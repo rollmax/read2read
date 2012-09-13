@@ -1,0 +1,706 @@
+body {
+	background: #999; 
+}
+
+#con {
+	position: relative; top: 0px; max-width: 1360px;  height: auto; margin: auto; 
+}
+
+
+  /*                        Навигация                  */
+ 
+#nav {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 10px 0px 0px 0px; background: #ccc; 
+}
+#nav td.img {
+	width: 9%; padding-top: 0px; padding-bottom: 0px; 
+}
+#nav td p {
+	position: relative; float: left; top: 0px; left: 0px; height: auto; width: auto; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 7px; padding-bottom: 2px; margin: 0px 5px 0px 5px; border-bottom: solid 1px #f00;
+}
+#nav td p.kzn {
+	padding-top: 0px; padding-bottom: 0px; border-bottom: solid 0px #f00; font: bold 10pt "verdana"; color: #345; 
+}
+#nav td p.kzn span {
+	 font: bold 12pt "verdana"; color: #f41; margin: 0px 0px 0px 5px; 
+}
+#nav td a {
+	position: relative; float: left; top: 0px; left: 0px; height: auto; width: auto; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 3px; margin: 5px 5px 0px 5px; display: inline; text-decoration: none; background: #abc; 
+}
+#nav td.img a {
+	background: transparent; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;
+}
+#nav td a p {
+	font: 8pt "verdana"; color: #000; text-align: center; width: 100%; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-bottom: solid 0px #f00; margin: 0px 0px 0px 0px;
+}
+#nav td a:hover {
+	background: #def; 
+}
+#nav td a:hover p {
+	
+}
+
+
+
+/*                     Поступление денег                */
+
+
+#incom {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#incom tr.w {
+	background: #efefef;
+}
+#incom tr.b {
+	background: #abc;
+}
+#incom tr.y {
+	background: #fdb;
+}
+#incom tr.ye {
+	background: #fed;
+}
+#incom tr {
+	background: #999;
+}
+#incom td {
+	width: 13%; padding-top: 8px; padding-bottom: 8px;
+}
+#incom td.h {
+	width: 16%; 
+}
+#incom td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 9pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#incom td p.p {
+	color: #d03;
+}
+#incom td.h p {
+	position: relative; float: left; top: 0px; left: 0px; font: 9pt "verdana"; color: #000; width: 78%; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+
+/*                     Доля r2r               */
+
+#incom td p.r2r_share {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 11pt "verdana"; color: #804; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px 0px 5px 0px;
+}
+
+
+#incom td a {
+	position: relative; float: left; top: 0px; left: 0px; width: 10%; font: 9pt "verdana"; color: #259; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin-left: 45%; text-decoration: none;  background: #def; 
+}
+#incom td a:hover {
+	color: #234; background: #ff0; 
+}
+#incom td input {
+	 width: 12%; height: auto; font: bold 11pt "verdana"; color: #259; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin-top: 5px; margin-left: 44%; display: block;
+}
+#incom td input.submit {
+	 font: 9pt "verdana"; color: #259; width: 8%; padding-top: 2px; padding-bottom: 2px; margin-left: 46.2%; 
+}
+
+
+#incom td.bottom {
+	width: 100%; background: #789; 
+}
+
+
+
+
+/*                           Выплаты переводчикам                   */
+ 
+#top {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 10px 0px 0px 0px; background: #efefef; 
+}
+#top td.img {
+	width: 9%; padding-top: 5px; padding-bottom: 5px; 
+}
+#top td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; display: inline;
+}
+#top td p.period {
+	font: 10pt "verdana"; color: #333; margin: 5px 0px 5px 0px; 
+}
+#top td p.period span {
+	font: 10pt "verdana"; color: #000; width: auto; background: #fff; padding-left: 10px; padding-right: 10px; border: solid 1px #fa5; margin: 0px 0px 0px 5px;
+}
+
+
+h4 {
+	width: 100%; text-align: center; color: #554;  padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+
+
+
+#show {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 5px 0px; background: #efefef; background: #ccc; 
+}
+#show td {
+	 padding-top: 5px; padding-bottom: 5px; vertical-align: top; padding-left: 5px; padding-right: 5px; width: 35%; 
+}
+#show td.option {
+	width: 9%; background: #ccc; 
+}
+#show td option {
+	 margin: 5px 5px 5px 5px;
+}
+#show td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 10pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px 5px 5px 5px;
+}
+#show td input {
+	position: relative; left: 0px; top: 0px; height: 20px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#show td input.radio {
+	 margin: 6px 0px 0px 50px;
+}
+#show td input.submit {
+	height: 25px; font: 8pt "verdana"; padding-bottom: 4px; margin: 0px 0px 0px 0px; padding-bottom: 3px;
+}
+
+
+#pay {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 0px 0px 0px 0px; background: #efefef; background: #abc; 
+}
+#pay tr.w {
+	background: #efefef;
+}
+#pay tr.b {
+	background: #dfdfdf;
+}
+#pay tr.y {
+	background: #fdb;
+}
+#pay tr.ye {
+	background: #fed;
+}
+#pay tr.yg {
+	background: #eed;
+}
+#pay td {
+	width: 15%; padding-top: 5px; padding-bottom: 5px;
+}
+#pay td.login {
+	width: 25%;
+}
+#pay td.bottom {
+	width: 100%; background: #789; 
+}
+#pay td input {
+	position: relative; left: 20%; top: 0px; height: 25px; padding-top: 0px; padding-bottom: 0px; margin: 0px; font-size: 9px;
+}
+#pay td input.submit {
+	width: 60%; font: 8pt "verdana"; color: #000; text-align: center; padding-top: 0px; padding-bottom: 3px; padding-left: 0px; padding-right: 0px;
+}
+#pay td input.summ {
+	background: transparent; border: solid 0px #000; text-align: center;
+}
+#pay td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; 
+}
+#pay td p {
+	font: 10pt "verdana"; color: #000; 
+}
+#pay td p.h {
+	font: bold 10pt "verdana"; color: #456; text-align: center; 
+}
+#pay td.login p.h {
+	text-align: left;  left: 2%; padding-left: 1%;
+}
+#pay td.login p.total {
+	 font: bold 10pt "verdana"; color: #954; text-align: left;  left: 2%; padding-left: 1%
+}
+#pay td.login p.paid {
+	 font: bold 8pt "verdana"; color: #954; text-align: left;  left: 2%; padding-left: 1%
+}
+#pay td p.no {
+	font: 10pt "verdana"; color: #f00; 
+}
+#pay td p.yes {
+	font: 10pt "verdana"; color: #089; 
+}
+#pay td a {
+	position: relative; float: left; top: 0px; left: 2%; width: 95%; font: 10pt "verdana"; color: #234; text-align: left; padding-left: 1%; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none;
+}
+#pay td a:hover {
+	 background: #ff3; color: #25a; 
+}
+#pay td.out {
+	width: 25%;
+}
+#pay td a.file {
+	color: #258; font: 9pt "verdana";  left: 2%; padding-left: 1%; padding-right: 1%; text-align: center;
+}
+#pay td a.file:hover {
+	background: #faa;
+}
+
+
+/*                       Список переводчиков                  */
+
+
+#p_list {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 0px 0px 0px 0px;  background: #abc; 
+}
+#p_list tr.w {
+	background: #efefef;
+}
+#p_list tr.b {
+	background: #dfdfdf;
+}
+#p_list tr.y {
+	background: #fdb;
+}
+#p_list tr.ye {
+	background: #fed;
+}
+#p_list td {
+	padding-top: 5px; padding-bottom: 5px;
+}
+#p_list td.login {
+	width: 40%;
+}
+#p_list td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 10pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; 
+}
+#p_list td p.h {
+	font: bold 10pt "verdana"; color: #456; text-align: center; 
+}
+#p_list td.login p.total {
+	 font: bold 10pt "verdana"; color: #954; text-align: left;  left: 2%; padding-left: 1%
+}
+#p_list td.login p.h {
+	text-align: left;  left: 2%; padding-left: 1%;
+}
+#p_list td a {
+	position: relative; float: left; top: 0px; left: 2%; width: 95%; font: 10pt "verdana"; color: #234; text-align: left; padding-left: 1%; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none;
+}
+#p_list td a:hover {
+	 background: #ff3;
+}
+#p_list td.bottom {
+	width: 100%; background: #789; 
+}
+
+
+
+/*                       Информация о p_пользователе                  */
+
+
+#p_info {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#p_info  tr.w {
+	background: #efefef;
+}
+#p_info  tr.b {
+	background: #dfdfdf;
+}
+#p_info tr.y {
+	background: #fdb;
+}
+#p_info tr.ye {
+	background: #fed;
+}
+#p_info td {
+	width: auto; padding-top: 5px; padding-bottom: 5px;
+}
+#p_info td.blocked {
+	width: 8%;
+}
+#p_info td.blocked input {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#p_info td.h {
+	width: 60%; 
+}
+#p_info td.h p.login {
+	font: bold 14pt "verdana"; color: #856; text-align: left; margin: 0px 0px 0px 10px;
+}
+#p_info td p.plan {
+	font: bold 11pt "verdana"; color: #458; text-align: center; margin: 0px;
+}
+#p_info td p.bill_A {
+	font: bold 10pt "verdana"; color: #456; text-align: center; margin: 0px;
+}
+#p_info td p.bill_W {
+	font: bold 11pt "verdana"; color: #856; text-align: center; margin: 0px;
+}
+#p_info td.h a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; text-decoration: none; 
+}
+#p_info td.h a:hover  {
+	 background: #ff3;
+}
+
+#p_info td.h a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 48%;  padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; margin: 0px; font: 9pt "verdana"; color: #000; margin: 0px 0px 0px 0px; display: inline; 
+}
+#p_info td.h a p.left {
+	text-align: left;
+}
+#p_info td.h a p.right {
+	text-align: right;
+}
+#p_info td.bottom {
+	width: 100%; background: #789; 
+}
+#p_info td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px; 
+}
+#p_info td p {
+	font: 10pt "verdana"; color: #000; 
+}
+#p_info td.h  p {
+	font: bold 10pt "verdana"; color: #456; text-align: left; margin: 0px 0px 0px 10px;
+}
+
+#p_info td.login p.h {
+	text-align: left;  left: 2%; padding-left: 1%;
+}
+
+/*                       Список читателей                  */
+
+
+#u_list {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 0px 0px 0px 0px;  background: #abc; 
+}
+#u_list tr.w {
+	background: #efefef;
+}
+#u_list tr.b {
+	background: #dfdfdf;
+}
+#u_list tr.y {
+	background: #fdb;
+}
+#u_list tr.ye {
+	background: #fed;
+}
+#u_list td {
+	padding-top: 5px; padding-bottom: 5px;
+}
+#u_list td.login {
+	width: 40%;
+}
+#u_list td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 10pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; 
+}
+#u_list td p.h {
+	font: bold 10pt "verdana"; color: #456; text-align: center; 
+}
+#u_list td.login p.total {
+	 font: bold 10pt "verdana"; color: #954; text-align: left;  left: 2%; padding-left: 1%
+}
+#u_list td.login p.h {
+	text-align: left;  left: 2%; padding-left: 1%;
+}
+#u_list td p.blocked {
+	 color: #f05; 
+}
+#u_list td p.stop {
+	 color: #888; 
+}
+#u_list td a {
+	position: relative; float: left; top: 0px; left: 2%; width: 95%; font: 10pt "verdana"; color: #234; text-align: left; padding-left: 1%; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none;
+}
+#u_list td a:hover {
+	 background: #ff3;
+}
+#u_list td.bottom {
+	width: 100%; background: #789; 
+}
+
+
+/*                       Информация о u_пользователе                  */
+
+
+#u_info {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #efefef; background: #abc; 
+}
+#u_info  tr.w {
+	background: #efefef;
+}
+#u_info  tr.b {
+	background: #dfdfdf;
+}
+#u_info tr.y {
+	background: #fdb;
+}
+#u_info tr.ye {
+	background: #fed;
+}
+#u_info td {
+	width: auto; padding-top: 5px; padding-bottom: 5px;
+}
+#u_info td.blocked {
+	width: 5%; 
+}
+#u_info td.blocked input {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#u_info td.h {
+	width: 60%; 
+}
+#u_info td.h p.login {
+	font: bold 14pt "verdana"; color: #856; text-align: left; margin: 0px 0px 0px 10px;
+}
+#u_info td p.bill_A {
+	font: bold 10pt "verdana"; color: #456; text-align: center; margin: 0px;
+}
+#u_info td p.bill_B {
+	font: bold 11pt "verdana"; color: #856; text-align: center; margin: 0px;
+}
+#u_info td.h a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; text-decoration: none; 
+}
+#u_info td.h a:hover  {
+	 background: #ff3;
+}
+
+#u_info td.h a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 48%;  padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; margin: 0px; font: 9pt "verdana"; color: #000; margin: 0px 0px 0px 0px; display: inline; 
+}
+#u_info td.h a p.left {
+	text-align: left;
+}
+#u_info td.h a p.right {
+	text-align: right;
+}
+#u_info td.bottom {
+	width: 100%; background: #789; 
+}
+#u_info td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px; 
+}
+#u_info td p {
+	font: 10pt "verdana"; color: #000; 
+}
+#u_info td.h  p {
+	font: bold 10pt "verdana"; color: #456; text-align: left; margin: 0px 0px 0px 10px;
+}
+
+#u_info td.login p.h {
+	text-align: left;  left: 2%; padding-left: 1%;
+}
+
+
+/*                     Переменные                */
+
+
+#varia {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#varia tr.w {
+	background: #efefef;
+}
+#varia tr.b {
+	background: #abc;
+}
+#varia tr.y {
+	background: #fdb;
+}
+#varia tr.ye {
+	background: #fed;
+}
+#varia td {
+	width: 35%; padding-top: 8px; padding-bottom: 8px;
+}
+#varia td.h {
+	width: 30%; 
+}
+#varia td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 9pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#varia td p.p {
+	color: #d03;
+}
+#varia td.h p {
+	position: relative; float: left; top: 0px; left: 0px; font: 9pt "verdana"; color: #000; width: 80%; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+
+/*                     Доля r2r               */
+
+#varia td p.r2r_share {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 11pt "verdana"; color: #804; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px 0px 5px 0px;
+}
+
+
+#varia  td a {
+	position: relative; float: left; top: 0px; left: 40%; width: 20%; font: 9pt "verdana"; color: #259; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px; text-decoration: none;  background: #def; 
+}
+#varia  td a:hover {
+	color: #234; background: #ff0; 
+}
+#varia td input {
+	 position: relative; float: left; top: 0px; left: 45%; width: 10%; height: auto; font: bold 11pt "verdana"; color: #259; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; 
+}
+#varia td input.submit {
+	 left: 40%; width: 20%; font: 9pt "verdana"; color: #259; padding-top: 0px; padding-bottom: 0px; 
+}
+#varia td.bottom {
+	width: 100%; background: #789; 
+}
+
+
+#over {
+	position: absolute; width: 100%; height: auto; z-index: 2; top: 110px; left: 0px; background-image: url(../images/part_.png); 
+}
+
+
+
+#f {
+	position: relative; top: 0px; width: 990px; margin: auto; padding-top: 50px
+}
+#main {
+	position: relative; float: left; top: 0px; left: 0px; width: 990px; min-height: 140px; margin: 0px; 
+}
+
+/*                      Ссылка   "Закрыть"                */
+
+#close {
+	position: fixed; top: 50%; left: 97%; width: 3%; z-index: 6;  padding-left: 0px; padding-right: 0px;  padding-top: 0px; padding-bottom: 0px; 
+}
+#close a {
+	padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#close a p {
+	padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#close a img {
+	border: solid 0px; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-top: 0px; padding-bottom: 0px;
+}
+
+/*                      Список категорий              */
+
+#category {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#category tr.w {
+	background: #efefef;
+}
+#category tr.b {
+	background: #abc;
+}
+#category tr.y {
+	background: #fdb;
+}
+#category tr.ye {
+	background: #fed;
+}
+#category td {
+	width: auto; padding-top: 8px; padding-bottom: 8px; padding-left: 0px; padding-right: 0px;
+}
+#category td.left {
+	width: 45%;
+}
+#category td.h {
+	width: 20%; 
+}
+#category td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+}
+#category td.left p a {
+	position: relative; float: left; top: 0px; left: 0px; width: 18%; font: 9pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 1%; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none;
+}
+#category td.left p a.part {
+	font-weight: bold; color: #234; width: 59%; text-align: left; padding-left: 1%; 
+}
+#category td.h p {
+	position: relative; float: left; top: 0px; left: 0px; font: 9pt "verdana"; color: #000; width: 48%; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#category td a:hover {
+	color: #234; background: #ff0; 
+}
+#category td ul {
+	 position: relative; top: 3px; left: 0px; list-style: none; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#category td ul li {
+	width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#category td.right a {
+	 position: relative; top: 0px; left: 0px; float: left; text-decoration: none; color: #234; width: 24%; margin-left: 38%; padding-left: 0px; padding-right: 0px; text-align: center;
+}
+
+#category td.bottom {
+	background: #789; 
+}
+
+
+ /*                      Добавить категорию               */
+
+
+#ad_category {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#ad_category tr.b {
+	background: #dfdfdf;
+}
+#ad_category tr.w {
+	background: #efefef;
+}
+#ad_category td.left {
+	width: 50%;
+}
+#ad_category h4 {
+	position: relative; float: left; top: 0px; left: 0px; color: #345; margin: 0px 0px 10px 0px;  padding-top: 5px; padding-bottom: 5px;
+}
+#ad_category td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 50%; font: 10pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0.5% 0% 0.5% 20%; 
+}
+#ad_category input {
+ 	position: relative; float: left; top: 0px; left: 0px; width: 30%; font: 10pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0% 0% 1% 30%; 
+}
+#ad_category input.checkbox {
+		width: 15px; margin: 1% 0% 1% 30%;display: inline; padding-top: 0px; padding-bottom: 0px;
+}
+#ad_category td.left p.free {
+		width: 30%; margin: 0.5% 0% 0.5% 1%; display: inline; text-align: left;
+}
+#ad_category input.submit {
+		width: 8%; margin: 0.5% 0% 0.5% 46%; 
+}
+#ad_category td.bottom {
+	width: 100%; background: #789; 
+}
+
+
+ /*                      Общие настройки              */
+
+
+#common {
+	position: relative; float: left; left: 0px; top: 0px; width: 100%; margin: 5px 0px 0px 0px; background: #abc; 
+}
+#common tr.b {
+	background: #dfdfdf;
+}
+#common tr.w {
+	background: #efefef;
+}
+#common td.left {
+	width: 50%; padding-bottom: 10px;
+}
+#common h4 {
+	position: relative; float: left; top: 0px; left: 0px; color: #345; margin: 0px 0px 10px 0px;  padding-top: 5px; padding-bottom: 5px;
+}
+#common td p {
+	position: relative; float: left; top: 0px; left: 0px; width: 67%; font: 10pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 4px; margin: 1% 0% 0% 1%; 
+}
+#common input {
+ 	position: relative; float: left; top: 0px; left: 0px; width: 30%; font: 10pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 1% 0% 0% 1%; 
+}
+#common input.checkbox {
+		width: 15px; margin: 1.8% 0% 0% 29.5%;padding-top: 0px; padding-bottom: 0px;
+}
+#common td.left p.free {
+		width: 50%; margin: 1% 0% 0% 1%; display: inline; text-align: left;
+}
+#common input.submit {
+		width: 8%; margin: 0.5% 0% 0.5% 46%; text-align: center;
+}
+#common td.bottom {
+	width: 100%; background: #789; 
+}
+ 
+.copy {
+ 	position: relative; float: left; left: 0px; top: 10px; width: 99%; height:20px; border-top: 1px solid #000; padding: 0.5%;
+}

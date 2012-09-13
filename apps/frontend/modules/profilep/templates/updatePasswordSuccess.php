@@ -1,0 +1,1 @@
+<?php echo json_encode(array('redirect'=>url_for('homepage'))); ?>

@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           BalanceSystem
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          balance_system
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        deposit_standart:  { label: Пополн. сч. standart }
+        deposit_expert:  { label: Пополн. сч. expert }
+        deposit_super:  { label: Пополн. сч. super }
+        deposit_user:  { label: Пополн. сч. чит. }
+      list:
+        title:   Опции
+        display: [ id ]
+      filter:
+        class: false
+        display: false #[ deposit_standart, deposit_expert, deposit_super, deposit_user ]
+#      form:    ~
+#      edit:    ~
+#      new:     ~

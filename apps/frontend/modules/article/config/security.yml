@@ -1,0 +1,1 @@
+all:  is_secure: true  credentials: [puser]purchase:  is_secure: false

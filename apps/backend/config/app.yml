@@ -1,0 +1,43 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  ckeditor:
+    basePath:                     '/ckeditor/'
+
+  sf_admin_dash:
+    web_dir:                      /sfAdminDashPlugin
+    image_dir:                    /sfAdminDashPlugin/images/icons/
+    default_image:                config.png
+    resize_mode:                  thumbnail
+    site:                         Read2Read
+    include_path:                 true
+    include_jquery_no_conflict:   false
+    logout:                       true
+    login_route:                  '@login'
+    logout_route:                 '@logout'
+    categories:
+      Common:
+        items:
+          Category:
+            url:    category
+          Page:
+            url:    page
+          Settings:
+            url:    setting
+      Пользователи:
+        items:
+          uusers:
+            url: user
+          puser:
+            url: user_puser
+      Баланс:
+        items:
+          Баланс:
+            url: balance_system
+      Выплаты:
+        items:
+          Выплаты p_пользователям:
+            url: @payment_pusers
+          

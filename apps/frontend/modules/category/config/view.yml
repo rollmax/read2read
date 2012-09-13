@@ -1,0 +1,10 @@
+indexSuccess:
+  stylesheets: [frame.css, status.css, parts.css]
+showSuccess:
+  stylesheets: [frame.css, parts.css, items.css]
+showArticleSuccess:
+  stylesheets: [frame.css, article.css, resume.css, rateit.css]
+  javascripts: [jquery.js, resume.js]
+printSuccess:
+  layout: print
+  stylesheets: [print.css]

@@ -1,0 +1,8 @@
+all:
+  stylesheets: [reg.css, frame0.css]
+
+activatepswSuccess:
+  stylesheets: [frame0.css, u_proom.css]
+  
+activatepswokSuccess:
+  stylesheets: [frame0.css, u_proom.css]

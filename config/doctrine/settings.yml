@@ -1,0 +1,6 @@
+Setting:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: { type: string(55), notnull: true, unique: true }
+    value: { type: string, notnull: true, length: 0 }

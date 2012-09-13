@@ -1,0 +1,154 @@
+User:
+  admin:
+    login: admin1
+    email: admin@r2r.ru
+    password: 123123
+    groups: [admin]
+    utype: suser
+    active: true
+
+  u_user_1:
+    login: uuser
+    email: uuser1@r2r.ru
+    password: 123
+    utype: uuser
+    balans: 0
+    is_blocked: true
+    groups: [uuser]
+    active: true
+  u_user_2:
+    login: uuser2
+    email: uuser2@r2r.ru
+    password: 123
+    utype: uuser
+    balans: 0
+    is_blocked: true
+    groups: [uuser]
+    active: true
+  u_user_3:
+    login: uuser3
+    email: uuser3@r2r.ru
+    password: 123
+    utype: uuser
+    balans: 0
+    is_blocked: true
+    groups: [uuser]
+    active: true
+
+  u_user_blocked:
+    login: ublocked
+    email: ublocked@r2r.ru
+    password: 123
+    utype: uuser
+    balans: 0
+    is_blocked: true
+    groups: [uuser]
+    active: true
+
+  p_user_blocked:
+    login: pblocked
+    email: pblocked@r2r.ru
+    password: 123
+    tariff: standart
+    utype: puser
+    phone: +375-29-123-45-67
+    first_name: Блокирован
+    last_name: Блокированный
+    live_place: Москва
+    site: http://site.com
+    skype: blocked_pupkin
+    resume_text: А этот заблокирован... И что дальше.... Предположим, некая Наталья Петрова (все совпадения имен и названий с реальными людьми и предприятиями случайны) по окончании вуза в Поволжье переехала в Москву. Сначала заведовала секцией бытовой химии в магазине в ближнем Подмосковье, затем перешла в оптово-розничную компанию, торгующую бытовой химией в масштабах всей страны, где курировала продажи не только в Москве, но и в регионах.
+    balans: 0
+    is_blocked: true
+    groups: [puser]
+    active: true
+    
+  p_user_standart_1:
+    login: standart
+    email: standard@r2r.ru
+    password: 123
+    tariff: standart
+    account_number: R1234567890
+    utype: puser
+    phone: +375-29-123-45-67
+    first_name: Вася
+    last_name: Васильев
+    live_place: Москва
+    site: http://site.com
+    skype: vasya_pupkin
+    resume_text: Предположим, некая Наталья Петрова (все совпадения имен и названий с реальными людьми и предприятиями случайны) по окончании вуза в Поволжье переехала в Москву. Сначала заведовала секцией бытовой химии в магазине в ближнем Подмосковье, затем перешла в оптово-розничную компанию, торгующую бытовой химией в масштабах всей страны, где курировала продажи не только в Москве, но и в регионах.
+    balans: 0
+    is_blocked: true
+    groups: [puser]
+    active: true
+    
+  p_user_expert_1:
+    login: expert
+    email: expert@r2r.ru
+    password: 123
+    tariff: expert
+    account_number: R1234567890
+    utype: puser
+    balans: 0
+    phone: +375-29-675-43-21
+    first_name: Петр
+    last_name: Петров
+    live_place: Новосибирск
+    site: http://site.ru
+    skype: petya_petrov
+    is_blocked: true
+    resume_text: Ей становится тесно в рамках текущей должности, но вариантов продвижения компания предложить не может. Наталья начинает искать новую работу и откликается на вакансию заместителя начальника отдела продаж в другой компании, также торгующей бытовой химией. Требования к кандидату: опыт работы в сфере оптовой торговли бытовой химией, руководства людьми, взаимодействия с региональными представительствами.
+    groups: [puser]
+    active: true
+    
+  p_user_super_1:
+    login: super
+    email: super@r2r.ru
+    password: 123
+    tariff: super
+    account_number: R1234567890
+    utype: puser
+    balans: 0
+    phone: +375-29-675-43-21
+    first_name: Семен
+    last_name: Слепаков
+    live_place: Владивосток
+    site: http://site.ch
+    skype: semen
+    is_blocked: true
+    resume_text: Личные данные. Фамилию имя и отчество кандидата нужно указывать полностью и в порядке: имя, отчество, фамилия. Исключение может быть только если вы обращаетесь напрямую в компанию, о которой точно знаете, что обращения по отчеству там не приняты. Это присуще в основном иностранным компаниям.
+    groups: [puser]
+    active: true
+
+UserPermission:
+  admin:
+    name:           admin
+    description:    Администраторские права
+  moder:
+    name:           moder
+    description:    Модераторские права
+  uuser:
+    name:           uuser
+    description:    Права зарегистрированных пользователей
+  puser:
+    name:           puser
+    description:    Права Переводчикок
+
+UserGroup:
+  admin:
+    name:        administrators
+    description: Руководитель
+    permissions: [admin]
+  moder:
+    name:        moder
+    description: Модератор
+    permissions: [moder]
+  uuser:
+    name:        uuser
+    description: Зарегистрированный пользователь
+    permissions: [uuser]
+  puser:
+    name:        puser
+    description: Зарегистрированный Переводчик
+    permissions: [puser]
+

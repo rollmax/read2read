@@ -1,0 +1,70 @@
+payment_pusers:
+  url:   /payment/pusers
+  param: { module: balance, action: ppayment }
+
+user_puser:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                User
+    module:               puser
+    prefix_path:          /puser
+    column:               id
+    with_wildcard_routes: true
+
+user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                User
+    module:               uuser
+    prefix_path:          /uuser
+    column:               id
+    with_wildcard_routes: true
+
+balance_system:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BalanceSystem
+    module:               balance
+    prefix_path:          /balance
+    column:               id
+    with_wildcard_routes: true
+
+setting:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Setting
+    module:               settings
+    prefix_path:          /settings
+    column:               id
+    with_wildcard_routes: true
+
+page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Page
+    module:               page
+    prefix_path:          /page
+    column:               id
+    with_wildcard_routes: true
+
+category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Category
+    module:               category
+    prefix_path:          /category
+    column:               id
+    with_wildcard_routes: true
+
+
+login:
+  url:   /login
+  param: { module: auth, action: login }
+
+logout:
+  url:   /logout
+  param: { module: auth, action: logout }
+
+homepage:
+  url:   /
+  param: { module: sfAdminDash, action: dashboard }

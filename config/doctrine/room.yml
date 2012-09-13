@@ -1,0 +1,31 @@
+# config/doctrine/room.yml
+Room:
+  columns:
+    name:         { type: string(55), notnull: true, unique: true }
+    description:  { type: string(255) }
+  options:
+    charset:  utf8
+
+Topic:
+  actAs: { Timestampable: ~ }
+  columns:
+    id_room:  { type: integer }
+    id_user:  { type: integer }
+    title:    { type: string(255), notnull: true , unique: true }
+  relations:
+    Room:     { local: id_room, foreign: id }
+    User:     { local: id_user, foreign: id }
+  options:
+    charset:  utf8
+
+Post:
+  actAs : { Timestampable: ~ }
+  columns:
+    id_topic:   { type: integer }
+    id_user:    { type: integer }
+    content:    { type: clob, notnull: true }
+  relations:
+    Topic:      { local: id_topic, foreign: id }
+    User:       { local: id_user, foreign: id }
+  options:
+    charset:    utf8

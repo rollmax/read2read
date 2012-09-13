@@ -1,0 +1,132 @@
+
+/*                      Регистрация  пользователя                     */
+
+#mdl3 {
+	position:  absolute; top: 140px; left: 222px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; z-index: 4; border-top: solid 0px #ccc;  border-left: solid 0px #102030;  border-right: solid 0px #102030;   
+} 
+
+
+
+/*                        шапка                   */
+
+#regh {
+	position:  relative; float: left; top: 0px; left: 0px;  height: 35px; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #fc; background-image: url(../images/u_proom_h.png); background-repeat: no-repeat;
+}
+#regh p {
+	position: relative; float: left; width: 95%; top: 0px; left: 0px;  height: 25px; font: bold 10pt "verdana"; color: #345;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 0px; margin: 0px; 
+}
+
+/*              логин, пароль, e-mail, выбор тарифного плана          */
+
+#reg {
+	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #efefef;
+}
+#reg tr {
+	 height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+}
+#reg tr.w {
+	 background: #e5e5e5;
+}
+#reg tr.sw {
+	 background: #fff;
+}
+#reg tr.b {
+	 background: #ccc;
+}
+#reg tr.g {
+	 background: #eec;
+}
+#reg td {
+	 height: 25px; padding-left: 0px; padding-right: 0px; vertical-align: middle; padding-top: 2px; padding-bottom: 5px; margin: 0px; 
+}
+#reg td.left {
+	 width: 20%;
+}
+#reg td.right {
+	 width: auto;
+}
+#reg td.left p {
+	position:  relative; top: 0px; left: 0px; width: 100%;  padding-left: 0px; font: 8pt "verdana"; color: #000; text-align: center; padding-top: 0px; padding-bottom: 0px; margin: 5px; 
+}
+
+
+
+
+
+
+/*              td_right   p         */
+
+#reg td.right p {
+	 position:  relative; float:left; top: 0px; left: 0px; width: 75%; font: bold 9pt "verdana"; color: #456;  padding-left: 0px; margin: 0px; text-align: center; 
+}
+#reg td.right p.err {
+	  width: 80%; left: auto; text-align: center; font: bold 8pt "verdana"; color: #e20; padding-top: 5px; padding-bottom: 5px;
+}
+#reg td.right label p {
+	   width: 30%; left: 0px; top: 0px; text-align: right; font: bold 8pt "verdana"; color: #234; padding-left: 0%; padding-top: 0px; padding-bottom: 0px; margin: 10px 0px 5px 0px; display: inline;
+}
+
+ 
+
+
+
+#reg td.end {
+	 height: auto; background: #345; background-image: url(../images/star.gif); background-repeat: no-repeat;
+}
+#reg td.end p {
+	position: relative; float: left; top: 0px; left: 0px; font: 11pt "verdana"; color: #eef; padding-left: 0px; height: auto; width: 100%; text-align: center; line-height: 120%; display: inline; margin-bottom: 1%; 
+}
+#reg td.end p.wht {
+	 width: 45%; text-align: right; padding-right: 9%;
+}
+#reg td.end p.log {
+	left: 0%; font: bold 11pt "verdana"; color: #2f6; width: 45%; text-align: left; 
+}
+#reg td.end p.pssw {
+	left: 0%; font: bold 11pt "verdana"; color: #fe3; width: 45%; text-align: left;
+}
+#reg td.end p.comm {
+	left: 10%; width: 80%;font: 10pt "verdana"; color: #fe0; line-height: 150%;
+}
+
+
+/*                                    inputs                    */
+
+#reg td input {
+	position: relative; float: left; width: auto; top: 0px; left: 0px; font: 9pt "verdana"; color: #244;  text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#reg td input.log {
+	 width: 150px;  left: 70px;
+}
+#reg td input.mail {
+	 width: 230px;  left: 70px;
+}
+
+#reg td input.check {
+	  left: 130px;
+}
+#reg td input.radio {
+	 width: 40%; left: 0px; top: 0px; display: inline; margin: 10px 10% 5px 0px; 
+}
+#reg td.end input {
+	left: 34%; width: 30%; font: bold 10pt "verdana"; color: #456; text-align: center; padding-top: 2px; padding-bottom: 2px; margin-bottom: 20px; 
+}
+
+/*                       Кнопка "Далее"                         */
+
+#regb {
+	position:  relative; float: left; top: 8px; left: 0px;  height: 35px; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #ababab; 
+}
+
+#regb input {
+	 position: relative; float: left; left: 45%; top: 5px; width: 12%; text-align: center; padding-bottom: 2px;
+}
+
+
+/* 5.01.2011 */
+ul li { list-style-type: none; }
+ul.radio_list li label { font: bold 8pt "verdana"; color: #234; margin-top: -3px !important; }
+ul.radio_list li input { display: inline-block !important; }
+
+ul.error_list { padding: 0; margin: 5px; }
+ul.error_list li { font: bold 8pt "verdana"; color: #e20; text-align: center; width: 80%; }

@@ -1,0 +1,152 @@
+User:
+  actAs:
+    Timestampable: ~
+    MySluggable:
+      unique: true
+      fields: [login]
+      canUpdate: true
+      builder: [SlugifyClass, Slugify]
+
+  columns:
+    salt: string(128)
+    password: string(128)
+    login:  { type: string(100), unique: true, notnull: true }
+    email: {type: string(80), unique: true, notnull: true}
+    phone: {type: string(20)}
+    first_name: {type: string(80)}
+    last_name: {type: string(80)}
+    live_place: {type: string(255)}
+    site: {type: string(255)}
+    account_number: { type: string(20), notnull: true }
+    skype: {type: string(40)}
+    resume_text: {type: string(1000)}
+    avatar: { type:string(255) }
+    userpic: { type:string(255) }
+    const_msg: { type: string(255) }
+    activation_code: { type: string(50), notnull: true }
+    active: { type: boolean, notnull: true, default: false }
+    slug: {type: string(255) }
+    utype: {type: enum, values: [puser, uuser, suser], default: uuser } # suser - system users: moderators, admins
+    is_blocked: { type: boolean, notnull: true, default: false }
+    tariff: {type: enum, values: [none, standart, expert, super], default: none }
+    tariff_change: { type: enum, values: [none, standart, expert, super], default: none }
+    tariff_change_date: { type: timestamp }
+    balans: {type: decimal, scale: 2, notnull: true}
+    last_login: { type: date, notnull: true }
+    last_purchase: { type: date, notnull: true }
+    sells: { type: integer, notnull: true }
+    img_file_size: { type: string, notnull: true, length: 0 }
+    img_file_md5: { type: string, notnull: true, length: 0 }
+    img_file_name: { type: string, notnull: true, length: 0 }
+
+  relations:
+    groups:
+      class: UserGroup
+      local: user_id
+      foreign: group_id
+      refClass: User__Group
+      foreignAlias: Users
+
+  options:
+    charset: utf8
+
+UserGroup:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: {type: string(255), unique: true}
+    description: string(255)
+  relations:
+    users:
+      class: User
+      refClass: User__Group
+      local: group_id
+      foreign: user_id
+      foreignAlias: Groups
+    permissions:
+      class: UserPermission
+      local: group_id
+      foreign: permission_id
+      refClass: Group__Permission
+      foreignAlias: Permissions
+
+UserPermission:
+  tableName: user_permission
+  actAs:
+    Timestampable: ~
+  columns:
+    name: {type: string(255), unique: true}
+    description: string(1000)
+
+Group__Permission:
+  tableName: user_group__user_permission
+  options:
+    symfony:
+      form:   false
+      filter: false
+  actAs:
+    Timestampable: ~
+  columns:
+    group_id:
+      type: integer
+      primary: true
+    permission_id:
+      type: integer
+      primary: true
+  relations:
+    Group:
+      class: UserGroup
+      local: group_id
+      foreign: id
+      onDelete: CASCADE
+    Permission:
+      class: UserPermission
+      local: permission_id
+      foreign: id
+      onDelete: CASCADE
+
+User__Group:
+  tableName: user__group
+  options:
+    symfony:
+      form:   false
+      filter: false
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:
+      type: integer
+      primary: true
+    group_id:
+      type: integer
+      primary: true
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      onDelete: CASCADE
+    Group:
+      class: UserGroup
+      local: group_id
+      foreign: id
+      onDelete: CASCADE
+
+UserRememberKey:
+  options:
+    symfony:
+      form:   false
+      filter: false
+  actAs:
+    Timestampable: ~
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    user_id: integer
+    remember_key: string(32)
+    ip_address: {type: string(50), primary: true}
+  relations:
+    User:
+      local: user_id
+      foreignAlias: RememberKeys
+      foreignType: one
+      onDelete: CASCADE
+

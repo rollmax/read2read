@@ -1,0 +1,32 @@
+BalanceUser:
+  u_user_1_balance:
+    Period: [december_2011]
+    User: [u_user_1]
+
+  u_user_2_balance:
+    Period: [december_2011]
+    User: [u_user_2]
+
+  u_user_3_balance:
+    Period: [december_2011]
+    User: [u_user_3]
+
+  u_user_blocked_balance:
+    Period: [december_2011]
+    User: [u_user_blocked]
+
+  p_user_blocked_balance:
+    Period: [december_2011]
+    User: [p_user_blocked]
+
+  p_user_standart_1_balance:
+    Period: [december_2011]
+    User: [p_user_standart_1]
+
+  p_user_expert_1_balance:
+    Period: [december_2011]
+    User: [p_user_expert_1]
+
+  p_user_super_1_balance:
+    Period: [december_2011]
+    User: [p_user_super_1]

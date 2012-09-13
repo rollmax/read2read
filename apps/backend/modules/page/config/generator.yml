@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Page
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          page
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+#    css:                   nothing # setting the css to a placeholder
+    
+    config:
+      actions: ~
+      fields:
+        id_page:  { label: id родителя }
+        title:    { label: Заголовок (внутреннее имя) }
+        name:     { label: Имя (выводится в меню) }
+        url:      { label: ссылка }
+      list:
+        title:   Страницы
+        display: [ parent_name, title, name, url ]
+        
+      filter:
+        display: [ id_page, title, name, url ]
+      form:
+        class:     BackendPageForm
+        display:
+          Content: [id_page, title, name, url, content]
+          Admin:   []
+      edit:
+        title: Изменить Страницу %%name%%
+      new:
+        title: Новая страница

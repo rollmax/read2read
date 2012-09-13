@@ -1,0 +1,5 @@
+all:
+  stylesheets: [ frame0.css, rules.css ]
+
+contactSuccess:
+  stylesheets: [frame0.css, contacts.css]

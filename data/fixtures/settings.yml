@@ -1,0 +1,28 @@
+Setting:
+  1k:
+    name: 1k
+    value: 1
+  standart:
+    name: standart
+    value: 0.5
+  expert:
+    name: expert
+    value: 1
+  super:
+    name: super
+    value: 2.5
+  r2r:
+    name: percent_r2r
+    value: 10
+  purse_u:
+    name: Кошелек продавца (поступления от u_пользователей)
+    value: R188770571207 
+  purse_p:
+    name: Кошелек продавца (поступления от p_пользователей)
+    value: R188770571207 
+  payments_test:
+    name: Платежи в тестовом режиме
+    value: 1
+  admin_email:
+    name: e-mail администратора
+    value: Read2Read@mail.ru

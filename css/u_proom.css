@@ -1,0 +1,469 @@
+
+
+
+/*                       Личный кабинет            */
+
+#mdl3 {
+	position:  absolute; top: 140px; left: 222px;  height: auto; width: 545px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 30px 0px; z-index: 2; border-top: solid 0px #ccc;  border-left: solid 1px #102030;;  border-right: solid 1px #102030; 
+}
+
+#mdl3 a {
+	text-decoration: none;
+}
+/*                       Личный кабинет  -  шапка                   */
+  
+#cabh {
+	position:  relative; float: left; top: 0px; left: 0px;  height: 37px; width: 545px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;   background-image: url(../images/u_proom_h.png); background-repeat: no-repeat;
+}
+#cabh p {
+	position: relative; float: left; width: 95%; top: 10px; left: 0px;  height: auto; font: bold 8pt "verdana"; color: #345;  text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+
+   /*                Личный кабинет  -  навигация                  */
+
+#cabto {
+	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 545px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345;
+}
+#to {
+	position:  relative; float: left; top: 0px; left: 0px;  height: 25px; width: 109px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345; border-right: solid 0px #ccc;
+}
+#to p {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: auto; font: bold 8pt "verdana"; color: #123;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 6px; padding-bottom: 6px; margin: 0px; 
+}
+#to p.act {
+	width: 100%; background: #efefef;
+}
+#to p.stat {
+	width: 100%; color: #789;
+}
+#to a {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#to a p {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: auto; font: bold 8pt "verdana"; color: #5df; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 6px; padding-bottom: 6px; margin: 0px; 
+}
+#to a:hover p {
+	color: #f20; background: #ccc;
+}
+
+/*                           Аккаунт                    */
+
+#account_data  {
+	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 545px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  background: #efefef;
+}
+#account_data tr {
+	  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#account_data tr.w {
+	 background: #e5e5e5;
+}
+#account_data tr.b {
+	 background: #ccc;
+}
+#account_data tr.y {
+	 background: #edc;
+}
+#account_data tr.g {
+	 background: #ccddcd;
+}
+
+#account_data td {
+	height: 25px; padding-left: 3px; padding-right: 3px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+
+#account_data td p {
+	 position: relative; float: left; top: 0px; left: 3px; width: 100%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; 
+}
+
+#account_data td.left {
+	width: 165px;  
+}
+#account_data td.center {
+	 width: 250px; 
+}
+#account_data td.right {
+	 padding-left: 5px; padding-right: 5px;  
+}
+
+#account_data td p.wr {
+	text-align: center; padding-left: 0px; padding-right: 0px;
+}
+#account_data td.center p {
+	left: 0px; text-align: center; padding-left: 0px;
+}
+
+
+
+#account_data td p.stop {
+	color: #f00;
+}
+#account_data td p.err {
+	color: #f00; 
+}
+#account_data td a  {
+	 text-decoration: none; 
+}
+#account_data td a p {
+	position: relative; float: left;  top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#account_data td a:hover p {
+	background: #abc;  padding-top: 2px; padding-bottom: 2px;
+}
+
+
+/*                           Aккаунт  -  изменения                      */
+
+
+#account_data td input {
+	position:  relative; float: left; top: 0px; left: 0px; display: inline; 
+}
+#account_data td.center input {
+	 left: 45px; width: 150px; vertical-align: midlle;
+}
+#account_data td input.file {
+	left: 45px;  width: 250px; 
+}
+#account_data td.right input {
+	position:  relative; float: left; top: 0px; left: 20px; width: 70px; vertical-align: midlle; font: 8pt "verdana";
+}
+
+/*       Aккаунт  -  изменения  - уведомление о посылке письма             */
+
+#account_data td.end {
+	 height: auto; background: #345;  background-repeat: no-repeat;
+}
+#account_data td.end p {
+	position: relative; float: left; top: 0px; left: 0px; font: 11pt "verdana"; color: #eef; padding-left: 0px; height: auto;  line-height: 120%;  display: inline; margin-bottom: 1%; 
+}
+#account_data td.end p.p {
+	text-align: center;
+}
+#account_data p.wht {
+	 width: 45%; text-align: right; padding-right: 5%; 
+}
+#account_data td.end p.log {
+	left: 0%; font: bold 11pt "verdana"; color: #2f6; width: 45%; text-align: left; 
+}
+#account_data td.end p.pssw {
+	left: 0%; font: bold 11pt "verdana"; color: #fe3; width: 40%; text-align: left; padding-left: 5%;
+}
+#account_data td.end p.comm {
+	left: 10%; width: 80%;font: 10pt "verdana"; color: #fe0; line-height: 150%;  text-align: center;
+}
+/*                       Кнопка "Далее"                         */
+
+#regb {
+	position:  relative; float: left; top: 14px; left: 0px;  height: 35px; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #ababab; 
+}
+
+#regb input {
+	 position: relative; float: left; left: 45%; top: 5px; width: 12%; text-align: center; padding-bottom: 2px;
+}
+
+
+/* ==================================================*/
+
+/*                           Счет                   */
+
+#count_data  {
+	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 545px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  background: #efefef;
+}
+#count_data tr {
+	  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#count_data tr.w {
+	 background: #e5e5e5;
+}
+#count_data tr.b {
+	 background: #ccc;
+}
+#count_data tr.y {
+	 background: #edc;
+}
+#count_data tr.g {
+	 background: #ccddcd;
+}
+
+#count_data td {
+	height: 25px; padding-left: 3px; padding-right: 3px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+
+#count_data td p {
+	 position: relative; float: left; top: 0px; left: 3px; width: 100%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; 
+}
+
+#count_data td.left {
+	width: 160px;  
+}
+#count_data td.center {
+	 width: 250px; 
+}
+#count_data td.right {
+	 padding-left: 5px; padding-right: 5px;  
+}
+#count_data td.center p {
+	left: 0px; text-align: center; padding-left: 0px;
+}
+
+
+
+#count_data td p.stop {
+	color: #f00;
+}
+#count_data td p.err {
+	color: #f00; 
+}
+
+#count_data td a  {
+	 text-decoration: none; 
+}
+#count_data td a p {
+	position: relative; float: left;  top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#count_data td a:hover p {
+	background: #abc; padding-top: 2px; padding-bottom: 2px;
+}
+
+/*                           счет  -  изменения                      */
+
+
+
+/*                           Мои покупки                   */
+
+#buys_data  {
+	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  background: #efefef;
+}
+#buys_data tr {
+	  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#buys_data tr.w {
+	 background: #e5e5e5;
+}
+#buys_data tr.b {
+	 background: #ccc;
+}
+#buys_data tr.y {
+	 background: #edc;
+}
+#buys_data tr.g {
+	 background: #ccddcd;
+}
+
+#buys_data td {
+	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#buys_data td.left {
+	width: 410px; 
+}
+
+#buys_data td.right {
+	 padding-left: 5px; padding-right: 5px; 
+}
+#buys_data td.no_buys {
+	width: 546px;  
+}
+#buys_data td.no_buys p {
+	width: 540px; text-align: center;
+}
+
+#buys_data td a  {
+	 text-decoration: none; 
+}
+
+#buys_data td p {
+	 position: relative; float: left; top: 0px; left: 3px; width: 100%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; 
+}
+
+#buys_data td a p {
+	position: relative; float: left;  top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#buys_data td a:hover p {
+	background: #fff; color: #f00; padding-top: 2px; padding-bottom: 2px;
+}
+#buys_data td a p.show {
+	width: 30%; margin-left: 69%; background: #eb5; color: #000;
+}
+#buys_data td a:hover p.show {
+	background: #ed5; color: #000; padding-top: 2px; padding-bottom: 2px
+}
+#buys_data td.left a p {
+	left: 0px; width: 48.5%; text-align: left;  display: inline; padding-left: 3px; padding-right: 3px; color: #000;
+}
+#buys_data td.left a p.right {
+	text-align: right;
+}
+#buys_data td.left a:hover p {
+	background: #fff; padding-top: 2px; padding-bottom: 2px;
+}
+#buys_data td p.stop {
+	color: #f00;
+}
+#buys_data td p.err {
+	color: #f00; 
+}
+#buys_data td select {
+	background: #ffd; margin: 5px;
+}
+
+
+
+/*                           мои сайты                */
+
+
+
+#sites_data  {
+	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  background: #efefef;
+}
+#sites_data tr {
+	  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#sites_data tr.w {
+	 background: #e5e5e5;
+}
+#sites_data tr.b {
+	 background: #ccc; height: 30px;
+}
+#sites_data tr.y {
+	 background: #edc;
+}
+#sites_data tr.g {
+	 background: #ccddcd;
+}
+#sites_data td {
+	  height: auto; width: auto; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 5px; padding-bottom: 5px; 
+}
+#sites_data td p {
+	 position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; 
+}
+
+#sites_data td.left {
+	width: 360px; padding-left: 10px; 
+}
+#sites_data td.left a  {
+	 width: 100%;  
+}
+#sites_data td.left a p {
+	position:  relative; float: left; top: 0px; left: 4%; width: 90%; font: 8pt "verdana"; color: #05a; text-align: left; padding-left: 1%; padding-right: 1%;padding-top: 0px; padding-bottom: 2px; margin: 0px; 
+}
+#sites_data td.left a:hover p {
+	 font: 8pt "verdana"; color: #05a; background: #abc;
+}
+
+
+
+#sites_data td.right a  {
+	 width: 100%;  
+}
+#sites_data td.right a p {
+	position:  relative; float: left; top: 0px; left: 50px; width: 40%; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-top: 0px; padding-bottom: 2px; margin: 0px; 
+}
+#sites_data td.right a:hover p {
+	 font: 8pt "verdana"; color: #f30; background: #abc;
+}
+
+
+/* ==================================================*/
+
+
+
+/*                     Upic - юзерпик и постоянное сообщение         */
+
+
+#upic_data  {
+	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  background: #efefef;
+}
+#upic_data tr {
+	  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#upic_data tr.w {
+	 background: #e5e5e5;
+}
+#upic_data tr.b {
+	 background: #ccc; height: 30px;
+}
+#upic_data tr.y {
+	 background: #edc;
+}
+#upic_data tr.g {
+	 background: #ccddcd;
+}
+#upic_data td {
+	  height: auto; width: auto; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 5px; padding-bottom: 5px; 
+}
+#upic_data td p {
+	 position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; 
+}
+
+#upic_data td.left {
+	width: 346px; padding-left: 10px; 
+}
+#upic_data td.right {
+	width: 200px; padding-left: 0px; 
+}
+
+/*      юзерпик      */
+
+#upic_data td img {
+	position: relative; float: left; top: 0px; left: 70px; width: 100px; height: 100px;
+}
+
+
+#upic_data td.right a {
+	position:  relative; float: left; top: 0px; left: 15%; width: 70%; padding-left: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#upic_data td a p {
+	 position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px; text-align: center;
+}
+#upic_data td.right a p:hover {
+	 font: 8pt "verdana"; color: #05a; background: #abc;
+}
+
+/*                          изменения                      */
+
+
+
+#upic_data td input {
+	position:  relative; float: left; top: 0px; left: 20px;  background: #fff; 
+}
+#upic_data td input.caption {
+	 left: 20px;  width: 220px; 
+}
+#upic_data td input.img {
+	 left: 30px; width: 200px; 
+}
+#upic_data td.right input {
+	 left: 30%; vertical-align: midlle; margin: 0px; background: #efefef; width: 40%; font: 8pt "verdana";
+}
+
+
+/*                     Открыть оплаченную статью              */
+
+
+
+#over {
+	position: absolute; width: 100%; height: auto; z-index: 6; top: 110px; left: 0px; 
+}
+
+
+
+/*                      Ссылка   "Закрыть"                */
+
+#close {
+	position: fixed; top: 50%; left: 96.5%; width: 3.5%; z-index: 10;  padding-left: 0px; padding-right: 0px;  padding-top: 0px; padding-bottom: 0px; 
+}
+#close a {
+	padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#close a p {
+	padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#close a img {
+	border: solid 0px; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-top: 0px; padding-bottom: 0px;
+}
+
+
+/* added 18-11-2011 */
+ul.error_list { margin:5px; }
+.error_list li { list-style-type: none; font-size:10px; color: #ff0000; }
+
+a:hover p { cursor: pointer; }

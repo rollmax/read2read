@@ -1,0 +1,18 @@
+Category:
+  cat_1:
+    name_en: Business
+    name_ru: Бизнес
+    ordered: 1
+  cat_2:
+    name_en: Money
+    name_ru: Деньги
+    ordered: 2
+  cat_3:
+    name_en: Politics
+    name_ru: Политика
+    ordered: 3
+  cat_4:
+    name_en: For Fun
+    name_ru: "Смеха ради"
+    is_free: true
+    

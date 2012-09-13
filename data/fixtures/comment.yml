@@ -1,0 +1,47 @@
+# data/fixtures/comment.yml
+Comment:
+  comment_1:
+    Paragraph: [paragraph_1]
+    comment_en:   populated by
+    comment_ru:   населены
+  comment_2:
+    Paragraph: [paragraph_1]
+    comment_en:   dependent upon
+    comment_ru:   зависят от
+  comment_3:
+    Paragraph: [paragraph_2]
+    comment_en:   an excuse
+    comment_ru:   здесь переведено как "ну", однако означает извинение (ввиду чеснока, видимо)
+  comment_4:
+    Paragraph: [paragraph_2]
+    comment_en:   dealership
+    comment_ru:   торговая точка дилера
+  comment_5:
+    Paragraph: [paragraph_2]
+    comment_en:   neighbor
+    comment_ru:   сосед
+  comment_6:
+    Paragraph: [paragraph_4]
+    comment_en:   commuters
+    comment_ru:   те, кто ездит на работу из пригородов или др. городов
+  comment_7:
+    Paragraph: [paragraph_4]
+    comment_en:   bunny
+    comment_ru:   кролик
+  comment_8:
+    Paragraph: [paragraph_6]
+    comment_en:   plenty of
+    comment_ru:   много
+  comment_9:
+    Paragraph: [paragraph_6]
+    comment_en:   down-and-out
+    comment_ru:   разоренный, нищенствующий
+  comment_9:
+    Paragraph: [paragraph_7]
+    comment_en:   counterintuitive
+    comment_ru:   противоинтуитивно (проиворечит опыту)
+  comment_9:
+    Paragraph: [paragraph_7]
+    comment_en:   it pays
+    comment_ru:   выгодно
+  

@@ -1,0 +1,152 @@
+
+/*   Главная -  правила   */
+
+
+#mdl {
+	position: relative; float: left; top: 30px; left: 70px; width: auto; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 20px; margin: 0px; border: solid 0px #f0a5a1; background: #b0b5b7; 
+}
+#mdl a {
+	 position: relative; float: left; top: 0px; left: 0px; font: 7pt "verdana"; color: #234; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border: solid 0px #f00; text-decoration: none;
+}
+#mdl p {
+	position: relative; top: 0px; left: 0px; height: auto; width: auto; font: 10pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#mdl p.who {
+	width: 180px; font: 11pt "verdana"; color: #000; text-align: left; padding-left: 10px;  padding-bottom: 3px; background: #ff3; 
+}
+
+/*       левая колонка - пункты  правил         */
+
+#left {
+	position: relative; float: left; top: 0px; left: 0px; width: 190px; height: auto; padding-left: 0px; padding-right: 0px; padding-top:10px; padding-bottom: 20px; margin: 0px 0px 0px 0px; border-bottom: solid 0px #778;  background: #606470; 
+}
+#left p {
+	float: left; width: 180px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; font: bold 8pt "verdana"; color: #000; background: #ffffff; 
+}
+#left a {
+	 font: bold 8pt "verdana"; width: 180px; text-align: left; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; margin: 0px 0px 0px 0px;  background: #606470; color: #fff;
+}
+#left a:hover {
+	 color: #000; background: #b0b5b7; 
+}
+
+
+#left hr {
+	position: relative; float: left; top: 0px; left: 4%; width: 92%; color: #ccc; 
+}
+
+/*        ссылка на правила переводчикам          */
+
+#left a.trans {
+	 font: 7pt "verdana"; width: 170px; color: #fff; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px 10px 0px 10px; background: transparent; border-top: solid 0px #fff; background: #606470; 
+}
+#left a.trans:hover {
+	color: #ed0;
+}
+
+
+
+/*   Средняя колоека  -      Текст правил         */
+
+#center {
+	position: relative; float: left; top: 0px; left: 0px; width: 445px; min-height: 400px; padding-left:10px; padding-right: 10px; padding-top: 18px; padding-bottom: 20px; margin: 0px 0px 0px 0px; border: solid 0px #f0f; background: #fff;
+}
+#center p {
+	 width: 100%; font: 9pt "verdana"; color: #000; text-align: justify; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; line-height: 140%;
+}
+#center p span.login {
+	 padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; margin: 0px 0px 0px 0px; font: bold 9pt "verdana"; color: #f22; background: #789; border-radius: 3px;
+}
+#center p span.login:hover {
+	color: #ff0; background: #789; cursor: pointer;
+}
+#center a.mail {
+	color: #2255ff; text-decoration: none; font: bold 10pt "verdana"; 
+}
+div.impo {
+	position: relative; top: 20px; left: 20px; height: auto; width: 90%; padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; margin: 0px 0px 0px 0px; border: solid 1px #555;  background: #dede88; border-radius: 7px; box-shadow: 7px 7px 5px #777;
+}
+#center div.impo p {
+	 font: bold 8pt "verdana"; color: #333;
+}
+#center div.impo p span {
+	color: #f00; font: bold 11pt "verdana";
+}
+
+/*    правая колонка           */
+
+
+#right {
+	position: relative; float: left; top: 0px; left: 10px; width: 200px; height: 300px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border: solid 0px #f0f; 
+}
+#right p {
+	position: relative; top: 5px; left: 15px; height: auto; width: 80px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border-left: solid 0px #f00; 
+}
+
+
+
+/*    ---------       Регистрация   -----------   */
+
+
+#right a.reg  {
+	 left: 10px; font: bold 11pt "verdana" ; color: #fff; padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 3px; margin: 0px 0px 0px 0px; border: solid 0px #f00; background: #f83;
+}
+
+
+#right a.reg:hover {
+	 background: #fa3;
+}
+
+/*    --------------------------------   */
+
+
+/*    ---------           Вход   -----------   */
+#in {
+	position: relative; float: left; top: 0px; left: 0px; width: 180px; height: 130px; padding-left: 0px; padding-right: 0px; padding-top: 10px; padding-bottom: 0px; margin: 10px 0px 0px 0px; border-top: solid 1px #778; 
+}
+#in input {
+	 position: relative; left:15px; top: 3px; height: 18px; width: 140px; margin: 5px 0px 0px 0px;
+}
+#in input.submit {
+	position: relative; left: 55px; top: 8px; height: auto; width: 60px; font: 8pt "verdana"; color: #000; padding-top: 0px; padding-bottom: 2px; margin: 10px 0px 0px 0px; 
+}
+#in input.submit:hover {
+	cursor: pointer; 
+}
+
+/*        Восстановить пароль      */
+
+#in a  {
+	 position: relative; float: left; left: 7%; top: 15px; height: auto; width: 80%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 20px 0px; 
+}
+#in a p {
+	  position: relative; left: 5px; top: 0px; height: auto; width: 98%; font: 7pt "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;
+}
+#in a p:hover {
+	text-decoration: underline; color: #358;
+}
+
+/*        Контакты     */
+
+
+#in a.contacts  {
+	position: relative; left: 11%; top: 30px; height: auto; width: 70%; text-decoration: none; font: 10pt "verdana"; color: #fff; text-align: left; padding-left: 13px; padding-right: 0px; padding-top: 3px; padding-bottom: 5px; margin: 0px 0px 0px 0px;  border-bottom: solid 0px #777; background: #bb8; border-radius: 5px 5px; box-shadow: 0px 0px 5px #678;
+}
+
+#in a.contacts:hover {
+	 border-bottom: solid 0px #05a; color: #025; background: #de8;
+}
+
+
+/*    --------------------   */
+
+#right a.rem  {
+	left: 15px; color: #334; padding-right: 70px;
+}
+#right a.rem:hover {
+	 color: #000; 
+}
+
+/*
+position: relative; float: left; top: 0px; left: 20px; width: auto; min-height: auto; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; margin: 0px 0px 0px 0px; border: solid 0px #f0f; background: #efefe88; border-radius: 5px;*/
+

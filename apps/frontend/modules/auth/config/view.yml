@@ -1,0 +1,10 @@
+accessDenied:
+  layout: access_denied
+blockedSuccess:
+  stylesheets: [frame.css, status.css, parts.css]
+recoveryPasswordSuccess:
+  stylesheets: [frame.css, status.css, parts.css]
+recoveryPasswordCompliteSuccess:
+  stylesheets: [frame.css, status.css, parts.css]
+recoveryPasswordImgErrorSuccess:
+  stylesheets: [frame.css, status.css, parts.css]

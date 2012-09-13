@@ -1,0 +1,4 @@
+all:
+  stylesheets: [frame.css, resume.css, article.css]
+  javascripts: [resume.js]
+

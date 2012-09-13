@@ -1,0 +1,310 @@
+
+
+
+
+
+
+/*                                                           */
+
+#room {
+	position: relative; float: left; top: 15px; left: 0px;  border: solid 0px #ff0; background: #fff; 
+}
+#room td {
+	vertical-align: top;
+}
+#room td p {
+	 position: relative; float: left; top: 0px; left: 0px; margin: 0px;
+}
+#room a {
+	text-decoration: none;
+}
+
+/*            Название раздела для общения          */
+
+#room td.top  {
+	 background: #bcd; border-bottom: solid 1px #567;
+	
+}
+#room td.top p {
+	 width: 94%; font: 16pt "verdana"; color: #123; text-align: right; padding-left: 0px; padding-right: 0px; padding-bottom: 10px; padding-top: 10px; 
+}
+
+/*            Колонка списка тем         */
+
+#room td.theme {
+	 width: 220px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; background: #cde;
+}
+
+/*            Заголовки ранее начатых тем         */
+
+#room td.theme p.last {
+	width: 205px; font: bold 8pt "verdana"; color: #123; padding-left: 5px; padding-bottom: 5px; padding-top: 2px; margin: 0px 0px 0px 5px;
+}
+#room td.theme p.last_date {
+	width: 205px; font: bold 7pt "verdana"; color: #345; padding-left: 5px; padding-bottom: 5px; padding-top: 2px; margin: 0px 0px 0px 5px; 
+}
+#room td.theme a p.old {
+	width: 205px; font: 8pt "verdana"; color: #123; padding-left: 5px; padding-bottom: 5px; padding-top: 2px; margin: 0px 0px 0px 5px;
+}
+#room td.theme a:hover p.old {
+	color: #123; background: #fff;
+}
+#room td.theme a p.date {
+	width: 205px; font: 7pt "verdana"; color: #345; padding-left: 5px; padding-bottom: 5px; padding-top: 2px; margin: 0px 0px 0px 5px; 
+}
+#room td.theme a:hover p.date {
+	color: #123;  background: #def;
+}
+
+/*            Переход к интерфейсу создания новой темы          */
+
+#new_theme {
+	position: relative; float: left; top: 0px; left: 0px; width: 210px; padding-left: 0px; padding-right: 0px; padding-bottom: 5px; padding-top: 5px; margin: 0px 0px 10px 5px;  border-bottom: solid 1px #f00; 
+}
+#new_theme a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 205px; font: 10pt "verdana"; color: #16a; padding-left: 5px; padding-bottom: 5px; padding-top: 5px; margin: 0px 0px 0px 0px;
+}
+
+#new_theme a:hover p {
+	color: #123; background: #fe5;
+}
+
+
+
+
+
+/*            Колонка коментариев пользователей         */
+
+#room td.comms {
+	 width: 770px; padding-top: 0px; padding-bottom: 0px;  padding-left: 0px; border: solid 0px #583; 
+}
+
+
+/*      Уведомление для не зарегистрированных пользователей     */
+
+#room td.comms p.err {
+	position: relative; float: left; top: 0px; left: 0px; width: 60%; font:  bold 11pt "georgia"; color: #526; color: #000; text-align: center; margin: 50px 0px 50px 20%; line-height: 150%; background: #fe2; padding-top: 10px; padding-bottom: 10px; border: 2px solid #f53;
+}
+
+
+/*             Заголовок пользователя          */
+
+#room td.comms p.theme_header {
+	width: 400px; font: bold 10pt "verdana"; color: #123; padding-left: 5px; margin: 10px 0px 10px 20px; 
+}
+ 
+ /*             Постоянное сообщение пользователя          */
+
+#room td.comms p.credo {
+	 font: 8pt "verdana"; color: #123; width: 750px; border-top: solid 1px #000; margin: 5px 0px 30px 5px; padding-top: 3px;
+}
+
+/*            Комментарий пользователя          */
+
+#comm {
+	position: relative; float: left; top: 0px; left: 0px; width: auto; border: solid 0px #aaa; padding-top: 0px; padding-bottom: 10px;  
+}
+
+
+/*             Дата добавления комента         */
+
+#comm p.post_date {
+	width: 98%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 5px; margin: 0px 0px 5px 0px; background: #abc; 
+}
+
+#user  {
+	position: relative; float: left; top: 0px; left: 0px; width: 200px; border: solid 0px #aaa; padding-top: 0px; padding-bottom: 10px; 
+}
+
+/*             Ссылка на резюме пользователя          */
+
+#user a p.login {
+	position: relative; float: left; top: 0px; left: 0px; font: bold 12pt "verdana"; color: #26b; text-align: left; margin: 0px 0px 5px 5px;
+}
+#user a:hover p.login {
+	color: #28f; 
+}
+
+/*                     Юзерпик                                    */
+
+#user img {
+	position: relative; float: left; top: 0px; left: 0px; width: 100px; margin: 0px 85px 0px 5px;
+}	
+
+/*                 Дата  регистрации  пользователя        */
+
+#user p.reg {
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #345; text-align: left; width: 10px; margin: 7px 0px 0px 5px; 
+}
+#user p.reg_date {
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #f45; text-align: left; width: 80px; margin: 7px 0px 0px 5px; 
+}
+
+/*                 Текст комментария         */
+
+#text {
+	position: relative; float: left; top: 0px; left: 0px; width: 570px; border: solid 0px #0f0; padding-top: 5px; padding-bottom: 20px; margin: 0px 0px 0px 0px; 
+}
+#text p.text {
+	position: relative; float: left; top: 0px; left: 0px; width: auto;  margin: 0px; font: 8pt "verdana"; color: #123; text-align: justify; padding-left: 10px; padding-right: 10px; margin: 0px 0px 10px 0px; 
+}
+/*            Конец комментария пользователя          */
+
+
+
+/*          Навигация по заголовкам тем         */
+
+#room td.theme_list {
+	 width: 210px; border: solid 0px #0f0; padding-left: 5px; padding-right: 5px; padding-top: 10px; padding-bottom: 10px; margin: 0px; border-top: solid 1px #678; background: #abc; 
+}
+#room td.theme_list a {
+	position:  relative; float: left; top: 5px; left: 5px; padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; font: 8pt "verdana"; color: #000; margin: 0px 2px 5px 0px;
+}
+#room td.theme_list a:hover {
+	 background: #ffa; 
+}
+
+#room td.theme_list p.act {
+	position:  relative; float: left; top: 5px; left: 5px; font: 8pt "verdana"; color: #123; width: 17px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; text-align: center; margin: 0px 5px 0px 0px; background: #fff; 
+}
+
+
+
+
+/*          Навигация по комментам темы         */
+
+
+#room td.comms_list {
+	  width: 610px; border: solid 0px #0f0; padding-left: 150px;padding-top: 10px; padding-bottom: 10px; margin: 0px;  border-top: solid 1px #678; background: #abc; 
+}
+#room td.comms_list a {
+	position:  relative; float: left; top: 5px; left: 5px; padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; font: 8pt "verdana"; color: #000; margin: 0px 2px 5px 0px;
+}
+#room td.comms_list a:hover {
+	 background: #ffa; 
+}
+
+#room td.comms_list p.act {
+	position:  relative; float: left; top: 5px; left: 5px; font: 8pt "verdana"; color: #123; width: 17px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; text-align: center; margin: 0px 5px 0px 0px; background: #fff; 
+}
+
+
+#room td.comms  p.adcomm {
+	position: relative; float: left; top: 0px; left: 0px; width: 755px; margin: 0px; font: 10pt "verdana"; color: #123; padding-top: 5px; padding-bottom: 10px; padding-left: 15px; padding-right: 0px; margin: 0px 0px 0px 0px; border-bottom: solid 0px #ccc; background: #bcd;
+}
+
+
+
+
+
+/*          Добавление комментария        */
+
+#input {
+	position: relative; float: left; top: 0px; left: 0px; width: 770px; height: auto; padding-top: 50px; padding-bottom: 20px; margin: 0px;  border-bottom: solid 1px #fff;
+}
+
+#input input.theme_header {
+	 margin: 10px 0px 10px 50px; width: 500px;
+}
+#input textarea {
+	 margin: 0px 0px 0px 50px; 
+}
+#input input.submit {
+	 margin: 30px 250px 10px 330px; 
+}
+
+
+
+/*          Добавление новой темы       */
+
+/*            Указатели к добавлению заголовка и текста новой темы         */
+
+#new_theme  p.new {
+	position: relative; float: left; top: 0px; left: 0px; width: 205px; font: 10pt "verdana"; color: #16a; padding-left: 5px; padding-bottom: 5px; padding-top: 5px; margin: 7px 0px 0px 0px;
+}
+
+/*                                    Предпросмотр                            */
+
+#new_theme  p.new_preview {
+	position: relative; float: left; top: 0px; left: 0px; width: 205px; font: 12pt "verdana"; color: #f00; padding-left: 5px; padding-bottom: 5px; padding-top: 0px; margin: 0px 0px 0px 0px;
+}
+
+#room td.comms_preview {
+	 width: 770px; padding-top: 0px; padding-bottom: 0px;  padding-left: 0px; border: solid 0px #583;
+}
+
+
+/*              Заголовок новой темы              */
+
+#room td.comms_preview  p.theme_header {
+	width: 400px; font: bold 10pt "verdana"; color: #123; padding-left: 5px; margin: 10px 0px 10px 20px; 
+}
+
+ /*             Постоянное сообщение пользователя          */
+
+#room td.comms_preview  p.credo {
+	 font: 8pt "verdana"; color: #123; width: 750px; border-top: solid 1px #000; margin: 5px 0px 30px 5px; padding-top: 3px;
+}
+
+#comm_preview {
+	position: relative; float: left; top: 0px; left: 0px; width: auto; border: solid 0px #aaa; padding-top: 0px; padding-bottom: 10px;  border: solid 1px #0f0;
+}
+
+
+/*          Добавление загловка и текста темы      */
+
+
+#input {
+	position: relative; float: left; top: 0px; left: 0px; width: 770px; height: auto; padding-top: 5px; padding-bottom: 20px; margin: 0px;  border-bottom: solid 0px #fff; background: #ccc; 
+}
+
+#input input.theme_header {
+	 margin: 10px 0px 10px 50px; width: 658px;
+}
+#input textarea {
+	 margin: 0px 0px 0px 50px; 
+}
+#input input.submit {
+	 margin: 30px 250px 10px 330px; 
+}
+
+
+
+/*            Кнопка перехода к предпросмотру       */
+
+#input a p.preview {
+	position: relative; float: left; top: 0px; left: 275px; width: auto; margin: 0px; font: 8pt "verdana"; color: #157; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; margin: 0px 0px 0px 0px; border: solid 1px #eee; cursor: pointer;
+}
+#input a:hover p.preview {
+	color: #18a;
+}
+
+
+/*          Навигация по добавлению новой темы          */
+
+
+/*          Назад        */
+
+#room td.comms_list input.button_back {
+	 position: relative; float: left; top: 0px; left: 120px; margin: 0px 10px 0px 0px;  width: 60px; padding-top: 2px; padding-bottom: 2px; font: 8pt "verdana";
+}
+
+/*          Добавить       */
+
+#room td.comms_list input.button_fwd {
+	 position: relative; float: left; top: 0px; left: 150px; margin: 0px 10px 0px 0px;  width: 60px; padding-top: 2px; padding-bottom: 2px; font: 8pt "verdana";
+}
+
+
+
+/*  updates 25.11.2011 */
+
+a.edit { display: inline-block; padding: 3px; }
+a.edit:hover { color: #2b66c9; background: #fbd850; }
+
+a.delete { display: inline-block; padding: 3px; }
+a.delete:hover { color: #f00; background: #fbd850; }
+
+
+.topicTitle         { width: 100%; color: #111; font-weight: bold; padding: 5px 0px; margin: 0px 10px; }
+.topicTitle:hover  { color: #1c94c4; background-color: #fbcb09; }

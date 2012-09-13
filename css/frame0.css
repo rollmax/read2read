@@ -1,0 +1,198 @@
+@charset "windows-1251";
+body {
+	padding-left: 0px; padding-bottom: 10px; margin: 0px; font-size: medium; font-family: Verdana, Arial, Helvetica, sans-serif;  background: #123;
+}
+#f {
+	position: relative; top: 0px; width: 990px;  min-height: 730px; margin: auto; background-image: url(/images/f_bgd.png);
+}
+#main {
+	position: relative; float: left; top: 0px; left: 0px; width: 990px; min-height: 176px; margin: 0px; background-image: url(/images/logos0.png); background-repeat: no-repeat;
+}
+
+
+
+
+#hat {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 990px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#hat tr {
+	height: 36px; width: 990px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; 
+}
+#hat td {
+	padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle; 
+}
+#hat td.logo {
+	height: 100%; width: 150px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#hat td.logo a img {
+	position:  relative; float: left; top: 0px; left: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px solid #fff; 
+}
+
+/*           �����    */
+
+#hat td.ban {
+	height: 100%; width: 690px; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 0px; border: 0px solid #dda;
+}
+
+/*           ����    */
+
+#hat td.date {
+	height: 100%; width: 150px; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 0px; 
+}
+#hat td.date p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #ddd; text-align: center; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-bottom: 0px; padding-top: 0px; line-height: 100%; 
+}
+
+
+
+#bof  {
+	position:  relative; float: left; top: 0px; left: 0px; height: auto; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px  0px  2px  0px;
+}
+#bof tr {
+	height: 37px; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px;
+}
+#bof  td.fl {
+	height: 100%; width: 330px; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 0px; 
+}
+#bof  td.fl img {
+	position:  relative; float: left; top: 0px; left: 101px;  height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#bof td a {
+	 text-decoration: none; cursor: pointer; 
+}
+#bof  td.h {
+	height: 100%; width: 330px; margin: 0px; 
+}
+
+#bof td.h p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 10pt "verdana"; color: #ccd; text-align: center; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-bottom: 9px; padding-top: 8px; line-height: 100%;
+}
+
+
+
+
+#nav  {
+	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#nav tr {
+	  height: 25px; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#nav  td {
+	height: 25px; width: auto; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; vertical-align: middle; border-radius: 5px;  
+}
+#nav  td.po {
+	height: 100%; width: 235px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#nav td.po p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%;  font: bold 12pt "verdana"; color: #fff; padding-left: 0px; text-align: center; margin: 0px; 
+}
+#nav  td.but {
+	height: 25px; width: 120px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; vertical-align: middle; background: #234;  border-radius: 5px;
+}
+#nav  td.but_no_reg {
+	background: #234;
+}
+#nav td.but a p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #fff; text-align: center; padding-left: 0px; padding-right: 0px;  padding-bottom: 7px; padding-top: 9px; line-height: 100%; margin: 0px;  border-radius: 5px;
+}
+#nav td.but a p.img {
+	padding-bottom: 0px; padding-top: 0px; 
+}
+#nav  td.but img {
+	border: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px;  
+}
+#nav td.but a:hover p {
+	 color: #fd2; background: #456; border-radius: 5px;
+}
+#nav td.act {
+	width: auto; background: #345; border-radius: 5px;
+}
+#nav td.act p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 11pt "verdana";  color: #32c0f2;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 3px; margin: 0px; 
+}
+
+
+
+/*    ������ �������� �� ������� �������� ��� �� ������������������ �������������   */ 
+
+#nav td.act_noreg a p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: 10pt "verdana"; color: #fff; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 9px; line-height: 100%; margin: 0px; background: #345; 
+}
+#nav td.act_noreg a:hover p {
+	 color: #fd2; background: #456; 
+}
+/*                ������ �������� � ������ �������       
+
+               ����� � ������������� ������� - [ login ]           */
+
+#nav td.act a p {
+	position:  relative; float: left; top: 0px; left: 0px; font: bold 11pt "verdana"; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 6px; padding-bottom: 6px; line-height: 100%; margin: 0px; background: #345; border-radius: 5px;
+}
+
+
+/*     ������ �������� - ��  */
+
+#nav td.act a p.ok {
+	 color: #2df;
+}
+
+#nav td.act a:hover p.ok {
+	color: #2f3;  background: #456; 
+}
+
+/*    ������ �������� - ����������   */    
+
+
+#nav td.act a p.stop {
+	color: #f10; 
+}
+#nav td.act a:hover p.stop {
+	 color: #fc0;  background: #456; 
+} 
+
+
+/*                ������ �������� �� �������� ������� �� ������� ������       */
+
+
+#nav td.act_art a p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 8pt "verdana"; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 6px; padding-bottom: 9px; line-height: 100%; margin: 0px; background: #345; 
+}
+#nav td.act_art a p{
+	 color: #fff;
+}
+#nav td.act_art a:hover p{
+	 color: #fc3; background: #456; 
+}
+
+
+#nav td.act_out a p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 8pt "verdana"; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 8px; padding-bottom: 8px; line-height: 100%; margin: 0px; background: #345; 
+}
+#nav td.act_out a p{
+	 color: #fff;
+}
+#nav td.act_out a:hover p{
+	 color: #fc3; background: #456; 
+}
+
+
+/*                      ������   "�������"         */       
+
+
+#close {
+	position: fixed; top: 50%; left: 96%; width: 4%; z-index: 6;  padding-left: 0px; padding-right: 0px;  padding-top: 0px; padding-bottom: 0px; 
+}
+#close a {
+	padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#close a p {
+	padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#close a img {
+	border: solid 0px; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-top: 0px; padding-bottom: 0px;
+}
+.error_list {
+    color: #FF0000;
+    font: 9pt "verdana";
+    list-style-type: none;
+}

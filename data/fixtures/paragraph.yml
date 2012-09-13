@@ -1,0 +1,67 @@
+# data/fixtures/paragraph.yml
+Paragraph:
+  paragraph_1:
+    Content:   [first_post]
+    paragraph_en: Most business capitals shout their names from the hilltops — literally, in the case of Hollywood. Everyone knows which industry dominates that town, and which ones rule Detroit and Houston. But how many could name the capital of socks? Or medical imaging technology? Or firearms? These are among dozens of hidden capitals of vital U.S. industries, each populated by and dependent upon dozens of small companies that both compete and collaborate.
+    paragraph_ru: Большинство бизнес столиц кричат свои имена с вершин холмов – буквально, в случае с Hollywood. Каждый знает, какая промышленность доминирует в этом городе, а которые правят [в] Detroit и Houston. Но сколько могли бы назвать столицу носков? Или медицинской видеографической технологии? Или огнестрельного оружия? Эти - среди дюжин скрытых столиц жизненно важных производств США, каждая населена и зависит от дюжин малых компаний, которые как конкурируют, так и сотрудничают.
+  paragraph_2:
+    Content:   [first_post]
+    paragraph_en: This idea of industry capitals, or "clusters," as academics call them, might seem like a quaint tourist draw for small towns, an excuse, say, for Gilroy, Calif., to throw its annual garlic festival. But they serve an important function in the economy. Overlapping businesses in the same region gain a number of advantages, drawing in more suppliers and customers along with financial institutions that understand the industry. Meanwhile, the labor pool grows to include more workers with special skills and experience. Even on a local scale, sticking together makes economic sense: An "auto mile" of car dealerships or an entertainment district with bars and restaurants can draw more customers, share parking, and pool its marketing dollars to promote the neighborhood.
+    paragraph_ru: Эта идея промышленных столиц, или «кластеров», как их называют академики, может выглядеть как гигантская туристическая приманка для небольших городов, ну, скажем, для Gilroy в California, с его ежегодным чесночным фестивалем. Но они выполняют важную функцию в экономике. Перекрывающие друг друга предприятия в том же регионе приобретают множество преимуществ, привлекая больше поставщиков и потребителей вместе с финансовыми институтами, которые понимают промышленность. Тем временем скопление рабочей силы растет, включая больше рабочих с особыми навыками и опытом. Даже в местном масштабе держаться вместе имеет хозяйственный смысл. «Авто-миля» торговцев автомобилями или квартал развлечений с барами и ресторанами может привлечь больше потребителей, автостоянки на паях и объединить доллары, предназначенных для маркетинга, для продвижения района.
+  paragraph_3:
+    Content:   [first_post]
+    paragraph_en: While business capitals have been around for centuries, they spring up and prosper today for very different reasons. Before computers and modern air travel, says Harvard Business School professor Michael Porter, who studies business clusters, capitals were located near natural resources — such as iron-ore deposits or a deep-water port for shipping goods. Today, Porter says, it isn't natural resources but human resources that make for an industry boomtown. Concentrations of specialized experts may result from a university producing patents on new technology and graduates who understand them, or a large corporation sloughing off workers who see entrepreneurial opportunities their less nimble employer didn't. Silicon Valley is a prime example of a brainpower-based capital, as is our lesser-known find, Orlando, where the University of Central Florida feeds the local virtual-reality industry. Sometimes, as in the case of sports medicine in Birmingham, Ala., a single expert is enough to draw an industry.
+    paragraph_ru: Несмотря на то, что бизнес столицы существуют повсюду столетиями, они возникают и процветают сегодня по совершенно другим причинам. До компьютеров и авиапутешествий, говорит профессор Michael Porter из Harvard Business School, который изучает бизнес-кластеры, столицы были расположены вблизи естественных ресурсов – железорудные залежи или глубоководный порт для перевозки товаров судами. Сегодня, говорит Porter, не естественные ресурсы, но ресурсы человеческие – вот, что создает для промышленности город быстрого роста. Концентрации специализированных экспертов могут быть результатом производства университетом патентов в новых технологиях и выпускников, которые в них разбираются, или крупная корпорация избавляется от работников, которые видят предпринимательские возможности, которые их менее сообразительный наниматель не видел. Silicon Valley – лучший пример капитала основанного на мощи мозга, как и наша менее известная находка, Orlando, где University of Central Florida вскармливает местную промышленность виртуальной реальности. Иногда, как в случае спортивной медицины в Birmingham, в Alabama, единственного эксперта достаточно, чтобы привлечь промышленность.
+  paragraph_4:
+    Content:   [first_post]
+    paragraph_en: Still, you've read the headlines: tele-commuters are working from home in their bunny slippers! A business's location, it is said, no longer matters. "That isn't true," says Porter. "You can't just set up any business in the middle of a cornfield. There are powerful benefits of proximity to a cluster in terms of efficiency and productivity." While you could plunk an aircraft-engineering firm in the middle of Vermont, the experience of hiring topflight employees will be infinitely more frustrating — and less competitive — than if you were to locate in Wichita, the biggest hub for light-aircraft manufacturing in the U.S.
+    paragraph_ru: Еще вы читали заголовки: теле-иногородние работают дома в своих шлепанцах-кроликах! Местоположение бизнеса, этим сказано, больше не имеет значения. «Это неправда» - говорит Porter. «Вы не можете разместить бизнес посредине кукурузного поля. Есть значительные выгоды от близости к кластеру по условиям эффективности и продуктивности». В то время как вы смогли бы воткнуть авиастроительную фирму в центре Vermont, опыт найма высококлассных работников будет бесконечно более разочаровывающим – и менее конкуренто-способным – чем, если бы вы были расположены в Wichita, крупнейшем узле производства легких самоле-тов в США.
+  paragraph_5:
+    Content:   [first_post]
+    paragraph_en: Professor Richard DeMartino, who studies clusters at the Rochester Institute of Technology College of Business in New York, says recent research has unearthed another benefit — faster innovation: "When you have people in the same area thinking and talking about a particular field, not only do people cooperate, but ideas flow quicker." Workers who change jobs pollinate their new environment with ideas from their old one.
+    paragraph_ru: Профессор Richard DeMartino, который изучает класте-ры в Rochester Institute of Technology College of Business в New York, говорит, что последнее исследование  вскрывает другую выгоду - более быструю инновацию. «Когда у вас есть люди в одном и том же районе, думающие и говорящие в одной области деятельности, люди не только взаимодействуют, но идеи перетекают быстрее». Работники, которые меняют место работы, опыляют новую среду обитания идеями от прежней работы.
+  paragraph_6:
+    Content:   [first_post]
+    paragraph_en: Plenty of cities have unfurled marketing campaigns to turn down-and-out waterfronts into thriving tech clusters. But experience, documented by research, indicates that many of those efforts are wasted. "The government can't make a cluster," says DeMartino. "It can only support one that already exists." A better idea for economic developers, Porter adds, is to notice the germ of a nascent industry capital and take action. Encourage nearby universities to turn out the kind of graduates that the industry needs. Repea laws that hinder its growth. Invest in upgrading business-friendly infrastructure, such as roads and airports.
+    paragraph_ru: Немало городов разворачивали маркетинговые компании, чтобы превратить бедные пристани в благоденствующие технокластеры. Но опыт, документированный исследованием, показывает, что многие из тех попыток напрасны. «Правительство не может сделать кластер» - говорит DeMartino. «Оно может только поддержать тот, который уже существует». Более хорошая идея для развивающих экономику, добавляет Porter, это заметить зачаток нарождающейся промышленной столицы и предпринять действия. Поощрять ближайшие университеты выпускать специалистов того рода, в которых нуждается промышленность. Отменить законы, которые препятствуют ее росту. Инвестировать в модернизацию дружественной к бизнесу инфраструктуры, такой как дороги и аэропорты.
+  paragraph_7:
+    Content:   [first_post]
+    paragraph_en: Beyond that support, capitals thrive or die by the decisions of their entrepreneurs and how well they cooperate and compete. It may seem counterintuitive but sometimes it pays to keep your friends close and your competitors closer.
+    paragraph_ru: После такой поддержки, столицы процветают или умирают решениями их предпринимателей и насколько хорошо они сотрудничают и конкурируют. Это может казаться противоинтуитивным, но иногда выгодно держать ваших друзей близко, а ваших конкурентов ближе.
+    
+  paragraph_2_1:
+    Content:   [content_2]
+    paragraph_en: So can we go on living longer and longer? Is there a limit to how long we can survive into old age?
+    paragraph_ru: Так можем мы продолжать жить дольше и дольше? Есть предел тому, как долго мы можем продолжать существовать в старом возрасте?
+  paragraph_2_2:
+    Content:   [content_2]
+    paragraph_en: ...
+    paragraph_ru: ...
+  paragraph_2_3:
+    Content:   [content_2]
+    paragraph_en: No natural limit'
+    paragraph_ru: «Нет естественного предела.»
+  paragraph_2_4:
+    Content:   [content_2]
+    paragraph_en: Nearly one-in-five people currently in the UK will live to see their 100th birthday, the Office for National Statistics predicted last year.
+    paragraph_ru: Почти каждый пятый сейчас в ЮКей доживет до своего 100-ого дня рождения, предсказала в прошлом году Служба Национальной Статистики.
+
+<?php for ($p = 1; $p<=17; $p++):?>
+<?php for ($i = 1; $i<=2; $i++):?>    
+  buisnes_parag_<?php echo $p."_".$i ?>:
+    Content:   [buisnes_<?php echo $p?>]
+    paragraph_en: 'No natural limit'
+    paragraph_ru: «Нет естественного предела.»
+<?php endfor ?>
+<?php endfor ?>
+
+<?php for ($pm = 1; $pm<=38; $pm++):?>
+<?php for ($im = 1; $im<=3; $im++):?>    
+  money_parag_<?php echo $pm."_".$im ?>:
+    Content:   [money_<?php echo $pm?>]
+    paragraph_en: Nearly one-in-five people currently in the UK will live to see their 100th birthday, the Office for National Statistics predicted last year.
+    paragraph_ru: Почти каждый пятый сейчас в ЮКей доживет до своего 100-ого дня рождения, предсказала в прошлом году Служба Национальной Статистики.
+<?php endfor ?>
+<?php endfor ?>
+
+ 

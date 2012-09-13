@@ -1,0 +1,62 @@
+
+
+/*         Состояние аккаунта             */
+
+
+#mdl1 {
+	position:  absolute; top: 140px; left: 222px; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; z-index: 4;  border: solid 0px #f0f;
+}
+
+
+#status_h {
+	position: relative; float: left; top: 0px; left: 0px;  height: 35px; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; font: bold 9pt "verdana"; 
+}
+#status_h p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 536px; height: autox; padding-left: 10px; padding-right: 0px; padding-top: 7px; padding-bottom: 14px; margin: 0px; display: inline; 
+}
+#status_h p.ok {
+	 color: #223; background-image: url(../images/status_h_ok.png); background-repeat: no-repeat;
+
+}
+#status_h p.stop {
+	 color: #f23; background-image: url(../images/status_h_stop.png); background-repeat: no-repeat;
+}
+#status {
+	position: relative; float: left; top: 3px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#status tr {
+	height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+ #status tr.w {
+	 background: #ebebeb;
+}
+#status tr.b {
+	 background: #ccc;
+}
+#status td {
+	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: top;  padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#status td.left {
+	width: 170px;
+}
+#status td.right {
+	width: 346px; 
+}
+#status td p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; padding-left: 0px; padding-top: 7px; padding-bottom: 3px; margin: 0px; 
+}
+#status td.left p {
+	 font: 8pt "verdana"; color: #123; padding-left: 10px; text-align: left; 
+}
+#status td.right p {
+	 font: 8pt "verdana"; color: #123; text-align: center; 
+}
+#status td p.ok {
+	 color: #049; background: #acb; font: 9pt "verdana"; 
+}
+#status td p.stop {
+	 font: 8pt "verdana"; color: #f00; 
+}
+
+
+

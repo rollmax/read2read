@@ -1,0 +1,7 @@
+all:
+  stylesheets: [ frame0.css, p_proom.css, sta.css ]
+  javascripts: [ jquery.js, article.js ]
+
+interpreterSuccess:
+  stylesheets:  [resume.css]
+  javascripts:  [resume.js]

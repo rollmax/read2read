@@ -1,0 +1,92 @@
+Statistics:
+
+  columns:
+    period_id: { type: integer }
+    category_id: { type: integer }
+    1_buy: { type: integer, notnull: true }
+    1_login: { type: integer, notnull: true }
+    2_buy: { type: integer, notnull: true }
+    2_login: { type: integer, notnull: true }
+    3_buy: { type: integer, notnull: true }
+    3_login: { type: integer, notnull: true }
+    4_buy: { type: integer, notnull: true }
+    4_login: { type: integer, notnull: true }
+    5_buy: { type: integer, notnull: true }
+    5_login: { type: integer, notnull: true }
+    6_buy: { type: integer, notnull: true }
+    6_login: { type: integer, notnull: true }
+    7_buy: { type: integer, notnull: true }
+    7_login: { type: integer, notnull: true }
+    8_buy: { type: integer, notnull: true }
+    8_login: { type: integer, notnull: true }
+    9_buy: { type: integer, notnull: true }
+    9_login: { type: integer, notnull: true }
+    10_buy: { type: integer, notnull: true }
+    10_login: { type: integer, notnull: true }
+    11_buy: { type: integer, notnull: true }
+    11_login: { type: integer, notnull: true }
+    12_buy: { type: integer, notnull: true }
+    12_login: { type: integer, notnull: true }
+    13_buy: { type: integer, notnull: true }
+    13_login: { type: integer, notnull: true }
+    14_buy: { type: integer, notnull: true }
+    14_login: { type: integer, notnull: true }
+    15_buy: { type: integer, notnull: true }
+    15_login: { type: integer, notnull: true }
+    16_buy: { type: integer, notnull: true }
+    16_login: { type: integer, notnull: true }
+    17_buy: { type: integer, notnull: true }
+    17_login: { type: integer, notnull: true }
+    18_buy: { type: integer, notnull: true }
+    18_login: { type: integer, notnull: true }
+    19_buy: { type: integer, notnull: true }
+    19_login: { type: integer, notnull: true }
+    20_buy: { type: integer, notnull: true }
+    20_login: { type: integer, notnull: true }
+    21_buy: { type: integer, notnull: true }
+    21_login: { type: integer, notnull: true }
+    22_buy: { type: integer, notnull: true }
+    22_login: { type: integer, notnull: true }
+    23_buy: { type: integer, notnull: true }
+    23_login: { type: integer, notnull: true }
+    24_buy: { type: integer, notnull: true }
+    24_login: { type: integer, notnull: true }
+    25_buy: { type: integer, notnull: true }
+    25_login: { type: integer, notnull: true }
+    26_buy: { type: integer, notnull: true }
+    26_login: { type: integer, notnull: true }
+    27_buy: { type: integer, notnull: true }
+    27_login: { type: integer, notnull: true }
+    28_buy: { type: integer, notnull: true }
+    28_login: { type: integer, notnull: true }
+    29_buy: { type: integer, notnull: true }
+    29_login: { type: integer, notnull: true }
+    30_buy: { type: integer, notnull: true }
+    30_login: { type: integer, notnull: true }
+    31_buy: { type: integer, notnull: true }
+    31_login: { type: integer, notnull: true }
+
+
+  relations:
+    Period:
+      local: period_id
+      foreign: id
+      onDelete: CASCADE
+
+    Category:
+      local: category_id
+      foreign: id
+      onDelete: CASCADE
+
+
+StatisticsCategory:
+
+  columns:
+    category_id: { type: integer, notnull: true }
+    user_id: { type: integer, notnull: true }
+    visit_date: { type: date, notnull: true }
+
+  indexes:
+    full:
+      fields: [visit_date, category_id, user_id]
+      type: unique

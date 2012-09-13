@@ -1,0 +1,18 @@
+# config/doctrine/paragraph.yml
+Paragraph:
+  actAs: { Timestampable: ~ }
+
+  columns:
+    id_content:   { type: integer }
+    paragraph_ru: { type: clob, notnull: true }
+    paragraph_en: { type: clob, notnull: true }
+    ordered:      { type: integer(4), notnull: true, default: 0 }
+    
+  relations:
+    Content:     { local: id_content, foreign: id }
+    
+  options:
+    charset: utf8
+
+
+

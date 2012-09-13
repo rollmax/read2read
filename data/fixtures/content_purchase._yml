@@ -1,0 +1,9 @@
+ContentPurchase:
+  purchuse_1:
+    Category:  [cat_1]
+    User: [u_user_1]
+    Content: [first_post]
+  purchuse_2:
+    Category:  [cat_2]
+    User: [u_user_1]
+    Content: [content_2]

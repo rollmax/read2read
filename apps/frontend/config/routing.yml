@@ -1,0 +1,572 @@
+contact:
+  url: /contact
+  param:  { module: page, action: contact }
+
+# Регистрация u-пользователя
+registration_u:
+  url: /registrationu
+  param:  { module: registration, action: regu }
+
+registration_p:
+  url:  /registrationp
+  param: { module: registration, action: regp }
+
+user_create_u:
+  url: /uuser-create
+  param: { module: registration, action: createu }
+  requirements:
+    sf_method: [post]
+
+user_create_p:
+  url: /puser-create
+  param: { module: registration, action: createp }
+  requirements:
+    sf_method: [post]
+
+user_activate:
+  class: sfDoctrineRoute
+  url: /user/activate/:activation_code
+  param: { module: registration, action: activate }
+  options: { model: User, type: object }
+
+# Activate new Password
+user_activate_change_psw:
+  class: sfDoctrineRoute
+  url: /user/activatepsw/:activation_code
+  param: { module: registration, action: activatepsw }
+  options: { model: User, type: object }
+
+# Activate new Password
+user_activate_change_psw_ok:
+  url: /user/activatepsw/ok
+  param: { module: registration, action: activatepswok }
+
+registration_conf:
+#  class: sfDoctrineRoute
+  url:  /register-confirmation #/:id
+  param: { module: registration, action: confirmation }
+#  options: { model: User, type: object }
+
+registration_credentials:
+  class: sfDoctrineRoute
+  url: /registration/get_password/:id
+  param:  { module: registration, action: getPassword }
+  options: { model: User, type: object }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+registration_credentials_ok:
+  class: sfDoctrineRoute
+  url: /registration/get_password/:id/ok
+  param:  { module: registration, action: getPasswordok }
+  options: { model: User, type: object }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+registration_end:
+  class: sfDoctrineRoute
+  url: /user/finish_registration/:id
+  param: { module: registration, action: end }
+  options: { model: User, type: object }
+
+
+# Purchase Article
+purchase_article:
+  url: /purchase/:id
+  param: { module: article, action: purchase }
+  requirements:
+    id: \d+
+
+# rooms
+room:
+  url: /room/:name
+  class: sfDoctrineRoute
+  param: { module: room, action: index }
+  options: { model: Room, type: object }
+  requirements:
+    sf_method: [get]
+
+
+ # room topic
+room_topic_new:
+  url: /room/:name/newTopic
+  class: sfDoctrineRoute
+  param: { module: room, action: newTopic }
+  options: { model: Room, type: object }
+  requirements:
+    sf_method: [get]
+
+room_topic_create:
+  url: /room/:name/createTopic
+  class: sfDoctrineRoute
+  param: { module: room, action: createTopic }
+  options: { model: Room, type: object }
+  requirements:
+    sf_method: [post]
+
+room_topic_show:
+  url: /room/topic/:id/show
+  class: sfDoctrineRoute
+  param: { module: room, action: showTopic }
+  options: { model: Topic, type: object }
+  requirements:
+    sf_method: [get]
+
+
+room_topic_post_create:
+  url: /room/topic/:id/post/create
+  class: sfDoctrineRoute
+  param: { module: room, action: createPost }
+  options: { model: Topic, type: object }
+  requirements:
+    sf_method: [post]
+    
+room_topic_post_edit:
+  url: /room/post/:id/edit
+  class: sfDoctrineRoute
+  param: { module: room, action: editPost }
+  options: { model: Post, type: object }
+  requirements:
+    sf_method: [get]
+
+room_topic_post_update:
+  url: /room/post/:id/update
+  class: sfDoctrineRoute
+  param: { module: room, action: updatePost }
+  options: { model: Post, type: object }
+  requirements:
+    sf_method: [post]
+    
+room_topic_post_delete:
+  url: /room/post/:id/delete
+  class: sfDoctrineRoute
+  param: { module: room, action: deletePost }
+  options: { model: Post, type: object }
+  requirements:
+    sf_method: [get]
+
+
+####################### Профайл P_user
+profile_p_user:
+  url: /profilep
+  param: { module: profilep, action: index }
+
+profile_p_edit:
+  url: /profilep/edit/:fieldname
+  param: { module: profilep, action: edit }
+  requirements:
+    sf_method: [post]
+
+profile_p_update:
+  url: /profilep/update/:fieldname
+  param: { module: profilep, action: update }
+  requirements:
+    sf_method: [post]
+
+profile_p_tarif:
+  url: /profilep/tariff
+  param:   { module: profilep, action: changeTariff }
+
+profile_p_balance:
+  url: /profilep/balance
+  param:   { module: profilep, action: changeBalance }
+
+profile_p_email:
+  url: /profilep/email
+  param:   { module: profilep, action: changeEmail }
+
+profile_p_password:
+  url: /profilep/password
+  param: { module: profilep, action: changePassword }
+  
+profile_p_update_tariff:
+  url:    /profilep/updateTariff
+  param:  { module: profilep, action: updateTariff }
+
+profile_p_balance_update:
+  url:    /profilep/updateBalance
+  param:  { module: profilep, action: updateBalance }
+
+profile_p_update_email:
+  url:    /profilep/updateEmail
+  param:  { module: profilep, action: updateEmail }
+
+profile_p_update_password:
+  url:    /profilep/updatePassword
+  param:  { module: profilep, action: updatePassword }
+
+profile_p_psw_change:
+  url: /profilep/pwschange
+  param: { module: profilep, action: pwschange }
+
+profile_p_psw_change_err:
+  url: /profilep/pwschange/error
+  param: { module: profilep, action: pwschangeerror }
+
+profile_p_psw_change_ok:
+  url: /profilep/pwschange/ok
+  param: { module: profilep, action: pwschangeok }
+
+
+profile_p_user_contacts:
+  url:    /profilep/contacts
+  param:  { module: profilep, action: contacts }
+
+profile_p_first_name:
+  url: /profilep/firstName
+  param:   { module: profilep, action: changeFirstName }
+
+profile_p_first_name_update:
+  url: /profilep/firstNameUpdate
+  param:   { module: profilep, action: updateFirstName }
+
+profile_p_last_name:
+  url: /profilep/lastName
+  param:   { module: profilep, action: changeLastName }
+
+profile_p_last_name_update:
+  url: /profilep/lastNameUpdate
+  param:   { module: profilep, action: updateLastName }
+
+profile_p_live_place:
+  url: /profilep/livePlace
+  param:   { module: profilep, action: changeLivePlace }
+
+profile_p_live_place_update:
+  url: /profilep/livePlaceUpdate
+  param:   { module: profilep, action: updateLivePlace }
+
+
+profile_p_phone:
+  url: /profilep/phone
+  param:   { module: profilep, action: changePhone }
+
+profile_p_phone_update:
+  url: /profilep/phoneUpdate
+  param:   { module: profilep, action: updatePhone }
+
+profile_p_skype:
+  url: /profilep/skype
+  param:   { module: profilep, action: changeSkype }
+
+profile_p_skype_update:
+  url: /profilep/skypeUpdate
+  param:   { module: profilep, action: updateSkype }
+
+profile_p_site:
+  url: /profilep/site
+  param:   { module: profilep, action: changeSite }
+
+profile_p_site_update:
+  url: /profilep/siteUpdate
+  param:   { module: profilep, action: updateSite }
+
+
+profile_p_userpic:
+  url: /profilep/userpic
+  param:   { module: profilep, action: changeUserpic }
+
+profile_p_userpic_update:
+  url: /profilep/userpicUpdate
+  param:   { module: profilep, action: updateUserpic }
+
+profile_p_const_msg:
+  url: /profilep/constMsg
+  param:   { module: profilep, action: changeConstMsg }
+
+profile_p_const_msg_update:
+  url: /profilep/constMsgUpdate
+  param:   { module: profilep, action: updateConstMsg }
+
+
+profile_p_user_cv:
+  url:    /profilep/cv
+  param:  { module: profilep, action: cv }
+
+profile_p_user_cv_resume:
+  url:    /profilep/resume
+  param:  { module: profilep, action: cvChangeResume }
+
+profile_p_user_cv_resume_update:
+  url:    /profilep/updateResume
+  param:  { module: profilep, action: cvUpdateResume }
+
+profile_p_user_cv_avatar:
+  url:    /profilep/avatar
+  param:  { module: profilep, action: cvChangeAvatar }
+
+profile_p_user_cv_avatar_update:
+  url:    /profilep/updateAvatar
+  param:  { module: profilep, action: cvUpdateAvatar }
+
+# invoice 
+profile_p_invoice:
+  url: /profilep/invoice
+  param: { module: profilep, action invoice }
+
+# Stats - sales
+profile_p_stats:
+  url: /profilep/stats
+  param: { module: stats, action index }
+
+profile_p_stats_size:
+  url: /profilep/stats/size
+  param: { module: stats, action size }
+
+profile_p_stats_quality:
+  url: /profilep/stats/quality
+  param: { module: stats, action quality }
+
+profile_p_stats_visit:
+  url: /profilep/stats/visit
+  param: { module: stats, action: visit }
+
+profile_p_stats_interpreter:
+  url: /profilep/stats/interpreter
+  param: { module: stats, action: interpreter }
+
+# Vote 1K
+profile_p_vote1k:
+  url: /profilep/vote1k
+  param: { module: vote1k, action: index }
+  
+profile_p_vote1k_all:
+  url: /profilep/vote1k/all
+  param: { module: vote1k, action: votes }
+
+profile_p_vote1k_add:
+  url: /profilep/vote1k/:id/add
+  class: sfDoctrineRoute
+  param: { module: vote1k, action: addVote }
+  options: { model: Vote, type: object }
+
+profile_p_vote1k_my:
+  url: /profilep/vote1k/my
+  param: { module: vote1k, action: votemy }
+  
+
+####################### Профайл U_user
+profileu_blocked:
+  url: /profile/blocked
+  param: { module: auth, action: blocked }
+  requirements:
+    sf_method: [get, post]
+recovery_password:
+  url: /password/recovery
+  param: { module: auth, action: recoveryPassword }
+profile_u_user:
+  url: /profileu
+  param: { module: profileu, action: index }
+
+profile_u_ajax_edit:
+  url: /profileu/:type/edit
+  param: { module: profileu, action: ajaxEdit }
+
+profile_u_ajax_update:
+  url: /profileu/:type/update
+  param: { module: profileu, action: ajaxUpdate }
+
+
+profile_u_account:
+  url: /profileu/account
+  param: { module: profileu, action: account }
+
+profile_u_purchase:
+  url: /profileu/purchase
+  param: { module: profileu, action: purchase }
+
+profile_u_purchase_remove:
+  url: /profileu/purchase/:id/remove
+  class:   sfDoctrineRoute
+  options: { model: ContentPurchase, type: object }
+  param: { module: profileu, action: purchaseRemove }
+
+profile_u_upic:
+  url: /profileu/upic
+  param: { module: profileu, action: upic }
+
+profile_u_psw_change:
+  url: /profileu/pwschange
+  param: { module: profileu, action: pwschange }
+
+profile_u_psw_change_err:
+  url: /profileu/pwschange/error
+  param: { module: profileu, action: pwschangeerror }
+
+profile_u_psw_change_ok:
+  url: /profileu/pwschange/ok
+  param: { module: profileu, action: pwschangeok }
+
+
+# article for p_user DoctrineRouteCollection
+article:
+  class:   sfDoctrineRouteCollection
+  options: { model: Content }
+
+article_published:
+  url:     /article/published
+  param:   { module: article, action: published }
+  
+article_no_published:
+  url:     /article/nopublished
+  param:   { module: article, action: nopublished }
+
+article_publish:
+  url:     /article/publish/:id
+  class:   sfDoctrineRoute
+  options: { model: Content, type: object }
+  param:   { module: article, action: publish }
+  requirements:
+    sf_method: [get]
+
+
+# article Paragraph for p_user
+paragraph_create:
+  url:     /article/:id/paragraph.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Content, type: object }
+  param:   { module: article, action: paragraphCreate, sf_format: html }
+  requirements: { sf_method: post }
+
+paragraph_edit:
+  url:     /article/paragraph/:id/edit.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Paragraph, type: object }
+  param:   { module: article, action: paragraphEdit, sf_format: html }
+  requirements: { sf_method: post }
+
+paragraph_update:
+  url:     /article/paragraph/:id/update.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Paragraph, type: object }
+  param:   { module: article, action: paragraphUpdate, sf_format: html }
+  requirements: { sf_method: post }
+
+paragraph_delete:
+  url:     /article/paragraph/:id/delete.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Paragraph, type: object }
+  param:   { module: article, action: paragraphDelete, sf_format: html }
+  requirements: { sf_method: post }
+
+
+# article comments routes
+comment_create:
+  url:     /article/:id/comment.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Paragraph, type: object }
+  param:   { module: article, action: commentCreate, sf_format: html }
+  requirements: { sf_method: post }
+
+comment_edit:
+  url:     /article/comment/:id/edit.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Comment, type: object }
+  param:   { module: article, action: commentEdit, sf_format: html }
+  requirements: { sf_method: post }
+
+comment_update:
+  url:     /article/comment/:id/update.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Comment, type: object }
+  param:   { module: article, action: commentUpdate, sf_format: html }
+  requirements: { sf_method: post }
+
+comment_delete:
+  url:     /article/comment/:id/delete.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Comment, type: object }
+  param:   { module: article, action: commentDelete, sf_format: html }
+  requirements: { sf_method: post }
+
+
+# resume routes
+user_p_resume_data:
+  url:    /resume/:login/data
+  class:  sfDoctrineRoute
+  options: { model: User, type: object }
+  param:   { module: resume, action: resumeData }
+  requirements: { sf_method: post }
+  
+# Show 
+user_p_resume_translates:
+  url:    /resume/:login/translates
+  class:  sfDoctrineRoute
+  options: { model: User, type: object }
+  param:   { module: resume, action: resumeTranslates }
+  requirements: { sf_method: post }
+
+user_p_resume_article:
+  url:          /resume/article/:id/show
+  class:        sfDoctrineRoute
+  options:      { model: Content, type: object }
+  param:        { module: resume, action: article }
+  requirements: { sf_method: post }
+
+
+
+logout:
+  url:   /logout
+  param: { module: auth, action: logout }
+
+# static pages
+static_page:
+  url: /page/:url
+  class:   sfDoctrineRoute
+  options: { model: Page, type: object }
+  param:   { module: page, action: showPage }
+  requirements:
+    sf_method: [get, post]
+
+static_page_subpage:
+  url: /page/:id_page/:url
+  class:   sfDoctrineRoute
+  options: { model: Page, type: object }
+  param: { module: page, action: showSubPage }
+  requirements:
+    sf_method: [get, post]
+
+
+
+article_by_categories:
+  url: /view/article/:id
+  class:   sfDoctrineRoute
+  options: { model: Content, type: object }
+  param:   { module: category, action: showArticle }
+  requirements:
+    sf_method: [get]
+
+article_rate:
+  url: /article/rate/:article_id/:rate_type/:rating
+  params: { module: category, action: rate }
+  requirement:
+    article_id: \d+
+    rating: \d+
+
+articles_category:
+#  url: /:name_slug
+  url: /category/:name_slug/:id
+  class:   sfDoctrineRoute
+  options: { model: Category, type: object }
+  param:   { module: category, action: show }
+  requirements:
+    sf_method: [get]
+  requirement:
+    id: \d+
+
+
+article_print:
+  url: /article/print/:id
+  class:   sfDoctrineRoute
+  options: { model: Content, type: object }
+  params: { module: category, action: print }
+  requirement:
+    id: \d+
+    sf_method: [get]
+
+
+homepage:
+  url:   /
+  param: { module: category, action: index }

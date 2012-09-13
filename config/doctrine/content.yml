@@ -1,0 +1,74 @@
+# config/doctrine/content.yml
+Content:
+  actAs: { Timestampable: ~ }
+
+  columns:
+    id_user:      { type: integer }
+    id_category:  { type: integer }
+    title_ru:     { type: string(1000), notnull: true }
+    title_en:     { type: string(1000), notnull: true }
+    author_ru:    { type: string(200), notnull: true }
+    author_en:    { type: string(200), notnull: true }
+    pretext_ru:   { type: string(2000), notnull: true }
+    pretext_en:   { type: string(2000), notnull: true }
+    photo_ru:     { type: string(200), default: null }
+    photo_en:     { type: string(200), default: null }
+    state:        { type: enum, values: [draft, public, deleted], default: draft }
+    is_blocked:   { type: boolean, notnull: true, default: false }
+    is_moderated: { type: boolean, notnull: true, default: false }
+    to_delete:    { type: boolean, notnull: true, default: false }
+    pub_date:     { type: date, notnull: true }
+    letters_k:    { type: integer, notnull: true, default: 0 }
+    is_free:      { type: boolean, notnull: true, default: false }
+    purchase_cnt:   { type: integer, notnull: true }
+    cont_rate:      { type: decimal, scale: 2, notnull: true, length: 6 }
+    trans_rate:     { type: decimal, scale: 2, notnull: true, length: 6 }
+    r2r_cont_rate:  { type: decimal, scale: 2, notnull: true, length: 6 }
+    r2r_trans_rate: { type: decimal, scale: 2, notnull: true, length: 6 }
+
+  relations:
+    User:     { local: id_user, foreign: id }
+    Category: { local: id_category, foreign: id }
+
+  indexes:
+    state_id_user_idx:
+      fields: [state, id_user]
+    
+  options:
+    charset: utf8
+
+
+ContentPurchase:
+  actAs: { Timestampable: ~ }
+
+  columns:
+    id_user:      { type: integer }    # U_User ID no P_User
+    id_category:  { type: integer }
+    id_content:   { type: integer }
+
+  relations:
+    User:     { local: id_user, foreign: id }
+    Category: { local: id_category, foreign: id }
+    Content: { local: id_content, foreign: id }
+
+  options:
+    charset: utf8
+
+
+
+ContentRating:
+
+  columns:
+    content_id: { type: integer }
+    user_id: { type: integer }
+    period_id: { type: integer }
+    content_rating: { type: integer, notnull: true, length: 1 }
+    translate_rating: { type: integer, notnull: true, length: 1 }
+
+  relations:
+    Period: { local: period_id, foreign: id }
+    User: { local: user_id, foreign: id }
+    Content: { local: content_id, foreign: id }
+
+  options:
+    charset: utf8

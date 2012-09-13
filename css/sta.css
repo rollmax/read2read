@@ -1,0 +1,404 @@
+
+/*                           Статистика               */
+
+/*                     Статистика  - навигация                  */
+
+#statto {
+	position:  relative; float: left; top: 4px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #fe3;
+}
+#sto {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#sto p {
+	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+#sto p.act {
+	color: #345; background: #e5e5e5;
+}
+#sto a {
+	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
+}
+#sto a p {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+#sto a:hover p {
+	color: #e30; background: #cdcdcd;
+}
+
+
+/*         ============     Посещения   ============      */
+
+
+#stat_data_visit {
+	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
+}
+#stat_data_visit tr {
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#stat_data_visit tr.w {
+	 background: #e5e5e5;
+}
+#stat_data_visit tr.b {
+	 background: #ccc;
+}
+#stat_data_visit tr.y {
+	 background: #edc;
+}
+#stat_data_visit tr.g {
+	 background: #cdc;
+}
+
+#stat_data_visit td {
+	width: auto; height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; 
+}
+
+#stat_data_visit td p {
+	 position: relative; float: left; width:auto; font: 8pt "verdana"; color: #000;  padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;  
+}
+
+#stat_data_visit td.left  {
+	width: 310px; 
+}
+#stat_data_visit td.h p {
+	left: 10px; 
+}
+
+#stat_data_visit td.left p {
+	left: 10px; 
+}
+#stat_data_visit td p.acctime {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #456;
+}
+#stat_data_visit td p.day {
+	width: 100%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px;
+}
+#stat_data_visit td p.day_data_users {
+	width: 45%; text-align: center; color: #034; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#stat_data_visit td p.day_data_buyers {
+	width: 45%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; color: #000; padding-left: 0px; padding-right: 0px; margin: 0px; background: #fe7;
+}
+#stat_data_visit td p.sep {
+	width: 9%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+
+
+/*         ============     Продажи    ============      */
+
+
+#stat_data_sale {
+	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
+}
+#stat_data_sale tr  {
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#stat_data_sale tr.w {
+	 background: #e5e5e5;
+}
+#stat_data_sale tr.b {
+	 background: #ccc;
+}
+#stat_data_sale tr.y {
+	 background: #edc;
+}
+#stat_data_sale tr.g {
+	 background: #cdc;
+}
+
+#stat_data_sale td {
+	width: auto; height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; 
+}
+
+#stat_data_sale td p {
+	 position: relative; float: left; width:auto; font: 8pt "verdana"; color: #000;  padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; margin: 0px;  
+}
+
+#stat_data_sale td.left  {
+	width: 220px; 
+}
+#stat_data_sale td.h p {
+	left: 10px; 
+}
+
+#stat_data_sale td.left p {
+	
+}
+#stat_data_sale td p.acctime {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #456;
+}
+#stat_data_sale td.work {
+	width: 568px; 
+}
+#stat_data_sale td.work a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; text-decoration: none; 
+}
+#stat_data_sale td.work a:hover {
+	background: #abc;
+}
+#stat_data_sale td.work a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 46%; font: 8pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 2px; margin: 0px; 
+}
+#stat_data_sale td.work a p.left {
+    padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_sale td.work a p.right {
+    text-align: right; padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_sale td.sales {
+	width: 60px; 
+}
+#stat_data_sale td.sales p {
+	width: 100%; left: 0px; text-align: center; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+}
+
+
+
+/*         ============    Размер    ===========      */
+
+
+
+
+#stat_data_size  {
+	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
+}
+#stat_data_size tr {
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#stat_data_size tr.w {
+	 background: #e5e5e5;
+}
+#stat_data_size tr.b {
+	 background: #ccc;
+}
+#stat_data_size tr.y {
+	 background: #edc;
+}
+#stat_data_size tr.g {
+	 background: #cdc;
+}
+
+#stat_data_size td {
+	width: auto; height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; 
+}
+
+#stat_data_size td p {
+	 position: relative; float: left; width:auto; font: 8pt "verdana"; color: #000;  padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; margin: 0px;  
+}
+
+#stat_data_size td.left  {
+	width: 220px; 
+}
+#stat_data_size td.h p {
+	left: 10px; 
+}
+
+#stat_data_size td.left p {
+	
+}
+#stat_data_size td p.acctime {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #456;
+}
+#stat_data_size td.work {
+	width: 568px; 
+}
+#stat_data_size td.work a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; text-decoration: none; 
+}
+#stat_data_size td.work a:hover {
+	background: #abc;
+}
+#stat_data_size td.work a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 46%; font: 8pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 2px; margin: 0px; 
+}
+#stat_data_size td.work a p.left {
+    padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_size td.work a p.right {
+    text-align: right; padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_size td.kzn {
+	width: 60px; 
+}
+#stat_data_size td.kzn p {
+	width: 100%; left: 0px; text-align: center; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+}
+
+
+
+/*         ==========     Качество   =======      */
+
+
+
+
+#stat_data_quality  {
+	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
+}
+#stat_data_quality tr {
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#stat_data_quality tr.w {
+	 background: #e5e5e5;
+}
+#stat_data_quality tr.b {
+	 background: #ccc;
+}
+#stat_data_quality tr.y {
+	 background: #edc;
+}
+#stat_data_quality tr.g {
+	 background: #cdc;
+}
+
+#stat_data_quality td {
+	width: auto; height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; 
+}
+
+#stat_data_quality td p {
+	 position: relative; float: left; width:auto; font: 8pt "verdana"; color: #000;  padding-left: 2%; padding-right: 2%; padding-top: 2px; padding-bottom: 2px; margin: 0px;  
+}
+
+#stat_data_quality td.left  {
+	width: 170px; 
+}
+#stat_data_quality td.h p {
+	left: 10px; 
+}
+
+#stat_data_quality td.left p {
+	
+}
+#stat_data_quality td p.acctime {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #456;
+}
+#stat_data_quality td.work {
+	width: 568px; 
+}
+#stat_data_quality td.work a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; text-decoration: none; 
+}
+#stat_data_quality td.work a:hover {
+	background: #abc;
+}
+#stat_data_quality td.work a p {
+	position: relative; float: left; top: 0px; left: 0px; width: 46%; font: 8pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 2px; margin: 0px; 
+}
+#stat_data_quality td.work a p.left {
+    padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_quality td.work a p.right {
+    text-align: right; padding-left: 2%; padding-right: 2%; 
+}
+#stat_data_quality td.qq {
+	width: 110px; 
+}
+#stat_data_quality td.qq p {
+	width: auto; left: 0px;  font: 8pt "verdana";text-align: center; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+}
+
+#stat_data_quality td.qq p.article {
+	width: 45%; text-align: center; color: #034; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#stat_data_quality td.qq p.trans {
+	width: 45%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; color: #000; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#stat_data_ td p.sep {
+	width: 9%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+} 
+
+
+/* ---------------  Переводчики   --------------   */
+
+
+
+#stat_data_trans {
+	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
+}
+#stat_data_trans  tr {
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#stat_data_trans tr.w {
+	 background: #e5e5e5;
+}
+#stat_data_trans  tr.b {
+	 background: #ccc;
+}
+#stat_data_trans tr.y {
+	 background: #edc;
+}
+#stat_data_trans tr.g {
+	 background: #cdc;
+}
+
+#stat_data_trans td {
+	width: auto; height: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; 
+}
+
+#stat_data_trans  td p {
+	 position: relative; float: left; width:auto; font: 8pt "verdana"; color: #000;  padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;  
+}
+#stat_data_trans td p.acctime {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #456;
+}
+
+#stat_data_trans td.left  {
+	width: 320px; vertical-align: top;
+}
+#stat_data_trans td.trans {
+	width: 492px; 
+}
+#stat_data_trans td.sales  {
+	width: 72px; vertical-align: top;
+}
+#stat_data_trans td.profit  {
+	width: 72px; vertical-align: top;
+}
+
+#stat_data_trans td.h p {
+	left: 10px; 
+}
+
+#stat_data_trans td.left p {
+	left: 10px; 
+}
+#stat_data_trans td.trans a {
+	position: relative; float: left; top: 0px; left: 0px; width: 100%; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; text-decoration: none; 
+}
+#stat_data_trans td.trans a:hover {
+	background: #abc;
+}
+#stat_data_trans td.trans a p {
+	left: 10px; 
+}
+#stat_data_trans td.sales p {
+	text-align: center; width: 100%;
+}
+#stat_data_trans td.profit p {
+	text-align: center; width: 100%;
+}
+
+#stat_data_trans td p.day_data_users {
+	width: 45%; text-align: center; color: #034; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#stat_data_trans td p.day_data_buyers {
+	width: 45%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; color: #000; padding-left: 0px; padding-right: 0px; margin: 0px; background: #fe7;
+}
+#stat_data_ trans td p.sep {
+	width: 9%; text-align: center; display: inline; font-size: 7pt; padding-top: 4px; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#stat_data_trans td.right p {
+	width: 100%; left: 0px; text-align: center; padding-top: 2px; padding-bottom: 2px; margin: 2px 0px 2px 0px;
+}
+
+#stat_data_trans td a  {
+	 position: relative; float: left; top: 0px; left: 0px; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none; 
+}
+#stat_data_trans td a p {
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#stat_data_trans td.center a p.left {
+             width: 260px;  padding-left: 5px; 
+}
+
+#stat_data_ trans td a:hover {
+	background: #abc;
+}

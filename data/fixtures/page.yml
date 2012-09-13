@@ -1,0 +1,27 @@
+# data/fixtures/page.yml
+Page:
+  readerRules:
+    title:  Читателям
+    name: Rules for readers
+    url: reader-rules
+    content: This is rules for readers
+  translatorRules:
+    title: Переводчикам
+    name: Rules for translators
+    url: translator-rules
+    content: This is rules for translators
+  readerRule1:
+    Parent: [readerRules]
+    name: Rules for readers part 1
+    url: reader-rule-1
+    content: This is rule num.1 for readers
+  readerRule2:
+    Parent: [readerRules]
+    name: Rules for readers part 2
+    url: reader-rule-2
+    content: This is rule num.2 for readers
+  readerRule3:
+    Parent: [readerRules]
+    name: Rules for readers part 3
+    url: reader-rule-3
+    content: This is rule num.3 for readers

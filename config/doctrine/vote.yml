@@ -1,0 +1,39 @@
+Vote:
+
+  columns:
+    id_period: { type: integer }
+    id_user: { type: integer }
+    price: { type: decimal, scale: 2, notnull: true }
+    position: { type: integer, notnull: true, length: 2 }
+    weight: { type: decimal, scale: 2, notnull: true }
+    joins: { type: integer, notnull: true, length: 2 }
+
+  relations:
+    Period:
+      local: id_period
+      foreign: id
+
+    User:
+      local: id_user
+      foreign: id
+
+    Voters:
+      local: id
+      foreign: id_vote
+      type: many
+
+
+Voters:
+
+  columns:
+    id_vote: { type: integer }
+    id_user: { type: integer }
+
+  relations:
+    Vote:
+      local: id_vote
+      foreign: id
+
+    User:
+      local: id_user
+      foreign: id

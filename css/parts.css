@@ -1,0 +1,73 @@
+
+
+
+            
+/*           таблица разделов    */
+
+
+#parts  {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#parts  tr {
+	  height: 23px; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px;
+}
+#parts  td {
+	height: 23px; width: 990px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle; 
+}
+#parts td a {
+	 text-decoration: none; cursor: pointer;  width: 100%;
+}
+
+
+#parts td a p.left {
+	position:  relative; float: left; top: 0px; width: 481px;  left: 0px; font: 9pt "verdana"; color: #fe0; color: #ff0; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 4px; padding-bottom: 6px; display: inline; margin: 0px; border-left: 3px solid #283937;   
+}
+#parts td a:hover p.left {
+	position:  relative; float: left; top: 0px; width: 481px;  left: 0px; font: 9pt "verdana"; color: #2df; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 4px; padding-bottom: 6px; display: inline; margin: 0px; border-left: 3px solid #fff;  background-image: url(../images/part_.png);
+}
+
+#parts td a p.right {
+	position:  relative; float: left; top: 0px; width: 481px;  left: 0px; font: 9pt "verdana"; color: #ff0; text-align: right; padding-left: 0px; padding-right: 10px; padding-top: 4px; padding-bottom: 6px; display: inline; margin: 0px; border-right: 3px solid #283937; 
+}
+#parts td a:hover p.right {
+	position:  relative; float: left; top: 0px; width: 481px;  left: 0px; font: 9pt "verdana"; color: #f11; text-align: right; padding-left: 0px; padding-right: 10px; padding-top: 4px; padding-bottom: 6px; display: inline; margin: 0px; border-right: 3px solid #fff;  background-image: url(../images/part_.png);
+}
+
+
+/*      бесплатный раздел     */
+
+
+#parts td a p.lfree {
+	position:  relative; float: left; top: 0px; width: 474px;  left: 0px; font: bold 9pt "verdana"; color: #fa0; text-align: left; padding-left: 20px; padding-right: 0px; padding-top: 4px; padding-bottom: 5px; line-height: 100%; display: inline; margin: 0px; 
+}
+#parts td a p.lfree span {
+	font: bold 9pt "verdana"; color: #123; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 30px;  line-height: 100%;
+}
+#parts td a:hover p.lfree {
+	position:  relative; float: left; top: 0px; width: 474px; left: 0px; font: 9pt "verdana"; color: #f0c; text-align: left; padding-left: 20px; padding-right: 0px; padding-top: 4px; padding-bottom: 5px; line-height: 100%; display: inline; margin: 0px; background: #fc0; 
+}
+
+#parts td a p.rfree {
+	position:  relative; float: left; top: 0px; width: 474px; left: 0px; font: bold 9pt "verdana"; color: #fa0; text-align: right; padding-left: 0px; padding-right: 20px; padding-top: 4px; padding-bottom: 5px; line-height: 100%; display: inline; margin: 0px;   
+}
+#parts td a p.rfree span {
+	font: bold 9pt "verdana"; color: #123; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 20px 0px 0px;  line-height: 100%;
+}
+#parts td a:hover  p.rfree {
+	position:  relative; float: left; top: 0px; width: 474px; left: 0px; font: 9pt "verdana"; color: #f0c; text-align: right; padding-left: 0px; padding-right: 20px; padding-top: 4px; padding-bottom: 5px; line-height: 100%; display: inline; margin: 0px; background: #fc0; 
+}
+
+/*              Активный  раздел                */
+
+#parts td a p.leftact {
+	 position:  relative; float: left; top: 0px; width: 481px;  left: 0px; font: 10pt "verdana"; color: #ccd; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; display: inline; margin: 0px; border-left: 3px solid #ff6; background-image: url(bg-act.png); background: #456; 
+}
+#parts td a:hover p.leftact  {
+	position:  relative; float: left; top: 0px; width: 481px; left: 0px; font: 10pt "verdana"; color: #fff; text-align: left; padding-left: 10px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; display: inline; margin: 0px;  border-left: 3px solid #2bf; background-image: url(bg-td-act.png);
+}
+#parts td a p.rightact {
+	position:  relative; float: left; top: 0px; width: 481px; left: 0px; font: 10pt "verdana"; color: #ccd; text-align: right; padding-left: 0px; padding-right: 10px; padding-top: 4px; padding-bottom: 4px; display: inline; margin: 0px;  border-right: 3px solid #ff6; background-image: url(bg-td-act.png); background: #456; 
+}
+#parts td a:hover p.rightact {
+	position:  relative; float: left; top: 0px; width: 481px; left: 0px; font: 10pt "verdana"; color: #fff; text-align: right; padding-left: 0px; padding-right: 10px; padding-top: 4px; padding-bottom: 4px; display: inline; margin: 0px;  border-right: 3px solid #f11; background-image: url(bg-td-act.png);
+}

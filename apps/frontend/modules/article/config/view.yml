@@ -1,0 +1,3 @@
+all:
+  stylesheets: [ frame0.css, p_proom.css ]
+  javascripts: [ jquery.js, article.js ]

@@ -1,0 +1,36 @@
+all:
+  rules:
+      default:
+        params:
+          
+          image_resize: true
+        sizes:
+          Thumbnail:
+            
+            image_ratio_y: true
+            image_x: 205
+            image_y: 205
+            callback: [ListingImageThumbnail, createFromUpload]
+            file_dst_path: '<?=sfConfig::get("sf_upload_dir") ?>'
+            file_new_name_body: '_thumb'
+            file_dst_path_builder: [Listing, buildScreenshotPath]
+            file_new_name_body_builder: [Listing, buildScreenshotName]
+            file_auto_rename: true
+            file_overwrite: false
+            image_convert: png
+          Large:
+            image_ratio: true
+            image_ratio_no_zoom_in: true
+            #image_ratio_crop: true
+            #image_ratio_no_zoom_out: true
+            image_x: 800
+            image_y: 600
+            callback: [ListingImageLarge, createFromUpload]
+            file_dst_path: '<?=sfConfig::get("sf_upload_dir") ?>'
+            file_new_name_body: ''
+            file_dst_path_builder: [Listing, buildScreenshotPath]
+            file_new_name_body_builder: [Listing, buildScreenshotName]
+            file_auto_rename: true
+            file_overwrite: false
+            image_convert: png
+      

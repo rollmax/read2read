@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           User
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          user_puser
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        login:              { label: логин }
+        sell_purchase_cnt:  { label: Количество продаж }
+        amount:             { label: сумма по продажам }
+        tariff:             { label: тариф }
+        tariff_string:      { label: тарифный план }
+        created:            { label: дата регистрации }
+      list:
+        table_method:       retrieveBackendPuserList
+        title:              Переводчики
+        display:            [ =login, sell_purchase_cnt, amount, tariff_string, created ]
+        object_actions:     {}
+      filter:
+        display:            [ tariff ]
+      form:    ~
+      edit:    ~
+      new:     ~

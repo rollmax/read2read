@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Setting
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          setting
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:  { label: название }
+        value: { label: Значение }
+      list:
+        title:   Опции
+        display: [ name, value ]
+      filter:
+        display: [ name, value ]
+      form:
+        class: BackendSettingForm
+        display:
+          Content: [name, value]
+          Admin: []
+      edit:
+        title:  Изменить опцию %%name%%
+      new:
+        title: Новая опция

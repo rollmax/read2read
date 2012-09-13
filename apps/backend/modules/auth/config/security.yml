@@ -1,0 +1,7 @@
+login:
+  is_secure: false
+  credentials: ~
+
+logout:
+  is_secure: false
+  credentials: ~

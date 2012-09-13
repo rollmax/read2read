@@ -1,0 +1,48 @@
+.ui-rating, .ui-rated {
+  display: block;
+  padding-top: 4px;
+  height:16px;
+  width: 90px;
+  overflow: hidden;
+}
+
+.ui-rating .ui-rating-star, .ui-rated .ui-rated-star{
+    width:16px !important;
+    height:16px !important;
+    font-size:2px !important;
+    float:left !important;
+    text-decoration:none !important;
+    vertical-align:bottom !important;
+    background-image:url(/images/rating/star.gif) !important;
+    background-repeat:no-repeat !important;
+}
+.ui-rating .ui-rating-cancel {
+  float:right !important;
+}
+
+.ui-rating a {
+	cursor: pointer !important;
+}
+.ui-rating-full, .ui-rated-full {
+    background-position:left -48px !important;
+}
+
+.ui-rating-half, .ui-rated-half {
+    background-position:left -16px !important;
+}
+
+.ui-rating-empty, .ui-rated-empty  {
+    background-position:left -32px !important;
+}
+
+.ui-rating-cancel-empty {
+    background-position:left -64px !important;
+}
+
+.ui-rating-cancel-full {
+    background-position:left -80px !important;
+}
+
+.ui-rating-hover {
+    background-position:left top !important;
+}

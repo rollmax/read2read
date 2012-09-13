@@ -1,0 +1,66 @@
+# data/fixtures/content.yml
+Content:
+  first_post:
+    Category:  [cat_1]
+    title_ru:     Тайные столицы
+    title_en:     Secret Capitals
+    author_en:    Julie Sloane
+    author_ru:    Julie Sloane
+    pretext_en:   Capitals of Small Business Helicopters, guns, cardiac devices, weight-loss centers, and more
+    pretext_ru:   Столицы Малого Предпринимательства Вертолеты, оружие, кардиологические приборы, центры по снижению веса и другое
+    photo_en:     hollywood.jpg
+    photo_ru:     hollywood.jpg
+    User:         [p_user_standart_1]
+    pub_date:     2011-11-14
+    letters_k:    3967
+    pub_date:     <?php echo date('Y-m-d'); ?>
+
+  content_2:
+    Category:  [cat_2]
+    title_ru:     Есть предел продолжительности жизни?
+    title_en:     Is there a limit to life expectancy?
+    author_en:    Philippa Roxby
+    author_ru:    Филипа Роксби
+    pretext_en:   Move over Methuselah. Future generations could be living well into their second century and still doing sudoku to boot, if life expectancy predictions are anything to go by.
+    pretext_ru:   Переживи Матсузелу. Будущие поколения смогут жить долго в своем втором столетии и все еще занимаясь судоку для зарядки, если предсказания для продолжительности жизни чего-нибудь стоят.
+    photo_en:     
+    photo_ru:     
+    User:         [p_user_super_1]
+    pub_date:     2011-11-17
+    letters_k:    2090
+
+<?php for ($i = 1; $i <= 17; $i++): ?>
+  buisnes_<?php echo $i ?>:
+    Category:  [cat_1]
+    title_ru:     Тайные столицы_<?php echo $i ."\n" ?>
+    title_en:     Secret Capitals_<?php echo $i ."\n" ?>
+    author_en:    Julie Sloane
+    author_ru:    Julie Sloane
+    pretext_en:   Move over Methuselah. Future generations could be living well into their second century and still doing sudoku to boot, if life expectancy predictions are anything to go by.
+    pretext_ru:   Переживи Матсузелу. Будущие поколения смогут жить долго в своем втором столетии и все еще занимаясь судоку для зарядки, если предсказания для продолжительности жизни чего-нибудь стоят.
+    photo_en:     
+    photo_ru:     
+    User:         [p_user_standart_1]
+    pub_date:     2011-11-14
+    letters_k:    2040
+    pub_date:     <?php echo date('Y-m-d'); ?>
+    
+<?php endfor ?>
+
+<?php for ($j = 1; $j <= 38; $j++): ?>
+  money_<?php echo $j ?>:
+    Category:  [cat_2]
+    title_ru:     Деньги_<?php echo $j ."\n" ?>
+    title_en:     Money_<?php echo $j ."\n" ?>
+    author_en:    Julie Sloane
+    author_ru:    Julie Sloane
+    pretext_en:   Capitals of Small Business Helicopters, guns, cardiac devices, weight-loss centers, and more
+    pretext_ru:   Столицы Малого Предпринимательства Вертолеты, оружие, кардиологические приборы, центры по снижению веса и другое
+    photo_en:     
+    photo_ru:     
+    User:         [p_user_super_1]
+    pub_date:     2011-11-14
+    letters_k:    2040
+    pub_date:     <?php echo date('Y-m-d'); ?>
+    
+<?php endfor ?>

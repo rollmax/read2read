@@ -1,0 +1,99 @@
+
+
+#mdl_i {
+	position:  absolute; top: 140px; left: 205px;  height: auto; width: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; z-index: 4; background: #fafcff; border: solid 0px #fff;
+}
+
+/*                               “аблица статей                     */
+
+#items  {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 576px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#items   tr {
+	  height: auto; width: 576px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#items   tr.b {
+	 background: #d0d3d5;
+}
+#items   tr.bl {
+	 background: #ccc; height: 30px;
+}
+#items   td {
+	 width: 576px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#items  td a {
+	position:  relative; float: left; top: 0px; width: auto;  left: 0px; text-decoration: none; cursor: pointer;  padding-left: 0px; padding-right: 0px; margin: 0px;  padding-top: 3px; padding-bottom: 3px;
+}
+#items  td a:hover {
+	background: #ffa;
+}
+#items  td a.stop:hover {
+	background: #fca;
+}
+
+#items td p {
+	position:  relative; float: left; top: 0px; width: auto;  left: 0px; font: 8pt "verdana"; color: #456; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; display: inline; margin: 0px; 
+}
+#items tr.bl td p {
+	 padding-top: 3px; padding-bottom: 3px; line-height: 170%;
+}
+#items  td p.le {
+	width: 238px; text-align: left;  padding-left: 10px; 
+}
+#items  td p.price {
+	width: 35px;  height: 100%; 
+}
+#items  td p.kzn {
+	width: 45px; 
+}
+#items  td p.ri {
+	width: 238px; text-align: right; padding-right: 0px;
+}
+
+
+#items  td a p {
+	position:  relative; float: left; top: 0px; width: 238px;  left: 0px; font:  bold 8pt "verdana"; color: #456; text-align: left; padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; display: inline; margin: 0px; line-height: 170%;
+}
+#items  td a p.price {
+	width: 35px; padding-left: 0px; padding-right: 0px; text-align: center; font: 8pt "verdana"; background: #fdefe0;  padding-top: 3px; padding-bottom: 3px;
+}
+#items  td a:hover p.price {
+	padding-left: 0px; padding-right: 0px; text-align: center; font: bold 8pt "verdana"; background: #ff0;
+}
+#items  td a p.kzn {
+	width: 45px; padding-left: 0px; padding-right: 0px; text-align: center; font: 8pt "verdana";  padding-top: 3px; padding-bottom: 3px;
+}
+#items  td a:hover p.kzn {
+	 padding-left: 0px; padding-right: 0px; text-align: center; font: 8pt "verdana";  background: #ddc;
+}
+
+#items  td a:hover p {
+	color: #234; 
+}
+
+#items  td a p.right {
+	text-align: right; 
+}
+
+
+/*   если статей больше, чем 15  */
+
+
+
+#items  td.list {
+	 padding-bottom: 6px; background: #99999b; height: 30px;padding-left: 245px;
+}
+#items  td.list p {
+	position:  relative; float: left; top: 5px; left: 5px; width: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; text-align: center; 
+}
+#items  td.list a {
+	position:  relative; float: left; top: 5px; left: 5px; padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 0px; font: 8pt "verdana"; color: #000;
+}
+#items  td.list a:hover {
+	 background: #ffa; 
+}
+
+#items td.list p.act {
+	width: 17px; background: #fff; margin: 0px 2px 0px 2px;
+}
+

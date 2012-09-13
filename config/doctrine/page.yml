@@ -1,0 +1,20 @@
+# config/doctrine/page.yml
+Page:
+  actAs: { Timestampable: ~ }
+
+  columns:
+    id_page:  { type: integer }
+    title:    { type: string(100) }
+    name:     { type: string(100), notnull: true, unique: true }
+    url:      { type: string(40), unique: true }
+    content:  { type: clob, notnull: true }
+
+  relations:
+    Parent:
+      class: Page
+      local: id_page
+      foreign: id
+      foreignAlias: SubPage
+      
+  options:
+    charset: utf8

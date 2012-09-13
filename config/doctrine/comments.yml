@@ -1,0 +1,18 @@
+# config/doctrine/comments.yml
+Comment:
+  actAs: { Timestampable: ~ }
+
+  columns:
+    id_paragraph: { type: integer }
+    comment_ru:   { type: clob, notnull: true }
+    comment_en:   { type: clob, notnull: true }
+    ordered:      { type: integer(4), notnull: true, default: 0 }
+
+  relations:
+    Paragraph:  { local: id_paragraph, foreign: id }
+
+  options:
+    charset: utf8
+
+
+

@@ -1,0 +1,15 @@
+Category:
+  actAs:
+    Timestampable: ~
+
+  columns:
+    name_en: {type: string(255), notnull: true}
+    name_ru: {type: string(255), notnull: true}
+    ordered: {type: integer, notnull: true, default: 50}
+    is_free: { type: boolean, notnull: true, default: false }
+    purchase_cnt: {type: integer, notnull: true}
+    page_keywords: { type: string, notnull: true, length: null, default: '' }
+    page_description: { type: string, notnull: true, length: null, default: '' }
+
+  options:
+    charset: utf8

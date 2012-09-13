@@ -1,0 +1,76 @@
+Period:
+  columns:
+    1k:   { type: decimal, scale: 2, notnull: true }
+    date: { type: string(7), notnull: true, unique: true }
+  indexes:
+    date:
+      fields: date
+
+BalanceUser:
+  actAs:                { Timestampable: ~ }
+  columns:
+    id_user:            { type: integer }
+    id_period:          { type: integer }
+#    balance:            { type: decimal, scale: 2, notnull: true } # ??? баланс за покупки баланс
+    add_funds:          { type: decimal, scale: 2, notnull: true } # Общая сумма пополнение счета (текущее состояние отражается в таблице User.balanse )
+    use_payment:        { type: decimal, scale: 2, notnull: true } # плата за пользование
+    sell_purchase_cnt:  { type: integer, notnull: true } # количество покупок-продаж (для u и p пользователей)
+    amount:             { type: decimal, scale: 2, notnull: true } # сумма купли-продажи контента
+    payable:            { type: decimal, scale: 2, notnull: true } # к выплате
+  relations:
+    User:               { onDelete: CASCADE, local: id_user, foreign: id }
+    Period:             { onDelete: CASCADE, local: id_period, foreign: id }
+
+BalanceSystem:
+  actAs: { Timestampable: ~ }
+  columns:
+    id_period:        { type: integer }
+    
+    deposit_standart: { type: decimal, scale: 2, notnull: true } # поступления от p_user standart
+    deposit_expert:   { type: decimal, scale: 2, notnull: true } # поступления от p_user expert
+    deposit_super:    { type: decimal, scale: 2, notnull: true } # поступления от p_user super
+    deposit_user:     { type: decimal, scale: 2, notnull: true } # поступления от u_user
+    
+    charges_standart: { type: decimal, scale: 2, notnull: true } # Расходы p_user standart
+    charges_expert:   { type: decimal, scale: 2, notnull: true } # Расходы p_user expert
+    charges_super:    { type: decimal, scale: 2, notnull: true } # Расходы p_user super
+    charges_user:     { type: decimal, scale: 2, notnull: true } # Расходы u_user
+    
+    in_balance_standart:  { type: decimal, scale: 2, notnull: true } # Остаток на начало периода p_user standart
+    in_balance_super:     { type: decimal, scale: 2, notnull: true } # Остаток на начало периода p_user super
+    in_balance_expert:    { type: decimal, scale: 2, notnull: true } # Остаток на начало периода p_user expert
+    in_balance_user:      { type: decimal, scale: 2, notnull: true } # Остаток на начало периода u_user
+
+    sales_standart:   { type: integer, notnull: true } # Продажи p_user standart
+    sales_super:      { type: integer, notnull: true } # Продажи p_user super
+    sales_expert:     { type: integer, notnull: true } # Продажи p_user expert
+
+    to_pay_standart:  { type: decimal, scale: 2, notnull: true } # К выплате p_user standart
+    to_pay_super:     { type: decimal, scale: 2, notnull: true } # К выплате p_user super
+    to_pay_expert:    { type: decimal, scale: 2, notnull: true } # К выплате p_user expert
+    
+    r2r_standart:     { type: decimal, scale: 2, notnull: true } # Доля R2R standart
+    r2r_super:        { type: decimal, scale: 2, notnull: true } # Доля R2R standart
+    r2r_expert:       { type: decimal, scale: 2, notnull: true } # Доля R2R standart
+    
+  relations:
+    Period:           { onDelete: CASCADE, local: id_period, foreign: id }
+
+Transaction:
+  actAs: { Timestampable: ~ }
+  columns:
+    id_period:                { type: integer }
+    operation:                { type: enum, values: [none, deposit_u, deposit_p, purchase, charges_service], default: none, notnull: true }
+                                # purchase - покупка статьи: списываем с u_пользователя, всю суму, заносим на баланс системы,
+                                #            списываем с баланса системы сумму переводчика и заносим ее на баланс переводчика
+                                # charges_service - переводчик оплачивает каждый день, за пользованием сайтом
+    amount:                   { type: decimal, scale: 2, notnull: true  } # сумма передаваемая при транзакции
+    id_sender:                { type: integer }
+    id_receiver:              { type: integer }
+    sender_balance_before:    { type: decimal, scale: 2, notnull: true }
+    sender_balance_after:     { type: decimal, scale: 2, notnull: true }
+    receiver_balance_before:  { type: decimal, scale: 2, notnull: true }
+    receiver_balance_after:   { type: decimal, scale: 2, notnull: true }
+    notes:                    { type: string(255), notnull: true }
+  relations:
+    Period:                   { onDelete: CASCADE, local: id_period, foreign: id }

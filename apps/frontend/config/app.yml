@@ -1,0 +1,34 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  attempts_count: 3
+  category_max_articles: 15
+
+  avatars_path_dir: /avatars
+  avatars_url_dir:  /uploads/avatars
+
+  userpic_path_dir: /userpics
+  userpic_url_dir: /uploads/userpics
+  default_userpic_url: /default.jpg
+
+  default_const_msg: Постоянное сообщение пользователя
+  default_const_msg_room:  
+
+  articles_photo_dir: /uploads/articles
+
+
+  room_topic_max_posts: 10
+  room_max_topics: 10
+
+  max_articles_on_published: 15
+  max_articles_on_nopublished: 15
+
+  max_articles_on_u_purchase: 10
+
+  r2r_noreply_email: do_not_reply@read2read.ru
+
+  secret_img_path_dir: /imgtmp
+  secret_img_upload_path_dir: /imgtmpup
+  secret_img_url_dir:  /uploads/imgtmp

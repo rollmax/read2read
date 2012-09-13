@@ -1,0 +1,106 @@
+
+/*   Главная - Контакты  */
+
+
+#mdl {
+	position: relative; float: left; top: 30px; left: 70px; width: auto; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: solid 0px #f0a5a1; background: #b0b5b7; 
+}
+#mdl a {
+	  position: relative; float: left; top: 0px; left: 0px; font: 7pt "verdana"; color: #234; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border: solid 0px #f00; text-decoration: none;
+}
+#mdl p {
+	position: relative; top: 0px; left: 0px; height: auto; width: auto; font: 10pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-left: solid 0px #f00; 
+}
+#mdl p.who {
+	position: relative; top: 0px; left: 0px; height: auto; width: 180px; font: 11pt "verdana"; color: #000; text-align: left; padding-left: 10px;  padding-bottom: 3px; margin: 0px 0px 0px 0px; background: #ff3; 
+}
+
+/*       левая колонка - пункты  правил         */
+
+#left {
+	position: relative; float: left; top: 0px; left: 0px; width: 190px; height: auto; padding-left: 0px; padding-right: 0px; padding-top:10px; padding-bottom: 20px; margin: 0px 0px 0px 0px; border-bottom: solid 0px #778;  background: #606470; 
+}
+#left p {
+	 color: #445; padding-left: 10px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; background: #fff; 
+}
+#left p.h_rules {
+	color: #fff; background: #606470; 
+}
+#left a {
+	 font: bold 8pt "verdana"; width: 180px; 	 text-align: left; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; margin: 0px 0px 0px 0px;  background: #606470; color: #fff;
+}
+#left a:hover {
+	 color: #000; background: #b0b5b7; 
+}
+#left a.trans {
+	 font: 7pt "verdana"; width: 170px; color: #fff; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px 10px 0px 10px; background: transparent; border-top: solid 0px #fff; background: #606470; 
+}
+
+
+#left hr {
+	position: relative; float: left; top: 0px; left: 4%; width: 92%; color: #ccc; 
+}
+
+
+/*        ссылка на правила переводчикам          */
+
+#left a.trans:hover {
+	color: #ed0;
+}
+
+/*   Средняя колоека  -      Текст контактов        */
+
+#center {
+	position: relative; float: left; top: 0px; left: 0px; width: 445px; min-height: 400px; padding-left: 10px; padding-right: 10px; padding-top: 18px; padding-bottom: 40px; margin: 0px 0px 0px 0px; border: solid 0px #f0f; background: #fff;
+}
+#center p {
+	 font: 10pt "verdana"; color: #000; text-align: justify; padding-left: 10px; padding-right: 10px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border-left: solid 0px #f00; line-height: 140%; 
+}
+#center a.mail {
+	top: -17px; left: 220px; color: #2255ff; text-decoration: none; font: bold 10pt "verdana"; padding-left: 10px; padding-right: 10px; 
+}
+#center a.mail:hover {
+	background: #ff3;
+}
+/*    правая колонка           */
+
+#right {
+	position: relative; float: left; top: 0px; left: 10px; width: 200px; height: 300px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border: solid 0px #f0f; 
+}
+#right p {
+	position: relative; top: 5px; left: 15px; height: auto; width: 80px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border-left: solid 0px #f00; 
+}
+
+
+
+/*    ---------           Вход   -----------   */
+#in {
+	position: relative; float: left; top: 0px; left: 0px; width: 180px; height: 130px; padding-left: 0px; padding-right: 0px; padding-top: 10px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border-top: solid 0px #778; 
+}
+#in input {
+	 position: relative; left:15px; top: 3px; height: 18px; width: 140px; margin: 5px 0px 0px 0px;
+}
+#in input.submit {
+	position: relative; left: 55px; top: 8px; height: auto; width: 60px; font: 8pt "verdana"; color: #000; padding-top: 0px; padding-bottom: 2px; margin: 10px 0px 0px 0px; 
+}
+#in input.submit:hover {
+	cursor: pointer; 
+}
+
+/*        Восстановить пароль      */
+
+#in a  {
+	 position: relative; float: left; left: 7%; top: 15px; height: auto; width: 80%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 20px 0px; 
+}
+#in a p {
+	  position: relative; left: 5px; top: 0px; height: auto; width: 98%; font: 7pt "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;
+}
+#in a p:hover {
+	text-decoration: underline; color: #358;
+}
+
+/*        Контакты     */
+
+
+
+

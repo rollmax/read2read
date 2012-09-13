@@ -1,0 +1,228 @@
+
+.error_list{
+   color: #FF0000;
+    font: 9pt "verdana";
+    height: auto;
+    list-style-type: none;
+    margin: 11px 3px 3px;
+    padding-left: 20px;
+}
+
+
+/*   ������� - � �����   */
+
+
+#mdl1 {
+	position:  absolute; top: 140px; left: 205px; width: auto; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; z-index: 4;  border: solid 0px #f0f; border-radius: 10px; box-shadow: 0px 0px 10px #ddeeff;
+}
+#for {
+	position: relative; float: left; top: 0px; left: 0px; width: 575px; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;  border: solid 0px #f0f; 
+}
+#for tr {
+	  height: auto; width: 600px; padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#for td{
+	 width: auto; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 45px; margin: 0px 0px 0px 0px; vertical-align: top; border-bottom: solid 0px #0f0; 
+}
+#for td.mdlleft {
+	 width: 390px;  padding-left: 0px; padding-right: 0px; padding-top: 30px; margin: 0px 0px 0px 0px; border-bottom: solid 0px #0f0; background-image: url(/images/log_err.png); border-radius: 7px 0px 0px 7px;
+}
+#for td.mdlleft p {
+	position:  relative; float: left; width: 370px; top: 0px; left: 0px;  font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 10px; margin: 0px; line-height: 12pt;
+}
+#for td.mdlleft p span {
+	 font: italic 14pt "verdana"; color: #f12;
+}
+
+
+/*          �����������  ������������        */
+
+#for td.mdlright {
+	width: auto; height: auto;  padding-top: 10px;  padding-bottom: 10px;  border-bottom: solid 0px #f00;  background-image: url(/images/log.png); border-radius: 0px 7px 7px 0px;
+}
+#for td.mdlright p {
+	position: relative; top: 5px; left: 15px; height: auto; width: 80px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px; border-left: solid 0px #f00; 
+}
+
+#for td.mdlright input {
+	 position: relative; left:15px; top: 3px; height: 18px; width: 140px; margin: 5px 0px 0px 0px; padding-top: 0px; padding-bottom: 0px; 
+}
+#for td.mdlright input.submit {
+	position: relative; left: 55px; top: 8px; height: auto; width: 60px; font: 8pt "verdana"; color: #000; padding-top: 0px; padding-bottom: 2px; margin: 10px 0px 20px 0px; 
+}
+#for td.mdlright input.submit:hover {
+	cursor: pointer; font: 8pt "verdana"; color: #000; width: 60px;  left: 55px;  
+}
+
+/*        ������������ ������      */
+
+#for td.mdlright a  {
+	 position: relative; float: left; left: 7%; top: 15px; height: auto; width: 80%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;  text-decoration: none; 
+}
+#for td.mdlright a p {
+	  position: relative; left: 0px; top: 0px; height: auto; width: 98%; font: 7pt "verdana"; color: #333; text-align: justify; padding-left: 1%; padding-right: 1%; padding-top: 0px; padding-bottom: 2px; margin: 0px 0px 0px 0px;  text-decoration: none; 
+}
+#for td.mdlright a p:hover {
+	color: #000; text-decoration: underline;  
+}
+
+
+
+/*          ������ �����������  ������������        */
+
+
+#for td.mdlleft p.err {
+	left: 50px; top: 0px; width: 270px; height: auto; font: 10pt "verdana"; color: #f10; text-align: center;  padding-top: 4px; padding-bottom: 5px; background: #fff; margin: 0px 0px 0px 0px; line-height: 180%; 
+}
+#for td.mdlleft input {
+	position: relative; left:145px; top: 30px; width: 100px; font: bold 9pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 10px 0px 0px 0px; 
+}
+#for td.mdlleft input.submit {
+	  left:175px; width: 40px; font: 9pt "verdana"; color: #000; 
+}
+#for td.mdlleft input.file {
+	  top: 50px; left: 100px; width: 200px; font: 9pt "verdana"; color: #000; 
+}
+#for td.mdlleft div {
+	 position: relative; left: 0px; top: 0px; width: 100%; padding-bottom: 50px; 
+}
+#for td.mdlleft p.err a {
+	 color: #25a; text-decoration: none;
+}
+#for td.mdlleft p.err a:hover{
+	 color: #25a; text-decoration: underline;
+}
+
+#login {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 546px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#login tr {
+	height: auto; width: 546px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#login tr.w {
+	 background: #ebebeb;
+}
+#login tr.b {
+	 background: #ccc;
+}
+#login td {
+	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: top;  padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#login td.left {
+	width: 170px;
+}
+#login td.right {
+	width: 346px; 
+}
+#login td p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%; padding-left: 0px; padding-top: 7px; padding-bottom: 3px; margin: 0px; 
+}
+#login td.left p {
+	 font: 8pt "verdana"; color: #123; padding-left: 10px; text-align: left; 
+}
+#login td.right p {
+	 font: 8pt "verdana"; color: #123; text-align: center; 
+}
+#login td p.ok {
+	 color: #049; background: #acb; font: 9pt "verdana"; 
+}
+#login td p.stop {
+	 font: 8pt "verdana"; color: #f00; 
+}
+
+
+#restore_data {
+	position: absolute; top: 140px; left: 204px; width: 575px; height: 300px; background: #345; border: solid 1px #fff; z-index: 6;
+}
+#restore_data p {
+position: relative; float: left; top: 70px; left: 0px; font: 11pt "verdana"; color: #fff; padding-left: 0px; height: auto; width: auto; text-align: center; line-height: 120%; display: inline; margin-bottom: 8%; 
+}
+#restore_data p.wht {
+	 width: 265px; text-align: right;
+}
+#restore_data p.log {
+	left: 40px; font: bold 11pt "verdana"; color: #2f6; width: 180px; text-align: left;
+}
+#restore_data p.pssw {
+	left: 40px; font: bold 11pt "verdana"; color: #fe3; width: 180px; text-align: left;
+}
+#restore {
+    position: absolute; top: 140px; left: 25%; width: 500px; height: auto; background: #345; border: solid 1px #fff; z-index: 6; padding-top: 20px; padding-bottom: 20px; padding-left: 0px; padding-right: 0px;
+}
+#restore p {
+    position: relative; float: left; top: 0px; left: 0%; font: 11pt "verdana"; color: #fff; height: auto; width: 100%; text-align: center; line-height: 100%; display: inline;
+}
+#restore p.wht {
+    width: 45%; text-align: right;
+}
+#restore p.log {
+    left: 10%; font: bold 11pt "verdana"; color: #2f6; width: 45%; text-align: left;
+}
+#restore p.pssw {
+    left: 10%; font: bold 11pt "verdana"; color: #fc2; width: 45%; text-align: left;
+}
+#restore p.warn {
+    font: bold 11pt "verdana"; color: #fc2;
+}
+#restore input {
+    position: relative; float: left; top: 0px; left: 25%; font: 11pt "verdana"; color: #fff; height: auto; width: 50%; text-align: center; line-height: 120%; color: #000; margin: 20px 0px 0px 0%;
+}
+#restore input.submit {
+    left: 0%; width: 10%; margin: 20px 0px 0px 45%;
+}
+#restore p a {
+    color: #4cf; text-decoration: none; padding-left: 5px; font: 16pt "georgia"; text-decoration: underline;
+}
+
+#restore p a:hover {
+    color: #fc2;
+}
+
+
+
+
+
+
+#req {
+	position: relative; float: left; top: -20px; left: 1%; width: 98%; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 5px; margin: 0px 0px 0px 0px;  border-top: solid 1px #444; 
+}
+#req td.td {
+	height: auto; width: 37%; padding-left: 0px; padding-right: 0px; vertical-align: top;  padding-top: 5px; padding-bottom: 0px; margin: 0px; 
+}
+#req td.center {
+	 width: 20%;
+}
+/*        ��������     */
+
+#req td.center a.contacts  {
+	position: relative; float: left; left: 25%; top: 5px; height: 17px; width: 50%; font: 8pt "verdana"; color: #fff; text-align:center; border-radius: 5px 5px; background: #886; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 0px; margin: 0px 0px 0px 0px; text-decoration: none;  
+}
+#req td.center a.contacts:hover {
+	 color: #025; background: #de8; box-shadow: 0px 0px 5px #ddc;
+}
+/*        ��������    - end   */
+
+
+#req td.td p {
+position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #fff;  height: auto; width: auto; text-align: left;  display: inline; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 0px;
+}
+#req td.td p.tr_r {
+	top: 0px; left: 0px; color: #553;
+}
+#req td.td h3 {
+	 position: relative; float: left; top: 0px; left: 120px; font: "verdana"; color: #345; margin: 0px 0px 0px 0px;   display: inline;
+}
+#req td.td p.e2r {
+	 top: 25px; left: 5px; font: bold 10pt "verdana"; color: #356; margin: 0px 0px 5px 0px;
+}
+#req td.td p.r2e {
+	 top: 20px; left: 50px; font: bold 8pt "verdana"; color: #355; margin: 0px 0px 5px 0px;
+}
+#req td.td p.trns {
+	 top: 10px; left: 130px; font: bold 10pt "verdana"; color: #344; margin: 0px 0px 0px 0px;
+}
+#req td.td h2 {
+	 position: relative; float: left; top: 0px; left: 170px; font: "verdana"; color: #345; margin: 0px 0px 0px 0px;   display: inline;
+}
+
+

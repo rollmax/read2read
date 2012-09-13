@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Category
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          category
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name_en: {label: Название Англ.}
+        name_ru: {label: Название Ру.}
+        ordered: {label: Порядок}
+        
+      list:
+        title:   Категории переводов
+        display: [ =ordered, name_en, name_ru ]
+
+      filter:
+        display: [ name_en, name_ru ]
+
+      form:    ~
+      edit:
+        title: Изменить Категорию %%name_ru%%
+
+      new:
+        title: Новая Категория Переводов

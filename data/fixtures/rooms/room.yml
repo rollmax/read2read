@@ -1,0 +1,13 @@
+Room:
+  uroom:
+    name:         uroom
+    description:  Это ветка для u_profile
+  sroom:
+    name:         sroom
+    description:  Это ветка для p_profile standart
+  suproom:
+    name:         suproom
+    description:  Это ветка для p_profile super
+  exroom:
+    name:         exroom
+    description:  Это ветка для p_profile expert
