@@ -20,6 +20,7 @@ abstract class BaseGuardUserForm extends BaseFormDoctrine
       'password'           => new sfWidgetFormInputText(),
       'login'              => new sfWidgetFormInputText(),
       'email'              => new sfWidgetFormInputText(),
+      'contact_email'      => new sfWidgetFormInputText(),
       'phone'              => new sfWidgetFormInputText(),
       'first_name'         => new sfWidgetFormInputText(),
       'last_name'          => new sfWidgetFormInputText(),
@@ -58,6 +59,7 @@ abstract class BaseGuardUserForm extends BaseFormDoctrine
       'password'           => new sfValidatorString(array('max_length' => 128, 'required' => false)),
       'login'              => new sfValidatorString(array('max_length' => 100)),
       'email'              => new sfValidatorString(array('max_length' => 80)),
+      'contact_email'      => new sfValidatorString(array('max_length' => 80, 'required' => false)),
       'phone'              => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'first_name'         => new sfValidatorString(array('max_length' => 80, 'required' => false)),
       'last_name'          => new sfValidatorString(array('max_length' => 80, 'required' => false)),
@@ -94,6 +96,7 @@ abstract class BaseGuardUserForm extends BaseFormDoctrine
       new sfValidatorAnd(array(
         new sfValidatorDoctrineUnique(array('model' => 'GuardUser', 'column' => array('login'))),
         new sfValidatorDoctrineUnique(array('model' => 'GuardUser', 'column' => array('email'))),
+        new sfValidatorDoctrineUnique(array('model' => 'GuardUser', 'column' => array('contact_email'))),
         new sfValidatorDoctrineUnique(array('model' => 'GuardUser', 'column' => array('slug'))),
       ))
     );

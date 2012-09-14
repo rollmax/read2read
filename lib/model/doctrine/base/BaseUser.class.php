@@ -9,6 +9,7 @@
  * @property string $password
  * @property string $login
  * @property string $email
+ * @property string $contact_email
  * @property string $phone
  * @property string $first_name
  * @property string $last_name
@@ -52,6 +53,7 @@
  * @method string              getPassword()           Returns the current record's "password" value
  * @method string              getLogin()              Returns the current record's "login" value
  * @method string              getEmail()              Returns the current record's "email" value
+ * @method string              getContactEmail()       Returns the current record's "contact_email" value
  * @method string              getPhone()              Returns the current record's "phone" value
  * @method string              getFirstName()          Returns the current record's "first_name" value
  * @method string              getLastName()           Returns the current record's "last_name" value
@@ -94,6 +96,7 @@
  * @method User                setPassword()           Sets the current record's "password" value
  * @method User                setLogin()              Sets the current record's "login" value
  * @method User                setEmail()              Sets the current record's "email" value
+ * @method User                setContactEmail()       Sets the current record's "contact_email" value
  * @method User                setPhone()              Sets the current record's "phone" value
  * @method User                setFirstName()          Sets the current record's "first_name" value
  * @method User                setLastName()           Sets the current record's "last_name" value
@@ -161,6 +164,11 @@ abstract class BaseUser extends sfDoctrineRecord
              'type' => 'string',
              'unique' => true,
              'notnull' => true,
+             'length' => 80,
+             ));
+        $this->hasColumn('contact_email', 'string', 80, array(
+             'type' => 'string',
+             'unique' => true,
              'length' => 80,
              ));
         $this->hasColumn('phone', 'string', 20, array(
