@@ -30,7 +30,6 @@ class puserActions extends autoPuserActions
     $this->pager = $this->getPager();
     $this->sort = $this->getSort();
 
-
     $user = new User();
     
     $this->dataArray = array(

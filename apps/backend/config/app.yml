@@ -28,8 +28,8 @@ all:
             url:    setting
       Пользователи:
         items:
-          uusers:
-            url: user
+          uuser:
+            url: user_uuser
           puser:
             url: user_puser
       Баланс:

@@ -15,7 +15,7 @@
   </div>
 
   <div id="sf_admin_content">
-    <form action="<?php echo url_for('user_collection', array('action' => 'batch')) ?>" method="post">
+    <form action="<?php echo url_for('user_uuser_collection', array('action' => 'batch')) ?>" method="post">
     <?php include_partial('uuser/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper, 'dataArray' => $dataArray)) ?>
     <ul class="sf_admin_actions">
       <?php include_partial('uuser/list_batch_actions', array('helper' => $helper)) ?>

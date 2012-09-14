@@ -11,7 +11,7 @@ user_puser:
     column:               id
     with_wildcard_routes: true
 
-user:
+user_uuser:
   class: sfDoctrineRouteCollection
   options:
     model:                User

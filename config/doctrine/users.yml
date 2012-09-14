@@ -12,6 +12,7 @@ User:
     password: string(128)
     login:  { type: string(100), unique: true, notnull: true }
     email: {type: string(80), unique: true, notnull: true}
+    contact_email: {type: string(80), unique: true}
     phone: {type: string(20)}
     first_name: {type: string(80)}
     last_name: {type: string(80)}
