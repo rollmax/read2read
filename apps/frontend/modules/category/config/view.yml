@@ -7,4 +7,5 @@ showArticleSuccess:
   javascripts: [jquery.js, resume.js]
 printSuccess:
   layout: print
-  stylesheets: [print.css]
+  stylesheets:
+    - print.css: { media: 'screen, print' }
