@@ -1,0 +1,137 @@
+
+/*            ++++++++               Шапка страницы            ++++++++               */ 
+
+#hat {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 990px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+#hat tr {
+	height: 36px; width: 990px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; 
+}
+#hat td {
+	padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle; 
+}
+#hat td.logo {
+	height: 100%; width: 150px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px solid #fff; 
+}
+#hat td.logo img {
+	position:  relative; float: left; top: 0px; left: 10px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+}
+
+#hat td.ban {
+	height: 100%; width: 690px; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 0px; border: 0px solid #dda;
+}
+#hat td.date {
+	height: 100%; width: 150px; padding-left: 0px; padding-right: 0px; padding-top: 0px; margin: 0px; 
+}
+
+
+
+/*                   Таблица        статьи         */      
+
+
+#article  {
+	position:  relative; float: left; top: 0px; left: 0px; width: 990px; height: auto;  padding-left: 0px; padding-right: 0px; margin: 20px 0px 30px 0px; border-top: 0px solid #fff; border-bottom: 10px solid #fff; 
+}
+#article tr {
+	  height: auto;  padding-left: 0px; padding-right: 0px; 
+}
+
+#article td {
+	width: 360px; height: auto; padding-left: 5px; padding-right: 5px; padding-bottom: 20px; padding-top: 5px; vertical-align: top; border-bottom: 0px solid #f00; margin: 0px; 
+}
+
+#article td a  {
+	 position:  relative; float: left; left: 0px; text-decoration: none; cursor: pointer; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px;  border: 0px solid #fff; margin: 0px; 
+}
+
+#article td p {
+	position:  relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #001; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  
+}
+ 
+
+/*                            Заголовки статьи                       */  
+
+#article td p.head {
+	width: 350px; font: bold 10pt "verdana"; color: #234; text-align: center; padding-top: 0px; padding-bottom: 10px;  border-bottom: 1px solid #555; 
+}
+
+
+/*                            Автор                                */  
+
+#article td p.authleft {
+	width: 350px; font:  9pt "verdana"; color: #012; text-align: left; 
+}
+#article td p.authright {
+	width: 350px; font:  9pt "verdana"; color: #012; text-align: right; 
+}
+
+/*                           Претекст                   */  
+
+#article td p.pretxt {
+	font:  bold 8pt "verdana"; color: #234;  text-align: left; margin: 0px; 
+}
+
+/*                            Текст                 */      
+
+#article td p.txt {
+	 text-indent: 2em; text-align: justify; line-height: 130%; 
+}
+
+
+
+
+/*              Ссылка на резюме переводчика            */  
+
+#article  td.trans {
+	padding-top: 0px; vertical-align: top; width: 250px; 
+}
+
+#article  td.trans a {
+	width: 250px; 
+}
+#article td.trans a:hover  {
+	 background: #bcd;
+}
+#article  td.trans a p {
+	position:  relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 3px; text-align: left; margin: 0px; display: inline;
+}
+#article  td.trans a p.lt {
+	font: bold 8pt "verdana"; padding-left: 5px; text-align: left; width: 120px; 
+}
+#article  td.trans a p.rt {
+	font: 8pt "verdana"; text-align: center; width: 125px; 
+}
+
+
+/*                             Отдельные слова и перевод к ним                       */  
+#article  td.center {
+	height: auto; padding-bottom: 0px; padding-top: 0px; margin: 0px; vertical-align: top; width: 250px; 
+}
+#article  td.center p {
+	width: 120px; padding-top: 7px; margin: 0px; display: inline; 
+}
+#article  td.center p.lt {
+	font:  bold 7pt "verdana"; color: #000; text-align: left; padding-right: 5px;
+}
+#article  td.center p.rt {
+	font:  7pt "verdana"; color: #000; text-align: justify; padding-left: 5px;
+}
+
+
+/*                      Ссылка   "Закрыть"         */       
+
+
+#close {
+	position: fixed; top: 42%; left: 96%; width: 4%; z-index: 6;  padding-left: 0px; padding-right: 0px;  padding-top: 0px; padding-bottom: 0px; 
+}
+#close a {
+	padding-left: 0px; padding-right: 0px; margin: 0px; 
+}
+#close a p {
+	padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#close a img {
+	border: solid 0px; padding-left: 0px; padding-right: 0px;  margin: 0px; padding-top: 0px; padding-bottom: 0px;
+}
+
+

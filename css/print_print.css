@@ -1,0 +1,100 @@
+body {
+	padding-left: 0cm; padding-right: 0cm; padding-top: 0cm; padding-bottom: 0pcm;
+}
+/*            ++++++++        лого           ++++++++               */ 
+
+
+#hat td.logo img {
+	position:  relative; float: left; top: 0cm; left: 0cm; padding-left: 0cm; padding-right: 0cm; padding-top: 0cm; padding-bottom: 0pcm; margin: 0cm;
+}
+
+
+
+/*                   Таблица        статьи         */      
+
+
+#article  {
+	position:  relative; float: left; top: 0cm; left: 0cm; width: auto; height: auto;  padding-left: 0cm; padding-right: 0cm; margin: 0cm; 
+}
+#article tr {
+	  height: auto;  padding-left: 0px; padding-right: 0px; 
+}
+
+#article td {
+	width: 6.5cm; height: auto; padding-left: 0cm; padding-right: 0cm; padding-bottom: 0cm; padding-top: 0cm; vertical-align: top; margin: 0cm; 
+}
+
+
+
+/*                            Заголовки статьи                       */  
+
+#article td p.head {
+	width: 6cm; font: bold 10pt "verdana"; color: #234; text-align: center; padding-top: 0cm; padding-bottom: 0cm;  border-bottom: 0.1cm solid #555; 
+}
+
+
+/*                            Автор                                */  
+
+#article td p.authleft {
+	width: 100%; font:  9pt "verdana"; color: #012; text-align: left; 
+}
+#article td p.authright {
+	width: 100%; font: 9pt "verdana"; color: #012; text-align: right; 
+}
+
+/*                           Претекст                   */  
+
+#article td p.pretxt {
+	width: 6cm; font:  bold 8pt "verdana"; color: #234;  text-align: left; margin: 0cm; 
+}
+
+/*                            Текст                 */      
+
+#article td p.txt {
+	 font: 8pt "verdana"; text-indent: 1em; text-align: justify; line-height: 115%; width: 100%;
+}
+
+
+
+
+/*              Ссылка на резюме переводчика           */
+
+#article  td.trans {
+	padding-top: 0px; vertical-align: top; width: 6cm; 
+}
+
+#article  td.trans a {
+	width: 5cm; 
+}
+#article td.trans a:hover  {
+	 background: #bcd;
+}
+#article  td.trans a p {
+	position:  relative; float: left; top: 0cm; left: 0cm; font: 8pt "verdana"; padding-left: 0cm; padding-right: 0cm; padding-top: 0.3cm; padding-bottom: 0cm; text-align: left; margin: 0cm; display: inline;
+}
+#article  td.trans a p.lt {
+	font: bold 8pt "verdana"; text-align: left; width: 3cm; 
+}
+#article  td.trans a p.rt {
+	font: 8pt "verdana"; text-align: center; width: 2.5cm; padding-left: 0.5cm;
+}
+
+
+/*                             Отдельные слова и перевод к ним                       */  
+
+
+#article  td.center {
+	height: auto; padding-bottom: 0cm; padding-top: 0.5cm; margin: 0cm; vertical-align: top; width: 6cm; padding-left: 0cm; padding-right: 0cm;
+}
+#article  td.center p {
+	position:  relative; float: left; top: 0cm; left: 0cm; padding-top: 0cm; margin: 0px; 
+}
+#article  td.center p.lt {
+	width: 2.7cm; font:  bold 7pt "verdana"; color: #000; text-align: left; padding-right: 0cm; padding-left: 0.3cm; display: inline; 
+}
+#article  td.center p.rt {
+	width: 2.4cm; font: 7pt "verdana"; color: #000; text-align: justify; padding-left: 0.3cm; padding-right: 0.3cm; display: inline; 
+}
+
+
+
