@@ -23,6 +23,7 @@
  * @property string $activation_code
  * @property boolean $active
  * @property string $slug
+ * @property decimal $weight
  * @property enum $utype
  * @property boolean $is_blocked
  * @property enum $tariff
@@ -65,6 +66,7 @@
  * @method string              getActivationCode()     Returns the current record's "activation_code" value
  * @method boolean             getActive()             Returns the current record's "active" value
  * @method string              getSlug()               Returns the current record's "slug" value
+ * @method decimal             getWeight()             Returns the current record's "weight" value
  * @method enum                getUtype()              Returns the current record's "utype" value
  * @method boolean             getIsBlocked()          Returns the current record's "is_blocked" value
  * @method enum                getTariff()             Returns the current record's "tariff" value
@@ -106,6 +108,7 @@
  * @method User                setActivationCode()     Sets the current record's "activation_code" value
  * @method User                setActive()             Sets the current record's "active" value
  * @method User                setSlug()               Sets the current record's "slug" value
+ * @method User                setWeight()             Sets the current record's "weight" value
  * @method User                setUtype()              Sets the current record's "utype" value
  * @method User                setIsBlocked()          Sets the current record's "is_blocked" value
  * @method User                setTariff()             Sets the current record's "tariff" value
@@ -218,6 +221,11 @@ abstract class BaseUser extends sfDoctrineRecord
         $this->hasColumn('slug', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
+             ));
+        $this->hasColumn('weight', 'decimal', null, array(
+             'type' => 'decimal',
+             'scale' => 2,
+             'notnull' => true,
              ));
         $this->hasColumn('utype', 'enum', null, array(
              'type' => 'enum',

@@ -26,6 +26,7 @@ User:
     activation_code: { type: string(50), notnull: true }
     active: { type: boolean, notnull: true, default: false }
     slug: {type: string(255) }
+    weight: {type: decimal, scale: 2, notnull: true}
     utype: {type: enum, values: [puser, uuser, suser], default: uuser } # suser - system users: moderators, admins
     is_blocked: { type: boolean, notnull: true, default: false }
     tariff: {type: enum, values: [none, standart, expert, super], default: none }
