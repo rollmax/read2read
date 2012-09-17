@@ -6,6 +6,10 @@ Paragraph:
     id_content:   { type: integer }
     paragraph_ru: { type: clob, notnull: true }
     paragraph_en: { type: clob, notnull: true }
+    is_bold:      { type: boolean, notnull: true, default: false }
+    is_italic:    { type: boolean, notnull: true, default: false }
+    h_style:      { type: enum, values: [none, 4, 5, 6], default: none}
+    pad_left:     { type: integer(2), notnull: true, default: 0 }
     ordered:      { type: integer(4), notnull: true, default: 0 }
     
   relations:

@@ -8,6 +8,10 @@
  * @property integer $id_content
  * @property clob $paragraph_ru
  * @property clob $paragraph_en
+ * @property boolean $is_bold
+ * @property boolean $is_italic
+ * @property enum $h_style
+ * @property integer $pad_left
  * @property integer $ordered
  * @property Content $Content
  * @property Doctrine_Collection $Comment
@@ -15,12 +19,20 @@
  * @method integer             getIdContent()    Returns the current record's "id_content" value
  * @method clob                getParagraphRu()  Returns the current record's "paragraph_ru" value
  * @method clob                getParagraphEn()  Returns the current record's "paragraph_en" value
+ * @method boolean             getIsBold()       Returns the current record's "is_bold" value
+ * @method boolean             getIsItalic()     Returns the current record's "is_italic" value
+ * @method enum                getHStyle()       Returns the current record's "h_style" value
+ * @method integer             getPadLeft()      Returns the current record's "pad_left" value
  * @method integer             getOrdered()      Returns the current record's "ordered" value
  * @method Content             getContent()      Returns the current record's "Content" value
  * @method Doctrine_Collection getComment()      Returns the current record's "Comment" collection
  * @method Paragraph           setIdContent()    Sets the current record's "id_content" value
  * @method Paragraph           setParagraphRu()  Sets the current record's "paragraph_ru" value
  * @method Paragraph           setParagraphEn()  Sets the current record's "paragraph_en" value
+ * @method Paragraph           setIsBold()       Sets the current record's "is_bold" value
+ * @method Paragraph           setIsItalic()     Sets the current record's "is_italic" value
+ * @method Paragraph           setHStyle()       Sets the current record's "h_style" value
+ * @method Paragraph           setPadLeft()      Sets the current record's "pad_left" value
  * @method Paragraph           setOrdered()      Sets the current record's "ordered" value
  * @method Paragraph           setContent()      Sets the current record's "Content" value
  * @method Paragraph           setComment()      Sets the current record's "Comment" collection
@@ -45,6 +57,33 @@ abstract class BaseParagraph extends sfDoctrineRecord
         $this->hasColumn('paragraph_en', 'clob', null, array(
              'type' => 'clob',
              'notnull' => true,
+             ));
+        $this->hasColumn('is_bold', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('is_italic', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('h_style', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 'none',
+              1 => 4,
+              2 => 5,
+              3 => 6,
+             ),
+             'default' => 'none',
+             ));
+        $this->hasColumn('pad_left', 'integer', 2, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'default' => 0,
+             'length' => 2,
              ));
         $this->hasColumn('ordered', 'integer', 4, array(
              'type' => 'integer',

@@ -16,6 +16,9 @@
  * @property string $photo_ru
  * @property string $photo_en
  * @property enum $state
+ * @property boolean $is_bold
+ * @property boolean $is_italic
+ * @property enum $h_style
  * @property boolean $is_blocked
  * @property boolean $is_moderated
  * @property boolean $to_delete
@@ -44,6 +47,9 @@
  * @method string              getPhotoRu()         Returns the current record's "photo_ru" value
  * @method string              getPhotoEn()         Returns the current record's "photo_en" value
  * @method enum                getState()           Returns the current record's "state" value
+ * @method boolean             getIsBold()          Returns the current record's "is_bold" value
+ * @method boolean             getIsItalic()        Returns the current record's "is_italic" value
+ * @method enum                getHStyle()          Returns the current record's "h_style" value
  * @method boolean             getIsBlocked()       Returns the current record's "is_blocked" value
  * @method boolean             getIsModerated()     Returns the current record's "is_moderated" value
  * @method boolean             getToDelete()        Returns the current record's "to_delete" value
@@ -71,6 +77,9 @@
  * @method Content             setPhotoRu()         Sets the current record's "photo_ru" value
  * @method Content             setPhotoEn()         Sets the current record's "photo_en" value
  * @method Content             setState()           Sets the current record's "state" value
+ * @method Content             setIsBold()          Sets the current record's "is_bold" value
+ * @method Content             setIsItalic()        Sets the current record's "is_italic" value
+ * @method Content             setHStyle()          Sets the current record's "h_style" value
  * @method Content             setIsBlocked()       Sets the current record's "is_blocked" value
  * @method Content             setIsModerated()     Sets the current record's "is_moderated" value
  * @method Content             setToDelete()        Sets the current record's "to_delete" value
@@ -151,6 +160,30 @@ abstract class BaseContent extends sfDoctrineRecord
               2 => 'deleted',
              ),
              'default' => 'draft',
+             ));
+        $this->hasColumn('is_bold', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('is_italic', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('h_style', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 'none',
+              1 => 1,
+              2 => 2,
+              3 => 3,
+              4 => 4,
+              5 => 5,
+              6 => 6,
+             ),
+             'default' => 'none',
              ));
         $this->hasColumn('is_blocked', 'boolean', null, array(
              'type' => 'boolean',
