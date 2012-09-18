@@ -421,6 +421,19 @@ article_publish:
   requirements:
     sf_method: [get]
 
+article_author_edit:
+  url:    /article/:id/author/edit.:sf_format
+  class:  sfDoctrineRoute
+  options:  { model: Content, type: object }
+  param:    { module: article, action: authorEdit, sf_format: html }
+  requirements: { sf_method: post }
+
+article_author_update:
+  url:    /article/:id/author/update.:sf_format
+  class:  sfDoctrineRoute
+  options:  { model: Content, type: object }
+  param:    { module: article, action: authorUpdate, sf_format: html }
+  requirements: { sf_method: post }
 
 # article Paragraph for p_user
 paragraph_create:

@@ -14,7 +14,7 @@ class ArticleTitleForm extends ContentForm
 
   public function configure()
   {
-    $this->useFields(array('id_category', 'title_en', 'title_ru'));
+    $this->useFields(array('id_category', 'title_en', 'title_ru', 'is_bold', 'is_italic', 'h_style'));
 
     // id_category
     $this->widgetSchema['id_category'] = new sfWidgetFormDoctrineChoice(array(
@@ -39,5 +39,20 @@ class ArticleTitleForm extends ContentForm
       'label' => 'Введите название на русском'
     ));
 
+      $this->widgetSchema['is_bold'] = new sfWidgetFormInputCheckbox(array(
+          'label' => 'Жирный',
+      ), array('class' => 'checkbox'));
+
+      $this->widgetSchema['is_italic'] = new sfWidgetFormInputCheckbox(array(
+          'label' => 'Курсив',
+      ), array('class' => 'checkbox'));
+
+      $choices = $this->getWidget('h_style')->getChoices();
+      $choices['none'] = '';
+
+      $this->widgetSchema['h_style'] = new sfWidgetFormChoice(array(
+          'label' => 'Заголовок',
+          'choices' => $choices,
+      ), array('class' => 'heads_1_6'));
   }
 }

@@ -308,7 +308,43 @@ class articleActions extends sfActions
     return false;
   }
 
-  
+  // author actions
+
+    public function processAuthorForm(sfWebRequest $request, sfForm $form)
+    {
+        $form->bind(
+            $request->getParameter($form->getName())
+        );
+
+        if ($form->isValid())
+        {
+            $article = $form->save();
+            return $article;
+        }
+
+        return false;
+    }
+
+    public function executeAuthorEdit(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new ArticleEditForm($this->getRoute()->getObject());
+        $this->setTemplate('author');
+    }
+
+    public function executeAuthorUpdate(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new ArticleEditForm($this->getRoute()->getObject());
+        $this->article = $this->processAuthorForm($request, $this->form);
+
+        if (!$this->article)
+        {
+            $this->setTemplate('author');
+        }
+    }
 
   // comments actions
 

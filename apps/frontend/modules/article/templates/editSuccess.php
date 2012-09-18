@@ -2,6 +2,8 @@
 <?php include_partial('article/headBlock'); ?>
 </div> <!-- e: mdl3 -->
 
+<?php $ll = strlen($form->getObject()->getAuthorEn().$form->getObject()->getAuthorEn()); ?>
+
 <table id=add_article cellpadding="0" cellspacing="0px">
   <thead>
     <tr class=b>
@@ -11,7 +13,7 @@
       <td class=h>
         <a class=close href="<?php echo url_for('@article_no_published'); ?>">Закрыть</a>
     </tr>
-    <tr>
+    <tr <?php if($ll) echo 'class=b' ?>>
       <td colspan=3>
         <p><?php echo $form->getObject()->getCategory()->getNameLanguages(); ?></p>
       </td>
@@ -22,18 +24,15 @@
     <?php echo $form->renderHiddenFields(); ?>
     <tr>
       <td class=left>
-        <p><?php echo $form['title_en']->renderLabel(); ?></p>
-        <p><?php echo $form['title_en']->renderError(); ?></p>
-        <p><?php echo $form['title_en']->render(); ?></p>
+          <p class="h"><?php echo $form->getObject()->getTitleEn() ?></p>
       </td>
       <td class=center></td>
       <td class=right>
-        <p><?php echo $form['title_ru']->renderLabel(); ?></p>
-        <p><?php echo $form['title_ru']->renderError(); ?></p>
-        <p><?php echo $form['title_ru']->render(); ?></p>
+          <p class="h"><?php echo $form->getObject()->getTitleRu() ?></p>
       </td>
     </tr>
-    <tr>
+    <?php if ($ll == 0): // author_field ?>
+    <tr class="work_area" id="author_field">
       <td class=left>
         <p><?php echo $form['author_en']->renderLabel(); ?></p>
         <p><?php echo $form['author_en']->renderError(); ?></p>
@@ -46,34 +45,19 @@
         <?php echo $form['author_ru']->render(); ?>
       </td>
     </tr>
-    <tr>
-      <td class=left>
-        <p><?php echo $form['pretext_en']->renderLabel(); ?></p>
-        <p><?php echo $form['pretext_en']->renderError(); ?></p>
-        <?php echo $form['pretext_en']->render(); ?>
-      </td>
-      <td class=center></td>
-      <td class=right>
-        <p><?php echo $form['pretext_ru']->renderLabel(); ?></p>
-        <p><?php echo $form['pretext_ru']->renderError(); ?></p>
-        <?php echo $form['pretext_ru']->render(); ?>
-      </td>
+    <?php else: ?>
+    <tr class="b" id="author_field">
+        <td class=left>
+            <p><?php echo $form->getObject()->getAuthorEn() ?></p>
+        </td>
+        <td class=center><a class=chng_author_name onclick="article.editAuthor('<?php echo url_for('article_author_edit', $form->getObject()) ?>');">Изменить</a></td>
+        <td class=right>
+            <p><?php echo $form->getObject()->getAuthorRu() ?></p>
+        </td>
     </tr>
-    <tr class="article_image">
-      <td class=left>
-        <p><?php echo $form['photo_en']->renderLabel(); ?></p>
-        <?php echo ($form->getObject()->getPathPhotoEn()) ? '<p>'.image_tag($form->getObject()->getPathPhotoEn()).'</p>' : '' ; ?>
-        <p><?php echo $form['photo_en']->renderError(); ?></p>
-        <?php echo $form['photo_en']->render(); ?>
-      </td>
-      <td class=center></td>
-      <td class=right>
-        <p><?php echo $form['photo_ru']->renderLabel(); ?></p>
-        <?php echo ($form->getObject()->getPathPhotoRu()) ? '<p>'.image_tag($form->getObject()->getPathPhotoRu()).'</p>' : '' ; ?>
-        <p><?php echo $form['photo_ru']->renderError(); ?></p>
-        <?php echo $form['photo_ru']->render(); ?>
-    </tr>
+    <?php endif // author_field?>
     </form>
+
     <?php foreach ($form->getObject()->getParagraph() as $paragraph): ?>
           <tr id="paragraph-<?php echo $paragraph->getId(); ?>" class="paragraphRow">
             <td class="left" style="padding-top:30px;">
@@ -103,9 +87,9 @@
           <p class="txt"><?php echo $paragraph->getParagraphRu(); ?></p>
         </td>
       </tr>
+    <?php endforeach; // $paragraph ?>
 
-    <?php endforeach; ?>
-    <tr class=b>
+    <tr class=b  <?php if ($ll == 0) echo 'style="display: none;"' ?>>
       <td colspan=3 class="add_paragraph">
         <a onclick="article.addParagraph('<?php echo url_for('paragraph_create', $form->getObject()); ?>');">Добавить абзац</a>
       </td>
@@ -116,6 +100,5 @@
       </td>
     </tr>
   </tbody>
-
 
 </table>

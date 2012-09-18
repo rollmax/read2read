@@ -1,0 +1,416 @@
+/*                    Личный кабинет            */
+
+
+#mdl3 {
+	position:  absolute; top: 140px; left: 70px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 30px 0px; z-index: 2; border-top: solid 0px #ccc;  border-left: solid 0px #345;  border-right: solid 0px #345; 
+}
+#mdl3 a {
+	text-decoration: none; 
+}
+
+/*      +++++++++         Добавление работы        +++++++++++         */
+
+
+#add_article  {
+	position:  relative; float: left; top: 110px; left: 0px; width: 990px; height: auto; padding-left: 0px; padding-right: 0px; margin: 20px 0px 30px 0px; border-top: 0px solid #fff; background: #efefef;
+}
+#add_article tr.w {
+	 background: #efefef;
+}
+#add_article tr.b {
+	 background: #ddd;
+}
+#add_article td {
+	height: auto; vertical-align: top; padding-left:5px; padding-right: 5px; padding-top: 10px; padding-bottom: 10px; 
+}
+#add_article td.h {
+	height: 30px; vertical-align: middle; 
+}
+#add_article td.h p {
+	position: relative; float: left; top: 0px; left: 3%;  width: 95%; font: bold 11pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+}
+#add_article td p {
+position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 5px 0px; font: 9pt "verdana"; color: #000;
+}
+#add_article a {
+ text-decoration: none; position: relative; top: 0px; left: 0%; float: left; width: auto; height: auto; text-align: center; font: 8pt verdana; color: #05a; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 2px; margin: 0px 0px 5px 0px; display: inline;
+}
+#add_article a:hover {
+ cursor: pointer; text-decoration: none; 
+}
+#add_article td input {
+	position: relative; float: left; top: 0px; left: 0px; width: 345px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 0px;
+}
+
+/*                            * * *                     */
+
+
+#add_article td.left {
+	width: 350px;
+}
+#add_article td.right {
+	width: 350px;
+}
+#add_article td.center {
+	width: 270px; padding-left: 0px; padding-right: 0px;
+}
+#add_article td.left p {
+	text-align: left;  width: 350px; 
+}
+#add_article td.right p {
+	text-align: right; width: 350px;
+}
+#add_article  td.center p {
+	position:  relative; float: left; top: 0px; left: 0px; width: 125px;  font: 7pt "verdana"; color: #000; padding-left: 5px; padding-right: 5px; padding-top: 2px; text-align: left; margin: 0px; display: inline;
+}
+
+/*          Заголовок "Добавление статьи"         */
+
+#add_article td p.h {
+	font: bold 11pt "verdana"; color: #234;
+}
+/*              Предупреждение - такая статья уже есть                 */
+
+#add_article td p.warn {
+	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #f34;
+}
+#add_article td p.any {
+	text-align: center; width: 100%; font: bold 9pt "verdana"; color: #456;
+}
+
+
+/*          Закрыть страницу добавления          */
+
+
+#add_article td.h a.close {
+	position: relative; float: left; top: 3px; left: 75%;  width: 22%; font: bold 11pt "verdana"; color: #f20; text-align: right; padding-left: 0px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; margin: 0px; background: #cde; border: solid 1px #cde;
+}
+#add_article td.h a.close:hover {
+	border: solid 1px #f20;  
+}
+
+
+/*         Выбор раздела                   */
+
+#add_article td select.part {
+	position: relative; float: left; top: 0px; left: 3%; width: 35%; height: 25px; font: 9pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 2px; margin: 0px;
+}
+
+/*        Выбор размера заголовка     */
+
+#add_article td select.heads_1_6 {
+	position: relative; float: left; top: 10px; left: 10px; width: 40px; height: 20px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 0px 10px; display: inline;
+}
+#add_article td select option {
+	font: bold 9pt "verdana"; color: #000; 
+}
+
+
+
+/*            =======       Рабочая область     ======                   */
+
+
+
+#add_article tr.work_area {
+	 background: #cedeef; 
+}
+#add_article td input.img {
+	left: 20%; width: 60%;
+}
+
+/*        Добавить параграф              */
+
+#add_article td p.add_paragraph {
+		position: relative; float: left; top: 0px; left: 0%; text-align: center; width: 100%; font: bold 10pt "verdana"; color: #05a; margin: 0% 0% 10px 0%;
+}
+/*        1- ый абзац             */
+
+#add_article td a.add_text_1 {
+	position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center; display:inline; border-bottom: solid 1px #05a; padding-bottom: 3px; margin: 0% 0% 0% 46%;
+}
+#add_article td a.add_text_1:hover {
+	color: #248; background: #ff5; 
+}
+
+/*        Картинка             */
+
+#add_article td a.add_picture {
+	 position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center;  display:inline; margin: 0% 5% 0% 40%; border-bottom: solid 1px #05a; padding-bottom: 3px;
+}
+#add_article td a.add_picture:hover {
+	color: #248; background: #ff5; 
+}
+
+/*        Все остальные абзацы             */
+
+#add_article td a.add_text {
+	position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center; display:inline; border-bottom: solid 1px #05a; padding-bottom: 3px;
+}
+#add_article td a.add_text:hover {
+	color: #248; background: #ff5; 
+}
+
+
+#add_article td input.submit {
+	position: relative; float: left; top: 0px; left: 0%; width: 10%; font: bold 8pt "verdana"; color: #234; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin-left:45%; margin-top: 10px;
+}
+
+/*           Добавить примечания       */
+
+#add_article td a.add_comments {
+	 left: 15%; width: 70%; 
+}
+#add_article td a.add_comments:hover {
+	background: #fe8; 
+	}
+
+
+
+/*        Заголовок "Стиль текста"        */
+
+
+#add_article td p.text_style {
+	width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-align: center; font: bold 10pt "verdana"; color: #04a;
+}
+
+/*        Свойства текста: отступ, жирный, курсив       */
+
+#add_article td p.text_option  {
+	display: inline; width: 8%; padding-left: 0%; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 10px 0% 0px 9%; text-align: center; background: #ffe;
+}
+#add_article td input.indent {
+	 top: 0px; display: inline; width: 3%; padding-right: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 10px 0px 0px 1%; text-align: right;
+}
+#add_article td input.checkbox {
+	 top: 2px; display: inline; width: 2.5%; padding-right: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 10px 0px 0px 0px; 
+}
+
+/*        Выбор размера  промежуточного заголовка     */
+
+#add_article td select.heads_4_6 {
+	position: relative; float: left; top: 10px; left: 10px; width: 50px; height: 20px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 0px 10px; display: inline;
+}
+#add_article td select option {
+ font: bold 9pt "verdana"; color: #000; width: 20px; text-align: right;
+}
+
+
+/*           Сохранить / Удалить текст  параграфа      */
+
+#add_article td a.save_text {
+	 left: 20%; width: 25%; 
+}
+#add_article td a.save_text:hover {
+	 background: #fff;
+}
+#add_article td a.del_text {
+	 left: 35%; width: 25%; 
+}
+#add_article td a.del_text:hover {
+	 background: #fff; color: #d00;
+} 
+
+/*                Поля ввода текста параграфов           */
+
+#add_article td  textarea.text_en {
+	position: relative; float: left; top: 0px; left: 0px; width: 99%; height: 80px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 0px;
+}
+#add_article td  textarea.text_ru {
+	position: relative; float: left; top: 0px; left: 0px; width: 99%; height: 80px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 0px;
+}
+
+
+/*           Изменить текст  параграфа      */
+
+#add_article td a.chng_text {
+	 left: 35%; width: 25%; 
+}
+#add_article td a.chng_text:hover {
+	 background: #fff;
+}
+
+/*           Сохранить  / Изменить  /  Удалить  примечания        */
+
+#add_article td a.save_comment {
+	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
+}
+#add_article td a.save_comment:hover {
+	 background: #fff;
+}
+#add_article td a.chng_comment {
+	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
+}
+#add_article td a.chng_comment:hover {
+	 background: #fff;
+}
+#add_article td a.del_comment {
+	 left: 0%; width: 40%; margin: 0px 0% 0px 10%;
+}
+#add_article td a.del_comment:hover {
+	 background: #fff; color: #d00;
+} 
+
+/*                Поля ввода текста примечаний           */
+
+#add_article td  textarea.comment_en {
+	position: relative; top: 0px; left: 0px; float: left;  width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 5%; display: inline; 
+}
+#add_article td  textarea.comment_ru {
+	position: relative; top: 0px; left: 0px;  float: left; width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 8%; display: inline; 
+}
+
+/*          =======      Конец рабочей области      ======            */
+
+
+/*           Изменить  имя автора        */
+
+#add_article td a.chng_author_name{
+	 left: 37%; width: 26%; 
+}
+#add_article td a.chng_author_name:hover  {
+	background: #fe8; 
+	}
+	
+	/*           Сохранить  имя автора        */
+
+#add_article td a.save_author_name{
+	 left: 37%; width: 26%; 
+}
+#add_article td a.save_author_name:hover  {
+	background: #fe8; 
+	}
+	
+	
+/*           Изменить / Удалить абзац        */
+
+#add_article td a.chng_paragraph {
+	 left: 20%; width: 25%; 
+}
+#add_article td a.chng_paragraph:hover {
+	 background: #fff;
+}
+#add_article td a.del_paragraph {
+	 left: 30%; width: 25%; 
+}
+#add_article td a.del_paragraph:hover {
+	 background: #fff; color: #d00; 
+}
+
+/*             Уже введенные текст  и  картинки                      */
+
+
+#add_article td p.txt {
+	left: 0px; width: 340px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
+}
+#add_article td img {
+	position: relative; float: left; top: 0px; left: 0%; width: 100%; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px;
+}
+
+
+/*              Параграфы примечаний  в средней колонке           */
+
+#add_article  td.center p.lt {
+	font:  bold 7pt "verdana"; color: #000; background: #8fe;  margin: 5px 0px 5px 0%;
+}
+#add_article  td.center p.rt {
+	text-align: justify;  background: #fe9;  margin: 5px 0px 5px 0%;
+}
+
+
+
+/*              Удалить все абзацы                        */
+
+
+#add_article td a.delete_all {
+	 left: 42%; width: 16%; font: 8pt "verdana"; color: #678; background: #bbb;
+}
+#add_article td a.delete_all:hover {
+	color: #123; background: #ddd; color: #555;
+}
+
+
+
+
+/*         ================================      */
+
+
+/*                       Личный кабинет - шапка                   */
+
+#cabh {
+	position:  relative; float: left; top: 0px; left: 0px;  height: 37px; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background-image: url(../images/p_proom_h.png); background-repeat: no-repeat;
+}
+#cabh p {
+	position: relative; float: left; width: 95%; top: 8px; left: 0px;  height: 25px; font: bold 11pt "verdana"; color: #456;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+
+/*                       Личный кабинет - навигация                  */
+
+#cabto {
+	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345;
+}
+#to {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#to p {
+	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+#to p.act {
+	background: #efefef;
+}
+#to p.wrks_act {
+	background: #cde; font: bold 8pt "verdana"; color: #345;
+}
+#to p.stat_act {
+	background: #fc3; font: bold 8pt "verdana"; color: #345;
+}
+#to a {
+	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
+}
+#to a p {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #2df; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+
+#to p.stat_act {
+	background: #fe3; color: #345; 
+}
+#to a p.stat {
+	color: #fe3;
+}
+#to a p.k {
+	color: #0f5;
+}
+#to a:hover p {
+	color: #f20; background: #ccc;
+}
+#to a:hover p.stat_act {
+	color: #345; background: #fe3;
+}
+
+/*         ================================      */
+
+
+/*                     Работы  - навигация                  */
+
+#wrksto {
+	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #cde;
+}
+#wto {
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 170px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+}
+#wto p {
+	position: relative; float: left; width: 150px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+#wto p.act {
+	color: #345; background: #efefef;
+}
+#wto a {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
+}
+#wto a p {
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
+}
+#wto a:hover p {
+	color: #e30; background: #bcd;
+}
+
+

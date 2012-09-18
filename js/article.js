@@ -186,5 +186,35 @@ var article = {
         $('#'+id+' td.center a.saveCmt').click();
     }
     return;
-  }
+  },
+
+    editAuthor: function(url)
+    {
+        $.ajaxSetup({async:false});
+        $.post(
+            url,
+            function(html)
+            {
+                $('#author_field').replaceWith(html);
+            }
+        );
+        return;
+    },
+
+    updateAuthor: function(url)
+    {
+        $.ajaxSetup({async:false});
+        var ff = $('#author_form');
+        vals = ff.serialize();
+        $.post(
+            url,
+            vals,
+            function(html)
+            {
+                $('#author_field').replaceWith(html);
+            }
+        );
+        return;
+
+    }
 };
