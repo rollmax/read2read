@@ -6,6 +6,9 @@ Paragraph:
     id_content:   { type: integer }
     paragraph_ru: { type: clob, notnull: true }
     paragraph_en: { type: clob, notnull: true }
+    is_photo:     { type: boolean, notnull: true, default: false }
+    photo_ru:     { type: string(200), default: null }
+    photo_en:     { type: string(200), default: null }
     is_bold:      { type: boolean, notnull: true, default: false }
     is_italic:    { type: boolean, notnull: true, default: false }
     h_style:      { type: enum, values: [none, 4, 5, 6], default: none}

@@ -1,7 +1,7 @@
 <tr class="work_area" id="author_field">
     <td colspan="3">
-        <form id="author_form">
-        <?php $form->renderHiddenFields() ?>
+        <form id="author_form" action="">
+        <?php echo $form->renderHiddenFields() ?>
         <table>
             <tr class="work_area">
                 <td class=left>

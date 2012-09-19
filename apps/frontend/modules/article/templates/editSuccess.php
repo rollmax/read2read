@@ -60,38 +60,54 @@
 
     <?php foreach ($form->getObject()->getParagraph() as $paragraph): ?>
           <tr id="paragraph-<?php echo $paragraph->getId(); ?>" class="paragraphRow">
-            <td class="left" style="padding-top:30px;">
-              <p class="txt"><?php echo $paragraph->getParagraphEn(); ?></p>
+            <td class="left">
+                <?php if ($paragraph->getIsPhoto()): ?>
+                    <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
+                <?php else: ?>
+                    <p class="txt"><?php echo $paragraph->getParagraphEn(); ?></p>
+                <?php endif ?>
             </td>
             <td class="center">
-              <table>
-          <?php foreach ($paragraph->getComment() as $comment): ?>
-            <tr id="comment-<?php echo $comment->getId(); ?>">
-              <td>
-                <a class=chng onclick="article.editComment('comment-<?php echo $comment->getId(); ?>', '<?php echo url_for('comment_edit', $comment); ?>')">Изменить</a>
-                <p class="lt"><?php echo $comment->getCommentEn(); ?></p>
-              </td>
-              <td>
-                <a class=del onclick="article.deleteComment('comment-<?php echo $comment->getId(); ?>', '<?php echo url_for('comment_delete', $comment); ?>')">Удалить</a>
-                <p class="rt"><?php echo $comment->getCommentRu(); ?></p>
-              </td>
-            </tr>
-          <?php endforeach; ?>
-          </table>
-
-          <a class="addCmt" onclick="article.addComment('paragraph-<?php echo $paragraph->getId(); ?>', '<?php echo url_for('comment_create', $paragraph); ?>');">Добавить примечание</a>
+                <a class="chng_paragraph" onclick="article.editParagraph('paragraph-<?php echo $paragraph->getId(); ?>', '<?php
+                    if ($paragraph->getIsPhoto()) {
+                        echo url_for('paragraph_pic_edit', $paragraph);
+                    }else{
+                        echo url_for('paragraph_edit', $paragraph);
+                    }
+                    ?>')">Изменить</a>
+                <a class="del_paragraph" onclick="article.deleteParagraph('paragraph-<?php echo $paragraph->getId(); ?>', '<?php echo url_for('paragraph_delete', $paragraph); ?>')">Удалить</a>
+                <?php if (!$paragraph->getIsPhoto()): ?>
+                <table>
+                    <?php foreach ($paragraph->getComment() as $comment): ?>
+                    <tr id="comment-<?php echo $comment->getId(); ?>">
+                        <td>
+                            <p class="lt"><?php echo $comment->getCommentEn(); ?></p>
+                        </td>
+                        <td>
+                            <p class="rt"><?php echo $comment->getCommentRu(); ?></p>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+              <?php else: ?>
+                &nbsp;
+              <?php endif ?>
         </td>
         <td class="right">
-          <a class="edit" onclick="article.editParagraph('paragraph-<?php echo $paragraph->getId(); ?>', '<?php echo url_for('paragraph_edit', $paragraph); ?>')">Изменить</a>
-          <a class="del" onclick="article.deleteParagraph('paragraph-<?php echo $paragraph->getId(); ?>', '<?php echo url_for('paragraph_delete', $paragraph); ?>')">Удалить</a>
-          <p class="txt"><?php echo $paragraph->getParagraphRu(); ?></p>
+            <?php if ($paragraph->getIsPhoto()): ?>
+                <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
+            <?php else: ?>
+                <p class="txt"><?php echo $paragraph->getParagraphRu(); ?></p>
+            <?php endif ?>
         </td>
       </tr>
     <?php endforeach; // $paragraph ?>
 
-    <tr class=b  <?php if ($ll == 0) echo 'style="display: none;"' ?>>
-      <td colspan=3 class="add_paragraph">
-        <a onclick="article.addParagraph('<?php echo url_for('paragraph_create', $form->getObject()); ?>');">Добавить абзац</a>
+    <tr id="add_paragraph_before" <?php if ($ll == 0) echo 'style="display: none;"' ?>>
+      <td colspan=3>
+          <p class="add_paragraph">Добавить абзац</p>
+          <a class="add_picture" style="display: none;" onclick="article.addParagraph('<?php echo url_for('paragraph_pic_create', $form->getObject()) ?>')">Картинку</a>
+          <a class="add_text_1" id="add_text_a" onclick="article.addParagraph('<?php echo url_for('paragraph_create', $form->getObject()); ?>');">Текст</a>
       </td>
     </tr>
     <tr class=b>

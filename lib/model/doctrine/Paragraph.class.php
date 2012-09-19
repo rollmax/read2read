@@ -12,4 +12,16 @@
  */
 class Paragraph extends BaseParagraph
 {
+
+    public function getPathPhotoRu()
+    {
+        return ($this->getPhotoRu() !== null) ? sfConfig::get('app_articles_photo_dir').'/ru/'.$this->getPhotoRu() : false;
+    }
+
+    public function getPathPhotoEn()
+    {
+        return ($this->getPhotoEn() !== null) ? sfConfig::get('app_articles_photo_dir').'/en/'.$this->getPhotoEn() : false;
+    }
+
+
 }

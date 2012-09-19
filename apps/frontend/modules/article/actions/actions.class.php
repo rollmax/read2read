@@ -223,24 +223,46 @@ class articleActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
+
+    public function createNewParagraph($id)
+    {
+        $paragraph = new Paragraph();
+        $paragraph->setIdContent($id);
+        $paragraph->save();
+        if(!$paragraph->getId())
+        {
+            // action on error
+            exit;
+        }
+        return $paragraph;
+    }
+
   public function executeParagraphCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isXmlHttpRequest());
 
     $contentId = $this->getRoute()->getObject()->getId();
-    $paragraph = new Paragraph();
-    $paragraph->setIdContent($contentId);
-    $paragraph->save();
-    if(!$paragraph->getId())
-    {
-      // action on error
-      exit;
-    }
+    $paragraph = $this->createNewParagraph($contentId);
+
     $this->form = new ArticleParagraphForm($paragraph);
     
     $this->setTemplate('paragraph');
   }
 
+
+    public function executeParagraphPicCreate(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $contentId = $this->getRoute()->getObject()->getId();
+        $paragraph = $this->createNewParagraph($contentId);
+        $paragraph->setIsPhoto(1);
+        $paragraph->save();
+
+        $this->form = new ArticleParagraphPicForm($paragraph);
+
+        $this->setTemplate('paragraphPic');
+    }
   /**
    * Executes paragraphUpdate action
    *
@@ -253,11 +275,30 @@ class articleActions extends sfActions
     $this->form = new ArticleParagraphForm($this->getRoute()->getObject());
 
     $this->paragraph = $this->processParagraphForm($request, $this->form);
+
     if (!$this->paragraph)
     {
       $this->setTemplate('paragraph');
     }
   }
+
+    public function executeParagraphPicUpdate(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new ArticleParagraphPicForm($this->getRoute()->getObject());
+
+        $this->paragraph = $this->processParagraphForm($request, $this->form);
+
+        if (!$this->paragraph)
+        {
+            $this->setTemplate('paragraphPic');
+        }
+        else
+        {
+            $this->setTemplate('paragraphUpdate');
+        }
+    }
 
   /**
    * Executes paragraphDelete action
@@ -281,6 +322,11 @@ class articleActions extends sfActions
   }
 
 
+    public function executeParagraphPicEdit(sfWebRequest $request)
+    {
+        $this->form = new ArticleParagraphPicForm($this->getRoute()->getObject());
+        $this->setTemplate('paragraphPic');
+    }
 
   /**
    * Processing paragraph form
@@ -290,7 +336,8 @@ class articleActions extends sfActions
   protected function processParagraphForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind(
-      $request->getParameter($form->getName())
+        $request->getParameter($form->getName()),
+        $request->getFiles($form->getName())
     );
 
     if ($form->isValid())

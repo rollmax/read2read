@@ -464,6 +464,28 @@ paragraph_delete:
   param:   { module: article, action: paragraphDelete, sf_format: html }
   requirements: { sf_method: post }
 
+# article paragraph pic
+paragraph_pic_create:
+  url:    /article/:id/paragraph/pic.:sf_format
+  class:  sfDoctrineRoute
+  options:  { model: Content, type: object }
+  param:    { module: article, action: paragraphPicCreate, sf_format: html }
+  requirements: { sf_method: post }
+
+paragraph_pic_edit:
+  url:    /article/paragraph/pic/:id/edit.:sf_format
+  class:  sfDoctrineRoute
+  options:  { model: Paragraph, type: object }
+  param:    { module: article, action: paragraphPicEdit, sf_format: html }
+  requirements: { sf_method: post }
+
+paragraph_pic_update:
+  url:    /article/paragraph/pic/:id/update.:sf_format
+  class:    sfDoctrineRoute
+  options:  { model: Paragraph, type: object }
+  param:    { module: article, action: paragraphPicUpdate, sf_format: html }
+  requirements: { sf_method: post }
+
 
 # article comments routes
 comment_create:

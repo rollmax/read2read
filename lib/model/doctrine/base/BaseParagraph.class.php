@@ -8,6 +8,9 @@
  * @property integer $id_content
  * @property clob $paragraph_ru
  * @property clob $paragraph_en
+ * @property boolean $is_photo
+ * @property string $photo_ru
+ * @property string $photo_en
  * @property boolean $is_bold
  * @property boolean $is_italic
  * @property enum $h_style
@@ -19,6 +22,9 @@
  * @method integer             getIdContent()    Returns the current record's "id_content" value
  * @method clob                getParagraphRu()  Returns the current record's "paragraph_ru" value
  * @method clob                getParagraphEn()  Returns the current record's "paragraph_en" value
+ * @method boolean             getIsPhoto()      Returns the current record's "is_photo" value
+ * @method string              getPhotoRu()      Returns the current record's "photo_ru" value
+ * @method string              getPhotoEn()      Returns the current record's "photo_en" value
  * @method boolean             getIsBold()       Returns the current record's "is_bold" value
  * @method boolean             getIsItalic()     Returns the current record's "is_italic" value
  * @method enum                getHStyle()       Returns the current record's "h_style" value
@@ -29,6 +35,9 @@
  * @method Paragraph           setIdContent()    Sets the current record's "id_content" value
  * @method Paragraph           setParagraphRu()  Sets the current record's "paragraph_ru" value
  * @method Paragraph           setParagraphEn()  Sets the current record's "paragraph_en" value
+ * @method Paragraph           setIsPhoto()      Sets the current record's "is_photo" value
+ * @method Paragraph           setPhotoRu()      Sets the current record's "photo_ru" value
+ * @method Paragraph           setPhotoEn()      Sets the current record's "photo_en" value
  * @method Paragraph           setIsBold()       Sets the current record's "is_bold" value
  * @method Paragraph           setIsItalic()     Sets the current record's "is_italic" value
  * @method Paragraph           setHStyle()       Sets the current record's "h_style" value
@@ -57,6 +66,19 @@ abstract class BaseParagraph extends sfDoctrineRecord
         $this->hasColumn('paragraph_en', 'clob', null, array(
              'type' => 'clob',
              'notnull' => true,
+             ));
+        $this->hasColumn('is_photo', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('photo_ru', 'string', 200, array(
+             'type' => 'string',
+             'length' => 200,
+             ));
+        $this->hasColumn('photo_en', 'string', 200, array(
+             'type' => 'string',
+             'length' => 200,
              ));
         $this->hasColumn('is_bold', 'boolean', null, array(
              'type' => 'boolean',

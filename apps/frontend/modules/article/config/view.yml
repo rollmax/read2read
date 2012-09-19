@@ -7,3 +7,4 @@ newSuccess:
 
 editSuccess:
   stylesheets: [ add_article.css ]
+  javascripts: [ jquery.form.js ]
