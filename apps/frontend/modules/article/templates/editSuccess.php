@@ -1,3 +1,14 @@
+<?php
+function editSuccess_genStyle($object)
+{
+    if($object->getIsBold()){ echo " bold"; }
+    if($object->getIsItalic()){ echo " ita"; }
+    if($object->getHStyle() != 'none'){
+        echo " h".$object->getHStyle();
+    }
+}
+?>
+
 <?php slot('currentPage', 'article_no_published') ?>
 <?php include_partial('article/headBlock'); ?>
 </div> <!-- e: mdl3 -->
@@ -24,11 +35,11 @@
     <?php echo $form->renderHiddenFields(); ?>
     <tr>
       <td class=left>
-          <p class="h"><?php echo $form->getObject()->getTitleEn() ?></p>
+          <p class="h<?php editSuccess_genStyle($form->getObject()) ?>"><?php echo $form->getObject()->getTitleEn() ?></p>
       </td>
       <td class=center></td>
       <td class=right>
-          <p class="h"><?php echo $form->getObject()->getTitleRu() ?></p>
+          <p class="h<?php editSuccess_genStyle($form->getObject()) ?>"><?php echo $form->getObject()->getTitleRu() ?></p>
       </td>
     </tr>
     <?php if ($ll == 0): // author_field ?>
@@ -64,7 +75,11 @@
                 <?php if ($paragraph->getIsPhoto()): ?>
                     <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
                 <?php else: ?>
-                    <p class="txt"><?php echo $paragraph->getParagraphEn(); ?></p>
+                    <p class="txt<?php editSuccess_genStyle($paragraph) ?>"<?php
+                        if($paragraph->getPadLeft() > 0){
+                            echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
+                        }
+                    ?>><?php echo $paragraph->getParagraphEn(); ?></p>
                 <?php endif ?>
             </td>
             <td class="center">
@@ -97,7 +112,11 @@
             <?php if ($paragraph->getIsPhoto()): ?>
                 <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
             <?php else: ?>
-                <p class="txt"><?php echo $paragraph->getParagraphRu(); ?></p>
+                <p class="txt<?php editSuccess_genStyle($paragraph) ?>"<?php
+                    if($paragraph->getPadLeft() > 0){
+                        echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
+                    }
+                    ?>><?php echo $paragraph->getParagraphRu(); ?></p>
             <?php endif ?>
         </td>
       </tr>

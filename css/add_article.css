@@ -296,12 +296,34 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 background: #fff; color: #d00; 
 }
 
-/*             Уже введенные текст  и  картинки                      */
+/*             Уже введенные текст  и  картинки                  */
 
+/*             основной текст                */
 
 #add_article td p.txt {
-	left: 0px; width: 340px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
+	left: 0px; width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
 }
+
+/*             дополнительные классы               */
+
+#add_article td p.ita {
+	font-style: italic;
+}
+#add_article td p.bold {
+	font-weight: bold;
+}
+#add_article td p.h4 {
+	font-size: 12pt; font-weight: bold; text-align: left; text-indent: 0em;
+}
+#add_article td p.h5 {
+	font-size: 10pt; font-weight: bold; text-align: left; text-indent: 0em;
+}
+#add_article td p.h6 {
+	font-size: 8pt; font-weight: bold; text-align: left; text-indent: 0em;
+}
+
+/*             Картинка               */
+
 #add_article td img {
 	position: relative; float: left; top: 0px; left: 0%; width: 100%; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px;
 }

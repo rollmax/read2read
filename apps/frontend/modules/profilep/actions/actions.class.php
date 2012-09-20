@@ -428,6 +428,13 @@ class profilepActions extends sfActions
     $this->form = new UserEmailForm($this->getUser()->getGuardUser());
   }
 
+    public function executeChangeContactEmail(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new UserContactEmailForm($this->getUser()->getGuardUser());
+    }
+
   /**
    * Executes update action
    *
@@ -445,6 +452,21 @@ class profilepActions extends sfActions
     
     $this->user = $this->getUser()->getGuardUser();
   }
+
+    public function executeUpdateContactEmail(sfWebRequest $request)
+    {
+        $this->user = $this->getUser()->getGuardUser();
+        $form = new UserContactEmailForm($this->user);
+
+        $processed = $this->processUserForm($request, $form);
+        if($processed !== true)
+        {
+            $this->form = $processed;
+            $this->setTemplate('changeContactEmail');
+        }
+    }
+
+
 
   public function executeChangePassword(sfWebRequest $request)
   {

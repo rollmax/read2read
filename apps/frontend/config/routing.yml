@@ -177,6 +177,10 @@ profile_p_email:
   url: /profilep/email
   param:   { module: profilep, action: changeEmail }
 
+profile_p_contact_email:
+  url: /profilep/contact/email
+  param:  { module: profilep, action: changeContactEmail }
+
 profile_p_password:
   url: /profilep/password
   param: { module: profilep, action: changePassword }
@@ -192,6 +196,10 @@ profile_p_balance_update:
 profile_p_update_email:
   url:    /profilep/updateEmail
   param:  { module: profilep, action: updateEmail }
+
+profile_p_update_contact_email:
+  url:    /profilep/contact/email/update
+  param:  { module: profilep, action: updateContactEmail }
 
 profile_p_update_password:
   url:    /profilep/updatePassword

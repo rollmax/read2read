@@ -258,6 +258,26 @@ var account = {
       }
     );
   },
+
+    changeContactEmail: function(url)
+    {
+        if(!account.initBlocker('contactemail'))
+            return false;
+
+        $form = $('#contactemail td.center form');
+
+        $values = $form.serialize();
+
+        $.post(
+            url,
+            $values,
+            function(data)
+            {
+                $('#contactemail').html(data);
+                account.removeBlocker('contactemail');
+            }
+        );
+    },
   
   changeLivePlace: function(url)
   {
