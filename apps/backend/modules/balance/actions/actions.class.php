@@ -13,37 +13,37 @@ require_once dirname(__FILE__).'/../lib/balanceGeneratorHelper.class.php';
  */
 class balanceActions extends autoBalanceActions
 {
-  /**
-   * Execute show P_Users payment page
-   *
-   * @param sfWebRequest $request
-   */
-  public function executePpayment(sfWebRequest $request)
-  {
-    $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
-    $this->p_users = UserTable::getInstance()->retrieveBackendPuserList()->execute();
-  }
-  
-  
-  public function executeIndex(sfWebRequest $request)
-  {
-    // System balance
-    $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
-
-    // sorting
-    if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort')))
+    /**
+     * Execute show P_Users payment page
+     *
+     * @param sfWebRequest $request
+     */
+    public function executePpayment(sfWebRequest $request)
     {
-      $this->setSort(array($request->getParameter('sort'), $request->getParameter('sort_type')));
+        $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
+        $this->p_users = UserTable::getInstance()->retrieveBackendPuserList()->execute();
     }
 
-    // pager
-    if ($request->getParameter('page'))
+
+    public function executeIndex(sfWebRequest $request)
     {
-      $this->setPage($request->getParameter('page'));
+        // System balance
+        $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
+
+        // sorting
+        if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort')))
+        {
+            $this->setSort(array($request->getParameter('sort'), $request->getParameter('sort_type')));
+        }
+
+        // pager
+        if ($request->getParameter('page'))
+        {
+            $this->setPage($request->getParameter('page'));
+        }
+
+        $this->pager = $this->getPager();
+        $this->sort = $this->getSort();
     }
 
-    $this->pager = $this->getPager();
-    $this->sort = $this->getSort();
-  }
-  
 }

@@ -1,267 +1,233 @@
 var account = {
 
-  get: function(id, url)
-  {
-    if(!account.initBlocker(id))
-      return false;
-    
-    $.post(
-      url,
-      function(data)
-      {
-        $('#'+id).html(data);
-        account.removeBlocker(id);
-      }
-    );
-    
-  },
+    get:function (id, url) {
+        if (!account.initBlocker(id))
+            return false;
 
-  change: function(id, url)
-  {
-    if(!account.initBlocker(id))
-      return false;
+        $.post(
+            url,
+            function (data) {
+                $('#' + id).html(data);
+                account.removeBlocker(id);
+            }
+        );
 
-    $form = $('#'+id+' form');
+    },
 
-    $values = $form.serialize();
+    change:function (id, url) {
+        if (!account.initBlocker(id))
+            return false;
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        try {
-          dataObject = jQuery.parseJSON(data);
-          window.location = dataObject.redirect;
-        } catch(e) {
+        $form = $('#' + id + ' form');
 
-          $('#'+id).html(data);
-          account.removeBlocker(id);
-        }
-      }
-    );
-    
-  },
+        $values = $form.serialize();
 
-  initBlocker: function(id)
-  {
-    if(!account.checkBlocker(id))
-      return false;
+        $.post(
+            url,
+            $values,
+            function (data) {
+                try {
+                    dataObject = jQuery.parseJSON(data);
+                    window.location = dataObject.redirect;
+                } catch (e) {
 
-    $('#'+id).addClass('blocked');
-    return true;
-  },
+                    $('#' + id).html(data);
+                    account.removeBlocker(id);
+                }
+            }
+        );
 
-  checkBlocker: function(id)
-  {
-    if($('#'+id).hasClass('blocked'))
-      return false;
-    return true;
-  },
+    },
 
-  removeBlocker: function(id)
-  {
-    if($('#'+id).removeClass('blocked'))
-    return true;
-  },
+    initBlocker:function (id) {
+        if (!account.checkBlocker(id))
+            return false;
+
+        $('#' + id).addClass('blocked');
+        return true;
+    },
+
+    checkBlocker:function (id) {
+        if ($('#' + id).hasClass('blocked'))
+            return false;
+        return true;
+    },
+
+    removeBlocker:function (id) {
+        if ($('#' + id).removeClass('blocked'))
+            return true;
+    },
 
 
-  getTariff: function(url)
-  {
-    if(!account.initBlocker('tariff'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#tariff').html(data);
-        account.removeBlocker('tariff');
-      }
-    );
-  },
+    getTariff:function (url) {
+        if (!account.initBlocker('tariff'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#tariff').html(data);
+                account.removeBlocker('tariff');
+            }
+        );
+    },
 
-  getEmail: function(url)
-  {
-    if(!account.initBlocker('email'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#email').html(data);
-        account.removeBlocker('email');
-      }
-    );
-  },
+    getEmail:function (url) {
+        if (!account.initBlocker('email'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#email').html(data);
+                account.removeBlocker('email');
+            }
+        );
+    },
 
-  getLivePlace: function(url)
-  {
-    if(!account.initBlocker('live-place'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#live-place').html(data);
-        account.removeBlocker('live-place');
-      }
-    );
-  },
+    getLivePlace:function (url) {
+        if (!account.initBlocker('live-place'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#live-place').html(data);
+                account.removeBlocker('live-place');
+            }
+        );
+    },
 
-  getPhone: function(url)
-  {
-    if(!account.initBlocker('phone'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#phone').html(data);
-        account.removeBlocker('phone');
-      }
-    );
-  },
+    getPhone:function (url) {
+        if (!account.initBlocker('phone'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#phone').html(data);
+                account.removeBlocker('phone');
+            }
+        );
+    },
 
-  getSkype: function(url)
-  {
-    if(!account.initBlocker('skype'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#skype').html(data);
-        account.removeBlocker('skype');
-      }
-    );
-  },
+    getSkype:function (url) {
+        if (!account.initBlocker('skype'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#skype').html(data);
+                account.removeBlocker('skype');
+            }
+        );
+    },
 
-  getSite: function(url)
-  {
-    if(!account.initBlocker('site'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#site').html(data);
-        account.removeBlocker('site');
-      }
-    );
-  },
-  
-  getPassword: function(url)
-  {
-    if(!account.initBlocker('password'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#password').html(data);
-        account.removeBlocker('password');
-      }
-    );
-  },
+    getSite:function (url) {
+        if (!account.initBlocker('site'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#site').html(data);
+                account.removeBlocker('site');
+            }
+        );
+    },
 
-  getFirstName: function(url)
-  {
-    if(!account.initBlocker('first-name'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#first-name').html(data);
-        account.removeBlocker('first-name');
-      }
-    );
-  },
+    getPassword:function (url) {
+        if (!account.initBlocker('password'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#password').html(data);
+                account.removeBlocker('password');
+            }
+        );
+    },
 
-  getLastName: function(url)
-  {
-    if(!account.initBlocker('last-name'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#last-name').html(data);
-        account.removeBlocker('last-name');
-      }
-    );
-  },
-  
-  getResumeText: function(url)
-  {
-    if(!account.initBlocker('changeResume'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#changeResume').replaceWith(data);
-        account.removeBlocker('changeResume');
-      }
-    );
-  },
+    getFirstName:function (url) {
+        if (!account.initBlocker('first-name'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#first-name').html(data);
+                account.removeBlocker('first-name');
+            }
+        );
+    },
 
-  getAvatar: function(url)
-  {
-    if(!account.initBlocker('changeAvatar'))
-      return false;
-    $.post(
-      url,
-      function(data)
-      {
-        $('#changeAvatar').replaceWith(data);
-        account.removeBlocker('changeAvatar');
-      }
-    );
-  },
+    getLastName:function (url) {
+        if (!account.initBlocker('last-name'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#last-name').html(data);
+                account.removeBlocker('last-name');
+            }
+        );
+    },
 
-  changeTariff: function(url)
-  {
-    if(!account.initBlocker('tariff'))
-      return false;
-    
-    $form = $('#tariff form');
-    $values = $form.serialize();
+    getResumeText:function (url) {
+        if (!account.initBlocker('changeResume'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#changeResume').replaceWith(data);
+                account.removeBlocker('changeResume');
+            }
+        );
+    },
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#tariff').html(data);
-        account.removeBlocker('tariff');
-      }
-    );
-  },
+    getAvatar:function (url) {
+        if (!account.initBlocker('changeAvatar'))
+            return false;
+        $.post(
+            url,
+            function (data) {
+                $('#changeAvatar').replaceWith(data);
+                account.removeBlocker('changeAvatar');
+            }
+        );
+    },
 
-  changeEmail: function(url)
-  {
-    if(!account.initBlocker('email'))
-      return false;
-    
-    $form = $('#email td.center form');
+    changeTariff:function (url) {
+        if (!account.initBlocker('tariff'))
+            return false;
 
-    $values = $form.serialize();
-    
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#email').html(data);
-        account.removeBlocker('email');
-      }
-    );
-  },
+        $form = $('#tariff form');
+        $values = $form.serialize();
 
-    changeContactEmail: function(url)
-    {
-        if(!account.initBlocker('contactemail'))
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#tariff').html(data);
+                account.removeBlocker('tariff');
+            }
+        );
+    },
+
+    changeEmail:function (url) {
+        if (!account.initBlocker('email'))
+            return false;
+
+        $form = $('#email td.center form');
+
+        $values = $form.serialize();
+
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#email').html(data);
+                account.removeBlocker('email');
+            }
+        );
+    },
+
+    changeContactEmail:function (url) {
+        if (!account.initBlocker('contactemail'))
             return false;
 
         $form = $('#contactemail td.center form');
@@ -271,177 +237,160 @@ var account = {
         $.post(
             url,
             $values,
-            function(data)
-            {
+            function (data) {
                 $('#contactemail').html(data);
                 account.removeBlocker('contactemail');
             }
         );
     },
-  
-  changeLivePlace: function(url)
-  {
-    if(!account.initBlocker('live-place'))
-      return false;
-    $form = $('#live-place td.center form');
 
-    $values = $form.serialize();
+    changeLivePlace:function (url) {
+        if (!account.initBlocker('live-place'))
+            return false;
+        $form = $('#live-place td.center form');
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#live-place').html(data);
-        account.removeBlocker('live-place');
-      }
-    );
-  },
+        $values = $form.serialize();
 
-  changeFirstName: function(url)
-  {
-    if(!account.initBlocker('first-name'))
-      return false;
-    
-    $form = $('#first-name td.center form');
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#live-place').html(data);
+                account.removeBlocker('live-place');
+            }
+        );
+    },
 
-    $values = $form.serialize();
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#first-name').html(data);
-        account.removeBlocker('first-name');
-      }
-    );
-  },
+    changeFirstName:function (url) {
+        if (!account.initBlocker('first-name'))
+            return false;
 
-  changeLastName: function(url)
-  {
-    if(!account.initBlocker('last-name'))
-      return false;
-    
-    $form = $('#last-name td.center form');
+        $form = $('#first-name td.center form');
 
-    $values = $form.serialize();
+        $values = $form.serialize();
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#first-name').html(data);
+                account.removeBlocker('first-name');
+            }
+        );
+    },
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#last-name').html(data);
-        account.removeBlocker('last-name');
-      }
-    );
-  },
-  changePassword: function(url)
-  {
-    if(!account.initBlocker('password'))
-      return false;
-    
-    $form = $('#password td.center form');
+    changeLastName:function (url) {
+        if (!account.initBlocker('last-name'))
+            return false;
 
-    $values = $form.serialize();
+        $form = $('#last-name td.center form');
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
+        $values = $form.serialize();
 
-        try {
-          dataObject = jQuery.parseJSON(data);
-          window.location = dataObject.redirect;
-        } catch(e) {
-          
-          $('#password').html(data);
-          account.removeBlocker('password');
-        }
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#last-name').html(data);
+                account.removeBlocker('last-name');
+            }
+        );
+    },
+    changePassword:function (url) {
+        if (!account.initBlocker('password'))
+            return false;
 
-        
-      },
-      'html'
-    );
-  },
+        $form = $('#password td.center form');
 
-  changeResumeText: function(url)
-  {
-    if(!account.initBlocker('changeResume'))
-      return false;
+        $values = $form.serialize();
 
-    $form = $('#changeResume  form');
+        $.post(
+            url,
+            $values,
+            function (data) {
 
-    $values = $form.serialize();
+                try {
+                    dataObject = jQuery.parseJSON(data);
+                    window.location = dataObject.redirect;
+                } catch (e) {
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#changeResume').replaceWith(data);
-        account.removeBlocker('changeResume');
-      }
-    );
-  },
+                    $('#password').html(data);
+                    account.removeBlocker('password');
+                }
 
-  changePhone: function(url)
-  {
-    if(!account.initBlocker('phone'))
-      return false;
-    $form = $('#phone  form');
 
-    $values = $form.serialize();
+            },
+            'html'
+        );
+    },
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#phone').html(data);
-        account.removeBlocker('phone');
-      }
-    );
-  },
+    changeResumeText:function (url) {
+        if (!account.initBlocker('changeResume'))
+            return false;
 
-  changeSkype: function(url)
-  {
-    if(!account.initBlocker('skype'))
-      return false;
-    $form = $('#skype  form');
+        $form = $('#changeResume  form');
 
-    $values = $form.serialize();
-    
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#skype').html(data);
-        account.removeBlocker('skype');
-      }
-    );
-  },
+        $values = $form.serialize();
 
-  changeSite: function(url)
-  {
-    if(!account.initBlocker('site'))
-      return false;
-    $form = $('#site  form');
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#changeResume').replaceWith(data);
+                account.removeBlocker('changeResume');
+            }
+        );
+    },
 
-    $values = $form.serialize();
+    changePhone:function (url) {
+        if (!account.initBlocker('phone'))
+            return false;
+        $form = $('#phone  form');
 
-    $.post(
-      url,
-      $values,
-      function(data)
-      {
-        $('#site').html(data);
-        account.removeBlocker('site');
-      }
-    );
-  }
+        $values = $form.serialize();
+
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#phone').html(data);
+                account.removeBlocker('phone');
+            }
+        );
+    },
+
+    changeSkype:function (url) {
+        if (!account.initBlocker('skype'))
+            return false;
+        $form = $('#skype  form');
+
+        $values = $form.serialize();
+
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#skype').html(data);
+                account.removeBlocker('skype');
+            }
+        );
+    },
+
+    changeSite:function (url) {
+        if (!account.initBlocker('site'))
+            return false;
+        $form = $('#site  form');
+
+        $values = $form.serialize();
+
+        $.post(
+            url,
+            $values,
+            function (data) {
+                $('#site').html(data);
+                account.removeBlocker('site');
+            }
+        );
+    }
 
 }
 

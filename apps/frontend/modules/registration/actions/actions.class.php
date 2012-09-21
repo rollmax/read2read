@@ -13,8 +13,9 @@ class registrationActions extends sfActions
 
     public function  preExecute()
     {
-        if (!$this->getUser()->isAnonymous())
+        if (!$this->getUser()->isAnonymous()) {
             $this->redirect('@homepage');
+        }
     }
 
     /**
@@ -46,11 +47,11 @@ class registrationActions extends sfActions
     {
         $this->form = new RegisterUserUForm();
 
-        if (!$this->processForm($request, $this->form))
+        if (!$this->processForm($request, $this->form)) {
             $this->setTemplate('regu');
-        else {
+        } else {
             //$this->user = $this->saveForm($this->form);
-            $data = $request->getParameter($this->form->getName());//;die;
+            $data = $request->getParameter($this->form->getName()); //;die;
             $this->user = new User;
             $this->user->setLogin($data['login']);
             $this->user->setEmail($data['email']);
@@ -64,11 +65,11 @@ class registrationActions extends sfActions
     {
         $this->form = new RegisterUserPForm();
 
-        if (!$this->processForm($request, $this->form))
+        if (!$this->processForm($request, $this->form)) {
             $this->setTemplate('regp');
-        else {
+        } else {
             //$this->user = $this->saveForm($this->form);
-            $data = $request->getParameter($this->form->getName());//;die;
+            $data = $request->getParameter($this->form->getName()); //;die;
             $this->user = new User;
             $this->user->setLogin($data['login']);
             $this->user->setEmail($data['email']);
@@ -150,8 +151,10 @@ EOF
     protected function processForm(sfWebRequest $request, sfForm $form)
     {
         $form->bind($request->getParameter($form->getName()));
-        if ($form->isValid())
+        if ($form->isValid()) {
             return true;
+        }
+
         return false;
     }
 
@@ -172,7 +175,7 @@ EOF
 
         $form = new UserActivationForm();
         //$this->user = $this->getRoute()->getObject();
-new User;
+        new User;
         $form->bind($request->getParameter($form->getName()));
 
 
@@ -180,8 +183,9 @@ new User;
             $data = $form->getValues();
 
             if ($data['login_check'] == $this->user->getLogin()) {
-                if ($this->user->getActivationCode() == '')
+                if ($this->user->getActivationCode() == '') {
                     $this->redirect('@homepage');
+                }
 
                 $this->password = $this->user->generatePassword();
 
@@ -193,11 +197,14 @@ new User;
 
                 $this->user->save();
                 // Init Image URL
-                $this->imgUrl = sfConfig::get('app_secret_img_url_dir') . '/' . $this->user->getImgFileName() . '?p=' . rand(1, 990000);
-            } else
+                $this->imgUrl = sfConfig::get('app_secret_img_url_dir') . '/' . $this->user->getImgFileName(
+                ) . '?p=' . rand(1, 990000);
+            } else {
                 $this->redirect('@homepage');
-        } else
+            }
+        } else {
             $this->redirect('@homepage');
+        }
     }
 
     public function executeGetPasswordok()
@@ -221,6 +228,7 @@ new User;
             $user->setActive(true);
             $user->save();
             $this->redirect('@user_activate_change_psw_ok');
+
             return;
         }
 
