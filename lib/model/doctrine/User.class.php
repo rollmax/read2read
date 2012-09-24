@@ -418,7 +418,9 @@ class User extends GuardUser
             ->andWhere('use_payment = 0')
             ->execute();
 
-        return $q->getFirst()->getPayableSum() ? : '0.00';
+        $res = $q->getFirst()->getPayableSum();
+
+        return $res ? $res : '0.00';
     }
 
     /**
