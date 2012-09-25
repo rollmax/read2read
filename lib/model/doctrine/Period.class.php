@@ -46,6 +46,25 @@ class Period extends BasePeriod
         return $oPeriod;
     }
 
+    public static function getPrevPeriod()
+    {
+        $now = Period::getCurrentPeriod();
+        $nowYear = $now->getYear();
+        $nowMonth= $now->getMonthNumeric();
+
+        if ($nowMonth - 1 == 0) {
+            $prevMonth = 12;
+            $prevYear = $nowYear - 1;
+        } else {
+            $prevMonth = $nowMonth - 1;
+            $prevYear = $nowYear;
+        }
+
+        $oPeriod = PeriodTable::getInstance()->findOneByDate($prevYear . '-' . $prevMonth);
+
+        return $oPeriod;
+    }
+
     /**
      * Returns Period Numeric value of the month
      * @return <ionteger> $monthNumeric

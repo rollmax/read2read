@@ -173,6 +173,12 @@ class Transaction extends BaseTransaction
         $this->setIdSender($oUser->getId());
         $this->setSenderBalanceBefore($oUser->getBalans());
         // Set user balance and save
+        $itog = $oUser->getBalans() - $fAmount;
+        if ($itog < 0) {
+            $oUser->setIsBlocked(1);
+            $oUser->save();
+            return;
+        }
         $oUser->setBalans($oUser->getBalans() - $fAmount);
         $oUser->save();
         //
@@ -180,9 +186,15 @@ class Transaction extends BaseTransaction
 
         // Recipient - Read2Read
         $this->setIdReceiver(0);
-        $sGetMethod = '';
-        $sSetMethod = '';
-        $this->setReceiverBalanceBefore($oBalanceSystem->get);
+        $this->setReceiverBalanceBefore(0);
+        $this->setReceiverBalanceAfter(0);
+
+        $sGetMethod = 'getCharges' . ucfirst($oUser->getTariff());
+        $sSetMethod = 'setCharges' . ucfirst($oUser->getTariff());
+        $bal = $oBalanceSystem->$sGetMethod();
+        $bal += $fAmount;
+        $oBalanceSystem->$sSetMethod($bal);
+        $oBalanceSystem->save();
 
 
         // Save transaction

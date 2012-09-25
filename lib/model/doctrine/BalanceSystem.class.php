@@ -49,8 +49,24 @@ class BalanceSystem extends BaseBalanceSystem
         if (!$sysBalance) {
             $sysBalance = new BalanceSystem();
             $sysBalance->setPeriod(Period::getCurrentPeriod());
+            $sysBalance->countInBalance();
+            $sysBalance->save();
         }
 
         return $sysBalance;
     }
+
+    public function countInBalance()
+    {
+        if ($this->getInBalancePUsers() + $this->getInBalanceUser() > 0) {
+            // похоже уже считали входной баланс, сваливаем
+            return;
+        }
+
+        $this->setInBalanceUser((float)UserTable::getUsersBalance('none'));
+        $this->setInBalanceStandart((float)UserTable::getUsersBalance('standart'));
+        $this->setInBalanceExpert((float)UserTable::getUsersBalance('expert'));
+        $this->setInBalanceSuper((float)UserTable::getUsersBalance('super'));
+    }
+
 }
