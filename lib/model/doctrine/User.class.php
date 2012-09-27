@@ -255,17 +255,33 @@ class User extends GuardUser
         )
         ) {
             return false;
+        } else {
+            return $addTransaction;
+        }
+    }
+
+    public static function addFundsFin(Transaction $transaction)
+    {
+        if ($transaction->getIsPaid()) {
+            // транзакция уже была обработана
+            return false;
+        } else {
+            $transaction->addFundsFin();
         }
 
         // set new balance
-        $this->setBalans($addTransaction->getReceiverBalanceAfter());
-        $this->save();
+        $user = UserTable::getInstance()->findOneById($transaction->getIdReceiver());
+
+        $user->setBalans($transaction->getReceiverBalanceAfter());
+        $user->save();
+
+        $amount = $transaction->getAmount();
 
         // write to BalanceUser instance
-        if (!$userBalance = BalanceUserTable::getInstance()->findOneByIdUser($this->getId())) {
+        if (!$userBalance = BalanceUserTable::getByUserIdAndPeriodId($user->getId())) {
             $userBalance = new BalanceUser();
             $userBalance->setPeriod(Period::getCurrentPeriod());
-            $userBalance->setUser($this);
+            $userBalance->setUser($user);
         }
         $userBalance->setAddFunds($userBalance->getAddFunds() + $amount);
         $userBalance->save();
@@ -276,10 +292,10 @@ class User extends GuardUser
             return false;
         }
 
-        if ($this->getUSerTypePrefix() == 'u') {
+        if ($user->getUSerTypePrefix() == 'u') {
             $systemBalance->setDepositUser($systemBalance->getDepositUser() + $amount);
         } else {
-            switch ($this->getTariff()) {
+            switch ($user->getTariff()) {
                 case 'standart':
                     $systemBalance->setDepositStandart($systemBalance->getDepositStandart() + $amount);
                     break;
@@ -294,8 +310,8 @@ class User extends GuardUser
         $systemBalance->save();
 
         // If user blocked try UnBlock
-        if ($this->is_blocked) {
-            $this->tryUnBlockUser();
+        if ($user->is_blocked) {
+            $user->tryUnBlockUser();
         }
 
         return true;

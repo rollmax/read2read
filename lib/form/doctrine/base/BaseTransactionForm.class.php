@@ -26,6 +26,7 @@ abstract class BaseTransactionForm extends BaseFormDoctrine
       'receiver_balance_before' => new sfWidgetFormInputText(),
       'receiver_balance_after'  => new sfWidgetFormInputText(),
       'notes'                   => new sfWidgetFormInputText(),
+      'is_paid'                 => new sfWidgetFormInputCheckbox(),
       'created_at'              => new sfWidgetFormDateTime(),
       'updated_at'              => new sfWidgetFormDateTime(),
     ));
@@ -42,6 +43,7 @@ abstract class BaseTransactionForm extends BaseFormDoctrine
       'receiver_balance_before' => new sfValidatorNumber(),
       'receiver_balance_after'  => new sfValidatorNumber(),
       'notes'                   => new sfValidatorString(array('max_length' => 255)),
+      'is_paid'                 => new sfValidatorBoolean(array('required' => false)),
       'created_at'              => new sfValidatorDateTime(),
       'updated_at'              => new sfValidatorDateTime(),
     ));

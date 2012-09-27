@@ -99,4 +99,30 @@ class authActions extends sfActions
         $this->categories = Doctrine_Core::getTable('Category')->getMainPageList();
 
     }
+
+    public function executeOnpay(sfWebRequest $request)
+    {
+        $pay_for = $request->getGetParameter('pay_for');
+        if (!is_numeric($pay_for)) {
+            throw new sfException('wrong argument for onpay');
+        }
+        $transaction = TransactionTable::getInstance()->findOneById($pay_for);
+        $onpay = OnPay::forTransaction($transaction);
+        $result = $onpay->processApiRequest(
+            $request->getGetParameter('type'),
+            $request->getGetParameter('order_amount'),
+            $request->getGetParameter('order_currency'),
+            $pay_for,
+            $request->getGetParameter('md5'),
+            $request->getGetParameter('onpay_id'),
+            $request->getGetParameter('balance_amount'),
+            $request->getGetParameter('balance_currency'),
+            $request->getGetParameter('exchange_rate'),
+            $request->getGetParameter('paymentDateTime')
+        );
+
+        $this->getResponse()->setContentType('text/plain');
+        return $this->renderText($result);
+    }
+
 }

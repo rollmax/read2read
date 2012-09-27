@@ -402,7 +402,7 @@ class profilepActions extends sfActions
         $this->cssId = 'balance';
         // process form
         $balance = $this->processUserForm($request, $this->form);
-        if (is_numeric($balance)) {
+        if ($balance === true) {
 //      $this->user       = $this->getUser()->getGuardUser();
 //      $this->routeName  = 'profile_p_balance';
 //      $this->value      = $balance;
@@ -410,10 +410,13 @@ class profilepActions extends sfActions
 //      $this->setTemplate('updateInputText');
             echo json_encode(array('redirect' => $this->generateUrl('profile_p_user')));
             exit;
-        } else {
+        } elseif ($balance instanceof sfForm) {
             $this->fieldName = 'balance';
             $this->routeName = 'profile_p_balance_update';
             $this->setTemplate('changeInputText');
+        } else {
+            echo json_encode(array('redirect' => $balance));
+            exit;
         }
     }
 
@@ -551,10 +554,21 @@ EOF
             if (isset($form['tariff_change'])) {
                 return $user->setNewTariff($form->getValue('tariff_change'));
             } elseif (isset($form['balance_add'])) {
-                // setting up new balance
-                $user->addFunds($form->getValue('balance_add'));
+                $transaction = $user->addFunds($form->getValue('balance_add'));
 
-                return $user->getBalans();
+                $pay_test = SettingTable::getInstance()->findOneByName('Платежи в тестовом режиме');
+
+                if ((int)$pay_test->getValue() > 0) {
+                    $user->addFundsFin($transaction);
+                    return true;
+                } else {
+                    // создаем объект онпей и затем редиректим на форму платежа
+                    $onpay = OnPay::forTransaction(
+                        $transaction,
+                        $this->generateUrl('profile_p_user', array(), true)
+                    );
+                    return $onpay->processFirstStep();
+                }
             } else {
                 $user = $form->save();
             }

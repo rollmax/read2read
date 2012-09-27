@@ -15,6 +15,7 @@
  * @property decimal $receiver_balance_before
  * @property decimal $receiver_balance_after
  * @property string $notes
+ * @property boolean $is_paid
  * @property Period $Period
  * 
  * @method integer     getIdPeriod()                Returns the current record's "id_period" value
@@ -27,6 +28,7 @@
  * @method decimal     getReceiverBalanceBefore()   Returns the current record's "receiver_balance_before" value
  * @method decimal     getReceiverBalanceAfter()    Returns the current record's "receiver_balance_after" value
  * @method string      getNotes()                   Returns the current record's "notes" value
+ * @method boolean     getIsPaid()                  Returns the current record's "is_paid" value
  * @method Period      getPeriod()                  Returns the current record's "Period" value
  * @method Transaction setIdPeriod()                Sets the current record's "id_period" value
  * @method Transaction setOperation()               Sets the current record's "operation" value
@@ -38,6 +40,7 @@
  * @method Transaction setReceiverBalanceBefore()   Sets the current record's "receiver_balance_before" value
  * @method Transaction setReceiverBalanceAfter()    Sets the current record's "receiver_balance_after" value
  * @method Transaction setNotes()                   Sets the current record's "notes" value
+ * @method Transaction setIsPaid()                  Sets the current record's "is_paid" value
  * @method Transaction setPeriod()                  Sets the current record's "Period" value
  * 
  * @package    read2read
@@ -101,6 +104,11 @@ abstract class BaseTransaction extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              'length' => 255,
+             ));
+        $this->hasColumn('is_paid', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
              ));
     }
 

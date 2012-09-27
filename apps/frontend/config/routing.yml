@@ -1,3 +1,7 @@
+onpay:
+  url: /onpay
+  param: { module: auth, action: onpay }
+
 contact:
   url: /contact
   param:  { module: page, action: contact }

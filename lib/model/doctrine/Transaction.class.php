@@ -139,17 +139,10 @@ class Transaction extends BaseTransaction
         $this->setPeriod(Period::getCurrentPeriod());
         $this->setOperation('deposit_' . $userType);
 
+        $this->setIsPaid(false);
         $this->setAmount($amount);
-
-
         $this->setIdSender($idSender);
-        $this->setSenderBalanceBefore($senderBalanceBefore);
-
         $this->setIdReceiver($idReceiver);
-        $this->setReceiverBalanceBefore($receiverBalanceBefore);
-
-        $this->setSenderBalanceAfter($this->getSenderBalanceBefore() + $amount);
-        $this->setReceiverBalanceAfter($this->getReceiverBalanceBefore() + $amount);
 
         // here may add some nodes
 
@@ -160,6 +153,33 @@ class Transaction extends BaseTransaction
 
         return $this;
 
+    }
+
+    /*
+     * функция устанавливает окончательные параметры транзакции после
+     * обработки платежа платежной системой
+     * функция вызывается скриптом обрабатывающим событие от платежной системы
+     * транзакция должна уже быть в базе с полем is_paid = 0
+     */
+    public function addFundsFin()
+    {
+        if ($this->isNew() or $this->getIsPaid()) {
+            // транзакция новая или уже проведена
+            return false;
+        }
+
+        $balance = UserTable::getInstance()->findOneById($this->getIdReceiver())->getBalans();
+
+        $this->setSenderBalanceBefore($balance);
+        $this->setReceiverBalanceBefore($balance);
+
+        $this->setSenderBalanceAfter($this->getSenderBalanceBefore() + $this->getAmount());
+        $this->setReceiverBalanceAfter($this->getReceiverBalanceBefore() + $this->getAmount());
+        $this->setIsPaid(true);
+
+        $this->save();
+
+        return true;
     }
 
     public function puserDailyPayment(User $oUser, BalanceSystem $oBalanceSystem, array &$aTariffs)

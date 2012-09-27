@@ -72,5 +72,7 @@ Transaction:
     receiver_balance_before:  { type: decimal, scale: 2, notnull: true }
     receiver_balance_after:   { type: decimal, scale: 2, notnull: true }
     notes:                    { type: string(255), notnull: true }
+    # is_paid - для транзакций типа deposit, отражает прошла ли оплата на платежном сервисе
+    is_paid:                  { type: boolean, notnull: true, default: false }
   relations:
     Period:                   { onDelete: CASCADE, local: id_period, foreign: id }
