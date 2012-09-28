@@ -1,4 +1,5 @@
 <?php slot('currentPage', 'profile_u_upic') ?>
+<?php slot('title_page', 'Personal room - Личный кабинет') ?>
 <?php include_partial('profileu/profMenu') ?>
 <table id=upic_data  cellpadding="0" cellspacing="0">
   <tr class=w id="userpic">

@@ -1,4 +1,5 @@
 <?php slot('currentPage', 'profile_p_user') ?>
+<?php slot('title_page', 'Personal room - Личный кабинет') ?>
 <?php include_partial('profilep/profMenu') ?>
 <table id=account_data  cellpadding="0" cellspacing="1">
 	<tr class=w>

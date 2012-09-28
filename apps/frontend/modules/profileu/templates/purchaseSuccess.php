@@ -1,4 +1,5 @@
 <?php slot('currentPage', 'profile_u_purchase') ?>
+<?php slot('title_page', 'Personal room - Личный кабинет') ?>
 <?php include_partial('profileu/profMenu') ?>
 <table id=buys_data  cellpadding="0" cellspacing="0">
   <?php if(!count($contentPurchaseCategories) > 0): ?>
