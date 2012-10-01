@@ -1,4 +1,4 @@
-/*                    Личный кабинет            */
+/*                    пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ            */
 
 
 #mdl3 {
@@ -8,7 +8,7 @@
 	text-decoration: none; 
 }
 
-/*      +++++++++         Добавление работы        +++++++++++         */
+/*      +++++++++         пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ        +++++++++++         */
 
 
 #add_article  {
@@ -26,9 +26,14 @@
 #add_article td.h {
 	height: 30px; vertical-align: middle; 
 }
+
+/*    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ -   "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"                        */
+
 #add_article td.h p {
 	position: relative; float: left; top: 0px; left: 3%;  width: 95%; font: bold 11pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
 }
+/*              - - - - - - - -         */
+
 #add_article td p {
 position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 5px 0px; font: 9pt "verdana"; color: #000;
 }
@@ -64,12 +69,8 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	position:  relative; float: left; top: 0px; left: 0px; width: 125px;  font: 7pt "verdana"; color: #000; padding-left: 5px; padding-right: 5px; padding-top: 2px; text-align: left; margin: 0px; display: inline;
 }
 
-/*          Заголовок "Добавление статьи"         */
 
-#add_article td p.h {
-	font: bold 11pt "verdana"; color: #234;
-}
-/*              Предупреждение - такая статья уже есть                 */
+/*              пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ                 */
 
 #add_article td p.warn {
 	text-align: center; width: 100%; font: bold 10pt "verdana"; color: #f34;
@@ -79,7 +80,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 }
 
 
-/*          Закрыть страницу добавления          */
+/*          пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ          */
 
 
 #add_article td.h a.close {
@@ -90,13 +91,13 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 }
 
 
-/*         Выбор раздела                   */
+/*         пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ                   */
 
 #add_article td select.part {
 	position: relative; float: left; top: 0px; left: 3%; width: 35%; height: 25px; font: 9pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 2px; margin: 0px;
 }
 
-/*        Выбор размера заголовка     */
+/*        пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ     */
 
 #add_article td select.heads_1_6 {
 	position: relative; float: left; top: 10px; left: 10px; width: 40px; height: 20px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 0px 10px; display: inline;
@@ -107,7 +108,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 
 
-/*            =======       Рабочая область     ======                   */
+/*            =======       пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ     ======                   */
 
 
 
@@ -118,12 +119,12 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	left: 20%; width: 60%;
 }
 
-/*        Добавить параграф              */
+/*        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ              */
 
 #add_article td p.add_paragraph {
 		position: relative; float: left; top: 0px; left: 0%; text-align: center; width: 100%; font: bold 10pt "verdana"; color: #05a; margin: 0% 0% 10px 0%;
 }
-/*        1- ый абзац             */
+/*        1- пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ             */
 
 #add_article td a.add_text_1 {
 	position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center; display:inline; border-bottom: solid 1px #05a; padding-bottom: 3px; margin: 0% 0% 0% 46%;
@@ -132,7 +133,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	color: #248; background: #ff5; 
 }
 
-/*        Картинка             */
+/*        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ             */
 
 #add_article td a.add_picture {
 	 position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center;  display:inline; margin: 0% 5% 0% 40%; border-bottom: solid 1px #05a; padding-bottom: 3px;
@@ -141,7 +142,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	color: #248; background: #ff5; 
 }
 
-/*        Все остальные абзацы             */
+/*        пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ             */
 
 #add_article td a.add_text {
 	position: relative; float: left; top: 0px; left: 0%; width: 8%; font: bold 9pt "verdana"; text-align: center; display:inline; border-bottom: solid 1px #05a; padding-bottom: 3px;
@@ -155,7 +156,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	position: relative; float: left; top: 0px; left: 0%; width: 10%; font: bold 8pt "verdana"; color: #234; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin-left:45%; margin-top: 10px;
 }
 
-/*           Добавить примечания       */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ       */
 
 #add_article td a.add_comments {
 	 left: 15%; width: 70%; 
@@ -166,14 +167,14 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 
 
-/*        Заголовок "Стиль текста"        */
+/*        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"        */
 
 
 #add_article td p.text_style {
 	width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-align: center; font: bold 10pt "verdana"; color: #04a;
 }
 
-/*        Свойства текста: отступ, жирный, курсив       */
+/*        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ       */
 
 #add_article td p.text_option  {
 	display: inline; width: 8%; padding-left: 0%; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 10px 0% 0px 9%; text-align: center; background: #ffe;
@@ -185,7 +186,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 top: 2px; display: inline; width: 2.5%; padding-right: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 10px 0px 0px 0px; 
 }
 
-/*        Выбор размера  промежуточного заголовка     */
+/*        пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ     */
 
 #add_article td select.heads_4_6 {
 	position: relative; float: left; top: 10px; left: 10px; width: 50px; height: 20px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px 0px 0px 10px; display: inline;
@@ -195,7 +196,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 }
 
 
-/*           Сохранить / Удалить текст  параграфа      */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ      */
 
 #add_article td a.save_text {
 	 left: 20%; width: 25%; 
@@ -210,7 +211,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 background: #fff; color: #d00;
 } 
 
-/*                Поля ввода текста параграфов           */
+/*                пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
 #add_article td  textarea.text_en {
 	position: relative; float: left; top: 0px; left: 0px; width: 99%; height: 80px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 0px;
@@ -220,7 +221,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 }
 
 
-/*           Изменить текст  параграфа      */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ      */
 
 #add_article td a.chng_text {
 	 left: 35%; width: 25%; 
@@ -229,7 +230,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 background: #fff;
 }
 
-/*           Сохранить  / Изменить  /  Удалить  примечания        */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  / пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  /  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ        */
 
 #add_article td a.save_comment {
 	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
@@ -250,7 +251,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 background: #fff; color: #d00;
 } 
 
-/*                Поля ввода текста примечаний           */
+/*                пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
 #add_article td  textarea.comment_en {
 	position: relative; top: 0px; left: 0px; float: left;  width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 5%; display: inline; 
@@ -259,10 +260,10 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	position: relative; top: 0px; left: 0px;  float: left; width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 8%; display: inline; 
 }
 
-/*          =======      Конец рабочей области      ======            */
+/*          =======      пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ      ======            */
 
 
-/*           Изменить  имя автора        */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ        */
 
 #add_article td a.chng_author_name{
 	 left: 37%; width: 26%; 
@@ -271,7 +272,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	background: #fe8; 
 	}
 	
-	/*           Сохранить  имя автора        */
+	/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ        */
 
 #add_article td a.save_author_name{
 	 left: 37%; width: 26%; 
@@ -281,7 +282,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	}
 	
 	
-/*           Изменить / Удалить абзац        */
+/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ        */
 
 #add_article td a.chng_paragraph {
 	 left: 20%; width: 25%; 
@@ -296,15 +297,35 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	 background: #fff; color: #d00; 
 }
 
-/*             Уже введенные текст  и  картинки                  */
+/*             пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ  пїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  */
 
-/*             основной текст                */
+/*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ               */
+/*          пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ             */
+
+#add_article td p.h {
+	font-family: "verdana"; color: #234; font-weight: bold;
+}
+
+/*            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ            */
+
+#add_article td p.h1 {
+	font-size: 20pt;
+}
+#add_article td p.h2 {
+	font-size: 18pt;
+}
+#add_article td p.h3 {
+	font-size: 16pt;
+}
+
+
+/*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ                */
 
 #add_article td p.txt {
 	left: 0px; width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
 }
 
-/*             дополнительные классы               */
+/*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ               */
 
 #add_article td p.ita {
 	font-style: italic;
@@ -322,14 +343,14 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	font-size: 8pt; font-weight: bold; text-align: left; text-indent: 0em;
 }
 
-/*             Картинка               */
+/*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ               */
 
 #add_article td img {
 	position: relative; float: left; top: 0px; left: 0%; width: 100%; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px;
 }
 
 
-/*              Параграфы примечаний  в средней колонке           */
+/*              пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
 #add_article  td.center p.lt {
 	font:  bold 7pt "verdana"; color: #000; background: #8fe;  margin: 5px 0px 5px 0%;
@@ -340,7 +361,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 
 
-/*              Удалить все абзацы                        */
+/*              пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ                        */
 
 
 #add_article td a.delete_all {
@@ -356,7 +377,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 /*         ================================      */
 
 
-/*                       Личный кабинет - шапка                   */
+/*                       пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ                   */
 
 #cabh {
 	position:  relative; float: left; top: 0px; left: 0px;  height: 37px; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background-image: url(../images/p_proom_h.png); background-repeat: no-repeat;
@@ -365,7 +386,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	position: relative; float: left; width: 95%; top: 8px; left: 0px;  height: 25px; font: bold 11pt "verdana"; color: #456;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
 }
 
-/*                       Личный кабинет - навигация                  */
+/*                       пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  */
 
 #cabto {
 	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345;
@@ -411,7 +432,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 /*         ================================      */
 
 
-/*                     Работы  - навигация                  */
+/*                     пїЅпїЅпїЅпїЅпїЅпїЅ  - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  */
 
 #wrksto {
 	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #cde;

@@ -1,19 +1,9 @@
-<?php
-function paragraphUpdateSuccess_genStyle($object)
-{
-    if($object->getIsBold()){ echo " bold"; }
-    if($object->getIsItalic()){ echo " ita"; }
-    if($object->getHStyle() != 'none'){
-        echo " h".$object->getHStyle();
-    }
-}
-?>
 <tr id="paragraph-<?php echo $paragraph->getId(); ?>" class="paragraphRow">
   <td class="left">
     <?php if ($paragraph->getIsPhoto()): ?>
       <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
     <?php else: ?>
-      <p class="txt<?php paragraphUpdateSuccess_genStyle($paragraph) ?>"<?php
+      <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
           if($paragraph->getPadLeft() > 0){
               echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
           }
@@ -50,7 +40,7 @@ function paragraphUpdateSuccess_genStyle($object)
       <?php if ($paragraph->getIsPhoto()): ?>
           <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
       <?php else: ?>
-          <p class="txt<?php paragraphUpdateSuccess_genStyle($paragraph) ?>"<?php
+          <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
           if($paragraph->getPadLeft() > 0){
               echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
           }

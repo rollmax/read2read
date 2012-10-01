@@ -22,7 +22,7 @@ generator:
         created:            { label: дата регистрации }
       list:
         table_method:       retrieveBackendUuserList
-        title:              Пользователи
+        title:              Читатели
         display:            [ =login, sell_purchase_cnt, amount, created, is_blocked_string ]
         object_actions:     {}
       filter:

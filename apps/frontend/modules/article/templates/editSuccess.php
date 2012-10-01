@@ -1,14 +1,3 @@
-<?php
-function editSuccess_genStyle($object)
-{
-    if($object->getIsBold()){ echo " bold"; }
-    if($object->getIsItalic()){ echo " ita"; }
-    if($object->getHStyle() != 'none'){
-        echo " h".$object->getHStyle();
-    }
-}
-?>
-
 <?php slot('currentPage', 'article_no_published') ?>
 <?php include_partial('article/headBlock'); ?>
 </div> <!-- e: mdl3 -->
@@ -35,11 +24,11 @@ function editSuccess_genStyle($object)
     <?php echo $form->renderHiddenFields(); ?>
     <tr>
       <td class=left>
-          <p class="h<?php editSuccess_genStyle($form->getObject()) ?>"><?php echo $form->getObject()->getTitleEn() ?></p>
+          <p class="h<?php echo ' ' . $form->getObject()->getTitleStyle() ?>"><?php echo $form->getObject()->getTitleEn() ?></p>
       </td>
       <td class=center></td>
       <td class=right>
-          <p class="h<?php editSuccess_genStyle($form->getObject()) ?>"><?php echo $form->getObject()->getTitleRu() ?></p>
+          <p class="h<?php echo ' ' . $form->getObject()->getTitleStyle() ?>"><?php echo $form->getObject()->getTitleRu() ?></p>
       </td>
     </tr>
     <?php if ($ll == 0): // author_field ?>
@@ -75,8 +64,8 @@ function editSuccess_genStyle($object)
                 <?php if ($paragraph->getIsPhoto()): ?>
                     <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
                 <?php else: ?>
-                    <p class="txt<?php editSuccess_genStyle($paragraph) ?>"<?php
-                        if($paragraph->getPadLeft() > 0){
+                    <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
+                        if ($paragraph->getPadLeft() > 0) {
                             echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
                         }
                     ?>><?php echo $paragraph->getParagraphEn(); ?></p>
@@ -112,7 +101,7 @@ function editSuccess_genStyle($object)
             <?php if ($paragraph->getIsPhoto()): ?>
                 <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
             <?php else: ?>
-                <p class="txt<?php editSuccess_genStyle($paragraph) ?>"<?php
+                <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
                     if($paragraph->getPadLeft() > 0){
                         echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
                     }
@@ -127,11 +116,6 @@ function editSuccess_genStyle($object)
           <p class="add_paragraph">Добавить абзац</p>
           <a class="add_picture" style="display: none;" onclick="article.addParagraph('<?php echo url_for('paragraph_pic_create', $form->getObject()) ?>')">Картинку</a>
           <a class="add_text_1" id="add_text_a" onclick="article.addParagraph('<?php echo url_for('paragraph_create', $form->getObject()); ?>');">Текст</a>
-      </td>
-    </tr>
-    <tr class=b>
-      <td class="submit" colspan="3">
-        <input type="button" value="Сохранить" onclick="document.articleForm.submit();">
       </td>
     </tr>
   </tbody>

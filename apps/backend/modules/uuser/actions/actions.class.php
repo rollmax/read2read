@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/uuserGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/uuserGeneratorHelper.class.php';
+require_once dirname(__FILE__) . '/../lib/uuserGeneratorConfiguration.class.php';
+require_once dirname(__FILE__) . '/../lib/uuserGeneratorHelper.class.php';
 
 /**
  * uuser actions.
@@ -13,35 +13,33 @@ require_once dirname(__FILE__).'/../lib/uuserGeneratorHelper.class.php';
  */
 class uuserActions extends autoUuserActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
-    // sorting
-    if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort')))
+    public function executeIndex(sfWebRequest $request)
     {
-      $this->setSort(array($request->getParameter('sort'), $request->getParameter('sort_type')));
+        // sorting
+        if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort'))) {
+            $this->setSort(array($request->getParameter('sort'), $request->getParameter('sort_type')));
+        }
+
+        // pager
+        if ($request->getParameter('page')) {
+            $this->setPage($request->getParameter('page'));
+        }
+
+        $this->pager = $this->getPager();
+        $this->sort = $this->getSort();
+
+        $user = new User();
+
+        $this->dataArray = array(
+            'amountSum' => $user->getUserAmountSum('uuser'),
+            'sellPurchaseSum' => $user->getUserSellPurchaseSum('uuser')
+        );
     }
 
-    // pager
-    if ($request->getParameter('page'))
+    public function executeEdit(sfWebRequest $request)
     {
-      $this->setPage($request->getParameter('page'));
-    }
-
-    $this->pager = $this->getPager();
-    $this->sort = $this->getSort();
-
-    $user = new User();
-
-    $this->dataArray = array(
-      'amountSum'       => $user->getUserAmountSum('uuser'),
-      'sellPurchaseSum' => $user->getUserSellPurchaseSum('uuser')
-    );
-  }
-  
-  public function executeEdit(sfWebRequest $request)
-  {
-    $this->user = $this->getRoute()->getObject();
+        $this->user = $this->getRoute()->getObject();
 //    $this->form = $this->configuration->getForm($this->user);
-  }
-  
+    }
+
 }

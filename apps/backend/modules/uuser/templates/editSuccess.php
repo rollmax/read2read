@@ -18,8 +18,8 @@
       </tr>
       <tr>
         <th width="60%">Итого по покупкам</th>
-        <th width="20%" align="center"><?php echo 0; ?></th>
-        <th width="20%" align="center"><?php echo 0; ?></th>
+        <th width="20%" align="center"><?php echo $user->getSellPurchaseCnt(); ?></th>
+        <th width="20%" align="center"><?php echo $user->getAmount(); ?></th>
       </tr>
       <tr class="sf_admin_row even" align="center">
         <td align="left"><b>Работы</b></td>
@@ -30,7 +30,7 @@
         <?php $content = $content_purchase->getContent(); ?>
       <tr class="sf_admin_row <?php echo $odd ?>">
         <td><a href="<?php echo sfProjectConfiguration::getActive()->generateFrontendUrl( 'article_by_categories', array('id'=>$content->getId()) ); ?>"><p style="text-align: left"><?php echo $content->getTitleEn()?></p><p style="text-align:right"><?php echo $content->getTitleRu()?></p></a></td>
-        <td>0</td>
+        <td>1</td>
         <td>0</td>
       </tr>
       <?php endforeach; ?>
