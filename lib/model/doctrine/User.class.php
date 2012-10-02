@@ -378,9 +378,13 @@ class User extends GuardUser
      */
     public function getSellPurchaseCnt()
     {
+        $sum = 0;
         if ($this->getBalanceUser()->count()) {
-            return $this->getBalanceUser()->getFirst()->getSellPurchaseCnt();
+            foreach ($this->getBalanceUser() as $bUser) {
+                $sum = $sum + $bUser->getSellPurchaseCnt();
+            }
         }
+        return $sum;
     }
 
     /**
@@ -389,9 +393,13 @@ class User extends GuardUser
      */
     public function getAmount()
     {
+        $sum = 0;
         if ($this->getBalanceUser()->count()) {
-            return $this->getBalanceUser()->getFirst()->getAmount();
+            foreach ($this->getBalanceUser() as $bUser) {
+                $sum = $sum + $bUser->getAmount();
+            }
         }
+        return $sum;
     }
 
     /**

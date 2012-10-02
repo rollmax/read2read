@@ -75,7 +75,7 @@ class Transaction extends BaseTransaction
         $systemBalance = null;
 
         // BalanceUser u_user: update purchase stats
-        if (!$userBalance = BalanceUserTable::getInstance()->findOneByIdUser($this->getIdSender())) {
+        if (!$userBalance = BalanceUserTable::getInstance()->getByUserIdAndPeriodId($this->getIdSender())) {
             $userBalance = new BalanceUser();
             $userBalance->setPeriod(Period::getCurrentPeriod());
             $userBalance->setIdUser($this->getIdSender());
@@ -89,7 +89,7 @@ class Transaction extends BaseTransaction
 
         // BalanceUser p_user: update sell stats
         // Receiver: P_User balance
-        if (!$userBalance = BalanceUserTable::getInstance()->findOneByIdUser($this->getIdReceiver())) {
+        if (!$userBalance = BalanceUserTable::getInstance()->getByUserIdAndPeriodId($this->getIdReceiver())) {
             $userBalance = new BalanceUser();
             $userBalance->setPeriod(Period::getCurrentPeriod());
             $userBalance->setIdUser($this->getIdReceiver());
