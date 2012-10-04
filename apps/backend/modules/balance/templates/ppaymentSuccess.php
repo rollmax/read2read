@@ -10,7 +10,7 @@
             <tr>
                 <th width="20%">Итого к выплате</th>
                 <th width="20%">&nbsp;</th>
-                <th width="20%">0<?php // echo $sysBalance->getToPayPUsers(); ?></th>
+                <th width="20%"><?php echo $sysBalance->getToPayPUsers(); ?></th>
                 <th width="20%"><input type="button" value="Создать файл"/></th>
                 <th><a href="#">Путь к файлу</a></th>
             </tr>

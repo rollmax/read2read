@@ -8,22 +8,28 @@
  * @property integer $id_user
  * @property integer $id_category
  * @property integer $id_content
+ * @property integer $id_transaction
  * @property User $User
  * @property Category $Category
  * @property Content $Content
+ * @property Transaction $Transaction
  * 
- * @method integer         getIdUser()      Returns the current record's "id_user" value
- * @method integer         getIdCategory()  Returns the current record's "id_category" value
- * @method integer         getIdContent()   Returns the current record's "id_content" value
- * @method User            getUser()        Returns the current record's "User" value
- * @method Category        getCategory()    Returns the current record's "Category" value
- * @method Content         getContent()     Returns the current record's "Content" value
- * @method ContentPurchase setIdUser()      Sets the current record's "id_user" value
- * @method ContentPurchase setIdCategory()  Sets the current record's "id_category" value
- * @method ContentPurchase setIdContent()   Sets the current record's "id_content" value
- * @method ContentPurchase setUser()        Sets the current record's "User" value
- * @method ContentPurchase setCategory()    Sets the current record's "Category" value
- * @method ContentPurchase setContent()     Sets the current record's "Content" value
+ * @method integer         getIdUser()         Returns the current record's "id_user" value
+ * @method integer         getIdCategory()     Returns the current record's "id_category" value
+ * @method integer         getIdContent()      Returns the current record's "id_content" value
+ * @method integer         getIdTransaction()  Returns the current record's "id_transaction" value
+ * @method User            getUser()           Returns the current record's "User" value
+ * @method Category        getCategory()       Returns the current record's "Category" value
+ * @method Content         getContent()        Returns the current record's "Content" value
+ * @method Transaction     getTransaction()    Returns the current record's "Transaction" value
+ * @method ContentPurchase setIdUser()         Sets the current record's "id_user" value
+ * @method ContentPurchase setIdCategory()     Sets the current record's "id_category" value
+ * @method ContentPurchase setIdContent()      Sets the current record's "id_content" value
+ * @method ContentPurchase setIdTransaction()  Sets the current record's "id_transaction" value
+ * @method ContentPurchase setUser()           Sets the current record's "User" value
+ * @method ContentPurchase setCategory()       Sets the current record's "Category" value
+ * @method ContentPurchase setContent()        Sets the current record's "Content" value
+ * @method ContentPurchase setTransaction()    Sets the current record's "Transaction" value
  * 
  * @package    read2read
  * @subpackage model
@@ -44,6 +50,9 @@ abstract class BaseContentPurchase extends sfDoctrineRecord
         $this->hasColumn('id_content', 'integer', null, array(
              'type' => 'integer',
              ));
+        $this->hasColumn('id_transaction', 'integer', null, array(
+             'type' => 'integer',
+             ));
 
         $this->option('charset', 'utf8');
     }
@@ -61,6 +70,10 @@ abstract class BaseContentPurchase extends sfDoctrineRecord
 
         $this->hasOne('Content', array(
              'local' => 'id_content',
+             'foreign' => 'id'));
+
+        $this->hasOne('Transaction', array(
+             'local' => 'id_transaction',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();

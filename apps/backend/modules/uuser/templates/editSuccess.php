@@ -26,12 +26,12 @@
         <td>Количество покупок</td>
         <td>Сумма по покупкам</td>
       </tr>
-      <?php foreach($user->getContentPurchase() as $i => $content_purchase): $odd = fmod(++$i, 2) ? 'odd' : 'even'; ?>
+      <?php foreach($user->getContentPurchaseForPeriod(Period::getCurrentPeriod()) as $i => $content_purchase): $odd = fmod(++$i, 2) ? 'odd' : 'even'; ?>
         <?php $content = $content_purchase->getContent(); ?>
       <tr class="sf_admin_row <?php echo $odd ?>">
         <td><a href="<?php echo sfProjectConfiguration::getActive()->generateFrontendUrl( 'article_by_categories', array('id'=>$content->getId()) ); ?>"><p style="text-align: left"><?php echo $content->getTitleEn()?></p><p style="text-align:right"><?php echo $content->getTitleRu()?></p></a></td>
         <td>1</td>
-        <td>0</td>
+        <td><?php echo $content_purchase->getTransaction()->getAmount() ?></td>
       </tr>
       <?php endforeach; ?>
     </table>

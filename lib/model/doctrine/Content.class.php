@@ -236,7 +236,7 @@ class Content extends BaseContent
             $out[] =  "ita";
         }
         if ($this->getHStyle() != 'none') {
-            $out[] = "h" . $this->getHStyle();
+            $out[] = "h_" . $this->getHStyle();
         } else {
             $out[] = "h";
         }

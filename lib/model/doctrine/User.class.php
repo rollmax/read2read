@@ -34,7 +34,7 @@ class User extends GuardUser
     public function getContent()
     {
         $q = ContentTable::getInstance()->addContentPublishedListQuery();
-        $q->andWhere('id_user=?', $this->getId());
+        $q->andWhere('cont.id_user=?', $this->getId());
 
         return $q->execute();
     }
@@ -212,6 +212,31 @@ class User extends GuardUser
         return $purchases = ContentPurchaseTable::getInstance()->getPurchaseContent($categoryIds);
     }
 
+    public function getContentPurchaseForPeriod(Period $period)
+    {
+        $q = Doctrine_Query::create()
+            ->select('cp.*')
+            ->from('ContentPurchase cp')
+            ->innerJoin('cp.Transaction t')
+            ->where('cp.id_user = ?', $this->getId())
+            ->andWhere('t.id_period = ?', $period->getId());
+
+        return $q->execute();
+    }
+
+    public function getSoldForPeriod(Period $period)
+    {
+        $q = Doctrine_Query::create()
+            ->select('cp.*, cc.*, count(1) as cp_count, sum(t.amount) as cp_amount')
+            ->from('ContentPurchase cp')
+            ->innerJoin('cp.Transaction t')
+            ->innerJoin('cp.Content cc')
+            ->where('cc.id_user = ?', $this->getId())
+            ->andWhere('t.id_period = ?', $period->getId())
+            ->groupBy('cp.id_content');
+
+        return $q->execute();
+    }
 
     protected function getUserTypePrefix()
     {
@@ -327,10 +352,11 @@ class User extends GuardUser
     {
         $res = false;
         $billing = new BillingClass();
-        if ($billing->userPurchaseArticle($this, $article_id)) {
+        $transaction = $billing->userPurchaseArticle($this, $article_id);
+        if ($transaction instanceof Transaction) {
             // Add Article to My purchases list
             $pl = new ContentPurchase();
-            $res = $pl->userPurchaseArticle($this->getId(), $article_id);
+            $res = $pl->userPurchaseArticle($this->getId(), $article_id, $transaction);
         }
 
         return $res;
@@ -354,8 +380,7 @@ class User extends GuardUser
             $min_summ = $settings->getPriceStandart();
             if ($this->getTariff() == 'expert') {
                 $min_summ = $settings->getPriceExpert();
-            }
-            elseif ($this->getTariff() == 'super') {
+            } elseif ($this->getTariff() == 'super') {
                 $min_summ = $settings->getPriceSuper();
             }
 
@@ -378,13 +403,7 @@ class User extends GuardUser
      */
     public function getSellPurchaseCnt()
     {
-        $sum = 0;
-        if ($this->getBalanceUser()->count()) {
-            foreach ($this->getBalanceUser() as $bUser) {
-                $sum = $sum + $bUser->getSellPurchaseCnt();
-            }
-        }
-        return $sum;
+        return BalanceUserTable::getByUserIdAndPeriodId($this->getId())->getSellPurchaseCnt();
     }
 
     /**
@@ -393,13 +412,7 @@ class User extends GuardUser
      */
     public function getAmount()
     {
-        $sum = 0;
-        if ($this->getBalanceUser()->count()) {
-            foreach ($this->getBalanceUser() as $bUser) {
-                $sum = $sum + $bUser->getAmount();
-            }
-        }
-        return $sum;
+        return BalanceUserTable::getByUserIdAndPeriodId($this->getId())->getAmount();
     }
 
     /**
@@ -424,10 +437,13 @@ class User extends GuardUser
      * @param <type> $utype
      * @return <type>
      */
-    public function getUserAmountSum($utype)
+    public function getUserAmountSum($utype, $period = 0)
     {
         $q = UserTable::getInstance()->getBalanceUserFieldSum('amount');
         $q->andWhere('u.utype=?', $utype);
+        if ($period > 0) {
+            $q->andWhere('id_period = ?', $period);
+        }
         $resultSet = $q->execute();
 
         return $resultSet->getFirst()->getAmountSum();
@@ -439,7 +455,7 @@ class User extends GuardUser
             ->getBalanceUserFieldSum('payable')
             ->andWhere('id_user = ?', $this->getId())
             ->andWhere('id_period != ?', $period)
-            ->andWhere('use_payment = 0')
+//            ->andWhere('use_payment = 0')
             ->execute();
 
         $res = $q->getFirst()->getPayableSum();
@@ -452,10 +468,13 @@ class User extends GuardUser
      * @param <type> $utype
      * @return <type>
      */
-    public function getUserSellPurchaseSum($utype)
+    public function getUserSellPurchaseSum($utype, $period = 0)
     {
         $q = UserTable::getInstance()->getBalanceUserFieldSum('sell_purchase_cnt');
         $q->andWhere('u.utype=?', $utype);
+        if ($period > 0) {
+            $q->andWhere('id_period = ?', $period);
+        }
         $resultSet = $q->execute();
 
         return $resultSet->getFirst()->getSellPurchaseCntSum();

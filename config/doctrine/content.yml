@@ -48,11 +48,13 @@ ContentPurchase:
     id_user:      { type: integer }    # U_User ID no P_User
     id_category:  { type: integer }
     id_content:   { type: integer }
+    id_transaction: { type: integer }
 
   relations:
     User:     { local: id_user, foreign: id }
     Category: { local: id_category, foreign: id }
     Content: { local: id_content, foreign: id }
+    Transaction: { local: id_transaction, foreign: id }
 
   options:
     charset: utf8

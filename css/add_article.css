@@ -308,13 +308,13 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 /*            �������������� ������            */
 
-#add_article td p.h1 {
+#add_article td p.h_1 {
 	font-size: 20pt;
 }
-#add_article td p.h2 {
+#add_article td p.h_2 {
 	font-size: 18pt;
 }
-#add_article td p.h3 {
+#add_article td p.h_3 {
 	font-size: 16pt;
 }
 

@@ -31,8 +31,8 @@ class puserActions extends autoPuserActions
         $user = new User();
 
         $this->dataArray = array(
-            'amountSum' => $user->getUserAmountSum('puser'),
-            'sellPurchaseSum' => $user->getUserSellPurchaseSum('puser')
+            'amountSum' => $user->getUserAmountSum('puser', Period::getCurrentPeriod()->getId()),
+            'sellPurchaseSum' => $user->getUserSellPurchaseSum('puser', Period::getCurrentPeriod()->getId())
         );
     }
 

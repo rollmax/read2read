@@ -31,8 +31,8 @@ class uuserActions extends autoUuserActions
         $user = new User();
 
         $this->dataArray = array(
-            'amountSum' => $user->getUserAmountSum('uuser'),
-            'sellPurchaseSum' => $user->getUserSellPurchaseSum('uuser')
+            'amountSum' => $user->getUserAmountSum('uuser', Period::getCurrentPeriod()->getId()),
+            'sellPurchaseSum' => $user->getUserSellPurchaseSum('uuser', Period::getCurrentPeriod()->getId())
         );
     }
 

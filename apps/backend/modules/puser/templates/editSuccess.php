@@ -17,7 +17,7 @@
       </tr>
       <tr class="sf_admin_row even">
         <td colspan="2">Счет "Итого за текущий период"</td>
-        <td align="center" colspan="2"><?php echo 0; ?></td>
+        <td align="center" colspan="2"><?php echo $balance->getPayable()  ?></td>
       </tr>
       <tr>
         <th width="5%">&nbsp;</th>
@@ -31,12 +31,12 @@
         <th>Количество продаж</th>
         <th>Сумма по продажам</th>
       </tr>
-      <?php foreach($user->getContent() as $i => $content): $odd = fmod(++$i, 2) ? 'odd' : 'even'; ?>
+      <?php foreach($user->getSoldForPeriod(Period::getCurrentPeriod()) as $i => $content): $odd = fmod(++$i, 2) ? 'odd' : 'even'; ?>
       <tr class="sf_admin_row <?php echo $odd ?>">
         <td>&nbsp;</td>
-        <td><a href="<?php echo sfProjectConfiguration::getActive()->generateFrontendUrl( 'article_by_categories', array('id'=>$content->getId()) ); ?>"><p style="text-align: left"><?php echo $content->getTitleEn()?></p><p style="text-align:right"><?php echo $content->getTitleRu()?></p></a></td>
-        <td>0</td>
-        <td>0</td>
+        <td><a href="<?php echo sfProjectConfiguration::getActive()->generateFrontendUrl( 'article_by_categories', array('id'=>$content->getContent()->getId()) ); ?>"><p style="text-align: left"><?php echo $content->getContent()->getTitleEn()?></p><p style="text-align:right"><?php echo $content->getContent()->getTitleRu()?></p></a></td>
+        <td><?php echo $content->getCpCount() ?></td>
+        <td><?php echo $content->getCpAmount() ?></td>
       </tr>
       <?php endforeach; ?>
     </table>

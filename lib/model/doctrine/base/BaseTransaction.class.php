@@ -17,31 +17,34 @@
  * @property string $notes
  * @property boolean $is_paid
  * @property Period $Period
+ * @property Doctrine_Collection $ContentPurchase
  * 
- * @method integer     getIdPeriod()                Returns the current record's "id_period" value
- * @method enum        getOperation()               Returns the current record's "operation" value
- * @method decimal     getAmount()                  Returns the current record's "amount" value
- * @method integer     getIdSender()                Returns the current record's "id_sender" value
- * @method integer     getIdReceiver()              Returns the current record's "id_receiver" value
- * @method decimal     getSenderBalanceBefore()     Returns the current record's "sender_balance_before" value
- * @method decimal     getSenderBalanceAfter()      Returns the current record's "sender_balance_after" value
- * @method decimal     getReceiverBalanceBefore()   Returns the current record's "receiver_balance_before" value
- * @method decimal     getReceiverBalanceAfter()    Returns the current record's "receiver_balance_after" value
- * @method string      getNotes()                   Returns the current record's "notes" value
- * @method boolean     getIsPaid()                  Returns the current record's "is_paid" value
- * @method Period      getPeriod()                  Returns the current record's "Period" value
- * @method Transaction setIdPeriod()                Sets the current record's "id_period" value
- * @method Transaction setOperation()               Sets the current record's "operation" value
- * @method Transaction setAmount()                  Sets the current record's "amount" value
- * @method Transaction setIdSender()                Sets the current record's "id_sender" value
- * @method Transaction setIdReceiver()              Sets the current record's "id_receiver" value
- * @method Transaction setSenderBalanceBefore()     Sets the current record's "sender_balance_before" value
- * @method Transaction setSenderBalanceAfter()      Sets the current record's "sender_balance_after" value
- * @method Transaction setReceiverBalanceBefore()   Sets the current record's "receiver_balance_before" value
- * @method Transaction setReceiverBalanceAfter()    Sets the current record's "receiver_balance_after" value
- * @method Transaction setNotes()                   Sets the current record's "notes" value
- * @method Transaction setIsPaid()                  Sets the current record's "is_paid" value
- * @method Transaction setPeriod()                  Sets the current record's "Period" value
+ * @method integer             getIdPeriod()                Returns the current record's "id_period" value
+ * @method enum                getOperation()               Returns the current record's "operation" value
+ * @method decimal             getAmount()                  Returns the current record's "amount" value
+ * @method integer             getIdSender()                Returns the current record's "id_sender" value
+ * @method integer             getIdReceiver()              Returns the current record's "id_receiver" value
+ * @method decimal             getSenderBalanceBefore()     Returns the current record's "sender_balance_before" value
+ * @method decimal             getSenderBalanceAfter()      Returns the current record's "sender_balance_after" value
+ * @method decimal             getReceiverBalanceBefore()   Returns the current record's "receiver_balance_before" value
+ * @method decimal             getReceiverBalanceAfter()    Returns the current record's "receiver_balance_after" value
+ * @method string              getNotes()                   Returns the current record's "notes" value
+ * @method boolean             getIsPaid()                  Returns the current record's "is_paid" value
+ * @method Period              getPeriod()                  Returns the current record's "Period" value
+ * @method Doctrine_Collection getContentPurchase()         Returns the current record's "ContentPurchase" collection
+ * @method Transaction         setIdPeriod()                Sets the current record's "id_period" value
+ * @method Transaction         setOperation()               Sets the current record's "operation" value
+ * @method Transaction         setAmount()                  Sets the current record's "amount" value
+ * @method Transaction         setIdSender()                Sets the current record's "id_sender" value
+ * @method Transaction         setIdReceiver()              Sets the current record's "id_receiver" value
+ * @method Transaction         setSenderBalanceBefore()     Sets the current record's "sender_balance_before" value
+ * @method Transaction         setSenderBalanceAfter()      Sets the current record's "sender_balance_after" value
+ * @method Transaction         setReceiverBalanceBefore()   Sets the current record's "receiver_balance_before" value
+ * @method Transaction         setReceiverBalanceAfter()    Sets the current record's "receiver_balance_after" value
+ * @method Transaction         setNotes()                   Sets the current record's "notes" value
+ * @method Transaction         setIsPaid()                  Sets the current record's "is_paid" value
+ * @method Transaction         setPeriod()                  Sets the current record's "Period" value
+ * @method Transaction         setContentPurchase()         Sets the current record's "ContentPurchase" collection
  * 
  * @package    read2read
  * @subpackage model
@@ -119,6 +122,10 @@ abstract class BaseTransaction extends sfDoctrineRecord
              'local' => 'id_period',
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
+
+        $this->hasMany('ContentPurchase', array(
+             'local' => 'id',
+             'foreign' => 'id_transaction'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

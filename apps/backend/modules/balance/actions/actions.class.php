@@ -29,6 +29,7 @@ class balanceActions extends autoBalanceActions
     {
         // System balance
         $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
+        $this->balanceUser = BalanceUserTable::getInstance();
 
         // sorting
         if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort')))

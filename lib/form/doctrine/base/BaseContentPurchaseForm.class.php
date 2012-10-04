@@ -15,21 +15,23 @@ abstract class BaseContentPurchaseForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'          => new sfWidgetFormInputHidden(),
-      'id_user'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
-      'id_category' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'add_empty' => true)),
-      'id_content'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Content'), 'add_empty' => true)),
-      'created_at'  => new sfWidgetFormDateTime(),
-      'updated_at'  => new sfWidgetFormDateTime(),
+      'id'             => new sfWidgetFormInputHidden(),
+      'id_user'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
+      'id_category'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'add_empty' => true)),
+      'id_content'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Content'), 'add_empty' => true)),
+      'id_transaction' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Transaction'), 'add_empty' => true)),
+      'created_at'     => new sfWidgetFormDateTime(),
+      'updated_at'     => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'id_user'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
-      'id_category' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'required' => false)),
-      'id_content'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Content'), 'required' => false)),
-      'created_at'  => new sfValidatorDateTime(),
-      'updated_at'  => new sfValidatorDateTime(),
+      'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'id_user'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
+      'id_category'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'required' => false)),
+      'id_content'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Content'), 'required' => false)),
+      'id_transaction' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Transaction'), 'required' => false)),
+      'created_at'     => new sfValidatorDateTime(),
+      'updated_at'     => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('content_purchase[%s]');

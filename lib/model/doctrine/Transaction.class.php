@@ -109,7 +109,7 @@ class Transaction extends BaseTransaction
         // Save transaction
         $this->save();
 
-        return true;
+        return $this;
     }
 
     /**
@@ -216,6 +216,9 @@ class Transaction extends BaseTransaction
         $oBalanceSystem->$sSetMethod($bal);
         $oBalanceSystem->save();
 
+        $oBalanceUser = BalanceUserTable::getByUserIdAndPeriodId($oUser->getId());
+        $oBalanceUser->setUsePayment($oBalanceUser->getUsePayment() + $fAmount);
+        $oBalanceUser->save();
 
         // Save transaction
         $this->save();
