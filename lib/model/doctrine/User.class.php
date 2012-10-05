@@ -215,11 +215,12 @@ class User extends GuardUser
     public function getContentPurchaseForPeriod(Period $period)
     {
         $q = Doctrine_Query::create()
-            ->select('cp.*')
+            ->select('cp.*, count(1) as cp_count, sum(t.amount) as cp_amount')
             ->from('ContentPurchase cp')
             ->innerJoin('cp.Transaction t')
             ->where('cp.id_user = ?', $this->getId())
-            ->andWhere('t.id_period = ?', $period->getId());
+            ->andWhere('t.id_period = ?', $period->getId())
+            ->groupBy('cp.id_content');
 
         return $q->execute();
     }

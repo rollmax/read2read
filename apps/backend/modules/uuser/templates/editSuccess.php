@@ -30,8 +30,8 @@
         <?php $content = $content_purchase->getContent(); ?>
       <tr class="sf_admin_row <?php echo $odd ?>">
         <td><a href="<?php echo sfProjectConfiguration::getActive()->generateFrontendUrl( 'article_by_categories', array('id'=>$content->getId()) ); ?>"><p style="text-align: left"><?php echo $content->getTitleEn()?></p><p style="text-align:right"><?php echo $content->getTitleRu()?></p></a></td>
-        <td>1</td>
-        <td><?php echo $content_purchase->getTransaction()->getAmount() ?></td>
+        <td><?php echo $content_purchase->getCpCount() ?></td>
+        <td><?php echo $content_purchase->getCpAmount() ?></td>
       </tr>
       <?php endforeach; ?>
     </table>

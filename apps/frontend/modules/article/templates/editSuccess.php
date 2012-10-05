@@ -118,6 +118,11 @@
           <a class="add_text_1" id="add_text_a" onclick="article.addParagraph('<?php echo url_for('paragraph_create', $form->getObject()); ?>');">Текст</a>
       </td>
     </tr>
+    <tr class=b <?php if ($ll != 0) echo 'style="display: none;"' ?>>
+        <td class="submit" colspan="3">
+            <input type="button" value="Сохранить" onclick="document.articleForm.submit();">
+        </td>
+    </tr>
   </tbody>
 
 </table>

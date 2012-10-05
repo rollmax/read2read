@@ -1,5 +1,5 @@
 
-/*                   РўР°Р±Р»РёС†Р°        СЃС‚Р°С‚СЊРё         */      
+/*                   Таблица        статьи         */      
 
 
 #article  {
@@ -10,56 +10,85 @@
 }
 
 #article td {
-	width: 350px; height: auto; padding-left: 5px; padding-right: 5px; padding-bottom: 20px; padding-top: 5px; vertical-align: top; border-bottom: 0px solid #f00;
+	width: 350px; height: auto; padding-left: 5px; padding-right: 5px; padding-bottom: 0px; padding-top: 5px; vertical-align: top; border-bottom: 0px solid #f00;
 }
 
 #article td a  {
-	 position:  relative; float: left; left: 0px; width: 350px; text-decoration: none; cursor: pointer; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px;  border: 0px solid #fff
+	 position:  relative; float: left; left: 0px; width: 350px; text-decoration: none; cursor: pointer; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px;  border: 0px solid #fff;
 }
 
 #article td p {
-	position:  relative; float: left; top: 0px; left: 0px; width: 350px; font: 9pt "verdana"; color: #001; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+	position:  relative; float: left; top: 0px; left: 0px; 
 }
  
 
-/*                            Р—Р°РіРѕР»РѕРІРєРё СЃС‚Р°С‚СЊРё                       */  
+/*                            Заголовки статьи                       */  
+
+
+/*          основной класс             */
 
 #article td p.head {
-	font: bold 10pt "verdana"; color: #234; text-align: center; padding-top: 0px; padding-bottom: 10px; background: #fff; border-bottom: 1px solid #555;
+	width: 350px; font-family: "verdana"; color: #234; font-weight: bold; text-align: center; padding-top: 0px; padding-bottom: 10px; background: #fff; border-bottom: 1px solid #555;
 }
 
-/*                            РђРІС‚РѕСЂ                                */  
+/*            дополнительные классы            */
+
+#article td p.h_1 {
+	font-size: 20pt;
+}
+#article td p.h_2 {
+	font-size: 18pt;
+}
+#article td p.h_3 {
+	font-size: 16pt;
+}
+
+
+/*                            Автор                                */  
 
 #article td p.authleft {
-	width: 100%; font:  9pt "verdana"; color: #012; text-align: left; 
+	width: 350px; font:  9pt "verdana"; color: #012; text-align: left; margin: 0px 0px 0px 0px;
 }
 #article td p.authright {
-	 font:  9pt "verdana"; color: #000;  text-align: right; 
-}
-
-/*                           РџСЂРµС‚РµРєСЃС‚                   */  
-
-#article td p.pretxt {
-	font:  bold 9pt "verdana"; color: #234;  text-align: left; margin: 0px; 
+	width: 350px; font:  9pt "verdana"; color: #000;  text-align: right; margin: 0px 0px 0px 0px;
 }
 
 
-/*                            РР»Р»СЋСЃС‚СЂР°С†РёРё Рє СЃС‚Р°С‚СЊРµ                      */  
+
+/*                            Иллюстрации к статье                      */  
 
 
 
 #article td  img {
-	 position:  relative; float: left; left: 0px;  width: 350px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; border: 0px solid #999; margin: 0px;
+	 position:  relative; float: left; left: 0px;  width: 350px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; border: 0px solid #999; margin: 0px 0px 20px 0px;
 }
 
-/*                            РўРµРєСЃС‚                 */      
+/*                       основной текст                 */      
 
 #article td p.txt {
-	 text-indent: 2em; text-align: justify; line-height: 130%; 
+		width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 20px 0px; line-height: 130%; text-indent: 2em; background-color: #fff;  
+}
+
+/*             дополнительные классы               */
+
+#article td p.ita {
+	font-style: italic;
+}
+#article td p.bold {
+	font-weight: bold;
+}
+#article td p.h4 {
+	font-size: 12pt; font-weight: bold; text-align: left; text-indent: 0em;
+}
+#article td p.h5 {
+	font-size: 10pt; font-weight: bold; text-align: left; text-indent: 0em;
+}
+#article td p.h6 {
+	font-size: 8pt; font-weight: bold; text-align: left; text-indent: 0em;
 }
 
 
-/*     РЎСЃС‹Р»РєРё "РґРѕР±Р°РІРёС‚СЊ РІ Р±Р»РѕРі" Рё "РІРµСЂСЃРёСЏ РґР»СЏ РїРµС‡Р°С‚Рё"  - С‚РѕР»СЊРєРѕ РІ РІР°СЂРёР°РЅС‚Рµ РґР»СЏ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№,  Р°РєРєР°СѓРЅС‚ - РћРљ            */  
+/*     Ссылка  "версия для печати"  - только в варианте для зарегистрированных пользователей,  аккаунт = ОК            */  
 
 
 
@@ -67,45 +96,29 @@
 	width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; vertical-align: top;  background: #e5e5eb;
 }
 #article  td.blg-print a {
-	width: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px;  padding-bottom: 0px; margin: 0px; 
+	width: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px;  padding-bottom: 0px; margin: 0px 0px 0px 0px; 
 }
-#article  td.blg-print a.blg {
-	 left: 10px; top: 5px; 
-}
-#article  td.blg-print a.print1 {
-	left: 10px; top: 11px; 
-}
-#article  td.blg-print a.print2 {
+
+#article  td.blg-print a.print {
 	left: 23px; top: 11px; 
 }
-#article  td.blg-print a p {
-	 font: 8pt "verdana"; color: #456; padding-left: 0px; padding-right: 0px; padding-top: 2px;  padding-bottom: 3px; text-align: center; margin: 0px;  
-}
-#article  td.blg-print a.blg p {
-	 width: 110px;  border-bottom: solid 1px #58f; background: #fefeff; 
-}
-#article  td.blg-print a.print1 p{
-	  width: 130px; border-bottom: solid 1px #588; background: #efefef;
-}
-#article  td.blg-print a.print2 p{
-	  width: 130px; border-bottom: solid 1px #588; background: #efefef;
+#article  td.blg-print a.print p {
+	  width: 130px; font: 8pt "verdana"; color: #456; padding-left: 0px; padding-right: 0px; padding-top: 2px;  padding-bottom: 3px; text-align: center; margin: 0px;border-bottom: solid 1px #588; background: #efefef; 
 }
 #article td.blg-print a:hover p {
 	 color: #000; background: #fff; 
 }
-#article td.blg-print a.blg:hover p {
-	 color: #26e; background: #fff; 
-}
 
 
-/*              РЎСЃС‹Р»РєР° РЅР° СЂРµР·СЋРјРµ РїРµСЂРµРІРѕРґС‡РёРєР°            */  
+
+/*              Ссылка на резюме переводчика            */  
 
 #article  td.trans {
-	height: auto; width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; 
+	height: auto; width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; background: #f00;
 }
 
 #article  td.trans a {
-	width: 270px;  background: #fff;
+	width: 270px;  background: #fff; margin: 0px;
 }
 #article td.trans a:hover  {
 	 background: #bcd;
@@ -123,22 +136,31 @@
 	width: 270px; font: bold 8pt "verdana"; color: #fff; text-align: center; padding-top: 0px; padding-bottom: 6px; 
 }
 
-/*                       РћС†РµРЅРёС‚СЊ СЃС‚Р°С‚СЊСЋ                        */  
+/*                       Оценить статью                        */  
 
-#article  td.center p.lt_ev {
-	font:  8pt "verdana"; color: #f25; text-align: left; padding-left: 5px; 
+#article td.center {
+	width: 270px; background: #ccc; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; 
 }
-#article  td.center p.rt a {
-	display: inline; width: 20px; margin: 0px 0px 0px 5px;
+#article td.center div.ev_fon {
+	position:  relative; float: left; left: 35px; top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 10px 0px 0px 0px; background: #f00;
 }
-#article  td.center p.rt a:hover {
-	background: #ccc;
+#article td.center p.lt_ev {
+	width: 130px; font:  8pt "verdana"; color: #333; text-align: left; padding-left: 5px; padding-top: 0px; margin: 10px 0px 0px 0px; 
 }
-#article  td.center p.rt a img {
-	display: inline; width: 20px 
+#article td.center p.rt_ev {
+ left: 0px; width: 80px; height: 16px; margin: 0px 0px 0px 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; background-image: url(../images/p_ev_rt_bgimg.png); background-repeat:no-repeat; background-position: 16px; border-bottom: solid 0px #000; 
+}
+#article td.center p.rt_ev a {
+	display: inline; width: auto; margin: 0px 0px 0px 0px; 
+}
+#article td.center p.rt_ev a:hover {
+   
+}
+#article td.center p.rt_ev a img {
+	  position:  relative; float: left; left: 0px; top: 0px; width: 16px; height: 16px; border: 0px solid #f99; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; 
 }
 
-/*                      РћС‚РґРµР»СЊРЅС‹Рµ СЃР»РѕРІР° Рё РїРµСЂРµРІРѕРґ Рє РЅРёРј              */  
+/*                      Отдельные слова и перевод к ним              */  
 
 #article  td.center {
 	height: auto; width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; background: #e8e8ef; vertical-align: top;
@@ -153,7 +175,7 @@
 	left: 5px; font:  8pt "verdana"; color: #000; text-align: justify; padding-right: 5px; 
 }
 
-/*     +++++      РЎСЃС‹Р»РєР° РЅР° РїСЂР°РІРёР»Р° СЃР°Р№С‚Р° - РґР»СЏ РЅРµР·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ    */  
+/*     +++++      Ссылка на правила сайта - для незарегистрированного пользователя    */  
 
 #article td a.rul  {
 	 width: 350px; left: 0px; background: #fff; 
@@ -172,24 +194,14 @@
 #article  td p.no_money span {
 	position:  relative; float: left; top: 0px; left: 80px; width: auto; padding-left: 0px; padding-right: 0px;
 }
-/*                      РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ    Google         */       
 
 
-#google_adds {
-	position: relative; top: 0px; left: 0px; width: 340px;  padding-left: 0px; padding-right: 0px;  padding-top: 0px; padding-bottom: 0px; margin: 0px;
+/*           Реклама       */       
+
+
+#article a.add {
+	 position:  relative; float: left; left: 0px; top: 0px; width: 350px; height: 115px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 5px 0px 0px 0px; border: 0px solid #f99; background: #89f;
 }
-
-#over {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  padding-top: 110px;
-  left: 0px;
-  top: 0px;
-  background-image: url(../images/part_.png);
-}
-
-#over #f {
-  min-height: 0px;
+#article a.add img {
+	 position:  relative; float: left; left: 0px; top: 0px; width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; border: 0px solid #f99; background: #89f;
 }
