@@ -36,7 +36,7 @@
         <?php if ($sf_user->isAuthenticated()): ?>
         <?php if ($sf_user->getGuardUser()->isPurchaseArticle($article->getId())): ?>
             <br/>
-            <a class=print2 href="<?php echo url_for('article_print', array('id' => $article->getId())) ?>"
+            <a class=print href="<?php echo url_for('article_print', array('id' => $article->getId())) ?>"
                target="_blank"><p>Версия для печати</p></a>
             <?php endif; ?>
         <?php endif; ?>
