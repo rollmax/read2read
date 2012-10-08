@@ -43,4 +43,29 @@ class puserActions extends autoPuserActions
         $this->form = $this->configuration->getForm($this->user);
     }
 
+    public function executeBatchDelete(sfWebRequest $request)
+    {
+        $ids = $request->getParameter('ids');
+
+        $records = Doctrine_Query::create()
+            ->from('User')
+            ->whereIn('id', $ids)
+            ->execute();
+
+        $err = false;
+        foreach ($records as $record) {
+            $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $record)));
+
+            if (!$record->delete()) {
+                $err = true;
+            }
+        }
+
+        if ($err) {
+            $this->getUser()->setFlash('error', 'Некоторые пользователи не удалены т.к. по ним имеются невыплаченные суммы.');
+        } else {
+            $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+        }
+        $this->redirect('@user_puser');
+    }
 }

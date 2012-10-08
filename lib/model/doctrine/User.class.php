@@ -455,8 +455,8 @@ class User extends GuardUser
         $q = UserTable::getInstance()
             ->getBalanceUserFieldSum('payable')
             ->andWhere('id_user = ?', $this->getId())
-            ->andWhere('id_period != ?', $period)
-//            ->andWhere('use_payment = 0')
+//            ->andWhere('id_period != ?', $period)
+            ->andWhere('was_paid = 0')
             ->execute();
 
         $res = $q->getFirst()->getPayableSum();
@@ -622,5 +622,26 @@ class User extends GuardUser
         }
 
         return true;
+    }
+
+    public function delete(Doctrine_Connection $conn = null)
+    {
+        if ($this->getUtype() == 'puser') {
+            $q = Doctrine_Query::create()
+                ->select('bu.*, sum(bu.payable) as u_payable')
+                ->from('BalanceUser bu')
+                ->where('bu.id_user = ?', $this->getId())
+                ->andWhere('bu.was_paid = 0')
+                ->groupBy('bu.id')
+                ->execute();
+
+            if (count($q) > 0 and $q->getFirst()->getUPayable() > 0) {
+                return false;
+            } else {
+                return parent::delete($conn);
+            }
+        } else {
+            return parent::delete($conn);
+        }
     }
 }

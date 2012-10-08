@@ -58,7 +58,8 @@ abstract class BaseComment extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Paragraph', array(
              'local' => 'id_paragraph',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

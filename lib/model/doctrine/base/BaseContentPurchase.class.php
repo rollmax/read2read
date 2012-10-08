@@ -70,7 +70,8 @@ abstract class BaseContentPurchase extends sfDoctrineRecord
 
         $this->hasOne('Content', array(
              'local' => 'id_content',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $this->hasOne('Transaction', array(
              'local' => 'id_transaction',

@@ -9,7 +9,7 @@ Comment:
     ordered:      { type: integer(4), notnull: true, default: 0 }
 
   relations:
-    Paragraph:  { local: id_paragraph, foreign: id }
+    Paragraph:  { local: id_paragraph, foreign: id, onDelete: Cascade }
 
   options:
     charset: utf8

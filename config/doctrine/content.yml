@@ -30,7 +30,7 @@ Content:
     r2r_trans_rate: { type: decimal, scale: 2, notnull: true, length: 6 }
 
   relations:
-    User:     { local: id_user, foreign: id }
+    User:     { local: id_user, foreign: id, onDelete: Cascade }
     Category: { local: id_category, foreign: id }
 
   indexes:
@@ -53,7 +53,7 @@ ContentPurchase:
   relations:
     User:     { local: id_user, foreign: id }
     Category: { local: id_category, foreign: id }
-    Content: { local: id_content, foreign: id }
+    Content: { local: id_content, foreign: id, onDelete: Cascade }
     Transaction: { local: id_transaction, foreign: id }
 
   options:
