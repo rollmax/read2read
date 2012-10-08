@@ -23,11 +23,14 @@ class Content extends BaseContent
         if ($this->getState() == 'draft') {
             return $this->delete();
         } elseif ($this->getState() == 'public') {
+/*
             if ($this->getToDelete()) {
                 $this->setState('deleted');
             } else {
                 $this->setToDelete(true);
             }
+*/
+            $this->setState('draft');
             $this->save();
 
             return true;
@@ -226,7 +229,7 @@ class Content extends BaseContent
         $this->save();
     }
 
-    public function getTitleStyle()
+    public function getTitleStyle($header = false)
     {
         $out = array();
         if ($this->getIsBold()) {
@@ -238,7 +241,7 @@ class Content extends BaseContent
         if ($this->getHStyle() != 'none') {
             $out[] = "h_" . $this->getHStyle();
         } else {
-            $out[] = "h";
+            $out[] = ($header) ? '' : 'h';
         }
 
         return join(' ', $out);
