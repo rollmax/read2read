@@ -122,7 +122,8 @@ abstract class BaseParagraph extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Content', array(
              'local' => 'id_content',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $this->hasMany('Comment', array(
              'local' => 'id',

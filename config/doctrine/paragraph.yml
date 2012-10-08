@@ -16,7 +16,7 @@ Paragraph:
     ordered:      { type: integer(4), notnull: true, default: 0 }
     
   relations:
-    Content:     { local: id_content, foreign: id }
+    Content:     { local: id_content, foreign: id, onDelete: Cascade }
     
   options:
     charset: utf8
