@@ -16,6 +16,7 @@ Vote:
     User:
       local: id_user
       foreign: id
+      onDelete: Cascade
 
     Voters:
       local: id
@@ -37,3 +38,4 @@ Voters:
     User:
       local: id_user
       foreign: id
+      onDelete: Cascade

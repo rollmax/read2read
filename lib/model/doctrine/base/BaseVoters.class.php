@@ -46,6 +46,7 @@ abstract class BaseVoters extends sfDoctrineRecord
 
         $this->hasOne('User', array(
              'local' => 'id_user',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
     }
 }

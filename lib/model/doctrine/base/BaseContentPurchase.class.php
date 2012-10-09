@@ -62,7 +62,8 @@ abstract class BaseContentPurchase extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('User', array(
              'local' => 'id_user',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $this->hasOne('Category', array(
              'local' => 'id_category',

@@ -73,7 +73,8 @@ abstract class BaseContentRating extends sfDoctrineRecord
 
         $this->hasOne('User', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $this->hasOne('Content', array(
              'local' => 'content_id',

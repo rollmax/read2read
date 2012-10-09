@@ -51,7 +51,7 @@ ContentPurchase:
     id_transaction: { type: integer }
 
   relations:
-    User:     { local: id_user, foreign: id }
+    User:     { local: id_user, foreign: id, onDelete: Cascade }
     Category: { local: id_category, foreign: id }
     Content: { local: id_content, foreign: id, onDelete: Cascade }
     Transaction: { local: id_transaction, foreign: id }
@@ -72,7 +72,7 @@ ContentRating:
 
   relations:
     Period: { local: period_id, foreign: id }
-    User: { local: user_id, foreign: id }
+    User: { local: user_id, foreign: id, onDelete: Cascade }
     Content: { local: content_id, foreign: id }
 
   options:

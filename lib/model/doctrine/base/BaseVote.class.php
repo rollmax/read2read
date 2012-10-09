@@ -81,7 +81,8 @@ abstract class BaseVote extends sfDoctrineRecord
 
         $this->hasOne('User', array(
              'local' => 'id_user',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'Cascade'));
 
         $this->hasMany('Voters', array(
              'local' => 'id',
