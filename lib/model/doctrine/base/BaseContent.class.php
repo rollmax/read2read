@@ -11,8 +11,6 @@
  * @property string $title_en
  * @property string $author_ru
  * @property string $author_en
- * @property string $pretext_ru
- * @property string $pretext_en
  * @property string $photo_ru
  * @property string $photo_en
  * @property enum $state
@@ -42,8 +40,6 @@
  * @method string              getTitleEn()         Returns the current record's "title_en" value
  * @method string              getAuthorRu()        Returns the current record's "author_ru" value
  * @method string              getAuthorEn()        Returns the current record's "author_en" value
- * @method string              getPretextRu()       Returns the current record's "pretext_ru" value
- * @method string              getPretextEn()       Returns the current record's "pretext_en" value
  * @method string              getPhotoRu()         Returns the current record's "photo_ru" value
  * @method string              getPhotoEn()         Returns the current record's "photo_en" value
  * @method enum                getState()           Returns the current record's "state" value
@@ -72,8 +68,6 @@
  * @method Content             setTitleEn()         Sets the current record's "title_en" value
  * @method Content             setAuthorRu()        Sets the current record's "author_ru" value
  * @method Content             setAuthorEn()        Sets the current record's "author_en" value
- * @method Content             setPretextRu()       Sets the current record's "pretext_ru" value
- * @method Content             setPretextEn()       Sets the current record's "pretext_en" value
  * @method Content             setPhotoRu()         Sets the current record's "photo_ru" value
  * @method Content             setPhotoEn()         Sets the current record's "photo_en" value
  * @method Content             setState()           Sets the current record's "state" value
@@ -133,16 +127,6 @@ abstract class BaseContent extends sfDoctrineRecord
              'notnull' => true,
              'length' => 200,
              ));
-        $this->hasColumn('pretext_ru', 'string', 2000, array(
-             'type' => 'string',
-             'notnull' => true,
-             'length' => 2000,
-             ));
-        $this->hasColumn('pretext_en', 'string', 2000, array(
-             'type' => 'string',
-             'notnull' => true,
-             'length' => 2000,
-             ));
         $this->hasColumn('photo_ru', 'string', 200, array(
              'type' => 'string',
              'length' => 200,
@@ -179,9 +163,6 @@ abstract class BaseContent extends sfDoctrineRecord
               1 => 1,
               2 => 2,
               3 => 3,
-              4 => 4,
-              5 => 5,
-              6 => 6,
              ),
              'default' => 'none',
              ));
