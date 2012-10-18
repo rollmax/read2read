@@ -33,9 +33,24 @@ class BalanceSystem extends BaseBalanceSystem
         return $this->getSalesStandart() + $this->getSalesSuper() + $this->getSalesExpert();
     }
 
+
     public function getToPayPUsers()
     {
         return $this->getToPayStandart() + $this->getToPaySuper() + $this->getToPayExpert();
+    }
+
+    public function getToPayPUsersForPrevPeriods()
+    {
+        $q = Doctrine_Query::create()
+            ->select('sum(bu.payable) as bu_payable')
+            ->from('BalanceUser bu')
+            ->innerJoin('bu.User u')
+            ->where('bu.id_period != ?', Period::getCurrentPeriod()->getId())
+            ->andWhere("u.utype = 'puser'")
+            ->andWhere('bu.was_paid = 0')
+            ->execute();
+
+        return $q->getFirst()->getBuPayable();
     }
 
     public function getR2rPUsers()
@@ -69,4 +84,72 @@ class BalanceSystem extends BaseBalanceSystem
         $this->setInBalanceSuper((float)UserTable::getUsersBalance('super'));
     }
 
+    public static function genMassPayWM()
+    {
+
+        $max_id = Doctrine_Query::create()
+            ->select('max(bu.was_paid_id) as bu_max')
+            ->from('BalanceUser bu')
+            ->where('bu.was_paid > 0')
+            ->execute()->getFirst()->getBuMax();
+
+        $q = Doctrine_Query::create()
+            ->select("bu.id_user, u.account_number as account_number, sum(bu.payable) as to_pay,
+                group_concat(p.date separator '|') as p_date, group_concat(bu.id separator '|') as for_ids")
+            ->from('BalanceUser bu')
+            ->innerJoin('bu.User u')
+            ->innerJoin('bu.Period p')
+            ->where('bu.was_paid = 0')
+            ->andWhere('bu.payable > 0')
+            ->andWhere("u.utype = 'puser'")
+            ->andWhere('bu.id_period != ?', Period::getCurrentPeriod()->getId())
+//            ->andWhere('bu.was_paid_id is null')
+            ->groupBy('bu.id_user')
+            ->execute();
+
+        $out = array();
+        foreach ($q as $rec) {
+            if (preg_match('/^R[0-9]{12}$/', $rec->getAccountNumber())) {
+                $max_id = (int)$max_id + 1;
+                $bu_ids = explode('|', $rec->getForIds());
+                foreach ($bu_ids as $bu_id) {
+                    $bu = BalanceUserTable::getInstance()->findOneById($bu_id);
+                    $bu->setWasPaidId($max_id);
+                    $bu->save();
+                }
+
+                $per = array();
+                $per_dates = explode('|', $rec->getPDate());
+                foreach ($per_dates as $p_date) {
+                    $p_date_t = explode('-', $p_date);
+                    $per[] = $p_date_t[1] . '/' . $p_date_t[0];
+                }
+
+
+                $row = array();
+                $row[] = $rec->getAccountNumber();  // номер кошелька
+                $row[] = $rec->getToPay();          // сумма тут надо разобраться с валютой
+                $row[] = mb_convert_encoding('Выплата за ', 'cp1251', 'utf-8') . join(', ', $per) . '. read2read.ru, payId:' . $max_id; // комментарий к выплате
+                $row[] = $max_id;                        // номер платежа
+                $out[] = join(';', $row);
+            }
+        }
+
+        return join(PHP_EOL, $out);
+    }
+
+    public static function processMP($mpfile)
+    {
+        $paid = 0;
+
+        foreach ($mpfile as $str) {
+            $pm = explode(';', $str);
+            if (!preg_match('/^MassPay Transaction.*payId:([\d]+)$/', str_replace('"', '', $pm[6]), $pId)) {
+                continue;
+            } else {
+                $paid += BalanceUserTable::setPaid($pId[1], floatval($pm[2]));
+            }
+        }
+        return $paid;
+    }
 }

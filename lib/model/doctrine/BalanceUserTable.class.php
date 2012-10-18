@@ -14,7 +14,7 @@ class BalanceUserTable extends Doctrine_Table
      * @param int $period_id
      * @return BalanceUser
      */
-    static public function getByUserIdAndPeriodId($user_id, $period_id = 0)
+    public static function getByUserIdAndPeriodId($user_id, $period_id = 0)
     {
         if ($period_id == 0) {
             $period_id = Period::getCurrentPeriod()->getId();
@@ -43,5 +43,25 @@ class BalanceUserTable extends Doctrine_Table
     public static function getInstance()
     {
         return Doctrine_Core::getTable('BalanceUser');
+    }
+
+    public static function setPaid($pay_id, $amount)
+    {
+        $sum = 0;
+        $q = Doctrine_Query::create()
+            ->select('bu.*')
+            ->from('BalanceUser bu')
+            ->where('bu.was_paid_id = ?', $pay_id)
+            ->andWhere('bu.was_paid = 0')
+            ->execute();
+
+        foreach ($q as $bu) {
+            $bu->setWasPaid(true);
+            $bu->setWasPaidAmount($amount);
+            $bu->save();
+            $sum += $bu->getPayable();
+        }
+
+        return $sum;
     }
 }

@@ -23,6 +23,9 @@ abstract class BaseBalanceUserForm extends BaseFormDoctrine
       'sell_purchase_cnt' => new sfWidgetFormInputText(),
       'amount'            => new sfWidgetFormInputText(),
       'payable'           => new sfWidgetFormInputText(),
+      'was_paid'          => new sfWidgetFormInputCheckbox(),
+      'was_paid_amount'   => new sfWidgetFormInputText(),
+      'was_paid_id'       => new sfWidgetFormInputText(),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -36,6 +39,9 @@ abstract class BaseBalanceUserForm extends BaseFormDoctrine
       'sell_purchase_cnt' => new sfValidatorInteger(),
       'amount'            => new sfValidatorNumber(),
       'payable'           => new sfValidatorNumber(),
+      'was_paid'          => new sfValidatorBoolean(array('required' => false)),
+      'was_paid_amount'   => new sfValidatorNumber(),
+      'was_paid_id'       => new sfValidatorInteger(array('required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));

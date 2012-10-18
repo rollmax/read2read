@@ -1,12 +1,12 @@
 <table id="article" cellpadding="0" cellspacing="0px" class="ajax-article">
   <tr>
     <td>
-      <p class=head><?php echo $article->getTitleEn(); ?></p>
+      <p class="head <?php echo $article->getTitleStyle(true) ?>"><?php echo $article->getTitleEn(); ?></p>
     </td>
     <td class=blg-print>
     </td>
     <td>
-      <p class=head><?php echo $article->getTitleRu(); ?></p>
+      <p class="head <?php echo $article->getTitleStyle(true) ?>"><?php echo $article->getTitleRu(); ?></p>
     </td>
   </tr>
   <tr>
@@ -26,14 +26,14 @@
   </tr>
   <tr>
     <td>
-      <p class=pretxt><?php echo $article->getPretextEn(); ?></p>
+      <p class=txt><?php echo $article->getPretextEn(); ?></p>
     </td>
     <td class=center>
       <p class=lt>&nbsp;</p>
       <p class=rt>&nbsp;</p>
     </td>
     <td>
-      <p class=pretxt><?php echo $article->getPretextRu(); ?></p>
+      <p class=txt><?php echo $article->getPretextRu(); ?></p>
     </td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@
   <?php foreach($article->getParagraph() as $paragraph): ?>
   <tr>
     <td>
-      <p class=txt><?php echo $paragraph->getParagraphEn(); ?></p>
+      <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphEn(); ?></p>
     </td>
     <td class=center>
       <?php foreach($paragraph->getComment() as $comment): ?>
@@ -62,7 +62,7 @@
     </td>
     <td>
 <?php if($article->getIsFree() || $sf_user->hasCredential('admin') ) : ?>
-    <p class=txt><?php echo $paragraph->getParagraphRu(); ?></p>
+    <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
 <?php else : ?>
 
 <?php if(!$sf_user->isAuthenticated() && $paragraph_count==1) : ?>
@@ -70,10 +70,10 @@
 <?php endif; ?>
 <?php if($sf_user->isAuthenticated()) : ?>
   <?php if($show_full) : ?>
-    <p class=txt><?php echo $paragraph->getParagraphRu(); ?></p>
+    <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
   <?php else: ?>
     <?php if($paragraph_count==1) : ?>
-      <p class=txt><?php echo $paragraph->getParagraphRu(); ?></p>
+      <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
     <?php endif; ?>
     <?php if($paragraph_count==2) : ?>
       <?php if($is_u_user) : ?>

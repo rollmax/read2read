@@ -12,6 +12,9 @@
  * @property integer $sell_purchase_cnt
  * @property decimal $amount
  * @property decimal $payable
+ * @property boolean $was_paid
+ * @property decimal $was_paid_amount
+ * @property integer $was_paid_id
  * @property User $User
  * @property Period $Period
  * 
@@ -22,6 +25,9 @@
  * @method integer     getSellPurchaseCnt()   Returns the current record's "sell_purchase_cnt" value
  * @method decimal     getAmount()            Returns the current record's "amount" value
  * @method decimal     getPayable()           Returns the current record's "payable" value
+ * @method boolean     getWasPaid()           Returns the current record's "was_paid" value
+ * @method decimal     getWasPaidAmount()     Returns the current record's "was_paid_amount" value
+ * @method integer     getWasPaidId()         Returns the current record's "was_paid_id" value
  * @method User        getUser()              Returns the current record's "User" value
  * @method Period      getPeriod()            Returns the current record's "Period" value
  * @method BalanceUser setIdUser()            Sets the current record's "id_user" value
@@ -31,6 +37,9 @@
  * @method BalanceUser setSellPurchaseCnt()   Sets the current record's "sell_purchase_cnt" value
  * @method BalanceUser setAmount()            Sets the current record's "amount" value
  * @method BalanceUser setPayable()           Sets the current record's "payable" value
+ * @method BalanceUser setWasPaid()           Sets the current record's "was_paid" value
+ * @method BalanceUser setWasPaidAmount()     Sets the current record's "was_paid_amount" value
+ * @method BalanceUser setWasPaidId()         Sets the current record's "was_paid_id" value
  * @method BalanceUser setUser()              Sets the current record's "User" value
  * @method BalanceUser setPeriod()            Sets the current record's "Period" value
  * 
@@ -73,6 +82,19 @@ abstract class BaseBalanceUser extends sfDoctrineRecord
              'type' => 'decimal',
              'scale' => 2,
              'notnull' => true,
+             ));
+        $this->hasColumn('was_paid', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => false,
+             ));
+        $this->hasColumn('was_paid_amount', 'decimal', null, array(
+             'type' => 'decimal',
+             'scale' => 2,
+             'notnull' => true,
+             ));
+        $this->hasColumn('was_paid_id', 'integer', null, array(
+             'type' => 'integer',
              ));
     }
 

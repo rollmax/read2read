@@ -20,6 +20,9 @@ class balanceActions extends autoBalanceActions
      */
     public function executePpayment(sfWebRequest $request)
     {
+        $this->paid = 0;
+
+        $this->form = new ProcessMPForm();
         $this->sysBalance = BalanceSystem::getCurrentBalanceInstance();
         $this->p_users = UserTable::getInstance()->retrieveBackendPuserList()->execute();
     }
@@ -47,4 +50,45 @@ class balanceActions extends autoBalanceActions
         $this->sort = $this->getSort();
     }
 
+    public function executeGenerateMP()
+    {
+        $content = BalanceSystem::genMassPayWM();
+
+        if (strlen($content) > 0) {
+            $this->setLayout(false);
+            sfConfig::set('sf_web_debug', false);
+
+            $fname = strftime('%Y-%m-%d_%H:%M', time()) . '_mass_payment.csv';
+
+            $this->getResponse()->clearHttpHeaders();
+            $this->getResponse()->setContentType('application/octet-stream', true);
+            $this->getResponse()->setHttpHeader('Content-Transfer-Encoding', 'binary', true);
+            $this->getResponse()->setHttpHeader('Content-Disposition','attachment; filename=' . $fname, TRUE);
+            $this->getResponse()->sendHttpHeaders();
+            $this->getResponse()->setContent($content);
+
+            return sfView::NONE;
+        } else {
+            $this->getUser()->setFlash('error', 'Отсутствуют суммы для выплаты, либо неверные номера кошельков у пользователей.');
+            $this->redirect('@payment_pusers');
+        }
+    }
+
+    public function executeProcessMP(sfWebRequest $request)
+    {
+        $this->executePpayment($request);
+
+        $this->form->bind(
+            $request->getPostParameters(),
+            $request->getFiles()
+        );
+
+        if ($this->form->isValid()) {
+            $mpfile = file($this->form->getValue('mpfile')->getTempName());
+            $this->paid = BalanceSystem::ProcessMP($mpfile);
+            $this->getUser()->setFlash('notice', 'Файл с выпиской обработан');
+        }
+
+        $this->setTemplate('ppayment');
+    }
 }

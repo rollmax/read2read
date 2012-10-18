@@ -2,6 +2,14 @@ payment_pusers:
   url:   /payment/pusers
   param: { module: balance, action: ppayment }
 
+payment_getmp:
+  url:  /payment/genmp
+  param: { module: balance, action: generateMP }
+
+payment_processmp:
+  url:  /payment/processmp
+  param:  { module: balance, action: processMP }
+
 user_puser:
   class: sfDoctrineRouteCollection
   options:

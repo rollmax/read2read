@@ -3,6 +3,8 @@
 
 # default values
 all:
+  r2r_noreply_email: do_not_reply@read2read.ru
+
   ckeditor:
     basePath:                     '/ckeditor/'
 

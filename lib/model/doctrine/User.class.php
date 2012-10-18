@@ -450,12 +450,12 @@ class User extends GuardUser
         return $resultSet->getFirst()->getAmountSum();
     }
 
-    public function getToPayForPeriod($period)
+    public function getToPayForPeriod($period_id)
     {
         $q = UserTable::getInstance()
             ->getBalanceUserFieldSum('payable')
             ->andWhere('id_user = ?', $this->getId())
-//            ->andWhere('id_period != ?', $period)
+            ->andWhere('id_period != ?', $period_id)
             ->andWhere('was_paid = 0')
             ->execute();
 

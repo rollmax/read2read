@@ -20,6 +20,9 @@ abstract class BaseBalanceUserFormFilter extends BaseFormFilterDoctrine
       'sell_purchase_cnt' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'amount'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'payable'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'was_paid'          => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'was_paid_amount'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'was_paid_id'       => new sfWidgetFormFilterInput(),
       'created_at'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -32,6 +35,9 @@ abstract class BaseBalanceUserFormFilter extends BaseFormFilterDoctrine
       'sell_purchase_cnt' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'amount'            => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'payable'           => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'was_paid'          => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'was_paid_amount'   => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'was_paid_id'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'created_at'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -61,6 +67,9 @@ abstract class BaseBalanceUserFormFilter extends BaseFormFilterDoctrine
       'sell_purchase_cnt' => 'Number',
       'amount'            => 'Number',
       'payable'           => 'Number',
+      'was_paid'          => 'Boolean',
+      'was_paid_amount'   => 'Number',
+      'was_paid_id'       => 'Number',
       'created_at'        => 'Date',
       'updated_at'        => 'Date',
     );

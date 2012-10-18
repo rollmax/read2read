@@ -9,14 +9,12 @@ Content:
     title_en:     { type: string(1000), notnull: true }
     author_ru:    { type: string(200), notnull: true }
     author_en:    { type: string(200), notnull: true }
-    pretext_ru:   { type: string(2000), notnull: true }
-    pretext_en:   { type: string(2000), notnull: true }
     photo_ru:     { type: string(200), default: null }
     photo_en:     { type: string(200), default: null }
     state:        { type: enum, values: [draft, public, deleted], default: draft }
     is_bold:    { type: boolean, notnull: true, default: false }
     is_italic:  { type: boolean, notnull: true, default: false }
-    h_style:       { type: enum, values: [none, 1, 2, 3, 4, 5, 6], default: none }
+    h_style:       { type: enum, values: [none, 1, 2, 3], default: none }
     is_blocked:   { type: boolean, notnull: true, default: false }
     is_moderated: { type: boolean, notnull: true, default: false }
     to_delete:    { type: boolean, notnull: true, default: false }

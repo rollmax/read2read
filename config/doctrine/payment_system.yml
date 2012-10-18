@@ -17,6 +17,9 @@ BalanceUser:
     sell_purchase_cnt:  { type: integer, notnull: true } # количество покупок-продаж (для u и p пользователей)
     amount:             { type: decimal, scale: 2, notnull: true } # сумма купли-продажи контента
     payable:            { type: decimal, scale: 2, notnull: true } # к выплате
+    was_paid:           { type: boolean, notnull: true, default: false } # было ли всё выплачено
+    was_paid_amount:    { type: decimal, scale: 2, notnull: true } # сколько было выплачено
+    was_paid_id:        { type: integer, default: null } # id платежа
   relations:
     User:               { onDelete: CASCADE, local: id_user, foreign: id }
     Period:             { onDelete: CASCADE, local: id_period, foreign: id }

@@ -30,7 +30,7 @@
 <table id=article cellpadding="0" cellspacing="0px">
 <tr>
     <td>
-        <p class="head <?php echo $article->getTitleStyle() ?>"><?php echo $article->getTitleEn(); ?></p>
+        <p class="head <?php echo $article->getTitleStyle(true) ?>"><?php echo $article->getTitleEn(); ?></p>
     </td>
     <td class=blg-print>
         <?php if ($sf_user->isAuthenticated()): ?>
@@ -42,7 +42,7 @@
         <?php endif; ?>
     </td>
     <td>
-        <p class="head <?php echo $article->getTitleStyle() ?>"><?php echo $article->getTitleRu(); ?></p>
+        <p class="head <?php echo $article->getTitleStyle(true) ?>"><?php echo $article->getTitleRu(); ?></p>
     </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@
 </tr>
 <tr>
     <td>
-        <p class=pretxt><?php echo $article->getPretextEn(); ?></p>
+        <p class="txt"><?php echo $article->getPretextEn(); ?></p>
     </td>
     <td class=center>
         <?php if ($sf_user->isAuthenticated()): ?>
@@ -249,7 +249,7 @@
 
     </td>
     <td>
-        <p class=pretxt><?php echo $article->getPretextRu(); ?></p>
+        <p class="txt"><?php echo $article->getPretextRu(); ?></p>
     </td>
 </tr>
 <tr>
