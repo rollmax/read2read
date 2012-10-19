@@ -269,7 +269,11 @@
 <?php foreach ($article->getParagraph() as $paragraph): ?>
 <tr>
     <td>
+        <?php if ($paragraph->getIsPhoto()): ?>
+        <p><?php echo image_tag($paragraph->getPathPhotoEn()) ?></p>
+        <?php else: ?>
         <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphEn(); ?></p>
+        <?php endif ?>
     </td>
     <td class=center>
         <?php foreach ($paragraph->getComment() as $comment): ?>
@@ -279,7 +283,11 @@
     </td>
     <td>
         <?php if ($article->getIsFree() || $sf_user->hasCredential('admin')) : ?>
+            <?php if ($paragraph->getIsPhoto()): ?>
+            <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
+            <?php else: ?>
             <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+            <?php endif ?>
         <?php else : ?>
 
         <?php if (!$sf_user->isAuthenticated() && $paragraph_count == 1) : ?>
@@ -287,7 +295,11 @@
         <?php endif; ?>
         <?php if ($sf_user->isAuthenticated()) : ?>
             <?php if ($show_full) : ?>
-                <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                    <?php if ($paragraph->getIsPhoto()): ?>
+                    <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
+                    <?php else: ?>
+                    <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                    <?php endif ?>
                 <?php else: ?>
                 <?php if ($paragraph_count == 1) : ?>
                     <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
