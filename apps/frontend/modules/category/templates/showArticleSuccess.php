@@ -65,7 +65,7 @@
 </tr>
 <tr>
     <td>
-        <p class="txt"><?php echo $article->getPretextEn(); ?></p>
+        <p class="txt">&nbsp;</p>
     </td>
     <td class=center>
         <?php if ($sf_user->isAuthenticated()): ?>
@@ -249,7 +249,7 @@
 
     </td>
     <td>
-        <p class="txt"><?php echo $article->getPretextRu(); ?></p>
+        <p class="txt">&nbsp;</p>
     </td>
 </tr>
 <tr>
