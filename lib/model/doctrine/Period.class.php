@@ -27,6 +27,18 @@ class Period extends BasePeriod
         'Декабрь'
     );
 
+    public static function getCurPeriodDate()
+    {
+        $virtPeriod = SettingTable::getOptionByName('virtPeriod')->getValue();
+
+        if (strlen($virtPeriod) == 7) {
+            $date = $virtPeriod;
+        } else {
+            $date = date('Y-m');
+        }
+
+        return $date;
+    }
     /**
      * Returns current period instance
      *
@@ -34,11 +46,20 @@ class Period extends BasePeriod
      */
     public static function getCurrentPeriod()
     {
-        $oPeriod = PeriodTable::getInstance()->findOneByDate(date('Y-m'));
+        $date = Period::getCurPeriodDate();
+        $oPeriod = PeriodTable::getInstance()->findOneByDate($date);
+
         if (!($oPeriod instanceof Period)) {
             $oPeriod = new Period();
-            $oPeriod->set1k('1.00');
-            $oPeriod->setDate(date('Y-m'));
+            if (($prev = Period::getPrevPeriod()) === false) {
+                $price1k = SettingTable::getOptionByName('price1k')->getValue();
+            } else {
+                if (($price1k = VoteTable::getVoted1k($prev)) === false) {
+                    $price1k = $prev->get1k();
+                }
+            }
+            $oPeriod->set1k(number_format((float)$price1k, 2));
+            $oPeriod->setDate($date);
             $oPeriod->save();
             //throw new sfException('Cannot get current period. Error in DB data');
         }
@@ -48,9 +69,9 @@ class Period extends BasePeriod
 
     public static function getPrevPeriod()
     {
-        $now = Period::getCurrentPeriod();
-        $nowYear = $now->getYear();
-        $nowMonth= $now->getMonthNumeric();
+        $now = explode('-', Period::getCurPeriodDate());
+        $nowYear = $now[0];
+        $nowMonth= $now[1];
 
         if ($nowMonth - 1 == 0) {
             $prevMonth = 12;
