@@ -10,9 +10,7 @@
             <p><?php echo Period::getPrevPeriod()->getMonthString() ?></p>
         </td>
         <td class=right>
-            <a href="#">
-                <p>Подробнее</p>
-            </a>
+            <p>&nbsp;</p>
         </td>
     </tr>
     <tr class=g>
