@@ -76,7 +76,7 @@
             <p>Итого за текущий период</p>
         </td>
         <td class=center>
-            <p>0.00</p>
+            <p><?php echo $user->getUserBalanceByPeriodId(Period::getCurrentPeriod()->getId())->getPayable() ?></p>
         </td>
         <td class=right>
             <p>&nbsp;</p>

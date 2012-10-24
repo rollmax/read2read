@@ -644,4 +644,9 @@ class User extends GuardUser
             return parent::delete($conn);
         }
     }
+
+    public function getUnpaid()
+    {
+
+    }
 }
