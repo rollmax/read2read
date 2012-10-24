@@ -31,11 +31,11 @@
     </tr>
     <tr>
         <td>
-          <p class=pretxt><?php echo $article->getPretextEn(); ?></p>
+            <p>&nbsp;</p>
         </td>
         <td class=center></td>
         <td>
-            <p class=pretxt><?php echo $article->getPretextRu(); ?></p>
+            <p>&nbsp;</p>
         </td>
     </tr>
 
