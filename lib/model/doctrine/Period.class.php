@@ -81,6 +81,8 @@ class Period extends BasePeriod
             $prevYear = $nowYear;
         }
 
+        $prevMonth = substr('0' . $prevMonth, 0, 2);
+
         $oPeriod = PeriodTable::getInstance()->findOneByDate($prevYear . '-' . $prevMonth);
 
         return $oPeriod;
