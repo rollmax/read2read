@@ -645,6 +645,21 @@ class User extends GuardUser
         }
     }
 
+    public function getSoldStatsForPeriod(Period $period)
+    {
+        $q = Doctrine_Query::create()
+            ->select('u.id, sum(t.amount) as sell_sum, count(cp.id) as sell_count, count(c.id) as content_count, sum(c.letters_k) as letter_sum')
+            ->from('User u')
+            ->leftJoin('u.Content c')
+            ->leftJoin('c.ContentPurchase cp')
+            ->leftJoin('cp.Transaction t with t.id_period = ?', $period->getId())
+            ->where('u.id = ?', $this->getId())
+            ->groupBy('u.id')
+            ->execute();
+
+        return $q->getFirst();
+    }
+
     public function getUnpaid()
     {
 

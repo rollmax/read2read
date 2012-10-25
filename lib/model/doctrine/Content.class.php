@@ -23,13 +23,13 @@ class Content extends BaseContent
         if ($this->getState() == 'draft') {
             return $this->delete();
         } elseif ($this->getState() == 'public') {
-/*
+            /*
             if ($this->getToDelete()) {
                 $this->setState('deleted');
             } else {
                 $this->setToDelete(true);
             }
-*/
+            */
             $this->setState('draft');
             $this->save();
 
@@ -100,7 +100,7 @@ class Content extends BaseContent
     public function publish()
     {
         $date = $this->getPubDate();
-        if (strlen($date) == 0) {
+        if ($date == '0000-00-00') {
             $this->setPubDate(date('Y-m-d'));
         }
         if ($this->getCategory()->getIsFree()) {

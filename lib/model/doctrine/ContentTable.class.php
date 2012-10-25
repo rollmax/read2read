@@ -86,6 +86,20 @@ class ContentTable extends Doctrine_Table
         return $q;
     }
 
+    public static function getSoldArticlesQuery(User $user, Period $period)
+    {
+        $q = Doctrine_Query::create()
+            ->select('c.id, sum(t.amount) as sell_sum, count(cp.id) as sell_count')
+            ->from('Content c')
+            ->leftJoin('c.ContentPurchase cp')
+            ->leftJoin('cp.Transaction t with t.id_period = ?', $period->getId())
+            ->where('c.id_user = ?', $user->getId())
+            ->groupBy('c.id')
+            ->orderBy('sell_sum DESC');
+
+        return $q;
+    }
+
     /**
      * Returns query for pagination in user not published content list
      *

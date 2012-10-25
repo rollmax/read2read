@@ -97,13 +97,16 @@ class articleActions extends sfActions
     public function executePublished(sfWebRequest $request)
     {
         $user = $this->getUser()->getGuardUser();
+        $this->period = Period::getCurrentPeriod();
 
         $this->pager = new sfDoctrinePager(
             'Content',
             sfConfig::get('app_max_articles_on_published')
         );
 
-        $this->pager->setQuery(ContentTable::getInstance()->getPublishedListQuery($user->getId()));
+//        $this->pager->setQuery(ContentTable::getInstance()->getPublishedListQuery($user->getId()));
+
+        $this->pager->setQuery(ContentTable::getSoldArticlesQuery($user, $this->period));
         $this->pager->setPage($request->getParameter('page', 1));
         $this->pager->init();
     }
@@ -142,7 +145,8 @@ class articleActions extends sfActions
     {
         $this->period = Period::getCurrentPeriod();
         $this->stats_nopub = ContentTable::getInstance()->getUserStatsNoPublished($this->getUser()->getId());
-        $this->stats_pub = ContentTable::getInstance()->getUserStatsPublished($this->getUser()->getId());
+//        $this->stats_pub = ContentTable::getInstance()->getUserStatsPublished($this->getUser()->getId());
+        $this->stats_pub = $this->getUser()->getGuardUser()->getSoldStatsForPeriod($this->period);
     }
 
 
