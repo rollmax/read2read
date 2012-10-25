@@ -94,6 +94,7 @@ class ContentTable extends Doctrine_Table
             ->leftJoin('c.ContentPurchase cp')
             ->leftJoin('cp.Transaction t with t.id_period = ?', $period->getId())
             ->where('c.id_user = ?', $user->getId())
+            ->andWhere('c.state = "public"')
             ->groupBy('c.id')
             ->orderBy('sell_sum DESC');
 
