@@ -43,7 +43,7 @@
             <p class=ok>Всего k знаков</p>
         </td>
         <td class=center>
-            <p>0.000</p>
+            <p><?php echo number_format($earned / $period->get1k(), 3, '.', '') ?></p>
         </td>
         <td class=right>
             <p>&nbsp;</p>
@@ -76,7 +76,7 @@
             <p>Итого за текущий период</p>
         </td>
         <td class=center>
-            <p><?php echo $user->getUserBalanceByPeriodId(Period::getCurrentPeriod()->getId())->getPayable() ?></p>
+            <p><?php echo $earned ?></p>
         </td>
         <td class=right>
             <p>&nbsp;</p>
