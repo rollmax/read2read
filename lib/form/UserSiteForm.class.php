@@ -7,7 +7,14 @@ class UserSiteForm extends UserForm
 
         $this->validatorSchema['site'] = new sfValidatorAnd(array(
             $this->validatorSchema['site'],
-            new sfValidatorUrl(),
+            new sfValidatorRegex(
+                array(
+                    'pattern' => '#\b([^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#'
+                ),
+                array(
+                    'invalid' => 'Please Enter a Valid Url'
+                )
+            ),
         ), array(
             'required' => false
         ));
