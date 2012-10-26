@@ -2,6 +2,7 @@ Period:
   columns:
     1k:   { type: decimal, scale: 2, notnull: true }
     date: { type: string(7), notnull: true, unique: true }
+    r2r_share:  { type: decimal, scale: 2, notnull: true }
   indexes:
     date:
       fields: date

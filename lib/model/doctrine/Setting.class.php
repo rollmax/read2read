@@ -82,9 +82,12 @@ class Setting extends BaseSetting
      */
     public static function getR2RPercent()
     {
+        /*
         $option = SettingTable::getOptionByName('percent_r2r');
-
         return (int)$option->getValue();
+        */
+
+        return (float)Period::getCurrentPeriod()->getR2rShare();
     }
 
     public static function getValueByName($name)

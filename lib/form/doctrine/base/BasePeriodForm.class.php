@@ -15,15 +15,17 @@ abstract class BasePeriodForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'   => new sfWidgetFormInputHidden(),
-      '1k'   => new sfWidgetFormInputText(),
-      'date' => new sfWidgetFormInputText(),
+      'id'        => new sfWidgetFormInputHidden(),
+      '1k'        => new sfWidgetFormInputText(),
+      'date'      => new sfWidgetFormInputText(),
+      'r2r_share' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      '1k'   => new sfValidatorNumber(),
-      'date' => new sfValidatorString(array('max_length' => 7)),
+      'id'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      '1k'        => new sfValidatorNumber(),
+      'date'      => new sfValidatorString(array('max_length' => 7)),
+      'r2r_share' => new sfValidatorNumber(),
     ));
 
     $this->validatorSchema->setPostValidator(

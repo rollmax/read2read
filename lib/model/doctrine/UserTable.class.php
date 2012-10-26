@@ -129,4 +129,36 @@ class UserTable extends Doctrine_Table
 
         return $res['balans_sum'];
     }
+
+    public static function setNewTariffs()
+    {
+        $q = UserTable::addPUserQuery();
+        $alias = $q->getRootAlias();
+        $res = $q->andWhere($alias . '.tariff_change_date is not NULL')
+            ->execute();
+
+        foreach ($res as $user) {
+            $user->setTariff($user->getTariffChange());
+            $user->setTariffChange('none');
+            $user->setTariffChangeDate(null);
+            $user->save();
+        }
+    }
+
+    public static function countWeights(Period $period)
+    {
+        // общая сумма продаж
+        $tSum = BalanceSystemTable::getInstance()->findOneByIdPeriod($period->getId())->getToPayPUsers();
+
+        $q = UserTable::addPUserQuery()
+            ->execute();
+
+        foreach ($q as $user) {
+            if (($bu = BalanceUserTable::getByUserIdAndPeriodId($user->getId(), $period->getId())) !== false) {
+                $uWeight = $bu->getPayable() * 100 / $tSum;
+                $user->setWeight((float)$uWeight);
+                $user->save();
+            }
+        }
+    }
 }

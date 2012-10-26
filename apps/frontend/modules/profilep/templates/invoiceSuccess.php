@@ -65,7 +65,7 @@
             <p>В счет r2r</p>
         </td>
         <td class=center>
-            <p><span class=r2r_share><?php echo Setting::getR2RPercent(); ?>%</span></p>
+            <p><span class=r2r_share><?php echo number_format(Setting::getR2RPercent(), 2, '.', ''); ?>%</span></p>
         </td>
         <td class=right>
             <p>&nbsp;</p>

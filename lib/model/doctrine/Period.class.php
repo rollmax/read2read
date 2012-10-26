@@ -39,6 +39,7 @@ class Period extends BasePeriod
 
         return $date;
     }
+
     /**
      * Returns current period instance
      *
@@ -50,15 +51,24 @@ class Period extends BasePeriod
         $oPeriod = PeriodTable::getInstance()->findOneByDate($date);
 
         if (!($oPeriod instanceof Period)) {
+            // выставить новые тарифы на новый период
+            UserTable::setNewTariffs();
+
             $oPeriod = new Period();
+            // вычислить стоимость 1к знаков
             if (($prev = Period::getPrevPeriod()) === false) {
                 $price1k = SettingTable::getOptionByName('price1k')->getValue();
             } else {
+                // рассчитать веса пользователей
+                UserTable::countWeights($prev);
                 if (($price1k = VoteTable::getVoted1k($prev)) === false) {
                     $price1k = $prev->get1k();
                 }
             }
             $oPeriod->set1k(number_format((float)$price1k, 2));
+            // выставить процент
+            $oPeriod->setR2rShare(number_format(Setting::getValueByName('percent_r2r'), 2, '.', ''));
+            // --
             $oPeriod->setDate($date);
             $oPeriod->save();
             //throw new sfException('Cannot get current period. Error in DB data');
@@ -81,7 +91,7 @@ class Period extends BasePeriod
             $prevYear = $nowYear;
         }
 
-        $prevMonth = substr('0' . $prevMonth, 0, 2);
+        $prevMonth = substr('0' . $prevMonth, -2);
 
         $oPeriod = PeriodTable::getInstance()->findOneByDate($prevYear . '-' . $prevMonth);
 
@@ -118,5 +128,10 @@ class Period extends BasePeriod
     public function getVotes()
     {
         return VoteTable::getInstance()->getVotesList($this->getId());
+    }
+
+    public static function setInitialThings()
+    {
+
     }
 }

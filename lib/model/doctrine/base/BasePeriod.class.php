@@ -7,6 +7,7 @@
  * 
  * @property decimal $1k
  * @property string $date
+ * @property decimal $r2r_share
  * @property Doctrine_Collection $ContentRating
  * @property Doctrine_Collection $BalanceUser
  * @property Doctrine_Collection $BalanceSystem
@@ -16,6 +17,7 @@
  * 
  * @method decimal             get1k()            Returns the current record's "1k" value
  * @method string              getDate()          Returns the current record's "date" value
+ * @method decimal             getR2rShare()      Returns the current record's "r2r_share" value
  * @method Doctrine_Collection getContentRating() Returns the current record's "ContentRating" collection
  * @method Doctrine_Collection getBalanceUser()   Returns the current record's "BalanceUser" collection
  * @method Doctrine_Collection getBalanceSystem() Returns the current record's "BalanceSystem" collection
@@ -24,6 +26,7 @@
  * @method Doctrine_Collection getVote()          Returns the current record's "Vote" collection
  * @method Period              set1k()            Sets the current record's "1k" value
  * @method Period              setDate()          Sets the current record's "date" value
+ * @method Period              setR2rShare()      Sets the current record's "r2r_share" value
  * @method Period              setContentRating() Sets the current record's "ContentRating" collection
  * @method Period              setBalanceUser()   Sets the current record's "BalanceUser" collection
  * @method Period              setBalanceSystem() Sets the current record's "BalanceSystem" collection
@@ -51,6 +54,11 @@ abstract class BasePeriod extends sfDoctrineRecord
              'notnull' => true,
              'unique' => true,
              'length' => 7,
+             ));
+        $this->hasColumn('r2r_share', 'decimal', null, array(
+             'type' => 'decimal',
+             'scale' => 2,
+             'notnull' => true,
              ));
 
 

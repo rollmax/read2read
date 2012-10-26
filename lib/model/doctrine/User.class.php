@@ -115,7 +115,7 @@ class User extends GuardUser
         }
 
         $this->setTariffChange($tariffName);
-        $this->setTariffChangeDate(time());
+        $this->setTariffChangeDate(date('Y-m-d H:i:s'));
         $this->save();
 
         if ($this->getId()) {
