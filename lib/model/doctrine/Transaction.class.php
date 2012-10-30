@@ -222,6 +222,11 @@ class Transaction extends BaseTransaction
 
         // Save transaction
         $this->save();
+
+        if ($itog < $fAmount) {
+            $oUser->setIsBlocked(1);
+            $oUser->save();
+        }
     }
 
 }
