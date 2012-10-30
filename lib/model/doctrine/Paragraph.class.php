@@ -37,7 +37,7 @@ class Paragraph extends BaseParagraph
         if ($this->getHStyle() != 'none') {
             $out[] = "h" . $this->getHStyle();
         } else {
-            $out[] = "h";
+            $out[] = "";
         }
 
         return join(' ', $out);
