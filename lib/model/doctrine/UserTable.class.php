@@ -138,10 +138,12 @@ class UserTable extends Doctrine_Table
             ->execute();
 
         foreach ($res as $user) {
-            $user->setTariff($user->getTariffChange());
-            $user->setTariffChange('none');
-            $user->setTariffChangeDate(null);
-            $user->save();
+            if ($user->getTariffChange() != 'none') {
+                $user->setTariff($user->getTariffChange());
+                $user->setTariffChange('none');
+                $user->setTariffChangeDate(null);
+                $user->save();
+            }
         }
     }
 
