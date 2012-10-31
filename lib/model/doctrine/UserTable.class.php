@@ -27,6 +27,7 @@ class UserTable extends Doctrine_Table
         $rootAlias = $q->getRootAlias();
         $q->leftJoin($rootAlias . '.BalanceUser bu');
         $q->andWhere($rootAlias . '.utype=?', 'uuser');
+        $q->andWhere($rootAlias . '.password IS NOT NULL');
 
         return $q;
     }
@@ -46,6 +47,7 @@ class UserTable extends Doctrine_Table
         $rootAlias = $q->getRootAlias();
         $q->leftJoin($rootAlias . '.BalanceUser bu');
         $q->andWhere($rootAlias . '.utype=?', 'puser');
+        $q->andWhere($rootAlias . '.password IS NOT NULL');
 
         return $q;
     }
