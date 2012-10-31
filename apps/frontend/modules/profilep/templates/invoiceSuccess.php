@@ -7,7 +7,7 @@
             <p>Расчетный период</p>
         </td>
         <td class=center>
-            <p><?php echo Period::getPrevPeriod()->getMonthString() ?></p>
+            <p><?php echo Period::periodMonthString(Period::getPrevPeriod()) ?></p>
         </td>
         <td class=right>
             <p>&nbsp;</p>

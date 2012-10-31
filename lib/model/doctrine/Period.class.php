@@ -125,6 +125,15 @@ class Period extends BasePeriod
         return self::$monthsNames[intval($this->getMonthNumeric())];
     }
 
+    public static function periodMonthString($period=null)
+    {
+        if ($period instanceof Period) {
+            return $period->getMonthString();
+        } else {
+            return "Не определен";
+        }
+    }
+
     public function getVotes()
     {
         return VoteTable::getInstance()->getVotesList($this->getId());
