@@ -3,34 +3,34 @@
 
 /*         ================================      */
 
-/*                    Ëè÷íûé êàáèíåò            */
+/*                    ������ �������            */
 
 
 #mdl3 {
-	position:  absolute; top: 140px; left: 70px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 30px 0px; z-index: 2; border-top: solid 0px #ccc;  border-left: solid 0px #345;  border-right: solid 0px #345;
+	position:  absolute; top: 140px; left: 70px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 30px 0px; z-index: 2; border-top: solid 0px #ccc;  border-left: solid 0px #345;  border-right: solid 0px #345; 
 }
 #mdl3 a {
 	text-decoration: none;
 }
-/*                       Ëè÷íûé êàáèíåò - øàïêà                   */
+/*                       ������ ������� - �����                   */
 
 #cabh {
 	position:  relative; float: left; top: 0px; left: 0px;  height: 37px; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background-image: url(../images/p_proom_h.png); background-repeat: no-repeat;
 }
 #cabh p {
-	position: relative; float: left; width: 95%; top: 8px; left: 0px;  height: 25px; font: bold 11pt "verdana"; color: #456;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; width: 95%; top: 8px; left: 0px;  height: 25px; font: bold 11pt "verdana"; color: #456;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
 }
 
-/*                       Ëè÷íûé êàáèíåò - íàâèãàöèÿ                  */
+/*                       ������ ������� - ���������                  */
 
 #cabto {
 	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345;
 }
 #to {
-	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
 }
 #to p {
-	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
 }
 #to p.act {
 	background: #efefef;
@@ -45,11 +45,11 @@
 	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
 }
 #to a p {
-	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #2df; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #2df; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
 }
 
 #to p.stat_act {
-	background: #fe3; color: #345;
+	background: #fe3; color: #345; 
 }
 #to a p.stat {
 	color: #fe3;
@@ -66,13 +66,13 @@
 
 /*         ================================      */
 
-/*                           Àêêàóíò                */
+/*                           �������                */
 
 #account_data  {
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123;  border-bottom: 7px solid #123; background: #efefef;
 }
 #account_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #account_data tr.w {
 	 background: #e5e5e5;
@@ -88,7 +88,7 @@
 }
 
 #account_data td {
-	height: 25px; padding-left: 0px; padding-right: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; margin: 0px;
+	height: 25px; padding-left: 0px; padding-right: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; margin: 0px; 
 }
 
 #account_data td p {
@@ -101,54 +101,54 @@
 	width: 264px;
 }
 #account_data td.center {
-	width: 320px;
+	width: 320px; 
 }
 #account_data td.right  {
 	width: 264px;
 }
 #account_data td.center p {
-	 left: 0px; text-align: center;
+	 left: 0px; text-align: center; 
 }
 
-/*        Þçåðïèê                */
+/*        �������                */
 
 #account_data td.center  img {
-	position: relative; float: left; top: 0px; left: 110px; width: 100px;
+	position: relative; float: left; top: 0px; left: 110px; width: 100px; 
 }
 
 #account_data td p.k {
-	left: 90px; width: 70px; background: #ffb;
+	left: 90px; width: 70px; background: #ffb; 
 }
 #account_data td p.stop {
 	color: #f00;
 }
 #account_data td p.err {
-	color: #f00;
+	color: #f00; 
 }
 
 #account_data td a  {
-		position: relative; float: left; top: 0px; left: 0px; left: 20%; width: 60%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  text-decoration: none;
+		position: relative; float: left; top: 0px; left: 0px; left: 20%; width: 60%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  text-decoration: none; 
 }
 #account_data td a p {
-	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #account_data td a:hover {
-	background: #abc;
+	background: #abc;  
 }
 
 
 
-/*                           Àêêàóíò -  èçìåíåíèÿ  äàííûõ                 */
+/*                           ������� -  ���������  ������                 */
 
 
 #account_data td p.wr {
-	text-align: center; left: 0%; font-weight: bold; width: 96%; padding-left: 2%;
+	text-align: center; left: 0%; font-weight: bold; width: 96%; padding-left: 2%; 
 }
 #account_data td input {
-	position:  relative; float: left; left: 0px;
+	position:  relative; float: left; left: 0px; 
 }
 #account_data td.center p.chng {
-	position:  relative; float: left; top: 0px; left: 0px; width: 150px; padding-top: 0px; margin: 0px 0px 0px 0px; display: inline;
+	position:  relative; float: left; top: 0px; left: 0px; width: 150px; padding-top: 0px; margin: 0px 0px 0px 0px; display: inline; 
 }
 #account_data td input {
 	  position: relative; float: left; top: 0px; left: 20%; width: 60%; vertical-align: midlle; margin: 0px 0px 0px 0px; padding-left: 0px; padding-right: 0px;
@@ -166,19 +166,19 @@
 }
 
 
-/*       Aêêàóíò  -  èçìåíåíèÿ  - óâåäîìëåíèå î ïîñûëêå ïèñüìà             */
+/*       A������  -  ���������  - ����������� � ������� ������             */
 
 #account_data td.end {
-	 height: auto; background: #345;
+	 height: auto; background: #345; 
 }
 #account_data td.end p {
-	position: relative; float: left; top: 0px; left: 10%; width: 80%; font: 11pt "verdana"; color: #eef; padding-left: 0px; padding-right: 0px;height: auto;  line-height: 120%;  margin: 0% 0% 1% 0%; text-align: center;
+	position: relative; float: left; top: 0px; left: 10%; width: 80%; font: 11pt "verdana"; color: #eef; padding-left: 0px; padding-right: 0px;height: auto;  line-height: 120%;  margin: 0% 0% 1% 0%; text-align: center; 
 }
 #account_data p.wht {
-	 width: 45%; text-align: right; padding-right: 5%;
+	 width: 45%; text-align: right; padding-right: 5%; 
 }
 #account_data td.end p.log {
-	left: 0%; font: bold 11pt "verdana"; color: #2f6; width: 45%; text-align: left;
+	left: 0%; font: bold 11pt "verdana"; color: #2f6; width: 45%; text-align: left; 
 }
 #account_data td.end p.pssw {
 	left: 0%; font: bold 11pt "verdana"; color: #fe3; width: 40%; text-align: left; padding-left: 5%;
@@ -186,7 +186,7 @@
 #account_data td.end p.comm {
 	left: 10%; width: 80%;font: 10pt "verdana"; color: #fe0; line-height: 150%;  text-align: center;
 }
-/*                       Êíîïêà "Äàëåå"                         */
+/*                       ������ "�����"                         */
 
 #account_data td.end input.submit {
 	position:  relative; float: left; top: 0px; left: 45%; width: 10%; font: 9pt "verdana"; margin: 0px;
@@ -194,13 +194,13 @@
 
 /*         ================================      */
 
-/*                                Ñ÷åò                                     */
+/*                                ����                                     */
 
 #count_data  {
 	position:  relative; float: left; top: 8px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-bottom: 4px solid #123; background: #efefef;
 }
 #count_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #count_data tr.w {
 	 background: #e5e5e5;
@@ -219,29 +219,29 @@
 }
 
 #count_data td {
-	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; margin: 0px;
+	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 5px; padding-bottom: 5px; margin: 0px; 
 }
 
 #count_data td p {
-	 position: relative; float: left; top: 0px; left: 12px; width: auto; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	 position: relative; float: left; top: 0px; left: 12px; width: auto; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 
 #count_data td.left  {
 	width: 264px;
 }
 #count_data td.center {
-	width: 320px;
+	width: 320px; 
 }
 #count_data td.right  {
 	width: 264px;
 }
 
 #count_data td.center p.pay_out {
-	font: bold 9pt "verdana"; color: #000;
+	font: bold 9pt "verdana"; color: #000; 
 }
 
 
-/*        Ïðèçíàê        Âûïëà÷åíî/Íåâûïëà÷åíî       */
+/*        �������        ���������/�����������       */
 
 #count_data td p span.paid {
 	font: 9pt "verdana"; color: #179;
@@ -257,13 +257,13 @@
 	 left: 0px; text-align: center; width: 100%;
 }
 
-/*        Öåíà 1k çíàêîâ        */
+/*        ���� 1k ������        */
 
 #count_data td p span.k_zn {
 	 padding-left: 5px; padding-right: 5px; background: #ff8; font: bold 9pt "verdana"; color: #04c;
 }
 
-/*        Äîëÿ Read2Read         */
+/*        ���� Read2Read         */
 
 #count_data td p span.r2r_share {
 		 padding-left: 5px; padding-right: 5px; background: #bde; font: 9pt "verdana"; color: #04c;
@@ -274,21 +274,21 @@
 	color: #f00;
 }
 #count_data td p.err {
-	color: #f00;
+	color: #f00; 
 }
 
 
 #count_data td a  {
-		position: relative; float: left; top: 0px; left: 0px; left: 20%; width: 60%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  text-decoration: none;
+		position: relative; float: left; top: 0px; left: 0px; left: 20%; width: 60%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;  text-decoration: none; 
 }
 #count_data td a p {
-	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #count_data td a p.back {
-	width: 50%;
+	width: 50%; 
 }
 #count_data td a p.fwd {
-	width: 50%;
+	width: 50%; 
 }
 #count_data td a.act p.back {
 	width: 50%; color: #888;
@@ -300,17 +300,17 @@
 	background: #abc;  padding-top: 2px; padding-bottom: 2px;
 }
 #count_data td a.act:hover p {
-	padding-top: 2px; padding-bottom: 2px; background: transparent;
+	padding-top: 2px; padding-bottom: 2px; background: transparent; 
 }
 
 
-/*                           Ñ÷åò -  èçìåíåíèÿ  äàííûõ                 */
+/*                           ���� -  ���������  ������                 */
 
 #count_data td input {
-	position:  relative; float: left; top: 0px; left: 0px;
+	position:  relative; float: left; top: 0px; left: 0px; 
 }
 #count_data td.center input {
-	 left: 30%; width: 40%; vertical-align: midlle; font: bold 9pt "verdana"; color: #345;
+	 left: 20%; width: 60%; vertical-align: midlle; font: bold 9pt "verdana"; color: #345;
 }
 #count_data td.right input {
 	position:  relative; float: left; top: 0px; left: 40%; width: 30%; vertical-align: midlle; font: 8pt "verdana";
@@ -331,21 +331,21 @@
 /*         ================================      */
 
 
-/*                           Ðàáîòû               */
+/*                           ������               */
 
 
 
 
-/*                     Ðàáîòû  - íàâèãàöèÿ                  */
+/*                     ������  - ���������                  */
 
 #wrksto {
 	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #cde;
 }
 #wto {
-	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 170px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 170px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
 }
 #wto p {
-	position: relative; float: left; width: 150px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; width: 150px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
 }
 #wto p.act {
 	color: #345; background: #efefef;
@@ -354,7 +354,7 @@
 	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
 }
 #wto a p {
-	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
 }
 #wto a:hover p {
 	color: #e30; background: #bcd;
@@ -367,77 +367,77 @@
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-bottom: 0px solid #123;
 }
 #wrks tr {
-	  height: auto; width: 989px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 989px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #wrks tr.w {
 	 background: #e5e5e5;
 }
 #wrks tr.b {
 	 background: #ccc;
-}
+} 
 #wrks td {
-	  height: 25px; padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px; margin: 0px; vertical-align: middle;
+	  height: 25px; padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px; margin: 0px; vertical-align: middle; 
 }
 #wrks td.sum_of_sales {
 	background: #edc;
 }
 #wrks td p {
-	  top: 0px; width: 100%; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center;
+	  top: 0px; width: 100%; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center; 
 }
 #wrks td p.h {
-	width: 290px; font: 9pt "verdana"; color: #000; padding-left: 15px; text-align: left;
+	width: 290px; font: 9pt "verdana"; color: #000; padding-left: 15px; text-align: left;  
 }
 #wrks td a  {
-	position: relative; float: left; top: 0px; left: 0px; width: auto; text-decoration: none;
+	position: relative; float: left; top: 0px; left: 0px; width: auto; text-decoration: none; 
 }
 #wrks td a p {
-	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #wrks td a:hover p {
-	background: #abc;
+	background: #abc; 
 }
 #wrks td a:hover p {
-	background: #bcd;  padding-top: 2px; padding-bottom: 2px;
+	background: #bcd;  padding-top: 2px; padding-bottom: 2px; 
 }
 
 
-/*                           Ñïèñêè ðàáîò                      */
+/*                           ������ �����                      */
 
 #wrks_data  {
 	position:  relative; float: left; top: 12px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123;  border-bottom: 7px solid #345; background: #efefef;
 }
 #wrks_data tr {
-	  height: auto; width: 989px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 989px; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #wrks_data tr.w {
 	 background: #e5e5e5;
 }
 #wrks_data tr.b {
 	 background: #ccc;
-}
+} 
 #wrks_data tr.y {
 	 background: #edc;
-}
+} 
 #wrks_data tr.r {
 	 background: #fdc;
-}
+} 
 #wrks_data td {
 	  height: 25px; padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
 }
 #wrks_data td p {
-	  top: 0px; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center;
+	  top: 0px; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center; 
 }
 #wrks_data td.sum_of_sales {
 	background: #edc;
 }
 #wrks_data td p.h {
-	width: 290px; font: 9pt "verdana"; color: #000; padding-left: 15px; text-align: left;
+	width: 290px; font: 9pt "verdana"; color: #000; padding-left: 15px; text-align: left;  
 }
 #wrks_data td.title {
 	 width: 230px; padding-left: 3px; padding-right: 3px;
 }
 #wrks_data td.part {
-	 width: 180px;
+	 width: 180px; 
 }
 #wrks_data td.title p.left {
 	  text-align: left; background: #fff;
@@ -451,7 +451,7 @@
 }
 #wrks_data td a p {
 	position: relative; float: left; top: 0px; left: 2.5%; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;  width: 95%;
-}
+}	
 #wrks_data td a p.add {
 	border: solid 1px #f00; width: 60%; left: 20%;
 }
@@ -463,35 +463,35 @@
 	background: #fff; border: solid 1px #fff;
 }
 #wrks_data td.del {
-	 width: 80px;
+	 width: 80px; 
 }
 #wrks_data td a.del_block {
-	 width: 60%; left: 20%;
+	 width: 60%; left: 20%; 
 }
 #wrks_data td a.del_block p {
 	width: 100%; font: 8pt "verdana"; text-align: center; color: #c13; background: #dcc;
 }
 #wrks_data td a.del {
-	 width: 30%;
+	 width: 30%;  
 }
 #wrks_data td a.pub {
-	 width: 40%;
+	 width: 40%;  
 }
 #wrks_data td a.chg {
-	 width: 30%;
+	 width: 30%; 
 }
 #wrks_data td a.del_block:hover p {
 	 color: #f00; background: #bcd;
 }
 
 
-/*                           Ïðèçíàê - ðàáîòà óäàëåíà                   */
+/*                           ������� - ������ �������                   */
 
 #wrks_data td p.deleted {
-	  font: 8pt "verdana"; color: #e13;
+	  font: 8pt "verdana"; color: #e13; 
 }
 
-/*                           Ïðèçíàê - ðàáîòà áëîêèðîâàíà                   */
+/*                           ������� - ������ �����������                   */
 
 #wrks_data td p.block {
 	  font: 8pt "verdana"; color: #c13; background: #dcc;
@@ -503,7 +503,7 @@
 	  text-align: right; color: #c13; background: #dcc;
 }
 
-/*                           Äîáàâëåíèå ðàáîòû                  */
+/*                           ���������� ������                  */
 
 
 #add_article  {
@@ -516,22 +516,22 @@
 	 background: #ddd;
 }
 #add_article td {
-	height: auto; vertical-align: top; padding-left:5px; padding-right: 5px; padding-top: 5px; padding-bottom: 10px;
+	height: auto; vertical-align: top; padding-left:5px; padding-right: 5px; padding-top: 5px; padding-bottom: 10px; 
 }
 #add_article td.h {
-	height: 30px; vertical-align: middle;
+	height: 30px; vertical-align: middle; 
 }
 #add_article td p {
 	position: relative; float: left; top: 0px; left: 0px; width: auto;  padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; margin: 0px; font: bold 8pt "verdana"; color: #456; border: solid 0px #000;
 }
 #add_article td a {
-	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #248; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin-bottom: 5px; cursor: pointer; text-decoration: none;
+	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #248; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin-bottom: 5px; cursor: pointer; text-decoration: none; 
 }
 #add_article td.h p {
 	position: relative; float: left; top: 0px; left: 3%;  width: 95%; font: bold 11pt "verdana"; color: #05a; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
 }
 
-/*          Çàêðûòü ñòðàíèöó äîáàâëåíèÿ          */
+/*          ������� �������� ����������          */
 
 #add_article td.h a.close {
 	position: relative; float: left; top: 3px; left: 75%;  width: 22%; font: bold 11pt "verdana"; color: #f20; text-align: right; padding-left: 0px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; margin: 0px; background: #cde; border: solid 1px #cde;
@@ -560,7 +560,7 @@
 	left: 60px; width: 250px;
 }
 #add_article td.left p {
-	text-align: left;  width: 350px;
+	text-align: left;  width: 350px; 
 }
 #add_article td.right p {
 	text-align: right; width: 350px;
@@ -575,16 +575,16 @@
 #add_article td textarea {
 	position: relative; float: left; top: 0px; left: 0px; width: 338px; height:100px; border: 1px solid #999; color: #123;font: 8pt "verdana"; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px;
 }
-#add_article td.center textarea
-{
-  position: relative; float: left; top: 0px; left: 0px; width: 110px; height:50px; border: 1px solid #999; color: #123;font: 8pt "verdana"; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px;
+
+#add_article td.comment textarea {
+    position: relative; float: left; top: 0px; left: 0px; width: 120px; height:100px; border: 1px solid #999; color: #123;font: 8pt "verdana"; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px;
 }
 
 #add_article td p.txt {
-	left: 0px; width: 340px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff;
+	left: 0px; width: 340px; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 5px; padding-right: 5px;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
 }
 
-/*           Äîáàâèòü ïðèìå÷àíèÿ        */
+/*           �������� ����������        */
 
 #add_article td.center a {
 	 left: 15%; width: 70%;
@@ -593,7 +593,7 @@
 	 color: #123; background: #fe8;
 }
 
-/*           Äîáàâèòü ïåðåâîä     */
+/*           �������� �������     */
 
 #add_article td.right a {
 	 left: 33%; width: 44%;
@@ -606,7 +606,7 @@
 	 color: #123; background: #fe8;
 }
 
-/*           Èçìåíèòü / Óäàëèòü àáçàö        */
+/*           �������� / ������� �����        */
 
 #add_article td a.chng {
 	 left: 25%; width: 20%;
@@ -615,26 +615,26 @@
 	 background: #fff;
 }
 #add_article td a.del {
-	 left: 35%; width: 20%;
+	 left: 35%; width: 20%; 
 }
 #add_article td a.del:hover {
 	 background: #fff; color: #f03;
 }
 
-/*           Èçìåíèòü / Óäàëèòü ïðèìå÷àíèÿ        */
+/*           �������� / ������� ����������        */
 
 #add_article td.center a.chng {
-	 left: 20%; width: 50%;
+	 left: 20%; width: 25%;
 }
 #add_article td.center a.chng:hover {
 	 background: #fff;
 }
 #add_article td.center a.del {
-	 left: 30%; width: 50%;
+	 left: 30%; width: 25%; 
 }
 #add_article td.center a.del:hover {
 	 background: #fff; color: #f03;
-}
+} 
 
 
 
@@ -649,7 +649,7 @@
 }
 
 #add_article td.add_paragraph a {
-	 left: 42%; width: 16%; font: bold 8pt "verdana"; color: #248;
+	 left: 42%; width: 16%; font: bold 8pt "verdana"; color: #248; 
 }
 #add_article td.add_paragraph a:hover {
 	color: #123; background: #ff5;
@@ -662,13 +662,13 @@
 
 /*         ================================      */
 
-/*                           Êîíòàêòû                */
+/*                           ��������                */
 
 #conts_data  {
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
 }
 #conts_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #conts_data tr.w {
 	 background: #e5e5e5;
@@ -684,53 +684,53 @@
 }
 
 #conts_data td {
-	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	height: 25px; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 
 #conts_data td p {
-	 position: relative; float: left; top: 0px; left: 5%; width: 95%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	 position: relative; float: left; top: 0px; left: 5%; width: 95%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 
 #conts_data td.left  {
 	width: 264px;
 }
 #conts_data td.center {
-	width: 230px;
+	width: 230px; 
 }
 #conts_data td.right  {
 	width: 264px;
 }
 #conts_data td.center p {
-	 left: 0px; text-align: center;
+	 left: 0px; text-align: center; 
 }
 
 #conts_data td p.k {
-	left: 90px; width: 70px; background: #ffb;
+	left: 90px; width: 70px; background: #ffb; 
 }
 #conts_data td p.stop {
 	color: #f00;
 }
 #conts_data td p.err {
-	color: #f00;
+	color: #f00; 
 }
 
 #conts_data td a  {
 	position: relative; float: left; top: 0px; left: 20%; width: 60%; text-decoration: none;  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; margin: 0px;
-}
+} 
 #conts_data td a p {
-	position: relative; float: left; top: 0px; left: 0px;width: 100%;  font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	position: relative; float: left; top: 0px; left: 0px;width: 100%;  font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #conts_data td a:hover p {
 	background: #abc;  padding-top: 2px; padding-bottom: 2px;
 }
 
-/*                           Êîíòàêòû -  èçìåíåíèÿ  äàííûõ                 */
+/*                           �������� -  ���������  ������                 */
 
 #conts_data td.center p.chng {
 	position:  relative; float: left; top: 0px; left: 0px; width: 120px; padding-top: 0px; margin: 0px 0px 0px 0px; display: inline;
 }
 #conts_data td input {
-	position:  relative; float: left; top: 0px; left: 0px;
+	position:  relative; float: left; top: 0px; left: 0px; 
 }
 #conts_data td.center input {
 	 left: 55px; width: 135px; vertical-align: midlle;
@@ -741,14 +741,14 @@
 
 /*         ================================      */
 
-/*                               Ðåçþìå è ôîòî                             */
+/*                               ������ � ����                             */
 
 
 #resume_data  {
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #efefef;
 }
 #resume_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #resume_data tr.w {
 	 background: #e5e5e5;
@@ -761,40 +761,40 @@
 	 min-height: 300px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; margin: 0px;
 }
 #resume_data td p {
-	  position:  relative; float: left; top: 0px; left: 0px; top: 0px; width: 100%; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center;
+	  position:  relative; float: left; top: 0px; left: 0px; top: 0px; width: 100%; left: 0px; font: 8pt  "verdana"; color: #000; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 3px; margin: 0px;  text-align: center; 
 }
 #resume_data td.left {
-	 width: 500px; padding-left: 10px; padding-right: 10px; vertical-align: top; text-align: left;
+	 width: 500px; padding-left: 10px; padding-right: 10px; vertical-align: top; text-align: left; 
 }
 
 #resume_data td.left p {
-	width: auto;  text-align: justify;
+	width: auto;  text-align: justify; 
 }
 
-/*        ÔÎÒÎ ïåðåâîä÷èêà äëÿ ðåçþìå ( ÍÅ ÞÇÅÐÏÈÊ )                */
+/*        ���� ����������� ��� ������ ( �� ������� )                */
 
 
 #resume_data td.left img {
-	position: relative; float: left; left: 20px; top: 0px; width: 200px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
+	position: relative; float: left; left: 20px; top: 0px; width: 60%; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
 }
 
 #resume_data td a  {
-	position: relative; float: left; top: 0px; left: 20%; width: 60%; text-decoration: none;
+	position: relative; float: left; top: 0px; left: 20%; width: 60%; text-decoration: none; 
 }
 #resume_data td a p {
-	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	position: relative; float: left; top: 0px; left: 0px; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #resume_data td a:hover p {
 	background: #abc;  padding-top: 2px; padding-bottom: 2px;
 }
 
-/*                           ðåçþìå  -  èçìåíåíèÿ  äàííûõ                 */
+/*                           ������  -  ���������  ������                 */
 
 #resume_data td.left input {
-	position:  relative; float: left; top: 0px; left: 0px;  width: auto; padding-top: 0px; margin: 0px 0px 0px 0px;
+	position:  relative; float: left; top: 0px; left: 0px;  width: auto; padding-top: 0px; margin: 0px 0px 0px 0px; 
 }
 #resume_data td input {
-	position:  relative; float: left; top: 0px; left: 0px; display: inline;
+	position:  relative; float: left; top: 0px; left: 0px; display: inline; 
 }
 #resume_data td.right input {
 	position:  relative; float: left; top: 0px; left: 35%; width: 30%; vertical-align: midlle; font: 8pt "verdana";
@@ -802,13 +802,13 @@
 
 
 
-/*                                Ãîëîñîâàíèå   - 1k çíàêîâ                                      */
+/*                                �����������   - 1k ������                                      */
 
 #vote  {
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #123; background: #efefef;
 }
 #vote tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #vote tr.w {
 	 background: #e5e5e5;
@@ -830,57 +830,57 @@
 }
 
 #vote td {
-	height: 25px; width: 480px; padding-left: 3px; padding-right: 3px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	height: 25px; width: 480px; padding-left: 3px; padding-right: 3px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 
 #vote td.left  {
 	width: 260px;
 }
 #vote td.center {
-	width: 250px;
+	width: 250px; 
 }
 #vote td.right {
-	width: auto;
+	width: auto; 
 }
 
 
 #vote td p {
-	 position: relative; float: left; top: 0px; left: 12px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	 position: relative; float: left; top: 0px; left: 12px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 
 
 #vote td.left p {
-	text-align: left;
+	text-align: left; 
 }
 
 
 #vote td.center p {
-	 left: 0px; text-align: center;
+	 left: 0px; text-align: center; 
 }
 
 #vote td.center p.k {
-	left: 90px; width: 70px; background: #ffb; font: 14pt "verdana"; color: #345;
+	left: 90px; width: 70px; background: #ffb; font: 14pt "verdana"; color: #345; 
 }
 #vote td.center p.cent {
-	left: 90px; width: 70px; background: #feb; font: 11pt "verdana"; color: #234;
+	left: 90px; width: 70px; background: #feb; font: 11pt "verdana"; color: #234; 
 }
 #vote td.center p.bid {
-	left: 90px; width: 70px; background: #edb; font: bold 12pt "verdana"; color: #a34;
+	left: 90px; width: 70px; background: #edb; font: bold 12pt "verdana"; color: #a34; 
 }
 
 #vote td p.stop {
 	color: #f00;
 }
 #vote td p.err {
-	color: #f00;
+	color: #f00; 
 }
 
 
 #vote td a  {
-	width: auto; text-decoration: none;
+	position:  relative; float: left; top: 0px; left: 0px; width: 100%;  padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;  text-decoration: none; 
 }
 #vote td a p {
-	 left: 0px; width: 100%; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	 position:  relative; float: left; top: 0px; left: 10%; width: 80%; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #vote td a:hover p {
 	background: #abc;  padding-top: 2px; padding-bottom: 2px;
@@ -890,13 +890,13 @@
 
 
 
-/*                           Ãîëîñîâàíèå -  èçìåíåíèÿ  äàííûõ               */
+/*                           ����������� -  ���������  ������               */  
 
 #vote td.center p.chng {
 	position:  relative; float: left; top: 0px; left: 0px; width: 120px; padding-top: 0px; margin: 0px 0px 0px 0px; display: inline;
 }
 #vote td input {
-	position:  relative; float: left; top: 0px; left: 0px;
+	position:  relative; float: left; top: 0px; left: 0px; 
 }
 #vote td.center input {
 	 left: 55px; width: 135px; vertical-align: midlle;  font: 14pt "verdana"; color: #a45; text-align: center;
@@ -907,13 +907,13 @@
 
 
 
-/*                                     Õîä ãîëîñîâàíèÿ                                  */
+/*                                     ��� �����������                                  */
 
 #vote_data {
 	position:  relative; float: left; top: 9px; left: 0px;  height: auto; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px solid #f23; background: #efefef;
 }
 #vote_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #vote_data tr.w {
 	 background: #e5e5e5;
@@ -932,68 +932,62 @@
 }
 
 #vote_data td {
-	height: 25px; width: auto; padding-left: 0px; padding-right: 0px; margin: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	height: 25px; width: auto; padding-left: 0px; padding-right: 0px; vertical-align: middle;  padding-top: 2px; padding-bottom: 2px;  
 }
 
 #vote_data td.h  {
-	 background: #cdc; height: 40px; width: 100%;
+	 background: #cdc; height: 40px; 
 }
 #vote_data td.nm  {
 	background: #ececc0; width: 170px;
 }
 #vote_data td.nmb {
-	background: #eee; width: 170px;
+	background: #eee; width: 250px;
 }
 #vote_data td.nmw {
 	background: #fff; width: 170px;
+}
+#vote_data td.position {
+	width: 150px;
+}
+#vote_data td.za {
+	width: 120px;
 }
 #vote_data td.left  {
 	width: 260px;
 }
 #vote_data td.center {
-	width: 250px;
+	width: 250px; 
 }
 #vote_data td.right {
-	width: 230px;
+	width: 230px; 
 }
 
 
 #vote_data td p {
-	 position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px;
+	 position: relative; float: left; top: 0px; left: 0px; width: 100%; font: 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
 }
 #vote_data td.h p {
-	left: 12px; font: 14pt "verdana"; color: #123; text-align: left;
+	left: 3%; width: 95%; font: 14pt "verdana"; color: #123; text-align: left; 
 }
 #vote_data td.nm p {
-	left: 12px; font: 10pt "verdana"; color: #123; text-align: left;
+	left: 12px; font: 10pt "verdana"; color: #123; text-align: left; 
 }
 #vote_data td.nmb p {
-	left: 12px; font: 10pt "verdana"; color: #123; text-align: left;
+	left: 12px; font: 10pt "verdana"; color: #123; text-align: left;  
 }
 #vote_data td.nmw p {
-	left: 12px; font: 10pt "verdana"; color: #123; text-align: left;
+	left: 12px; font: 10pt "verdana"; color: #123; text-align: left; 
 }
 
 
 
 #vote_data td a {
-	 position: relative; float: left; top: 0px; left: 0px; width: 80%; font: bold 8pt "verdana"; color: #269; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px 0px 0px 10%; text-decoration: none;
+	 position: relative; float: left; top: 0px; left: 20%; width: 60%;  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
 }
-#vote_data td a:hover {
+#vote_data td a p {
+	 position: relative; float: left; top: 0px; left: 0px; width: 100%; font: bold 8pt "verdana"; color: #000; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px; 
+}
+#vote_data td a p:hover {
 	font: bold 10pt "verdana"; color: #252; background: #ed5;
 }
-#vote_data td p.za {
-	 width: 80%; font: bold 11pt "verdana"; color: #269; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 0px 10%;
-}
-
-/*^^^ 10.11.2011  ^^^*/
-tr#tariff ul.radio_list { margin-left:-60px; width: 70px; }
-tr#tariff ul.radio_list li input { float: right; width: 15px;}
-tr#tariff ul.radio_list li label { float: left; }
-ul.radio_list li {list-style-type: none; font-size: 11px; }
-
-ul.error_list li {list-style-type: none; font-size:10px; color: #ff0000; }
-
-.article_image td img { max-width:350px; }
-
-a:hover p { cursor: pointer; }
