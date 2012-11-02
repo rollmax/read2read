@@ -511,7 +511,11 @@ class User extends GuardUser
      */
     public function getUserBalanceByPeriodId($period_id = 0)
     {
-        $balance = BalanceUserTable::getByUserIdAndPeriodId($this->getId(), $period_id);
+        if (is_null($period_id)) {
+            $balance = false;
+        } else {
+            $balance = BalanceUserTable::getByUserIdAndPeriodId($this->getId(), $period_id);
+        }
 
         return $balance;
     }
@@ -658,10 +662,5 @@ class User extends GuardUser
             ->execute();
 
         return $q->getFirst();
-    }
-
-    public function getUnpaid()
-    {
-
     }
 }

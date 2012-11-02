@@ -18,10 +18,22 @@
             <p>К выплате</p>
         </td>
         <td class=center>
-            <p class=pay_out>0.00</p>
+            <p class=pay_out>
+                <?php if (!is_null($earnedPrev)): ?>
+                    <?php echo number_format($earnedPrev->getPayable(), 2, '.', '') ?>
+                <?php else: ?>
+                    0.00
+                <?php endif ?>
+            </p>
         </td>
         <td class=right>
-            <p><span class=paid>Выплачено</span></p>
+            <p><span class=paid>
+                <?php if (!is_null($earnedPrev) && ($earnedPrev->getWasPaid() == true)): ?>
+                    Выплачено
+                <?php else: ?>
+                    Не выплачено
+                <?php endif ?>
+            </span></p>
         </td>
     </tr>
 </table>

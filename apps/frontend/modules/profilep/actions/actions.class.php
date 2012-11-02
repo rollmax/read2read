@@ -591,6 +591,7 @@ EOF
         $this->form = null;
         $this->form_type = '';
         $this->earned = $this->user->getUserBalanceByPeriodId(Period::getCurrentPeriod()->getId())->getPayable();
+        $this->earnedPrev = $this->user->getUserBalanceByPeriodId(Period::getPrevPeriod()->getId());
 
         if ($request->getMethod() == 'POST') {
             $this->form = new UserPasswordImgForm($this->user);
