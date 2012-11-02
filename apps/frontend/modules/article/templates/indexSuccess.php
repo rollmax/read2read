@@ -20,7 +20,7 @@
         <td><p><?php echo $stats_pub->getContentCount() ?></p></td>
         <td><p><?php echo $stats_pub->getLetterSum() / 1000 ?></p></td>
         <td><p><?php echo $stats_pub->getSellCount() ?></p></td>
-        <td class=sum_of_sales><p><?php echo $stats_pub->getSellSum() ?></p></td>
+        <td class=sum_of_sales><p><?php echo number_format($stats_pub->getSellSum(), 2, '.', '') ?></p></td>
         <td><p><?php echo number_format($stats_pub->getSellSum() / $period->get1k(), 3, '.', '') ?></p></td>
     </tr>
 </table>
