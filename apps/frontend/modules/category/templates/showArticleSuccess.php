@@ -18,6 +18,10 @@
         ) . '"><p>Parts - Разделы</p></a></td>'
     ) ?>
 <?php endif; ?>
+<?php
+$adsense = <<<EOD
+EOD;
+?>
 
 <div id="close">
     <?php if ($back_url != '') : ?>
@@ -299,35 +303,69 @@
         <?php if ($sf_user->isAuthenticated()) : ?>
             <?php if ($show_full) : ?>
                     <?php if ($paragraph->getIsPhoto()): ?>
-                    <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
+                        <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
                     <?php else: ?>
-                    <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                        <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
                     <?php endif ?>
                 <?php else: ?>
-                <?php if ($paragraph_count == 1) : ?>
-                    <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
-                <?php endif; ?>
-                <?php if ($paragraph_count == 2) : ?>
-                    <?php if ($is_u_user) : ?>
-                        <?php if (!$account_blocked) : ?>
-                            <?php if ($has_money) : ?>
-                                <a href="<?php echo url_for('@purchase_article?id=' . $article->getId())?>" title="" class=rul><p>Купить&nbsp;перевод&nbsp;&nbsp;&gt;&gt;</p></a>
+                    <?php if ($paragraph_count == 1) : ?>
+                        <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                    <?php endif; ?>
+                    <?php if ($paragraph_count == 2) : ?>
+                        <?php if ($is_u_user) : ?>
+                            <?php if (!$account_blocked) : ?>
+                                <?php if ($has_money) : ?>
+                                    <a href="<?php echo url_for('@purchase_article?id=' . $article->getId())?>" title="" class=rul><p>Купить&nbsp;перевод&nbsp;&nbsp;&gt;&gt;</p></a>
                                 <?php else: ?>
-                                <p class=no_money>На Вашем счету недостаточно средств для приобретения перевода <span>к этой статье</span>
-                                </p>
+                                    <p class=no_money>На Вашем счету недостаточно средств для приобретения перевода <span>к этой статье</span></p>
                                 <?php endif; ?>
                             <?php else: ?>
-                            <p class=no_money>На Вашем счету недостаточно средств для приобретения перевода <span>к этой статье</span>
-                            </p>
-                            <?php endif; ?>
+                                <p class=no_money>На Вашем счету недостаточно средств для приобретения перевода <span>к этой статье</span></p>
+                        <?php endif; ?>
                         <?php endif; ?>
                     <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
-
         <?php endif; ?>
     </td>
 </tr>
     <?php $paragraph_count++ ?>
     <?php endforeach; ?>
 </table>
+
+<?php if (!$sf_user->isAuthenticated()): ?>
+<div id=goo>
+    <table id=article_add>
+        <tr>
+            <td>
+                <p class="head <?php echo $article->getTitleStyle(true) ?>"><?php echo $article->getTitleRu(); ?></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class=authright><p class=authright>Автор: <?php echo $article->getAuthorRu(); ?></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="<?php echo url_for('/page/reader-rules') ?>" title="" class=rul><p>Правила сайта&nbsp;&nbsp;&gt;&gt;</p></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-1695948175874149";
+                /* skyscraper2 */
+                google_ad_slot = "9103478275";
+                google_ad_width = 120;
+                google_ad_height = 600;
+                //-->
+                </script>
+                <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </td>
+        </tr>
+    </table>
+</div>
+<?php endif ?>
