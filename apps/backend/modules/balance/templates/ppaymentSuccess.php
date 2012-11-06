@@ -10,7 +10,7 @@
             <tr>
                 <th width="20%">Итого к выплате</th>
                 <th width="20%">&nbsp;</th>
-                <th width="20%"><?php echo $sysBalance->getToPayPUsersForPrevPeriods(); ?></th>
+                <th width="20%"><?php echo number_format(BalanceSystem::genMassPayWM(false), 2, '.', '') ?></th>
                 <th width="20%"><input type="button" value="Создать файл для массовых выплат" onclick="location.href='<?php echo url_for('@payment_getmp') ?>'" /></th>
                 <th>&nbsp;</th>
             </tr>

@@ -84,7 +84,7 @@ class BalanceSystem extends BaseBalanceSystem
         $this->setInBalanceSuper((float)UserTable::getUsersBalance('super'));
     }
 
-    public static function genMassPayWM()
+    public static function genMassPayWM($pay=true)
     {
 
         $max_id = Doctrine_Query::create()
@@ -107,35 +107,46 @@ class BalanceSystem extends BaseBalanceSystem
             ->groupBy('bu.id_user')
             ->execute();
 
+        $min_payout = (float)Setting::getValueByName('minPayout');
+
         $out = array();
+        $out_num = 0;
         foreach ($q as $rec) {
-            if (preg_match('/^R[0-9]{12}$/', $rec->getAccountNumber())) {
-                $max_id = (int)$max_id + 1;
-                $bu_ids = explode('|', $rec->getForIds());
-                foreach ($bu_ids as $bu_id) {
-                    $bu = BalanceUserTable::getInstance()->findOneById($bu_id);
-                    $bu->setWasPaidId($max_id);
-                    $bu->save();
+            if (preg_match('/^R[0-9]{12}$/', $rec->getAccountNumber()) && ($rec->getToPay() >= $min_payout)) {
+                if ($pay===true) {
+                    $max_id = (int)$max_id + 1;
+                    $bu_ids = explode('|', $rec->getForIds());
+                    foreach ($bu_ids as $bu_id) {
+                        $bu = BalanceUserTable::getInstance()->findOneById($bu_id);
+                        $bu->setWasPaidId($max_id);
+                        $bu->save();
+                    }
+
+                    $per = array();
+                    $per_dates = explode('|', $rec->getPDate());
+                    foreach ($per_dates as $p_date) {
+                        $p_date_t = explode('-', $p_date);
+                        $per[] = $p_date_t[1] . '/' . $p_date_t[0];
+                    }
+
+
+                    $row = array();
+                    $row[] = $rec->getAccountNumber();  // номер кошелька
+                    $row[] = $rec->getToPay();          // сумма тут надо разобраться с валютой
+                    $row[] = mb_convert_encoding('Выплата за ', 'cp1251', 'utf-8') . join(', ', $per) . '. read2read.ru, payId:' . $max_id; // комментарий к выплате
+                    $row[] = $max_id;                        // номер платежа
+                    $out[] = join(';', $row);
+                } else {
+                    $out_num += $rec->getToPay();
                 }
-
-                $per = array();
-                $per_dates = explode('|', $rec->getPDate());
-                foreach ($per_dates as $p_date) {
-                    $p_date_t = explode('-', $p_date);
-                    $per[] = $p_date_t[1] . '/' . $p_date_t[0];
-                }
-
-
-                $row = array();
-                $row[] = $rec->getAccountNumber();  // номер кошелька
-                $row[] = $rec->getToPay();          // сумма тут надо разобраться с валютой
-                $row[] = mb_convert_encoding('Выплата за ', 'cp1251', 'utf-8') . join(', ', $per) . '. read2read.ru, payId:' . $max_id; // комментарий к выплате
-                $row[] = $max_id;                        // номер платежа
-                $out[] = join(';', $row);
             }
         }
 
-        return join(PHP_EOL, $out);
+        if ($pay === true) {
+            return join(PHP_EOL, $out);
+        } else {
+            return (int)$out_num;
+        }
     }
 
     public static function processMP($mpfile)
