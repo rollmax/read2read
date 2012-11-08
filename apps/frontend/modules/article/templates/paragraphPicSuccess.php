@@ -11,7 +11,7 @@
                 <?php echo $form['photo_en']->render(); ?>
             </td>
             <td class=center>
-                <a class=save_author_name onclick="article.savePicParagraph(<?php echo $form->getObject()->getId() ?>, '<?php echo url_for('paragraph_pic_update', $form->getObject()) ?>');">Сохранить</a>
+                <a class="save_zone" onclick="article.savePicParagraph(<?php echo $form->getObject()->getId() ?>, '<?php echo url_for('paragraph_pic_update', $form->getObject()) ?>');">Сохранить</a>
             </td>
             <td class=right>
                 <p><?php echo $form['photo_ru']->renderLabel(); ?></p>

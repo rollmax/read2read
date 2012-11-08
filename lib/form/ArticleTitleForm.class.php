@@ -22,6 +22,8 @@ class ArticleTitleForm extends ContentForm
         'add_empty' => true,
         'label' => 'Выберите раздел',
         'method'=> 'getNameLanguages'
+        ), array(
+        'class' => 'part'
     ));
 
     $this->validatorSchema['id_category'] = new sfValidatorDoctrineChoice(array(

@@ -6,14 +6,14 @@
           <tr>
             <td class="comment">
               <?php echo $form->renderHiddenFields(); ?>
-              <a class="saveCmt" onclick="article.saveComment('commentForm-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_update', $form->getObject()); ?>')">Сохранить</a>
+              <a class="save_comment" onclick="article.saveComment('commentForm-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_update', $form->getObject()); ?>')">Сохранить</a>
               <p><?php echo $form['comment_en']->renderError(); ?></p>
-              <p><?php echo $form['comment_en']->render(); ?></p>
+              <?php echo $form['comment_en']->render(); ?>
             </td>
             <td class="comment">
-              <a class=del onclick="article.deleteComment('comment-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_delete', $form->getObject()); ?>')">Удалить</a>
+              <a class="del_comment" onclick="article.deleteComment('comment-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_delete', $form->getObject()); ?>')">Удалить</a>
               <p><?php echo $form['comment_ru']->renderError(); ?></p>
-              <p><?php echo $form['comment_ru']->render(); ?></p>
+              <?php echo $form['comment_ru']->render(); ?>
             </td>
           </tr>
         </table>

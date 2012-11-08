@@ -9,7 +9,7 @@
                     <p><?php echo $form['author_en']->renderError(); ?></p>
                     <?php echo $form['author_en']->render(); ?>
                 </td>
-                <td class=center><a class=save_author_name onclick="article.updateAuthor('<?php echo url_for('article_author_update', $form->getObject()) ?>');">Сохранить</a></td>
+                <td class=center><a class="save_zone" onclick="article.updateAuthor('<?php echo url_for('article_author_update', $form->getObject()) ?>');">Сохранить</a></td>
                 <td class=right>
                     <p><?php echo $form['author_ru']->renderLabel(); ?></p>
                     <p><?php echo $form['author_ru']->renderError(); ?></p>

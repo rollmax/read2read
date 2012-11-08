@@ -48,8 +48,8 @@
         </td>
     </tr>
     <tr class=b>
-        <td class=submit colspan=3>
-            <input type="submit" value="Продолжить"><br>
+        <td colspan=3>
+            <input type="submit" class="submit" value="Продолжить"><br>
         </td>
     </tr>
     </form>

@@ -2,7 +2,7 @@
 <?php include_partial('article/headBlock'); ?>
 </div> <!-- e: mdl3 -->
 
-<?php $ll = strlen($form->getObject()->getAuthorEn().$form->getObject()->getAuthorEn()); ?>
+<?php $ll = strlen($form->getObject()->getAuthorEn().$form->getObject()->getAuthorRu()); ?>
 
 <table id=add_article cellpadding="0" cellspacing="0px">
   <thead>
@@ -119,8 +119,8 @@
       </td>
     </tr>
     <tr class=b <?php if ($ll != 0) echo 'style="display: none;"' ?>>
-        <td class="submit" colspan="3">
-            <input type="button" value="Сохранить" onclick="document.articleForm.submit();">
+        <td colspan="3">
+            <input type="button" class="submit" value="Сохранить" onclick="document.articleForm.submit();">
         </td>
     </tr>
   </tbody>

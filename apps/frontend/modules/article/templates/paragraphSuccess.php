@@ -16,14 +16,14 @@
                     <td class="left">
                         <a class=chng_text onclick="enableChngBlock(this);">Изменить</a>
                         <div class="chng_block" style="display: none;">
-                            <a class=save_text onclick="saveTaField(this)">Сохранить</a>
-                            <a class=del_text onclick="clearClosestTa(this);">Очистить</a>
+                            <a class="save_text" onclick="saveTaField(this)">Сохранить</a>
+                            <a class="del_text" onclick="clearClosestTa(this);">Очистить</a>
                         </div>
                         <?php echo $form['paragraph_en']->renderError(); ?>
                         <?php echo $form['paragraph_en']->render(); ?>
                     </td>
                     <td class="center">
-                        <a class="save" onclick="article.saveParagraph(<?php echo $form->getObject()->getId(); ?>, '<?php echo url_for('paragraph_update', $form->getObject()); ?>');">Coхранить</a>
+                        <a class="save_zone" onclick="article.saveParagraph(<?php echo $form->getObject()->getId(); ?>, '<?php echo url_for('paragraph_update', $form->getObject()); ?>');">Coхранить</a>
                         <table>
                             <?php foreach ($form->getObject()->getComment() as $comment): ?>
                             <tr id="comment-<?php echo $comment->getId(); ?>">
@@ -38,13 +38,13 @@
                             </tr>
                             <?php endforeach; ?>
                         </table>
-                        <a class="addCmt" onclick="article.addComment('paragraph-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_create', $form->getObject()); ?>');">Добавить примечание</a>
+                        <a class="add_comments" onclick="article.addComment('paragraph-<?php echo $form->getObject()->getId(); ?>', '<?php echo url_for('comment_create', $form->getObject()); ?>');">Добавить примечание</a>
                     </td>
                     <td class="right">
                         <a class=chng_text onclick="enableChngBlock(this);">Изменить</a>
                         <div class="chng_block" style="display: none;">
                             <a class=save_text onclick="saveTaField(this)">Сохранить</a>
-                            <a class=del_text onclick="clearClosestTa(this)">Очистить</a>
+                            <a class="del_text" onclick="clearClosestTa(this)">Очистить</a>
                         </div>
                         <?php echo $form['paragraph_ru']->renderError(); ?>
                         <?php echo $form['paragraph_ru']->render(); ?>

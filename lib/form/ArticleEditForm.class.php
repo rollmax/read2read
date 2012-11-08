@@ -12,14 +12,16 @@
 class ArticleEditForm extends ContentForm
 {
 
-  public function configure()
-  {
-    $this->useFields(array('author_en', 'author_ru'));
+    public function configure()
+    {
+        $this->useFields(array('author_en', 'author_ru'));
 
-    $this->widgetSchema->setLabels(array(
-        'author_en'=>'Введите имя автора на английском',
-        'author_ru'=>'Введите имя автора на русском'
-    ));
+        $this->widgetSchema->setLabels(
+            array(
+                'author_en' => 'Введите имя автора на английском',
+                'author_ru' => 'Введите имя автора на русском'
+            )
+        );
 
-  }
+    }
 }

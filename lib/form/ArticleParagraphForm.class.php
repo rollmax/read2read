@@ -23,12 +23,12 @@ class ArticleParagraphForm extends ParagraphForm
 
       $this->widgetSchema['paragraph_en'] = new sfWidgetFormTextarea(
           array(),
-          array('readonly' => 'readonly')
+          array('readonly' => 'readonly', 'class' => 'text_en', 'rows' => '', 'cols' => '')
       );
 
       $this->widgetSchema['paragraph_ru'] = new sfWidgetFormTextarea(
           array(),
-          array('readonly' => 'readonly')
+          array('readonly' => 'readonly', 'class' => 'text_ru', 'rows' => '', 'cols' => '')
       );
 
       $this->validatorSchema['paragraph_en'] = new sfValidatorString(array('required' => false));
