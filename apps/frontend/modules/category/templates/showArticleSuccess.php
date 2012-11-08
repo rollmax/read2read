@@ -279,7 +279,7 @@ EOD;
         <?php if ($paragraph->getIsPhoto()): ?>
         <p><?php echo image_tag($paragraph->getPathPhotoEn()) ?></p>
         <?php else: ?>
-        <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphEn(); ?></p>
+        <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphEn(); ?></p>
         <?php endif ?>
     </td>
     <td class=center>
@@ -293,7 +293,7 @@ EOD;
             <?php if ($paragraph->getIsPhoto()): ?>
             <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
             <?php else: ?>
-            <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+            <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphRu(); ?></p>
             <?php endif ?>
         <?php else : ?>
 
@@ -305,11 +305,11 @@ EOD;
                     <?php if ($paragraph->getIsPhoto()): ?>
                         <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
                     <?php else: ?>
-                        <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                    <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphRu(); ?></p>
                     <?php endif ?>
                 <?php else: ?>
                     <?php if ($paragraph_count == 1) : ?>
-                        <p class="txt <?php echo $paragraph->getParagraphStyle() ?>"><?php echo $paragraph->getParagraphRu(); ?></p>
+                    <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphRu(); ?></p>
                     <?php endif; ?>
                     <?php if ($paragraph_count == 2) : ?>
                         <?php if ($is_u_user) : ?>

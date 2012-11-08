@@ -64,11 +64,7 @@
                 <?php if ($paragraph->getIsPhoto()): ?>
                     <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
                 <?php else: ?>
-                    <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
-                        if ($paragraph->getPadLeft() > 0) {
-                            echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
-                        }
-                    ?>><?php echo $paragraph->getParagraphEn(); ?></p>
+                <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphEn(); ?></p>
                 <?php endif ?>
             </td>
             <td class="center">
@@ -101,11 +97,7 @@
             <?php if ($paragraph->getIsPhoto()): ?>
                 <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
             <?php else: ?>
-                <p class="txt<?php echo ' ' . $paragraph->getParagraphStyle() ?>"<?php
-                    if($paragraph->getPadLeft() > 0){
-                        echo ' style="padding-left: '.$paragraph->getPadLeft().'%"';
-                    }
-                    ?>><?php echo $paragraph->getParagraphRu(); ?></p>
+            <p<?php echo $paragraph->getRawValue()->getParagraphStyle() ?>><?php echo $paragraph->getParagraphRu(); ?></p>
             <?php endif ?>
         </td>
       </tr>

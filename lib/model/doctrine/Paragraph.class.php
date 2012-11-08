@@ -27,17 +27,23 @@ class Paragraph extends BaseParagraph
 
     public function getParagraphStyle()
     {
+        $res = ' class="txt';
         $out = array();
         if ($this->getIsBold()) {
-            $out[] = "bold";
+            $res .= ' bold';
         }
         if ($this->getIsItalic()) {
-            $out[] =  "ita";
+            $res .=  ' ita';
         }
         if ($this->getHStyle() != 'none') {
-            $out[] = "h" . $this->getHStyle();
+            $res .= ' h' . $this->getHStyle();
+        }
+        $res .= '"';
+
+        if($this->getPadLeft() > 0){
+            $res .= ' style="padding-left: '.$this->getPadLeft().'%"';
         }
 
-        return join(' ', $out);
+        return $res;
     }
 }
