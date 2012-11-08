@@ -663,4 +663,17 @@ class User extends GuardUser
 
         return $q->getFirst();
     }
+
+    public function getSiteUrl()
+    {
+        $site = $this->getSite();
+
+        if (preg_match('#^http://#', $site)) {
+            $out = $site;
+        } else {
+            $out = 'http://' . $site;
+        }
+
+        return $out;
+    }
 }
