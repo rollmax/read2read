@@ -1,8 +1,8 @@
-<td class=left>
+<td class=left xmlns="http://www.w3.org/1999/html">
   <p>Сайт</p>
 </td>
 <td class=center>
-  <?php echo ($user->getSite() !== null) ? '<a href="'.$user->getSite().'" target="_blank"><p>'.$user->getSite().'</p></a>' : ''; ?>
+  <p><?php echo $user->getSite() ?></p>
 </td>
 <td class=right>
   <a onclick="account.getSite('<?php echo url_for('profile_p_site'); ?>');">
