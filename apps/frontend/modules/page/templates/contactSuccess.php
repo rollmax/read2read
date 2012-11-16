@@ -9,7 +9,7 @@
 <p class=h_rules>Правила</p>
 <hr>
 <a class=trans href="<?php echo url_for('static_page', array('url'=>'reader-rules')); ?>">Читателям</a>
-<a class=trans href="<?php echo url_for('static_page', array('url'=>'translator-rules')); ?>">Переводчикам</a>
+<?php /* <a class=trans href="<?php echo url_for('static_page', array('url'=>'translator-rules')); ?>">Переводчикам</a> */ ?>
     </div><!-- e: left  -->  
 
   <div id=center>

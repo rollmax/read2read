@@ -289,7 +289,7 @@ EOD;
         <?php endforeach; ?>
     </td>
     <td>
-        <?php if ($article->getIsFree() || $sf_user->hasCredential('admin')) : ?>
+        <?php if ($article->getCategory()->getIsFree() || $sf_user->hasCredential('admin')) : ?>
             <?php if ($paragraph->getIsPhoto()): ?>
             <p><?php echo image_tag($paragraph->getPathPhotoRu()) ?></p>
             <?php else: ?>

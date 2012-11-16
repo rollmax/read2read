@@ -61,7 +61,7 @@
         <a href="<?php echo url_for('article_by_categories',$article); ?>">
           <p class="left"><?php echo $article->getTitleEn(); ?></p>
           <p class=price>
-            <?php if($article->getIsFree()) : ?>
+            <?php if($article->getCategory()->getIsFree()) : ?>
               0
             <?php else : ?>
               <?php echo $article->getPrice(); ?>
