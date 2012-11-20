@@ -14,7 +14,7 @@
       </tr>
       <tr class="sf_admin_row odd">
         <td>Счет за пользование</td>
-        <td colspan="2" align="center"><?php echo 0; ?></td>
+        <td colspan="2" align="center"><?php echo number_format($user->getBalans(), 2, '.', '') ?></td>
       </tr>
       <tr>
         <th width="60%">Итого по покупкам</th>
