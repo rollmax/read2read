@@ -8,3 +8,5 @@ showArticleSuccess:
 printSuccess:
   layout: print
   stylesheets: [-style.css, print_screen.css, print_print.css: { media: 'print' }]
+catalogSuccess:
+  stylesheets: [frame.css, parts.css, catalog.css]

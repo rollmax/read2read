@@ -147,4 +147,8 @@ class categoryActions extends sfActions
 
     }
 
+    public function executeCatalog(sfWebRequest $request)
+    {
+        $this->catList = CategoryTable::getInstance()->getMainPageList();
+    }
 }

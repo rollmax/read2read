@@ -6,6 +6,10 @@ contact:
   url: /contact
   param:  { module: page, action: contact }
 
+catalog:
+  url: /catalog
+  param: { module: category, action: catalog }
+
 # Регистрация u-пользователя
 registration_u:
   url: /registrationu

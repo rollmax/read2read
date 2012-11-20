@@ -66,7 +66,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 	text-align: right; width: 350px;
 }
 #add_article  td.center p {
-	position:  relative; float: left; top: 0px; left: 0px; width: 125px;  font: 7pt "verdana"; color: #000; padding-left: 5px; padding-right: 5px; padding-top: 2px; text-align: left; margin: 0px; display: inline;
+	position:  relative; float: left; top: 0px; left: 0px; width: auto;  font: 7pt "verdana"; color: #000; padding-left: 5px; padding-right: 5px; padding-top: 2px; text-align: left; margin: 0px; display: inline;
 }
 
 
@@ -96,7 +96,9 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 #add_article td select.part {
 	position: relative; float: left; top: 0px; left: 3%; width: 35%; height: 25px; font: 9pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 2px; margin: 0px;
 }
-
+#add_article td select.part option {
+	width: 99%; text-align: left; 
+}
 /*        пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ     */
 
 #add_article td select.heads_1_6 {
@@ -110,7 +112,17 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 /*            =======       пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ     ======                   */
 
+	/*           Общая ссылка "Сохранить" - сохраняет  имя автора, картинки 
+	, тексты параграфов - удаляет признак рабочей области  <tr class=work_area>    */
 
+#add_article td a.save_zone {
+	 width: 26%; margin: 0px 0px 0px 37%
+}
+#add_article td a.save_zone:hover  {
+	background: #fe8; 
+	}
+	
+/*             Признак рабочей  области   -  синий цвет           */
 
 #add_article tr.work_area {
 	 background: #cedeef; 
@@ -159,7 +171,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 /*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ       */
 
 #add_article td a.add_comments {
-	 left: 15%; width: 70%; 
+	 top: 10px; left: 15%; width: 70%; display: block;
 }
 #add_article td a.add_comments:hover {
 	background: #fe8; 
@@ -213,10 +225,10 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 /*                пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
-#add_article td  textarea.text_en {
+#add_article td.left  textarea.text_en {
 	position: relative; float: left; top: 0px; left: 0px; width: 99%; height: 80px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 0px;
 }
-#add_article td  textarea.text_ru {
+#add_article td.right  textarea.text_ru {
 	position: relative; float: left; top: 0px; left: 0px; width: 99%; height: 80px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 0px;
 }
 
@@ -226,60 +238,74 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 #add_article td a.chng_text {
 	 left: 35%; width: 25%; 
 }
-#add_article td a.chng_text:hover {
+#add_article td.left a.chng_text:hover {
+	 background: #fff;
+}
+#add_article td.right a.chng_text:hover {
 	 background: #fff;
 }
 
 /*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  / пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  /  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ        */
 
-#add_article td a.save_comment {
-	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
+
+#add_article td a.chng {
+	 left: 0%; width: 50%; margin: 0px 0px 0px 25%;
 }
-#add_article td a.save_comment:hover {
+#add_article td a.chng:hover {
 	 background: #fff;
 }
-#add_article td a.chng_comment {
-	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
+#add_article td a.del {
+	 left: 0%; width: 50%; margin: 0px 0px 0px 25%;
 }
-#add_article td a.chng_comment:hover {
+#add_article td a.del:hover {
 	 background: #fff;
 }
-#add_article td a.del_comment {
-	 left: 0%; width: 40%; margin: 0px 0% 0px 10%;
+#add_article td table td.comment a.save_comment {
+	 left: 0%; width: 50%; margin: 0px 0px 0px 25%;
 }
-#add_article td a.del_comment:hover {
+#add_article td table td.comment a.save_comment:hover {
+	 background: #fff;
+}
+#add_article td table td.comment a.chng_comment {
+	 left: 0%; width: 40%; margin: 0px 0px 0px 5%;
+}
+#add_article td table td.comment a.chng_comment:hover {
+	 background: #fff;
+}
+#add_article td table td.comment a.del_comment {
+	 left: 0%; width: 50%; margin: 0px 0% 0px 25%;
+}
+#add_article td table td.comment a.del_comment:hover {
 	 background: #fff; color: #d00;
 } 
 
 /*                пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
 #add_article td  textarea.comment_en {
-	position: relative; top: 0px; left: 0px; float: left;  width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 5%; display: inline; 
+	position: relative; top: 0px; left: 0px; float: left;  width: 90%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 5%; display: inline; 
 }
 #add_article td  textarea.comment_ru {
-	position: relative; top: 0px; left: 0px;  float: left; width: 40%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 8%; display: inline; 
+	position: relative; top: 0px; left: 0px;  float: left; width: 90%; height: 60px; font: bold 8pt "verdana"; color: #234; text-align: left; padding-left: 0px; padding-right: 0px; padding-top: 4px; padding-bottom: 4px; margin: 5px 0px 0px 5%; display: inline; 
 }
 
 /*          =======      пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ      ======            */
 
 
-/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ        */
+/*           Ссылка "Изменить" устанавливает признак рабочей области - <tr class=work_area>       */
 
-#add_article td a.chng_author_name{
-	 left: 37%; width: 26%; 
+#add_article td a.chng_zone {
+	 left: 37%; width: 26%; display: block; 
+}
+#add_article td a.chng_zone:hover  {
+	background: #fe8; 
+	}
+#add_article td a.chng_author_name {
+	 left: 37%; width: 26%; display: block; 
 }
 #add_article td a.chng_author_name:hover  {
 	background: #fe8; 
 	}
 	
-	/*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ        */
-
-#add_article td a.save_author_name{
-	 left: 37%; width: 26%; 
-}
-#add_article td a.save_author_name:hover  {
-	background: #fe8; 
-	}
 	
 	
 /*           пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ        */
@@ -322,7 +348,7 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 /*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ                */
 
 #add_article td p.txt {
-	left: 0px; width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%; text-indent: 2em; background-color: #fff; 
+	left: 0px; width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 130%;  background-color: #fff; 
 }
 
 /*             пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ               */
@@ -352,108 +378,19 @@ position: relative; float: left; top: 0px; left: 0px; width: auto; height: auto;
 
 /*              пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ           */
 
-#add_article  td.center p.lt {
-	font:  bold 7pt "verdana"; color: #000; background: #8fe;  margin: 5px 0px 5px 0%;
+#add_article  td.center table td p.lt {
+	font:  bold 7pt "verdana"; color: #000; background: #8fe;  margin: 5px 0px 5px 5%; width:90%;
 }
-#add_article  td.center p.rt {
-	text-align: justify;  background: #fe9;  margin: 5px 0px 5px 0%;
-}
-
-
-
-/*              пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ                        */
-
-
-#add_article td a.delete_all {
-	 left: 42%; width: 16%; font: 8pt "verdana"; color: #678; background: #bbb;
-}
-#add_article td a.delete_all:hover {
-	color: #123; background: #ddd; color: #555;
+#add_article  td.center table td p.rt {
+	text-align: justify;  background: #fe9;  margin: 5px 0px 5px 5%; width:90%;
 }
 
+/*           таблица в которую вписаны комменты             */
 
-
-
-/*         ================================      */
-
-
-/*                       пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ                   */
-
-#cabh {
-	position:  relative; float: left; top: 0px; left: 0px;  height: 37px; width: 848px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background-image: url(../images/p_proom_h.png); background-repeat: no-repeat;
-}
-#cabh p {
-	position: relative; float: left; width: 95%; top: 8px; left: 0px;  height: 25px; font: bold 11pt "verdana"; color: #456;  text-align: right; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
+#add_article  td.center table {
+	position: relative; float: left; top: 0px; left: 0%; width: 270px; height: auto; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border: 0px;
 }
 
-/*                       пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  */
-
-#cabto {
-	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #345;
+#add_article  td.center table td {
+	width: 135px;
 }
-#to {
-	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 100px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
-}
-#to p {
-	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
-}
-#to p.act {
-	background: #efefef;
-}
-#to p.wrks_act {
-	background: #cde; font: bold 8pt "verdana"; color: #345;
-}
-#to p.stat_act {
-	background: #fc3; font: bold 8pt "verdana"; color: #345;
-}
-#to a {
-	position: relative; float: left; width: 100px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
-}
-#to a p {
-	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #2df; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
-}
-
-#to p.stat_act {
-	background: #fe3; color: #345; 
-}
-#to a p.stat {
-	color: #fe3;
-}
-#to a p.k {
-	color: #0f5;
-}
-#to a:hover p {
-	color: #f20; background: #ccc;
-}
-#to a:hover p.stat_act {
-	color: #345; background: #fe3;
-}
-
-/*         ================================      */
-
-
-/*                     пїЅпїЅпїЅпїЅпїЅпїЅ  - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ                  */
-
-#wrksto {
-	position:  relative; float: left; top: 5px; left: 0px;  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #cde;
-}
-#wto {
-	position:  relative; float: left; top: 0px; left: 0px;  height: auto; width: 170px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; 
-}
-#wto p {
-	position: relative; float: left; width: 150px; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
-}
-#wto p.act {
-	color: #345; background: #efefef;
-}
-#wto a {
-	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; text-decoration: none;
-}
-#wto a p {
-	position: relative; float: left; width: 100%; top: 0px; left: 0px;  height: 20px; font: bold 8pt "verdana"; color: #345; text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 3px; padding-bottom: 0px; margin: 0px; 
-}
-#wto a:hover p {
-	color: #e30; background: #bcd;
-}
-
-

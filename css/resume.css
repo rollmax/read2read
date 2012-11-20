@@ -3,32 +3,32 @@
 /*         ================================      */
 
 
-/*                      Ã‹Ã¨Ã·Ã­Ã»Ã© ÃªÃ Ã¡Ã¨Ã­Ã¥Ã²            */
+/*                      Ëè÷íûé êàáèíåò            */
 
 #mdl2 {
 	position:  absolute; top: 180px; left: 35px; height: auto; width: 848px; width: 900px; padding-left: 7px; padding-right: 7px; padding-top: 7px; padding-bottom: 40px; margin: 0px 0px 30px 0px; z-index: 4; border-top: solid 0px #ccc;  border-left: solid 3px #102030; border-right: solid 3px #102030;  border: solid 0px #888; background: #889;
 }
+ 
 
-
-/*                       Ã‹Ã¨Ã·Ã­Ã»Ã© ÃªÃ Ã¡Ã¨Ã­Ã¥Ã² - Ã¸Ã Ã¯ÃªÃ                    */
+/*                       Ëè÷íûé êàáèíåò - øàïêà                   */
 
 #resh {
 	position:  relative; float: left; top: 0px; left: 0px;  height: 38px; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; background: #fc3;
 }
 #resh p {
-	position: relative; float: left; width: 1%; top: 4px; left: 0px;  height: auto; font: bold 10pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; display: inline;
+	position: relative; float: left; width: 1%; top: 4px; left: 0px;  height: auto; font: bold 10pt "verdana"; color: #345;  text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; display: inline;  
 }
 #resh p.login {
 	width: 86%; left: 20px; top: 2px; font: bold 14pt "verdana"; color: #456; text-align: left; padding-top: 5px;
 }
 #resh p.r1 {
-	font: bold 14pt "verdana"; color: #05e; padding-top: 2px; padding-bottom: 4px; padding-left: 5px;
+	font: bold 14pt "verdana"; color: #05e; padding-top: 2px; padding-bottom: 4px; padding-left: 5px; 
 }
 #resh p.r2 {
-	font: bold 14pt "verdana"; color: #f45; padding-top: 2px; padding-bottom: 4px;
+	font: bold 14pt "verdana"; color: #f45; padding-top: 2px; padding-bottom: 4px; 
 }
 #resh p.two {
-	font: bold 18pt "verdana"; width: 2.5%;
+	font: bold 18pt "verdana"; width: 2.5%; 
 }
 #resh p.re {
 	top: 8px; font: bold 10pt "verdana"; color: #3df; width: 12%; padding-top: 0px; padding-bottom: 4px; background: #345;
@@ -37,13 +37,13 @@
 	font: bold 12pt "verdana"; color: #f23;
 }
 
-/*                           Ã°Ã¥Ã§Ã¾Ã¬Ã¥    -  Ã²Ã Ã¡Ã«Ã¨Ã¶Ã            */
+/*                           ðåçþìå    -  òàáëèöà           */
 
 #resume_data  {
 	position:  relative; float: left; top: 7px; left: 0px;  height: auto; width: 848px; width: 100%; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px; border-top: 0px solid #889; border-bottom: 0px solid #888;
 }
 #resume_data tr {
-	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px;
+	  height: auto; width: 100%; padding-left: 0px; padding-right: 0px; margin: 0px; padding-top: 0px; padding-bottom: 0px; 
 }
 #resume_data tr.w {
 	 background: #e5e5e5;
@@ -58,28 +58,28 @@
 	 background: #cdc;
 }
 #resume_data td {
-	height: auto; width: auto; padding-left: 10px; padding-right: 0px; vertical-align: top;  padding-top: 10px; padding-bottom: 20px; margin: 0px 0px 10px 0px;
+	height: auto; width: auto; padding-left: 10px; padding-right: 0px; vertical-align: top;  padding-top: 10px; padding-bottom: 20px; margin: 0px 0px 10px 0px; 
 }
 #resume_data td.foto  {
-	width: 250px; padding-right: 0px;
+	width: 250px; 
 }
 
-/*  ---------------   Ã°Ã¥Ã§Ã¾Ã¬Ã¥    -  Ã´Ã®Ã²Ã®  ------------  */
+/*  ---------------   ðåçþìå    -  ôîòî  ------------  */
 
-#resume_data td img {
-	 position: relative; float: left; top: 0px; left: 0px; width: 240px;
+#resume_data td.foto img {
+	 position: relative; float: left; top: 0px; left: 0px; width: 100%; height: auto;
 }
 /*  ----------------------------------------------      */
 
 
 #resume_data td p {
-	 position: relative; float: left; top: 0px; left: 0px; width: 40%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 5px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px 0px 2px 0px;
+	 position: relative; float: left; top: 0px; left: 0px; width: 40%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 5px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px; margin: 0px 0px 2px 0px; 
 }
 #resume_data td p.p {
-	 width: 55%; display: inline;
+	 width: 55%; display: inline; font: bold 8pt "verdana"; color: #456;
 }
 #text {
-	 position: relative; float: left; top: 0px; left: 0px; width: 95%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 5px; padding-right: 5px; padding-top: 10px; padding-bottom: 10px; margin: 0px;
+	 position: relative; float: left; top: 0px; left: 0px; width: 95%; font: 8pt "verdana"; color: #000; text-align: left; padding-left: 5px; padding-right: 5px; padding-top: 10px; padding-bottom: 10px; margin: 0px; border-radius: 10px; background: #fff;
 }
 #text p.txt {
 	 position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #000; text-align: justify; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; margin: 0px;
@@ -88,17 +88,17 @@
 	color: #f00;
 }
 #resume_data td p.err {
-	color: #f00;
+	color: #f00; 
 }
 
 #resume_data td a  {
-	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none;
+	position: relative; float: left; top: 0px; left: 0px; width: auto; font: 8pt "verdana"; color: #05a; text-align: center; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 2px; margin: 0px; text-decoration: none; 
 }
 #resume_data td a:hover  {
-	background: #bcd;
+	background: #bcd; 
 }
 #resume_data td p.wh {
-	 width: 96%; font: bold 10pt "verdana"; color: #345; background: #fc5; margin: 10px 0px 5px 0px;
+	 width: 96%; font: bold 10pt "verdana"; color: #345; background: #fc5; margin: 10px 0px 5px 0px; 
 }
 #resume_data td p.wh span.red {
 	color: #f20;
@@ -107,7 +107,7 @@
 	color: #05f;
 }
 #resume_data td a.w  {
-	  width: 95%; margin: 0px;
+	  width: 95%; margin: 0px; 
 }
 #resume_data td a.w p.left {
 	  width: 49%; padding-left: 0px; margin: 0px; color: #123;
@@ -115,6 +115,7 @@
 #resume_data td a.w p.right {
 	width: 49%; text-align: right; color: #123;
 }
+
 
 
 

@@ -3,7 +3,7 @@
 
 
 #article  {
-	position:  relative; float: left; top: 0px; left: 0px; width: auto; height: auto;  padding-left: 0px; padding-right: 0px; margin: 20px 0px 30px 0px; border-top: 0px solid #fff; border-bottom: 10px solid #fff; background: #fff;
+	position:  relative; float: left; top: 0px; left: 0px; width: auto; height: auto;  padding-left: 0px; padding-right: 0px; margin: 20px 0px 30px 0px; border-top: 0px solid #f00; border-bottom: 10px solid #fff; background: #fff;
 }
 #article tr {
 	  height: auto;  padding-left: 0px; padding-right: 0px; 
@@ -28,29 +28,29 @@
 /*          �������� �����             */
 
 #article td p.head {
-	width: 350px; font-family: "verdana"; color: #234; font-weight: bold; text-align: center; padding-top: 0px; padding-bottom: 10px; background: #fff; border-bottom: 1px solid #555;
+	width: 340px; font-family: "verdana"; color: #234; font-weight: bold; text-align: center; padding-top: 0px; padding-bottom: 10px; background: #fff; border-bottom: 1px solid #555; border-top: 0px solid #555;
 }
 
 /*            �������������� ������            */
 
 #article td p.h_1 {
-	font-size: 20pt;
+	font-size: 16pt;
 }
 #article td p.h_2 {
-	font-size: 18pt;
+	font-size: 14pt;
 }
 #article td p.h_3 {
-	font-size: 16pt;
+	font-size: 12pt;
 }
 
 
 /*                            �����                                */  
 
 #article td p.authleft {
-	width: 350px; font:  9pt "verdana"; color: #012; text-align: left; margin: 0px 0px 0px 0px;
+	width: 345px; font:  9pt "verdana"; color: #012; text-align: left; margin: 0px 0px 0px 0px;
 }
 #article td p.authright {
-	width: 350px; font:  9pt "verdana"; color: #000;  text-align: right; margin: 0px 0px 0px 0px;
+	width: 345px; font:  9pt "verdana"; color: #000;  text-align: right; margin: 0px 0px 0px 0px;
 }
 
 
@@ -66,7 +66,7 @@
 /*                       �������� �����                 */      
 
 #article td p.txt {
-		width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 20px 0px; line-height: 130%; text-indent: 2em; background-color: #fff;  
+		width: auto; font-weight: normal; font-style: normal; font-size: 8pt; font-family:  "verdana"; color: #000; text-align: justify; padding-left: 1%; padding-right: 1%;  padding-top: 0px; padding-bottom: 0px; margin: 0px 0px 20px 0px; line-height: 130%;  background-color: #fff;  
 }
 
 /*             �������������� ������               */
@@ -114,7 +114,7 @@
 /*              ������ �� ������ �����������            */  
 
 #article  td.trans {
-	height: auto; width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; background: #f00;
+	height: auto; width: 270px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; 
 }
 
 #article  td.trans a {
@@ -138,6 +138,10 @@
 
 /*                       ������� ������                        */  
 
+
+#article tr.eval {
+	background: #ccc; background: #e5e5eb;
+}
 #article td.center {
 	width: 270px; background: #ccc; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; vertical-align: top; 
 }
@@ -178,7 +182,7 @@
 /*     +++++      ������ �� ������� ����� - ��� ��������������������� ������������    */  
 
 #article td a.rul  {
-	 width: 350px; left: 0px; background: #fff; 
+	 width: 345px; left: 0px; background: #fff; 
 }
 
 #article  td a.rul p {
@@ -196,7 +200,7 @@
 }
 
 
-/*           �������       */       
+/*           �������           
 
 
 #article a.add {
@@ -205,7 +209,7 @@
 #article a.add img {
 	 position:  relative; float: left; left: 0px; top: 0px; width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px; margin: 0px; border: 0px solid #f99; background: #89f;
 }
-
+*/   
 #over {
     position: absolute;
     width: 100%;
@@ -219,4 +223,53 @@
 
 #over #f {
     min-height: 0px;
+}
+
+/*          google skyscraper   */
+
+#goo {
+	position: absolute; top: 128px; left: 630px; width: auto; height: auto; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; border: 0px solid #0f0; 
+}
+
+#article_add  {
+	width: auto; height: auto;  padding-left: 0px; padding-right: 0px; margin: 0px 0px 0px 0px; border-top: 0px solid #f00; border-bottom: 0px solid #fff; background: #fff;
+}
+#article_add tr {
+	  height: auto;  padding-left: 0px; padding-right: 0px; 
+}
+
+#article_add td {
+	width: 350px; height: auto; padding-left: 5px; padding-right: 5px; padding-bottom: 0px; padding-top: 5px; vertical-align: top; border-bottom: 0px solid #f00;
+}
+#article_add td p {
+	position:  relative; float: left; top: -2px; left: -2px; 
+}
+ 
+#article_add td p.head {
+	width: 340px; font-family: "verdana"; color: #234; font-weight: bold; text-align: center; padding-top: 0px; padding-bottom: 10px; background: #fff; border-bottom: 1px solid #555; border-top: 0px solid #555;
+}
+#article_add td p.h_1 {
+	font-size: 16pt;
+}
+#article_add td p.h_2 {
+	font-size: 14pt;
+}
+#article_add td p.h_3 {
+	font-size: 12pt;
+}
+#article_add td p.authright {
+	top: -4px; width: 345px; font:  9pt "verdana"; color: #000;  text-align: right; margin: 0px 0px 0px 0px;
+}
+#article_add td img.add {
+	position: relative; top: 50px; left: 100px; width: 160px; height: 600px; margin: 0px;  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; border: 0px solid #0f0; 
+}
+#article_add td a.rul  {
+	 position: relative; top: 20px; left: 0px; background: #fff; 
+}
+
+#article_add  td a.rul p {
+	position:  relative; float: left; top: 0px; left: 100px; width: 170px; font: bold 9pt "verdana" ; color: #234; padding-left: 0px; padding-right: 0px; padding-top: 5px;  padding-bottom: 5px; text-align: center; margin: 0px; 
+}
+#article_add td a.rul p:hover  {
+	top: 0px; background: #bcd; 
 }
