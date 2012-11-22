@@ -12,7 +12,7 @@
       <a href="<?php echo url_for('static_page_subpage', $subPage); ?>"><?php echo $subPage->getName(); ?></a>
       <?php endif; ?>
     <?php endforeach; ?>
-    <?php // include_partial('toggleLink', array('page'=>$page)); ?>
+    <?php include_partial('toggleLink', array('page'=>$page)); ?>
   </div>
   <div id=center>
     <p><?php echo html_entity_decode($page->getContent()); ?></p>
