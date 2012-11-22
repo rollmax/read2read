@@ -17,6 +17,6 @@
   <div id=center>
     <p><?php echo html_entity_decode($page->getContent()); ?></p>
   </div>
-  <?php $registerRoute = ($page->getUrl()=='translator-rules') ? 'registration_p' : 'registration_u'; ?>
+  <?php $registerRoute = ($page->getParent()->getUrl()=='translator-rules') ? 'registration_p' : 'registration_u'; ?>
   <?php include_partial('rightSide', array('registerRoute' => $registerRoute)); ?>
 </div>
