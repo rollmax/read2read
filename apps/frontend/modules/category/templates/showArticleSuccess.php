@@ -333,7 +333,7 @@ EOD;
     <?php endforeach; ?>
 </table>
 
-<?php if (!$sf_user->isAuthenticated()): ?>
+<?php if (!$sf_user->isAuthenticated() and !$article->getCategory()->getIsFree()): ?>
 <div id=goo>
     <table id=article_add>
         <tr>
