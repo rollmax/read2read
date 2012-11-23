@@ -25,7 +25,7 @@ class OnPay
     private $sum = null;
     private $md5check = null;
 
-    public $currency = 'TST';
+    public $currency = 'RUR';
 
 
     /*
