@@ -72,14 +72,10 @@
        elseif(sfContext::getInstance()->getActionName() == 'blocked') include_slot('menu_part_1', '<td class="act"><p class="ok">Авторизация</p></td>');
        elseif(sfContext::getInstance()->getModuleName() == 'registration') include_slot('menu_part_1', '<td class="act"><p class="ok">Регистрация</p></td>');
        elseif(in_array(sfContext::getInstance()->getActionName(), array('activatepsw', 'activatepswok'))) include_slot('menu_part_1', '<td class="act"><p class="ok">Внесение изменений</p></td>');
-       elseif(sfContext::getInstance()->getActionName() == 'catalog') include_slot('menu_part_1', '<td class="act"><p class="ok">Каталог статей</p></td>');
-       else { include_slot('menu_part_1', '<td class="act"><p class="ok">О сайте</p></td><td class="but"><a href="' .
-           url_for('@catalog') . '"><p>Каталог</p></a></td>'); } ?>
+       else include_slot('menu_part_1', '<td class="act"><p class="ok">О сайте</p></td>') ?>
        <td class=but>
         <?php if (sfContext::getInstance()->getModuleName()=='page'): ?>
           <a href="<?php echo url_for('@homepage') ?>"><p>О сайте</p></a>
-        <?php elseif (sfContext::getInstance()->getActionName() == 'catalog'): ?>
-           <a href="<?php echo url_for('@homepage') ?>"><p>Главная</p></a>
         <?php else: ?>
           <a href="<?php echo url_for('static_page', array('url'=>'reader-rules')) ?>"><p>Правила</p></a>
         <?php endif; ?>

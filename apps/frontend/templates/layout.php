@@ -61,9 +61,10 @@
 <table id=req>
 	<tr> 
 			<td class=td><h3>Text</h3><p class=r2e>English</p><p class=trns>Translation</p></td>
-            <td class=center>
-			<a class=contacts href="<?php echo url_for('contact'); ?>">Контакты</a>
-			</td>	
+            <td class="center">
+                <a class="contacts" href="<?php echo url_for('contact'); ?>">Контакты</a>
+                <a class="catalog" href="<?php echo url_for('@catalog') ?>">Каталог&nbsp;статей</a>
+            </td>
             <td class=td><h2>Текст</h2><p class=tr_r>Перевод</p><p class=e2r>С Английского</p></td>
 	</tr>
 </table>
