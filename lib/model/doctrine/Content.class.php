@@ -21,7 +21,10 @@ class Content extends BaseContent
     public function deleteContent()
     {
         if ($this->getState() == 'draft') {
-            return $this->delete();
+            $this->setState('deleted');
+            $this->setToDelete(true);
+            $this->save();
+            return true;
         } elseif ($this->getState() == 'public') {
             /*
             if ($this->getToDelete()) {

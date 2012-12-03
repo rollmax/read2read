@@ -80,7 +80,7 @@ class ContentTable extends Doctrine_Table
             ->from('Content c')
             ->innerJoin('c.Category cat')
             ->where('id_user=?', $userId)
-            ->andWhereIn('state', array('public', 'deleted'))
+            ->andWhereIn('state', array('public'))
             ->orderBy('updated_at DESC');
 
         return $q;
@@ -128,7 +128,7 @@ class ContentTable extends Doctrine_Table
      */
     public function getPublishedList($user_id = 0)
     {
-        return $this->getContentList(array('user_id' => $user_id, 'state' => array('public', 'deleted')));
+        return $this->getContentList(array('user_id' => $user_id, 'state' => array('public')));
     }
 
     /**
