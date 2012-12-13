@@ -217,6 +217,21 @@ class articleActions extends sfActions
         }
     }
 
+    protected function processTitleForm(sfWebRequest $request, sfForm $form)
+    {
+        $form->bind(
+            $request->getParameter($form->getName()),
+            $request->getFiles($form->getName())
+        );
+
+        if ($form->isValid()) {
+            $article = $form->save();
+            return $article;
+        }
+
+        return false;
+    }
+
 
     // paragraph actions
 
@@ -390,6 +405,27 @@ class articleActions extends sfActions
 
         if (!$this->article) {
             $this->setTemplate('author');
+        }
+    }
+
+    public function executeTitleEdit(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new ArticleTitleForm($this->getRoute()->getObject());
+        $this->is_ajax = true;
+    }
+
+    public function executeTitleUpdate(sfWebRequest $request)
+    {
+        $this->forward404Unless($request->isXmlHttpRequest());
+
+        $this->form = new ArticleTitleForm($this->getRoute()->getObject());
+        $this->ll = strlen($this->getRoute()->getObject()->getAuthorEn().$this->getRoute()->getObject()->getAuthorRu());
+        $this->article = $this->processTitleForm($request, $this->form);
+        if (!$this->article) {
+            $this->is_ajax = true;
+            $this->setTemplate('titleEdit');
         }
     }
 

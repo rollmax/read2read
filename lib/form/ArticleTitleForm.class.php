@@ -27,19 +27,21 @@ class ArticleTitleForm extends ContentForm
     ));
 
     $this->validatorSchema['id_category'] = new sfValidatorDoctrineChoice(array(
-        'model' => $this->getRelatedModelName('Category'), 
+        'model' => $this->getRelatedModelName('Category'),
         'required' => true
     ));
 
     // title_en
-    $this->widgetSchema['title_en'] = new sfWidgetFormInputText(array(
-      'label' => 'Введите название на английском'
-    ));
-    
+    $this->widgetSchema['title_en'] = new sfWidgetFormTextArea(
+        array('label' => 'Введите название на английском'),
+        array('class' => 'text_en', 'cols' => '', 'rows' => '')
+    );
+
     // title_ru
-    $this->widgetSchema['title_ru'] = new sfWidgetFormInputText(array(
-      'label' => 'Введите название на русском'
-    ));
+    $this->widgetSchema['title_ru'] = new sfWidgetFormTextArea(
+        array('label' => 'Введите название на русском'),
+        array('class' => 'text_ru', 'cols' => '', 'rows' => '')
+    );
 
       $this->widgetSchema['is_bold'] = new sfWidgetFormInputCheckbox(array(
           'label' => 'Жирный',
@@ -56,5 +58,8 @@ class ArticleTitleForm extends ContentForm
           'label' => 'Заголовок',
           'choices' => $choices,
       ), array('class' => 'heads_1_6'));
+
+      $this->validatorSchema['title_en'] = new sfValidatorString(array('required' => true));
+      $this->validatorSchema['title_ru'] = new sfValidatorString(array('required' => true));
   }
 }

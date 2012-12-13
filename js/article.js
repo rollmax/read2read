@@ -243,6 +243,35 @@ var article = {
 
     },
 
+    editTitle: function(url)
+    {
+        $.ajaxSetup({async:false});
+        $.post(
+            url,
+            function(html)
+            {
+                $('#title_group').replaceWith(html);
+            }
+        );
+        return;
+    },
+
+    updateTitle: function(url)
+    {
+        $.ajaxSetup({async:false});
+        var ff = $('#title_form');
+        vals = ff.serialize();
+        $.post(
+            url,
+            vals,
+            function(html)
+            {
+                $('#title_group').replaceWith(html);
+            }
+        );
+        return;
+    },
+
     savePicParagraph: function(id, url)
     {
 

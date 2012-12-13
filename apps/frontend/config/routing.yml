@@ -437,6 +437,20 @@ article_publish:
   requirements:
     sf_method: [get]
 
+article_title_edit:
+  url:      /article/:id/title/edit.:sf_format
+  class:    sfDoctrineRoute
+  options:  { model: Content, type: object }
+  param:    { module: article, action: titleEdit, sf_format: html }
+  requirements: { sf_method: post }
+
+article_title_update:
+  url:      /article/:id/title/update.:sf_format
+  class:    sfDoctrineRoute
+  options:  { model: Content, type: object }
+  param:    { module: article, action: titleUpdate, sf_format: html }
+  requirements: { sf_method: [post, put] }
+
 article_author_edit:
   url:    /article/:id/author/edit.:sf_format
   class:  sfDoctrineRoute

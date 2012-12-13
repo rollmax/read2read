@@ -13,23 +13,14 @@
       <td class=h>
         <a class=close href="<?php echo url_for('@article_no_published'); ?>">Закрыть</a>
     </tr>
-    <tr <?php if($ll) echo 'class=b' ?>>
-      <td colspan=3>
-        <p><?php echo $form->getObject()->getCategory()->getNameLanguages(); ?></p>
-      </td>
-    </tr>
   </thead>
   <tbody>
     <?php echo form_tag_for($form, '@article', array('name'=>'articleForm')); ?>
     <?php echo $form->renderHiddenFields(); ?>
     <tr>
-      <td class=left>
-          <p class="h<?php echo ' ' . $form->getObject()->getTitleStyle() ?>"><?php echo $form->getObject()->getTitleEn() ?></p>
-      </td>
-      <td class=center></td>
-      <td class=right>
-          <p class="h<?php echo ' ' . $form->getObject()->getTitleStyle() ?>"><?php echo $form->getObject()->getTitleRu() ?></p>
-      </td>
+        <td colspan="3" style="padding: 0;">
+        <?php include_partial('titleUpdate', array('ll' => $ll, 'form' => $form)) ?>
+        </td>
     </tr>
     <?php if ($ll == 0): // author_field ?>
     <tr class="work_area" id="author_field">
