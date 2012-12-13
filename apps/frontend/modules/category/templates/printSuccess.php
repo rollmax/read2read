@@ -42,7 +42,7 @@
   <?php foreach($article->getParagraph() as $paragraph): ?>
   <tr>
     <td>
-      <p class=txt><?php echo $paragraph->getParagraphEn(); ?></p>
+      <p class=txt><?php echo $paragraph->getRawValue()->getParagraphEnBr(); ?></p>
     </td>
     <td class=center>
       <?php foreach($paragraph->getComment() as $comment): ?>
@@ -51,7 +51,7 @@
       <?php endforeach; ?>
     </td>
     <td>
-        <p class=txt><?php echo $paragraph->getParagraphRu(); ?></p>
+        <p class=txt><?php echo $paragraph->getRawValue()->getParagraphRuBr(); ?></p>
     </td>
   </tr>
   <?php endforeach; ?>

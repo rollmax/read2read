@@ -64,7 +64,7 @@
                 <?php if ($paragraph->getIsPhoto()): ?>
                     <?php echo image_tag($paragraph->getPathPhotoEn()) ?>
                 <?php else: ?>
-                <p<?php echo sfOutputEscaper::unescape($paragraph->getParagraphStyle()) ?>><?php echo $paragraph->getParagraphEn(); ?></p>
+                <p<?php echo sfOutputEscaper::unescape($paragraph->getParagraphStyle()) ?>><?php echo sfOutputEscaper::unescape($paragraph->getParagraphEnBr()); ?></p>
                 <?php endif ?>
             </td>
             <td class="center">
@@ -97,7 +97,7 @@
             <?php if ($paragraph->getIsPhoto()): ?>
                 <?php echo image_tag($paragraph->getPathPhotoRu()) ?>
             <?php else: ?>
-            <p<?php echo sfOutputEscaper::unescape($paragraph->getParagraphStyle()) ?>><?php echo $paragraph->getParagraphRu(); ?></p>
+            <p<?php echo sfOutputEscaper::unescape($paragraph->getParagraphStyle()) ?>><?php echo sfOutputEscaper::unescape($paragraph->getParagraphRuBr()); ?></p>
             <?php endif ?>
         </td>
       </tr>

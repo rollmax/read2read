@@ -46,4 +46,14 @@ class Paragraph extends BaseParagraph
 
         return $res;
     }
+
+    public function getParagraphEnBr()
+    {
+        return nl2br($this->getParagraphEn());
+    }
+
+    public function getParagraphRuBr()
+    {
+        return nl2br($this->getParagraphRu());
+    }
 }
