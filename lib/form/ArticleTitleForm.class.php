@@ -21,7 +21,8 @@ class ArticleTitleForm extends ContentForm
         'model' => $this->getRelatedModelName('Category'),
         'add_empty' => true,
         'label' => 'Выберите раздел',
-        'method'=> 'getNameLanguages'
+        'method'=> 'getNameLanguages',
+        'order_by' => array('ordered', 'asc')
         ), array(
         'class' => 'part'
     ));
