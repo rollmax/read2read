@@ -127,6 +127,7 @@ var article = {
                 function(html)
                 {
                     $('#'+id+' td.center table').append(html);
+                    $('#'+id+' a.add_comments').hide();
                 }
             );
         return;
@@ -152,6 +153,7 @@ var article = {
             function(html)
             {
                 $('#'+id).replaceWith(html);
+                $('#' + paragraphId + ' a.add_comments').hide();
             }
         );
         return;
@@ -171,7 +173,9 @@ var article = {
                 $values,
                 function(html)
                 {
+                    var oAddCmt = $replaceElement.closest('tr.paragraphRow').find('a.add_comments');
                     $replaceElement.parent().replaceWith(html);
+                    oAddCmt.show();
                 }
             );
         return;
@@ -189,8 +193,11 @@ var article = {
             {
                 if(data.success == 0)
                     alert('Not deleted');
-                else
+                else {
+                    var oAddCmt = $('#'+id).closest('tr.paragraphRow').find('a.add_comments');
                     $('#'+id).remove();
+                    oAddCmt.show();
+                }
             },
             'json'
 
