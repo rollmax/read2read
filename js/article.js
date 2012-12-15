@@ -250,16 +250,15 @@ var article = {
             url,
             function(html)
             {
-                $('#title_group').replaceWith(html);
+                $('#title_table').replaceWith(html);
             }
         );
-        return;
     },
 
     updateTitle: function(url)
     {
         $.ajaxSetup({async:false});
-        var ff = $('#title_form');
+        var ff = $('#title_group');
         vals = ff.serialize();
         $.post(
             url,
@@ -269,7 +268,6 @@ var article = {
                 $('#title_group').replaceWith(html);
             }
         );
-        return;
     },
 
     savePicParagraph: function(id, url)

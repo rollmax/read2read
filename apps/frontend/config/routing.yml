@@ -449,7 +449,7 @@ article_title_update:
   class:    sfDoctrineRoute
   options:  { model: Content, type: object }
   param:    { module: article, action: titleUpdate, sf_format: html }
-  requirements: { sf_method: [post, put] }
+  requirements: { sf_method: post }
 
 article_author_edit:
   url:    /article/:id/author/edit.:sf_format

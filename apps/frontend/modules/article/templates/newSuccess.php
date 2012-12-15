@@ -14,6 +14,8 @@
     </tr>
     </thead>
     <tbody>
+    <?php echo form_tag_for($form, '@article'); ?>
+    <?php echo $form->renderHiddenFields(); ?>
     <tr>
         <td colspan="3" style="padding: 0;">
             <?php include_partial('titleEdit', array('form' => $form)) ?>

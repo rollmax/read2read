@@ -1,4 +1,4 @@
-<table id="title_group">
+<table id="title_table">
 <tr <?php if($ll) echo 'class=b' ?>>
     <td colspan=3>
         <p><?php echo $form->getObject()->getCategory()->getNameLanguages(); ?></p>
