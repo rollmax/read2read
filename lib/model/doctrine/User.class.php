@@ -579,8 +579,11 @@ class User extends GuardUser
     public function generateImg()
     {
         $width = 100;
-        $height = 100;
+        $height = 16;
 
+        $mask = imagecreatefrompng(sfConfig::get('sf_upload_dir') . '/assets/mask.png');
+        imagealphablending($mask, false);
+        imagesavealpha($mask, true);
         $img = imagecreatetruecolor($width, $height);
         imagerectangle(
             $img,
@@ -602,13 +605,16 @@ class User extends GuardUser
             );
         }
 
+        imagecopy($mask, $img, 57, 90, 0, 0, 100, 16);
+
         // Save file
         $this->setImgFileName(md5($this->getId() . 'Ab222+!+R') . '.png');
         $file_full_path = sfConfig::get('sf_upload_dir') . sfConfig::get(
             'app_secret_img_path_dir'
         ) . '/' . $this->getImgFileName();
-        imagepng($img, $file_full_path);
+        imagepng($mask, $file_full_path);
         imagedestroy($img);
+        imagedestroy($mask);
         chmod($file_full_path, 0777);
 
         // Get file info
