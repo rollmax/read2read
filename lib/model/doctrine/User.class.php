@@ -582,38 +582,19 @@ class User extends GuardUser
         $height = 16;
 
         $mask = imagecreatefrompng(sfConfig::get('sf_upload_dir') . '/assets/mask.png');
-        imagealphablending($mask, false);
-        imagesavealpha($mask, true);
-        $img = imagecreatetruecolor($width, $height);
-        imagerectangle(
-            $img,
-            1,
-            1,
-            $width - 1,
-            99,
-            imagecolorallocate($img, rand(10, 255), rand(10, 255), rand(10, 255))
-        );
-
-        for ($x = 2; $x < $width - 1; $x++) {
-            imageline(
-                $img,
-                $x,
-                2,
-                $x,
-                $height - 2,
-                imagecolorallocate($img, rand(20, 255), rand(0, 255), rand($x, 255))
-            );
-        }
-
-        imagecopy($mask, $img, 57, 90, 0, 0, 100, 16);
-
+        $string = ($this->getUtype() == 'puser') ? 'П' : 'Ч';
+        $string .= ': ' . substr(md5($this->getId() . 'SaLt!'), 0, 8);
+        putenv('GDFONTPATH=' . realpath('./images'));
+        imagettftext($mask, 12, 0, 67, 110, 0, 'Ubuntu-L', $string);
         // Save file
         $this->setImgFileName(md5($this->getId() . 'Ab222+!+R') . '.png');
         $file_full_path = sfConfig::get('sf_upload_dir') . sfConfig::get(
             'app_secret_img_path_dir'
         ) . '/' . $this->getImgFileName();
+        imagealphablending($mask, false);
+        imagesavealpha($mask, true);
         imagepng($mask, $file_full_path);
-        imagedestroy($img);
+        // imagedestroy($img);
         imagedestroy($mask);
         chmod($file_full_path, 0777);
 
