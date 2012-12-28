@@ -86,17 +86,25 @@ class ContentTable extends Doctrine_Table
         return $q;
     }
 
-    public static function getSoldArticlesQuery(User $user, Period $period)
+    public static function getSoldArticlesQuery(User $user, Period $period, $c_sort = null)
     {
+        if (!is_null($c_sort)) {
+            $sortby = $c_sort['sortby'];
+            $order = $c_sort['order'];
+        } else {
+            $sortby = 'pub_date';
+            $order = 'desc';
+        }
         $q = Doctrine_Query::create()
             ->select('c.id, sum(t.amount) as sell_sum, count(cp.id) as sell_count')
             ->from('Content c')
+            ->leftJoin('c.Category ct')
             ->leftJoin('c.ContentPurchase cp')
             ->leftJoin('cp.Transaction t with t.id_period = ?', $period->getId())
             ->where('c.id_user = ?', $user->getId())
             ->andWhere('c.state = "public"')
             ->groupBy('c.id')
-            ->orderBy('sell_sum DESC');
+            ->orderBy("$sortby $order");
 
         return $q;
     }

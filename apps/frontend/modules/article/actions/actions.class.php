@@ -99,6 +99,9 @@ class articleActions extends sfActions
         $user = $this->getUser()->getGuardUser();
         $this->period = Period::getCurrentPeriod();
 
+        $this->c_sort = array('sortby' => $request->getParameter('sortby'),
+                              'order' => $request->getParameter('order'));
+
         $this->pager = new sfDoctrinePager(
             'Content',
             sfConfig::get('app_max_articles_on_published')
@@ -106,7 +109,7 @@ class articleActions extends sfActions
 
 //        $this->pager->setQuery(ContentTable::getInstance()->getPublishedListQuery($user->getId()));
 
-        $this->pager->setQuery(ContentTable::getSoldArticlesQuery($user, $this->period));
+        $this->pager->setQuery(ContentTable::getSoldArticlesQuery($user, $this->period, $this->c_sort));
         $this->pager->setPage($request->getParameter('page', 1));
         $this->pager->init();
     }

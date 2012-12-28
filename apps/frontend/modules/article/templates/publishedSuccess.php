@@ -1,6 +1,24 @@
 <?php slot('currentPage', 'article_published') ?>
 <?php include_partial('article/headBlock') ?>
 
+<?php
+    function sort_helper($text, $sort, $c_sort)
+    {
+        if ($c_sort['sortby'] == $sort) {
+            $order = ($c_sort['order'] == 'asc') ? 'desc' : 'asc';
+            $text .= ($c_sort['order'] == 'desc') ? ' ↓' : ' ↑';
+        } else {
+            $order = 'desc';
+        }
+        return link_to(
+            '<p>' . $text . '</p>',
+            'article_published',
+            array('sortby' => $sort, 'order' => $order)
+        );
+    }
+?>
+
+
 <table id=wrks_data cellpadding="0" cellspacing="0">
     <tr class=w>
         <td colspan=7>
@@ -17,11 +35,11 @@
     </tr>
     <tr class=b>
         <td class=title><p>Работы</p></td>
-        <td><p>k знаков</p></td>
-        <td><p>Продажи</p></td>
-        <td class=sum_of_sales><p>Сумма по<br> продажам</p></td>
-        <td><p>Дата <br>публикации</p></td>
-        <td class=part><p>Раздел</p></td>
+        <td><?php echo sort_helper('k знаков', 'letters_k', $c_sort) ?></td>
+        <td><?php echo sort_helper('Продажи', 'sell_count', $c_sort) ?></td>
+        <td class=sum_of_sales><?php echo sort_helper('Сумма по<br> продажам', 'sell_sum', $c_sort) ?></td>
+        <td><?php echo sort_helper('Дата <br>публикации', 'pub_date', $c_sort) ?></td>
+        <td class=part><?php echo sort_helper('Раздел', 'name_ru', $c_sort) ?></td>
         <td><p>&nbsp;</p></td>
     </tr>
 
@@ -67,5 +85,7 @@
         </td>
     </tr>
     <?php endforeach; ?>
-    <?php include_partial('pager', array('pager' => $pager, 'url' => url_for('article_published'))); ?>
+    <?php include_partial('pager', array('pager' => $pager,
+                                        'url' => url_for('article_published',
+                                            array('sortby'=>$c_sort['sortby'], 'order'=>$c_sort['order'])))); ?>
 </table>

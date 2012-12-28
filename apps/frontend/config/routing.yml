@@ -422,8 +422,10 @@ article:
   options: { model: Content }
 
 article_published:
-  url:     /article/published
-  param:   { module: article, action: published }
+  url:     /article/published/:sortby/:order
+  param:   { module: article, action: published , sortby: "pub_date", order: "desc" }
+  requirements:
+    sf_method: [get]
   
 article_no_published:
   url:     /article/nopublished
